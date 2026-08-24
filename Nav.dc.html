@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    @media (max-width: 980px) {
+      [data-nav-desk] { display: none !important; }
+      [data-nav-burger] { display: inline-flex !important; }
+    }
+  </style>
+</helmet>
+
+<header data-senvia-nav="1" style="position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.94); backdrop-filter: blur(14px); border-bottom: 1px solid #eaf2ec; font-family: 'Instrument Sans', sans-serif">
+  <div style="max-width: 1280px; margin: 0 auto; padding: 11px clamp(16px, 4vw, 32px); display: flex; align-items: center; gap: 10px">
+    <a href="Senvia%20Landing%20v2.dc.html" style="display: flex; align-items: center; gap: 10px; color: #12261a; flex: 0 0 auto">
+      <img src="uploads/1024x1024bb.png" alt="Senvia logo" width="42" height="42" style="width: clamp(36px, 9vw, 42px); height: auto; border-radius: 11px; display: block; box-shadow: 0 2px 8px rgba(18,38,26,0.14)">
+      <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(18px, 4.6vw, 22px); letter-spacing: 0.02em">Senvia</span>
+    </a>
+
+    <nav data-nav-desk style="display: flex; align-items: center; gap: 2px; margin-left: 16px">
+      <sc-for list="{{ mainLinks }}" as="l" hint-placeholder-count="3">
+        <sc-if value="{{ l.isActive }}" hint-placeholder-val="{{ false }}">
+          <a href="{{ l.href }}" style="padding: 9px 13px; border-radius: 11px; font-size: 15px; font-weight: 600; color: #12261a; background: #f4faf6">{{ l.label }}</a>
+        </sc-if>
+        <sc-if value="{{ l.isOther }}" hint-placeholder-val="{{ true }}">
+          <a href="{{ l.href }}" style="padding: 9px 13px; border-radius: 11px; font-size: 15px; font-weight: 500; color: #3c5346" style-hover="background: #f4faf6; color: #12261a">{{ l.label }}</a>
+        </sc-if>
+      </sc-for>
+
+      <div style="position: relative">
+        <sc-if value="{{ moreOpen }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ toggleMore }}" style="display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 500; color: #12261a; background: #f4faf6; padding: 9px 13px; border-radius: 11px">
+            {{ moreLabel }}
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(180deg)"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div style="position: absolute; top: calc(100% + 10px); left: 0; min-width: 272px; background: #ffffff; border: 1px solid #e4efe7; border-radius: 18px; padding: 8px; box-shadow: 0 18px 44px rgba(18,38,26,0.14); z-index: 120">
+            <sc-for list="{{ moreLinks }}" as="l" hint-placeholder-count="4">
+              <a href="{{ l.href }}" style="display: block; padding: 11px 14px; border-radius: 12px; color: #12261a" style-hover="background: #f4faf6">
+                <span style="display: block; font-size: 14.5px; font-weight: 600">{{ l.label }}</span>
+                <span style="display: block; font-size: 13px; color: #6b8272; margin-top: 2px">{{ l.desc }}</span>
+              </a>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ moreShut }}" hint-placeholder-val="{{ true }}">
+          <button onClick="{{ toggleMore }}" style="display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 500; color: #3c5346; background: transparent; padding: 9px 13px; border-radius: 11px" style-hover="background: #f4faf6; color: #12261a">
+            {{ moreLabel }}
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+        </sc-if>
+      </div>
+
+    </nav>
+
+    <div style="margin-left: auto; display: flex; align-items: center; gap: 8px; flex: 0 0 auto">
+      <div data-nav-desk style="position: relative">
+        <sc-if value="{{ bizOpen }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ toggleBiz }}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; border: 1px solid #2dbb54; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; color: #12261a; background: #e8f7ee; padding: 8px 13px; border-radius: 11px">
+            {{ bizLabel }}
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(180deg)"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div style="position: absolute; top: calc(100% + 10px); right: 0; min-width: 284px; background: #ffffff; border: 1px solid #e4efe7; border-radius: 18px; padding: 8px; box-shadow: 0 18px 44px rgba(18,38,26,0.14); z-index: 120">
+            <sc-for list="{{ bizLinks }}" as="l" hint-placeholder-count="3">
+              <a href="{{ l.href }}" style="display: block; padding: 11px 14px; border-radius: 12px; color: #12261a" style-hover="background: #f4faf6">
+                <span style="display: block; font-size: 14.5px; font-weight: 600">{{ l.label }}</span>
+                <span style="display: block; font-size: 13px; color: #6b8272; margin-top: 2px">{{ l.desc }}</span>
+              </a>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ bizShut }}" hint-placeholder-val="{{ true }}">
+          <button onClick="{{ toggleBiz }}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; border: 1px solid #b9d9c4; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; color: #167a38; background: #f4faf6; padding: 8px 13px; border-radius: 11px" style-hover="border-color: #2dbb54; background: #e8f7ee; color: #12261a">
+            {{ bizLabel }}
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+        </sc-if>
+      </div>
+
+      <span data-nav-desk aria-hidden="true" style="display: block; width: 1px; height: 26px; background: #e4efe7; margin: 0 2px; flex: 0 0 auto"></span>
+
+      <div style="position: relative">
+        <sc-if value="{{ langOpen }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ toggleLang }}" style="display: inline-flex; align-items: center; gap: 5px; min-height: 44px; border: 1px solid #2dbb54; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14px; font-weight: 600; color: #12261a; background: #e8f7ee; padding: 9px 11px; border-radius: 11px">
+            {{ langShort }}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(180deg)"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+          <div style="position: absolute; top: calc(100% + 10px); right: 0; min-width: 168px; background: #ffffff; border: 1px solid #e4efe7; border-radius: 18px; padding: 8px; box-shadow: 0 18px 44px rgba(18,38,26,0.14); z-index: 120; display: grid; gap: 2px">
+            <sc-for list="{{ langs }}" as="l" hint-placeholder-count="3">
+              <sc-if value="{{ l.isCurrent }}" hint-placeholder-val="{{ false }}">
+                <button onClick="{{ l.pick }}" style="display: block; width: 100%; text-align: left; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14.5px; font-weight: 600; color: #12261a; background: #f4faf6; padding: 11px 14px; border-radius: 11px">{{ l.label }}</button>
+              </sc-if>
+              <sc-if value="{{ l.isOther }}" hint-placeholder-val="{{ true }}">
+                <button onClick="{{ l.pick }}" style="display: block; width: 100%; text-align: left; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14.5px; font-weight: 500; color: #3c5346; background: transparent; padding: 11px 14px; border-radius: 11px" style-hover="background: #f4faf6">{{ l.label }}</button>
+              </sc-if>
+            </sc-for>
+          </div>
+        </sc-if>
+        <sc-if value="{{ langShut }}" hint-placeholder-val="{{ true }}">
+          <button onClick="{{ toggleLang }}" style="display: inline-flex; align-items: center; gap: 5px; min-height: 44px; border: 1px solid #e4efe7; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14px; font-weight: 600; color: #3c5346; background: #f7fbf8; padding: 9px 11px; border-radius: 11px" style-hover="border-color: #2dbb54; color: #12261a">
+            {{ langShort }}
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
+          </button>
+        </sc-if>
+      </div>
+
+
+      <button data-nav-burger onClick="{{ toggleMenu }}" aria-label="Menu" style="display: none; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e4efe7; background: #f7fbf8; border-radius: 12px; cursor: pointer; padding: 0">
+        <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12261a" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
+        </sc-if>
+        <sc-if value="{{ menuShut }}" hint-placeholder-val="{{ true }}">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12261a" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16"></path><path d="M4 12h16"></path><path d="M4 17h16"></path></svg>
+        </sc-if>
+      </button>
+    </div>
+  </div>
+
+  <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="border-top: 1px solid #eaf2ec; background: #ffffff">
+      <div style="max-width: 1280px; margin: 0 auto; padding: 8px clamp(16px, 4vw, 32px) 18px; display: grid; gap: 2px">
+        <sc-for list="{{ allLinks }}" as="l" hint-placeholder-count="7">
+          <sc-if value="{{ l.isActive }}" hint-placeholder-val="{{ false }}">
+            <a href="{{ l.href }}" style="display: block; padding: 14px 12px; border-radius: 12px; font-size: 16px; font-weight: 600; color: #12261a; background: #f4faf6">{{ l.label }}</a>
+          </sc-if>
+          <sc-if value="{{ l.isOther }}" hint-placeholder-val="{{ true }}">
+            <a href="{{ l.href }}" style="display: block; padding: 14px 12px; border-radius: 12px; font-size: 16px; font-weight: 500; color: #3c5346">{{ l.label }}</a>
+          </sc-if>
+        </sc-for>
+        <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer" style="margin-top: 10px; background: #2dbb54; color: #ffffff; font-weight: 600; font-size: 15.5px; padding: 14px 18px; border-radius: 14px; text-align: center">{{ ctaLabel }}</a>
+      </div>
+    </div>
+  </sc-if>
+</header>
+
+<sc-if value="{{ consentOpen }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-label="{{ consentAria }}" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 300; background: #ffffff; border-top: 1px solid #e4efe7; box-shadow: 0 -12px 34px rgba(18,38,26,0.12); font-family: 'Instrument Sans', sans-serif">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px); display: flex; gap: 16px; flex-wrap: wrap; align-items: center; justify-content: space-between">
+      <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #3c5346; max-width: 70ch; text-wrap: pretty">{{ consentText }} <a href="Politika%20kolacica.dc.html" style="font-weight: 600">{{ consentCookieLink }}</a> {{ consentAnd }} <a href="Politika%20privatnosti.dc.html" style="font-weight: 600">{{ consentPrivacyLink }}</a>.</p>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap">
+        <button onClick="{{ consentDeny }}" style="border: 1px solid #d7e7dc; background: #ffffff; color: #3c5346; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 12px 18px; border-radius: 12px; cursor: pointer; min-height: 44px" style-hover="background: #f4faf6">{{ consentNo }}</button>
+        <button onClick="{{ consentAccept }}" style="border: none; background: #2dbb54; color: #ffffff; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 12px 20px; border-radius: 12px; cursor: pointer; min-height: 44px" style-hover="background: #26a449">{{ consentYes }}</button>
+      </div>
+    </div>
+  </div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1280, &quot;height&quot;: 90}, &quot;active&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;&quot;, &quot;how&quot;, &quot;send&quot;, &quot;trust&quot;, &quot;faq&quot;, &quot;blog&quot;, &quot;corr&quot;, &quot;routes&quot;], &quot;default&quot;: &quot;&quot;, &quot;tsType&quot;: &quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { lang: 'hr', more: false, biz: false, get: false, langOpen: false, menu: false, consent: 'yes' };
+  lastToggle = 0;
+
+  T = {
+    how:   { hr: 'Kako radi', en: 'How it works', de: 'So funktioniert es' },
+    send:  { hr: 'Slanje paketa', en: 'Sending packages', de: 'Pakete senden' },
+    trust: { hr: 'Sigurnost', en: 'Trust & safety', de: 'Sicherheit' },
+    more:  { hr: 'Više', en: 'More', de: 'Mehr' },
+    faq:   { hr: 'Česta pitanja', en: 'FAQ', de: 'Häufige Fragen' },
+    faqD:  { hr: 'Cijene, rute, verifikacija', en: 'Prices, routes, verification', de: 'Preise, Routen, Verifizierung' },
+    blog:  { hr: 'Blog', en: 'Blog', de: 'Blog' },
+    blogD: { hr: 'Vodiči i usporedbe cijena', en: 'Guides and price comparisons', de: 'Ratgeber und Preisvergleiche' },
+    corr:  { hr: 'Usporedba s klasičnom dostavom', en: 'Compared to classic delivery', de: 'Vergleich mit klassischer Zustellungen' },
+    corrD: { hr: 'Cijena, brzina i fleksibilnost', en: 'Price, speed and flexibility', de: 'Preis, Geschwindigkeit, Flexibilität' },
+    routes:{ hr: 'Popularne rute', en: 'Popular routes', de: 'Beliebte Routen' },
+    routesD:{ hr: 'Cijene i trajanje po gradovima', en: 'Prices and times by city', de: 'Preise und Dauer pro Stadt' },
+    biz:   { hr: 'Za poslovne korisnike', en: 'For business', de: 'Für Geschäftskunden' },
+    bizApply: { hr: 'Prijavi svoj obrt', en: 'Register your business', de: 'Betrieb anmelden' },
+    bizApplyD: { hr: 'Kratka prijava, javljamo se u par dana', en: 'Short form, we reply in a few days', de: 'Kurzes Formular, Antwort in wenigen Tagen' },
+    bizHow: { hr: 'Kako radi za tvrtke', en: 'How it works for business', de: 'So funktioniert es für Firmen' },
+    bizHowD: { hr: 'Trgovine, cvjećarnice, servisi i obrti', en: 'Shops, florists, garages and trades', de: 'Geschäfte, Floristen, Werkstätten' },
+    bizPartners: { hr: 'Naši partneri', en: 'Our partners', de: 'Unsere Partner' },
+    bizPartnersD: { hr: 'S kime trenutno radimo', en: 'Who we work with right now', de: 'Mit wem wir aktuell arbeiten' },
+    cta:   { hr: 'Preuzmi aplikaciju', en: 'Get the app', de: 'App herunterladen' },
+    getMsg: { hr: 'Besplatno za iPhone i Android, bez pretplate.', en: 'Free for iPhone and Android, no subscription.', de: 'Kostenlos für iPhone und Android, ohne Abo.' },
+    cAria: { hr: 'Pristanak na mjerenje posjeta', en: 'Analytics consent', de: 'Zustimmung zur Messung' },
+    cText: { hr: 'Koristimo kolačiće za analizu prometa. Prihvaćanjem analitičkih kolačića pomažeš nam poboljšati uslugu. Više u dokumentima', en: 'We use cookies to analyze traffic. By accepting analytics cookies you help us improve our service. Learn more in our', de: 'Wir verwenden Cookies zur Analyse des Datenverkehrs. Durch die Annahme von Analyse-Cookies hilfst du uns, unseren Service zu verbessern. Mehr in unserer' },
+    cCookie: { hr: 'Politika kolačića', en: 'Cookie Policy', de: 'Cookie-Richtlinie' },
+    cPrivacy: { hr: 'Politika privatnosti', en: 'Privacy Policy', de: 'Datenschutzerklärung' },
+    cAnd: { hr: 'i', en: 'and', de: 'und' },
+    cYes: { hr: 'Prihvaćam sve', en: 'Accept all', de: 'Alle akzeptieren' },
+    cNo: { hr: 'Samo neophodno', en: 'Only essential', de: 'Nur notwendige' }
+  };
+
+  componentDidMount() {
+    let saved = 'yes';
+    try { saved = localStorage.getItem('senvia-consent') || ''; } catch (e) { saved = 'yes'; }
+    this.setState({ consent: saved });
+    this.onConsentOpen = () => this.setState({ consent: 'ask' });
+    window.addEventListener('senvia-consent-open', this.onConsentOpen);
+    import('./i18n.js').then(m => {
+      this.i18n = m;
+      this.setState({ lang: m.getLang() });
+      this.off = m.onLang(l => this.setState({ lang: l }));
+    });
+    this.onDoc = (e) => {
+      if (!this.state.more && !this.state.biz && !this.state.get && !this.state.langOpen) return;
+      if (Date.now() - (this.lastToggle || 0) < 150) return;
+      if (e.target && e.target.closest && e.target.closest('[data-senvia-nav]')) return;
+      this.setState({ more: false, biz: false, get: false, langOpen: false });
+    };
+    document.addEventListener('click', this.onDoc);
+  }
+  componentWillUnmount() {
+    if (this.off) this.off();
+    document.removeEventListener('click', this.onDoc);
+    if (this.onConsentOpen) window.removeEventListener('senvia-consent-open', this.onConsentOpen);
+  }
+
+  t(key, lang) { const o = this.T[key]; return (o && (o[lang] || o.hr)) || ''; }
+
+  renderVals() {
+    const lang = this.state.lang;
+    const active = this.props.active || '';
+    const link = (key, href, id) => {
+      const on = active === id;
+      return { href, label: this.t(key, lang), isActive: on, isOther: !on };
+    };
+
+    const mainLinks = [
+      link('how', 'Kako%20radi.dc.html', 'how'),
+      link('send', 'Slanje%20paketa.dc.html', 'send'),
+      link('trust', 'Sigurnost.dc.html', 'trust')
+    ];
+    const bizLinks = [
+      { ...link('bizPartners', 'Partneri.dc.html', 'partners'), desc: this.t('bizPartnersD', lang) },
+      { ...link('bizHow', 'Za%20tvrtke.dc.html', 'business'), desc: this.t('bizHowD', lang) },
+      { ...link('bizApply', 'Za%20tvrtke.dc.html#prijava', 'apply'), desc: this.t('bizApplyD', lang) }
+    ];
+    const moreLinks = [
+      { ...link('faq', 'FAQ.dc.html', 'faq'), desc: this.t('faqD', lang) },
+      { ...link('blog', 'Blog.dc.html', 'blog'), desc: this.t('blogD', lang) },
+      { ...link('corr', 'Usporedba.dc.html', 'corr'), desc: this.t('corrD', lang) },
+      { ...link('routes', 'Popularne%20rute.dc.html', 'routes'), desc: this.t('routesD', lang) }
+    ];
+
+    const setLang = (l) => () => {
+      if (this.i18n) this.i18n.setLang(l); else this.setState({ lang: l });
+      this.setState({ langOpen: false, menu: false });
+    };
+
+    const setConsent = (v) => () => {
+      try { localStorage.setItem('senvia-consent', v); } catch (e) {}
+      if (v === 'yes' && typeof window.senviaLoadAnalytics === 'function') window.senviaLoadAnalytics();
+      this.setState({ consent: v });
+      // nakon odabira korisnik ide na naslovnicu
+      window.location.href = 'Senvia%20Landing%20v2.dc.html';
+    };
+
+    return {
+      consentOpen: this.state.consent !== 'yes' && this.state.consent !== 'no',
+      consentAria: this.t('cAria', lang), consentText: this.t('cText', lang),
+      consentCookieLink: this.t('cCookie', lang), consentPrivacyLink: this.t('cPrivacy', lang), consentAnd: this.t('cAnd', lang),
+      consentYes: this.t('cYes', lang), consentNo: this.t('cNo', lang),
+      consentAccept: setConsent('yes'), consentDeny: setConsent('no'),
+      mainLinks, moreLinks, bizLinks,
+      allLinks: mainLinks.concat(moreLinks).concat(bizLinks),
+      bizLabel: this.t('biz', lang),
+      moreLabel: this.t('more', lang),
+      langShort: lang.toUpperCase(),
+      langs: ['hr', 'en', 'de'].map(l => ({
+        label: { hr: 'Hrvatski', en: 'English', de: 'Deutsch' }[l],
+        pick: setLang(l),
+        isCurrent: lang === l,
+        isOther: lang !== l
+      })),
+      moreOpen: this.state.more, moreShut: !this.state.more,
+      bizOpen: this.state.biz, bizShut: !this.state.biz,
+      langOpen: this.state.langOpen, langShut: !this.state.langOpen,
+      menuOpen: this.state.menu, menuShut: !this.state.menu,
+      toggleMore: (e) => { if (e && e.preventDefault) e.preventDefault(); this.lastToggle = Date.now(); this.setState(s => ({ more: !s.more, biz: false, get: false, langOpen: false })); },
+      toggleBiz: (e) => { if (e && e.preventDefault) e.preventDefault(); this.lastToggle = Date.now(); this.setState(s => ({ biz: !s.biz, more: false, get: false, langOpen: false })); },
+      toggleLang: (e) => { if (e && e.preventDefault) e.preventDefault(); this.lastToggle = Date.now(); this.setState(s => ({ langOpen: !s.langOpen, more: false, biz: false, get: false })); },
+      toggleMenu: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState(s => ({ menu: !s.menu, more: false, biz: false, get: false, langOpen: false })); }
+    };
+  }
+}
+</script>
+</body>
+</html>

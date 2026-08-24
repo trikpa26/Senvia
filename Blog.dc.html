@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta charset="utf-8">
+  <title>Blog o slanju paketa i dostavi | Senvia</title>
+  <meta name="description" content="Savjeti o slanju paketa preko vozača koji već putuju: cijene, pakiranje, rute Beč–Zagreb i Graz–Zagreb te iskustva korisnika Senvia aplikacije.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Senvia">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:title" content="Blog o slanju paketa i dostavi | Senvia">
+  <meta property="og:description" content="Savjeti o slanju paketa uz putnike koji već putuju: cijene, pakiranje, rute i iskustva korisnika Senvia aplikacije.">
+  <link rel="canonical" href="https://www.senviaapp.com/blog">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <meta property="og:url" content="https://www.senviaapp.com/blog">
+  <meta property="og:image" content="https://www.senviaapp.com/uploads/1024x1024bb.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Blog o slanju paketa i dostavi | Senvia">
+  <meta name="twitter:description" content="Savjeti o slanju paketa uz putnike koji već putuju: cijene, pakiranje, rute i iskustva korisnika Senvia aplikacije.">
+  <meta name="twitter:image" content="https://www.senviaapp.com/uploads/1024x1024bb.png">
+  <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
+  <script>
+    window.SENVIA_GA_ID = 'G-H8DBTNDF62';
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H8DBTNDF62');
+    window.senviaLoadAnalytics = function () {
+      if (window.senviaGaLoaded || location.hostname.indexOf('senviaapp.com') === -1) return;
+      window.senviaGaLoaded = true;
+      var el = document.createElement('script');
+      el.setAttribute('async', '');
+      el.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + window.SENVIA_GA_ID);
+      document.head.appendChild(el);
+    };
+    try { if (localStorage.getItem('senvia-consent') === 'yes') window.senviaLoadAnalytics(); } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    a { color: #1a9e44; text-decoration: none; }
+    a:hover { color: #0e7c31; }
+    ::selection { background: #c9efd6; }
+    img { max-width: 100%; }
+  
+
+  </style>
+</helmet>
+
+<div style="overflow-x: clip">
+
+<dc-import name="Nav" active="blog" hint-size="100%,66px"></dc-import>
+
+<nav aria-label="breadcrumb" style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
+  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">Blog</span>
+</nav>
+
+<section style="max-width: 1060px; margin: 0 auto; padding: 40px clamp(16px, 4.0vw, 32px) 40px">
+  <div style="color: #1a9e44; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px">Blog</div>
+  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(30px, 8.4vw, 52px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; text-wrap: balance">{{ t.h1 }}</h1>
+  <p style="font-size: 19px; line-height: 1.6; color: #3c5346; margin: 0; max-width: 62ch; text-wrap: pretty">{{ t.lead }}</p>
+</section>
+
+<section style="max-width: 1060px; margin: 0 auto; padding: 0 clamp(16px, 4.0vw, 32px) clamp(38px, 6.5vw, 84px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 22px">
+  <sc-for list="{{ posts }}" as="p" hint-placeholder-count="8">
+    <a href="{{ p.href }}" hrefLang="{{ p.lang }}" style="display: block; border: 1px solid #e4efe7; border-radius: 24px; padding: 32px clamp(17px, 4.3vw, 34px); color: #12261a" style-hover="border-color: #2dbb54; background: #f7fbf8">
+      <span style="display: inline-block; background: #e8f7ee; color: #167a38; font-weight: 700; font-size: 12.5px; padding: 5px 12px; border-radius: 999px; margin-bottom: 16px">{{ p.tag }}</span>
+      <span style="display: block; font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.0vw, 25px); font-weight: 700; line-height: 1.2; margin-bottom: 10px; text-wrap: balance">{{ p.title }}</span>
+      <span style="display: block; font-size: 15.5px; line-height: 1.6; color: #3c5346">{{ p.desc }}</span>
+    </a>
+  </sc-for>
+</section>
+
+<dc-import name="Podnozje" hint-size="100%,300px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'hr' };
+
+  STR = {
+    hr: {
+      h1: 'Savjeti o slanju paketa i rutama',
+      lead: 'Kratki tekstovi o cijenama, pakiranju i rutama, unutar Hrvatske, od Zagreba, Varaždina i Osijeka do Rijeke, Zadra i Splita, i prema dijaspori u Njemačkoj, Austriji, Švicarskoj i Irskoj. Pisani na temelju stvarnih pošiljki naših korisnika.',
+      title: 'Blog o slanju paketa i dostavi | Senvia',
+      desc: 'Savjeti o slanju paketa, cijenama i rutama. Kako poslati paket brže i jeftinije uz putnika koji već putuje. Preuzmi Senvia aplikaciju besplatno.',
+      locale: 'hr_HR', crumb: 'Blog'
+    },
+    en: {
+      h1: 'Advice on sending packages and routes',
+      lead: 'Short pieces about prices, packing and routes, inside Croatia from Zagreb, Varazdin and Osijek to Rijeka, Zadar and Split, and towards the diaspora in Germany, Austria, Switzerland and Ireland. Written from real shipments of our users.',
+      title: 'Blog about sending packages and delivery | Senvia',
+      desc: 'Advice on sending packages, prices and routes. How to send a package faster and cheaper with a traveller already on the road. Download Senvia for free.',
+      locale: 'en_GB', crumb: 'Blog'
+    },
+    de: {
+      h1: 'Ratgeber zu Paketversand und Strecken',
+      lead: 'Kurze Texte zu Preisen, Verpackung und Strecken, innerhalb Kroatiens von Zagreb, Varazdin und Osijek nach Rijeka, Zadar und Split, sowie zur Diaspora in Deutschland, Österreich, der Schweiz und Irland. Geschrieben aus echten Sendungen unserer Nutzer.',
+      title: 'Blog über Paketversand und Zustellung | Senvia',
+      desc: 'Ratgeber zu Paketversand, Preisen und Strecken. Wie ein Paket schneller und günstiger mit einem Reisenden ankommt. Senvia App kostenlos laden.',
+      locale: 'de_DE', crumb: 'Blog'
+    }
+  };
+
+  POSTS = [
+    { href: 'Blog%20-%20Slanje%20unutar%20Hrvatske.dc.html', lang: 'hr',
+      tag: { hr: 'Hrvatska', en: 'Croatia', de: 'Kroatien' },
+      title: { hr: 'Slanje paketa unutar Hrvatske: Zagreb, obala i sve između', en: 'Sending packages inside Croatia: Zagreb, the coast and everything between', de: 'Pakete innerhalb Kroatiens senden: Zagreb, Küste und alles dazwischen' },
+      desc: { hr: 'Studenti, sezonski radnici i svi koji rade izvan svog grada, s cijenama po rutama.', en: 'Students, seasonal workers and everyone working away from home, with prices per route.', de: 'Studierende, Saisonarbeiter und alle, die auswärts arbeiten, mit Preisen je Strecke.' } },
+    { href: 'Blog%20-%20Dijaspora%20paket%20doma.dc.html', lang: 'hr',
+      tag: { hr: 'Dijaspora', en: 'Diaspora', de: 'Diaspora' },
+      title: { hr: 'Kako paket dolazi doma: Njemačka, Švicarska, Irska i Austrija', en: 'How a package gets home: Germany, Switzerland, Ireland and Austria', de: 'Wie ein Paket nach Hause kommt: Deutschland, Schweiz, Irland und Österreich' },
+      desc: { hr: 'Što se šalje u obje strane, koliko traje put i kako pripremiti paket za dugu vožnju.', en: 'What travels in both directions, how long it takes and how to prepare a package for a long drive.', de: 'Was in beide Richtungen reist, wie lange es dauert und wie man ein Paket für lange Fahrten vorbereitet.' } },
+    { href: 'Blog%20-%20Kako%20poslati%20paket%20u%20Austriju.dc.html', lang: 'hr',
+      tag: { hr: 'Vodič', en: 'Guide', de: 'Ratgeber' },
+      title: { hr: 'Kako poslati paket u Austriju? Vodič za 2026.', en: 'How to send a package to Austria? A 2026 guide', de: 'Wie schickt man ein Paket nach Österreich? Ratgeber 2026' },
+      desc: { hr: 'Tri načina slanja, okvirne cijene, trajanje i savjeti da paket brže nađe putnika.', en: 'Three ways to send, indicative prices, timings and tips so a package finds a traveller faster.', de: 'Drei Versandwege, Richtpreise, Dauer und Tipps, damit ein Paket schneller einen Reisenden findet.' } },
+    { href: 'Blog%20-%20Senvia%20vs%20kurirska%20sluzba.dc.html', lang: 'hr',
+      tag: { hr: 'Usporedba', en: 'Comparison', de: 'Vergleich' },
+      title: { hr: 'Senvia ili klasična dostava: što je jeftinije za Austriju?', en: 'Senvia or classic delivery: which is cheaper for Austria?', de: 'Senvia oder klassische Zustellung: was ist günstiger nach Österreich?' },
+      desc: { hr: 'Cijena, brzina, fleksibilnost i praćenje, te kada se koja opcija isplati.', en: 'Price, speed, flexibility and tracking, and when each option pays off.', de: 'Preis, Geschwindigkeit, Flexibilität und Verfolgung, und wann sich welche Option lohnt.' } },
+    { href: 'Blog%20-%20Paket%20nach%20Kroatien%20schicken.dc.html', lang: 'de',
+      tag: { hr: 'Deutsch', en: 'Deutsch', de: 'Deutsch' },
+      title: { hr: 'Paket nach Kroatien schicken, Ratgeber 2026', en: 'Paket nach Kroatien schicken, Ratgeber 2026', de: 'Paket nach Kroatien schicken, Ratgeber 2026' },
+      desc: { hr: 'Kosten, Dauer und Strecken aus Österreich, Deutschland und der Schweiz.', en: 'Kosten, Dauer und Strecken aus Österreich, Deutschland und der Schweiz.', de: 'Kosten, Dauer und Strecken aus Österreich, Deutschland und der Schweiz.' } },
+    { href: 'Blog%20-%20Kome%20koriste%20rute.dc.html', lang: 'hr',
+      tag: { hr: 'Korisnici', en: 'Users', de: 'Nutzer' },
+      title: { hr: 'Kome najviše koriste rute za slanje paketa', en: 'Who benefits most from these routes', de: 'Wem die Strecken am meisten nützen' },
+      desc: { hr: 'Dijaspora, studenti, sezonski radnici i ljudi koji rade izvan svojega grada.', en: 'The diaspora, students, seasonal workers and people working away from home.', de: 'Diaspora, Studierende, Saisonarbeiter und Menschen, die auswärts arbeiten.' } },
+    { href: 'Blog%20-%20Sto%20Hrvati%20u%20Becu%20salju%20doma.dc.html', lang: 'hr',
+      tag: { hr: 'Iskustva', en: 'Stories', de: 'Erfahrungen' },
+      title: { hr: 'Što dijaspora u Austriji šalje kući u Hrvatsku', en: 'What the diaspora in Austria sends home to Croatia', de: 'Was die Diaspora in Österreich nach Kroatien schickt' },
+      desc: { hr: 'Beč, Graz, Linz i Salzburg prema Hrvatskoj, što ide u obratnom smjeru i kako to zapakirati.', en: 'Vienna, Graz, Linz and Salzburg towards Croatia, what goes the other way and how to pack it.', de: 'Wien, Graz, Linz und Salzburg Richtung Kroatien, was zurückreist und wie man es verpackt.' } },
+    { href: 'Blog%20-%20Koliko%20kosta%20paket.dc.html', lang: 'hr',
+      tag: { hr: 'Cijene', en: 'Prices', de: 'Preise' },
+      title: { hr: 'Koliko stvarno košta poslati paket iz Austrije u Hrvatsku', en: 'What it really costs to send a package from Austria to Croatia', de: 'Was ein Paket von Österreich nach Kroatien wirklich kostet' },
+      desc: { hr: 'Usporedba tarife klasične dostave i dogovora s putnikom, na primjeru rute Beč–Zagreb.', en: 'Classic delivery tariffs compared with a traveller agreement, on the Vienna to Zagreb route.', de: 'Tarife der klassischen Zustellung im Vergleich zur Absprache mit einem Reisenden, Strecke Wien nach Zagreb.' } }
+  ];
+
+  componentWillUnmount() { if (this.off) this.off(); }
+
+  t() { return { ...this.STR.hr, ...(this.STR[this.state.lang] || {}) }; }
+
+  syncSeo() {
+    const lang = this.state.lang;
+    const t = this.t();
+    if (this.seoLang !== lang) {
+      this.seoLang = lang;
+      document.documentElement.setAttribute('lang', lang);
+      const meta = (attr, name, content) => {
+        let el = document.head.querySelector('meta[' + attr + '="' + name + '"]');
+        if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); }
+        el.setAttribute('content', content);
+      };
+      meta('name', 'description', t.desc);
+      meta('property', 'og:title', t.title);
+      meta('property', 'og:description', t.desc);
+      meta('property', 'og:locale', t.locale);
+      const bl = document.getElementById('senvia-blog-ld');
+      if (bl) bl.textContent = JSON.stringify({
+        '@context': 'https://schema.org', '@type': 'Blog',
+        name: 'Senvia blog', url: 'https://www.senviaapp.com/blog', inLanguage: lang,
+        publisher: { '@type': 'Organization', name: 'Senvia', url: 'https://www.senviaapp.com/' }
+      });
+    }
+    if (this.titleTimer) clearTimeout(this.titleTimer);
+    this.titleTimer = setTimeout(() => { if (document.title !== t.title) document.title = t.title; }, 60);
+    setTimeout(() => { if (document.title !== t.title) document.title = t.title; }, 400);
+  }
+
+  renderVals() {
+    this.syncSeo();
+    const lang = this.state.lang;
+    const pick = (o) => o[lang] || o.hr;
+    return {
+      t: this.t(),
+      posts: this.POSTS.map(p => ({ href: p.href, lang: p.lang, tag: pick(p.tag), title: pick(p.title), desc: pick(p.desc) }))
+    };
+  }
+
+  componentDidMount() {
+    import('./i18n.js').then(m => {
+      this.i18n = m;
+      this.setState({ lang: m.getLang() });
+      this.off = m.onLang(l => this.setState({ lang: l }));
+    });
+    const add = (id, data) => {
+      let el = document.getElementById(id);
+      if (!el) { el = document.createElement('script'); el.type = 'application/ld+json'; el.id = id; document.head.appendChild(el); }
+      el.textContent = JSON.stringify(data);
+    };
+    add('senvia-breadcrumb-ld', {
+      '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Početna', item: 'https://www.senviaapp.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.senviaapp.com/blog' }
+      ]
+    });
+    add('senvia-blog-ld', {
+      '@context': 'https://schema.org', '@type': 'Blog',
+      name: 'Senvia blog', url: 'https://www.senviaapp.com/blog', inLanguage: 'hr',
+      publisher: { '@type': 'Organization', name: 'Senvia', url: 'https://www.senviaapp.com/' }
+    });
+  }
+}
+</script>
+</body>
+</html>

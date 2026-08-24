@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta charset="utf-8">
+  <title>Brisanje računa u Senvia aplikaciji | Senvia</title>
+  <meta name="description" content="Kako trajno obrisati Senvia račun i sve povezane podatke. Brisanje ide kroz aplikaciju u tri koraka, a moguće je i zahtjevom na e-poštu.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.senviaapp.com/brisanje-racuna">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Senvia">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:title" content="Brisanje računa u Senvia aplikaciji | Senvia">
+  <meta property="og:description" content="Kako trajno obrisati Senvia račun i sve povezane podatke. Brisanje ide kroz aplikaciju u tri koraka, a moguće je i zahtjevom na e-poštu.">
+  <meta property="og:url" content="https://www.senviaapp.com/brisanje-racuna">
+  <meta property="og:image" content="https://www.senviaapp.com/uploads/1024x1024bb.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Brisanje računa u Senvia aplikaciji | Senvia">
+  <meta name="twitter:description" content="Kako trajno obrisati Senvia račun i sve povezane podatke. Brisanje ide kroz aplikaciju u tri koraka, a moguće je i zahtjevom na e-poštu.">
+  <meta name="twitter:image" content="https://www.senviaapp.com/uploads/1024x1024bb.png">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
+  <script>
+    window.SENVIA_GA_ID = 'G-H8DBTNDF62';
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H8DBTNDF62');
+    window.senviaLoadAnalytics = function () {
+      if (window.senviaGaLoaded || location.hostname.indexOf('senviaapp.com') === -1) return;
+      window.senviaGaLoaded = true;
+      var el = document.createElement('script');
+      el.setAttribute('async', '');
+      el.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + window.SENVIA_GA_ID);
+      document.head.appendChild(el);
+    };
+    try { if (localStorage.getItem('senvia-consent') === 'yes') window.senviaLoadAnalytics(); } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    a { color: #1a9e44; text-decoration: none; }
+    a:hover { color: #0e7c31; }
+    ::selection { background: #c9efd6; }
+    img { max-width: 100%; }
+  
+
+  </style>
+</helmet>
+
+<div style="overflow-x: clip; min-height: 100vh; display: flex; flex-direction: column">
+
+<dc-import name="Nav" active="" hint-size="100%,66px"></dc-import>
+
+<nav aria-label="breadcrumb" style="max-width: 720px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
+  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.title }}</span>
+</nav>
+
+<main style="width: 100%; max-width: 720px; margin: 0 auto; padding: clamp(32px, 5.5vw, 72px) clamp(16px, 4.0vw, 32px) clamp(43px, 7.4vw, 96px); box-sizing: border-box; flex: 1">
+  <div style="color: #1a9e44; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px">{{ t.kicker }}</div>
+  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 6.8vw, 42px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; text-wrap: balance">{{ t.title }}</h1>
+  <p style="font-size: 17px; line-height: 1.65; color: #3c5346; margin: 0 0 40px; text-wrap: pretty">{{ t.intro }}</p>
+
+  <div style="background: #f4faf6; border: 1px solid #e4efe7; border-radius: 22px; padding: 30px clamp(16px, 4.0vw, 32px); margin-bottom: 22px">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; margin: 0 0 20px">{{ t.inAppTitle }}</h2>
+    <div style="display: grid; gap: 16px">
+      <div style="display: flex; gap: 14px; align-items: flex-start">
+        <span style="width: 30px; height: 30px; border-radius: 10px; background: #2dbb54; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 14px; flex-shrink: 0">1</span>
+        <p style="margin: 3px 0 0; font-size: 15.5px; line-height: 1.55; color: #12261a">{{ t.step1 }}</p>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start">
+        <span style="width: 30px; height: 30px; border-radius: 10px; background: #2dbb54; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 14px; flex-shrink: 0">2</span>
+        <p style="margin: 3px 0 0; font-size: 15.5px; line-height: 1.55; color: #12261a">{{ t.step2 }}</p>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: flex-start">
+        <span style="width: 30px; height: 30px; border-radius: 10px; background: #2dbb54; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 14px; flex-shrink: 0">3</span>
+        <p style="margin: 3px 0 0; font-size: 15.5px; line-height: 1.55; color: #12261a">{{ t.step3 }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 14px; align-items: flex-start; background: #fff7f0; border: 1px solid #f5e0cc; border-radius: 18px; padding: 20px 22px; margin-bottom: 22px">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c97b2d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>
+    <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #7a4a17; text-wrap: pretty">{{ t.warning }}</p>
+  </div>
+
+  <div style="border: 1px solid #e4efe7; border-radius: 22px; padding: 30px clamp(16px, 4.0vw, 32px)">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; margin: 0 0 10px">{{ t.noAccessTitle }}</h2>
+    <p style="margin: 0 0 22px; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.noAccessDesc }}</p>
+    <a href="mailto:contact@senviaapp.com" style="display: inline-flex; align-items: center; gap: 10px; background: #2dbb54; color: #ffffff; font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: 13px" style-hover="background: #26a449">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"></rect><path d="M22 7l-10 7L2 7"></path></svg>
+      contact@senviaapp.com
+    </a>
+  </div>
+</main>
+
+<dc-import name="Podnozje" hint-size="100%,300px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;defaultLang&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;hr&quot;, &quot;en&quot;, &quot;de&quot;], &quot;default&quot;: &quot;hr&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Jezik&quot;}}">
+class Component extends DCLogic {
+  state = { lang: null };
+
+  STR = {
+    hr: {
+      back: 'Natrag na stranicu', kicker: 'Tvoj račun', title: 'Brisanje računa',
+      intro: 'Žao nam je što odlaziš. Svoj Senvia račun i sve povezane podatke možeš trajno izbrisati izravno u aplikaciji, u nekoliko koraka.',
+      inAppTitle: 'Brisanje u aplikaciji',
+      step1: 'Otvori aplikaciju Senvia i prijavi se na svoj račun.',
+      step2: 'Otvori Profil, a zatim Postavke.',
+      step3: 'Odaberi Izbriši račun i potvrdi brisanje.',
+      warning: 'Brisanje je trajno i ne može se poništiti. Uklanjaju se tvoj profil, pošiljke, poruke i ocjene.',
+      noAccessTitle: 'Nemaš pristup aplikaciji?',
+      noAccessDesc: 'Pošalji nam zahtjev za brisanje s e-mail adrese povezane s tvojim računom i obradit ćemo ga u najkraćem roku.',
+      rights: 'Sva prava pridržana.'
+    },
+    en: {
+      back: 'Back to site', kicker: 'Your account', title: 'Account deletion',
+      intro: 'Sorry to see you go. You can permanently delete your Senvia account and all associated data directly in the app, in a few steps.',
+      inAppTitle: 'Delete in the app',
+      step1: 'Open the Senvia app and sign in to your account.',
+      step2: 'Go to Profile, then Settings.',
+      step3: 'Choose Delete account and confirm.',
+      warning: 'Deletion is permanent and cannot be undone. Your profile, shipments, messages and ratings will be removed.',
+      noAccessTitle: 'Can’t access the app?',
+      noAccessDesc: 'Send us a deletion request from the email address linked to your account and we will process it as soon as possible.',
+      rights: 'All rights reserved.'
+    },
+    de: {
+      back: 'Zurück zur Seite', kicker: 'Dein Konto', title: 'Konto löschen',
+      intro: 'Schade, dass du gehst. Dein Senvia Konto und alle damit verbundenen Daten kannst du in wenigen Schritten direkt in der App dauerhaft löschen.',
+      inAppTitle: 'Löschen in der App',
+      step1: 'Öffne die Senvia App und melde dich bei deinem Konto an.',
+      step2: 'Gehe zu Profil und danach zu Einstellungen.',
+      step3: 'Wähle Konto löschen und bestätige die Löschung.',
+      warning: 'Die Löschung ist endgültig und kann nicht rückgängig gemacht werden. Profil, Sendungen, Nachrichten und Bewertungen werden entfernt.',
+      noAccessTitle: 'Kein Zugriff auf die App?',
+      noAccessDesc: 'Schicke uns die Löschanfrage von der E-Mail-Adresse, die mit deinem Konto verknüpft ist, wir bearbeiten sie so schnell wie möglich.',
+      rights: 'Alle Rechte vorbehalten.'
+    }
+  };
+
+
+  addBreadcrumbLd() {
+    let bc = document.getElementById('senvia-breadcrumb-ld');
+    if (!bc) { bc = document.createElement('script'); bc.type = 'application/ld+json'; bc.id = 'senvia-breadcrumb-ld'; document.head.appendChild(bc); }
+    bc.textContent = JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+      itemListElement: [{"@type":"ListItem","position":1,"name":"Senvia","item":"https://www.senviaapp.com/"},{"@type":"ListItem","position":2,"name":"Brisanje računa","item":"https://www.senviaapp.com/brisanje-racuna"}]
+    });
+  }
+  componentDidMount() {
+    this.addBreadcrumbLd();
+    import('./i18n.js').then(m => {
+      this.i18n = m;
+      this.setState({ lang: m.getLang() });
+      this.off = m.onLang(l => this.setState({ lang: l }));
+    });
+  }
+  componentWillUnmount() { if (this.off) this.off(); }
+
+  getLang() { return this.state.lang || (this.props.defaultLang ?? 'hr'); }
+  setLang(l) { if (this.i18n) this.i18n.setLang(l); else this.setState({ lang: l }); }
+
+  renderVals() {
+    const lang = this.getLang();
+    const t = { ...this.STR.hr, ...(this.STR[lang] || {}) };
+    const pill = { border: 'none', cursor: 'pointer', fontFamily: "'Instrument Sans', sans-serif", fontWeight: 700, fontSize: '13px', padding: '5px 12px', borderRadius: '999px', transition: 'all .2s' };
+    return {
+      t,
+      setHr: () => this.setLang('hr'), setEn: () => this.setLang('en'),
+      hrBtnStyle: { ...pill, background: lang === 'hr' ? '#12261a' : 'transparent', color: lang === 'hr' ? '#ffffff' : '#3c5346' },
+      enBtnStyle: { ...pill, background: lang === 'en' ? '#12261a' : 'transparent', color: lang === 'en' ? '#ffffff' : '#3c5346' }
+    };
+  }
+}
+</script>
+</body>
+</html>

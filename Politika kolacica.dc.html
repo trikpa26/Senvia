@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta charset="utf-8">
+  <title>Politika kolačića | Senvia</title>
+  <meta name="description" content="Saznaj koje kolačiće Senvia koristi i kako upravljati postavkama kolačića.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://www.senviaapp.com/politika-kolacica">
+</helmet>
+<dc-import name="Pravni dokument" doc="{{ doc }}" self="cookies" hint-size="100%,100%"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  renderVals() {
+    return { doc: {
+      urls: {
+        hr: 'https://www.senviaapp.com/politika-kolacica',
+        en: 'https://www.senviaapp.com/cookie-policy',
+        de: 'https://www.senviaapp.com/cookie-richtlinie'
+      },
+      hr: {
+        title: 'Politika kolačića | Senvia',
+        desc: 'Saznaj koje kolačiće Senvia koristi i kako upravljati postavkama kolačića.',
+        crumb: 'Politika kolačića',
+        h1: 'Politika kolačića',
+        updated: 'Zadnje ažuriranje: kolovoz 2026.',
+        lead: 'Koristimo dvije vrste kolačića. Nužne, bez kojih stranica ne radi, i analitičke, koji se uključuju samo ako ih sam prihvatiš. Ovdje piše koji su to točno i kako predomisliti se.',
+        contactTitle: 'Pitanja o kolačićima',
+        contactText: 'Pristanak možeš povući u bilo kojem trenutku, preko postavki kolačića u podnožju stranice ili pisanjem na našu adresu.',
+        contactMail: 'privacy@senviaapp.com',
+        sections: [
+          { h: 'Što su kolačići',
+            p: 'Kolačići su male tekstualne datoteke koje se pohranjuju na tvom uređaju kad posjetiš web stranicu. Pomažu nam da stranica ispravno radi i da razumijemo kako je koristiš.' },
+          { h: 'Nužni kolačići, uvijek aktivni',
+            p: 'Ove kolačiće ne možeš isključiti jer bez njih stranica ne radi. Ne prikupljaju osobne podatke.',
+            rows: [['Naziv', 'senvia-consent'], ['Svrha', 'Pamti tvoj odabir o kolačićima'], ['Trajanje', '12 mjeseci'], ['Upravljač', 'Senvia']] },
+          { h: 'Analitički kolačići, samo uz pristanak',
+            p: 'Postavljaju se samo ako ih prihvatiš. Pomažu nam razumjeti kako se stranica koristi, a podaci su anonimni.',
+            rows: [
+              ['Naziv', '_ga, _ga_H8DBTNDF62'],
+              ['Svrha', 'Google Analytics, mjerenje posjeta'],
+              ['Trajanje', '2 godine za _ga, 1 godina za _ga_H8DBTNDF62'],
+              ['Upravljač', 'Google Ireland Limited']
+            ],
+            note: 'IP adrese se anonimiziraju unutar Europske unije. Podaci se mogu prenositi u Sjedinjene Američke Države na temelju standardnih ugovornih klauzula Europske unije. Više na policies.google.com/privacy.' },
+          { h: 'Kako upravljaš kolačićima',
+            p: 'Kad prvi put posjetiš stranicu, ponudimo ti dva izbora: Prihvaćam sve, čime prihvaćaš i analitičke kolačiće, ili Samo neophodno, čime ostaju samo nužni. Odabir možeš promijeniti u bilo kojem trenutku klikom na Postavke kolačića u podnožju stranice.',
+            list: [
+              'Chrome: support.google.com/chrome/answer/95647',
+              'Firefox: support.mozilla.org/kb/cookies',
+              'Safari: support.apple.com/guide/safari/manage-cookies'
+            ],
+            note: 'Kolačiće možeš isključiti i u samom pregledniku, preko poveznica iznad.' },
+          { h: 'Tvoja prava',
+            p: 'Imaš pravo povući pristanak u bilo kojem trenutku, bez obrazloženja i bez posljedica. Ako smatraš da postupamo protivno propisima, možeš se obratiti nadzornom tijelu.',
+            rows: [['Hrvatska', 'AZOP, azop.hr'], ['Austrija', 'DSB, dsb.gv.at'], ['Njemačka', 'BfDI, bfdi.bund.de']] },
+          { h: 'Promjene politike',
+            p: 'O promjenama ćemo te obavijestiti na ovoj stranici. Datum zadnjeg ažuriranja uvijek stoji na vrhu dokumenta.' }
+        ]
+      },
+      en: {
+        title: 'Cookie policy | Senvia',
+        desc: 'Learn which cookies Senvia uses and how to manage your cookie settings.',
+        crumb: 'Cookie policy',
+        h1: 'Cookie policy',
+        updated: 'Last updated: August 2026',
+        lead: 'We use two kinds of cookies. Essential ones, without which the site does not work, and analytics ones, which are switched on only if you accept them. This page says exactly which they are and how to change your mind.',
+        contactTitle: 'Questions about cookies',
+        contactText: 'You can withdraw consent at any time, through cookie settings in the footer or by writing to us.',
+        contactMail: 'privacy@senviaapp.com',
+        sections: [
+          { h: 'What cookies are',
+            p: 'Cookies are small text files stored on your device when you visit a website. They help the site work properly and help us understand how you use it.' },
+          { h: 'Essential cookies, always on',
+            p: 'You cannot switch these off, because without them the site does not work. They do not collect personal data.',
+            rows: [['Name', 'senvia-consent'], ['Purpose', 'Remembers your cookie choice'], ['Duration', '12 months'], ['Controller', 'Senvia']] },
+          { h: 'Analytics cookies, only with consent',
+            p: 'These are set only if you accept them. They help us understand how the site is used, and the data is anonymous.',
+            rows: [
+              ['Name', '_ga, _ga_H8DBTNDF62'],
+              ['Purpose', 'Google Analytics, traffic measurement'],
+              ['Duration', '2 years for _ga, 1 year for _ga_H8DBTNDF62'],
+              ['Controller', 'Google Ireland Limited']
+            ],
+            note: 'IP addresses are anonymised within the European Union. Data may be transferred to the United States under the EU standard contractual clauses. More at policies.google.com/privacy.' },
+          { h: 'How you manage cookies',
+            p: 'On your first visit we offer two choices: Accept all, which includes analytics cookies, or Only essential, which keeps just the necessary ones. You can change your choice at any time by clicking Cookie settings in the footer.',
+            list: [
+              'Chrome: support.google.com/chrome/answer/95647',
+              'Firefox: support.mozilla.org/kb/cookies',
+              'Safari: support.apple.com/guide/safari/manage-cookies'
+            ],
+            note: 'You can also disable cookies in your browser, through the links above.' },
+          { h: 'Your rights',
+            p: 'You have the right to withdraw consent at any time, without giving a reason and without consequences. If you believe we are acting unlawfully, you can contact a supervisory authority.',
+            rows: [['Croatia', 'AZOP, azop.hr'], ['Austria', 'DSB, dsb.gv.at'], ['Germany', 'BfDI, bfdi.bund.de']] },
+          { h: 'Changes to this policy',
+            p: 'We will announce changes on this page. The date of the last update is always at the top of the document.' }
+        ]
+      },
+      de: {
+        title: 'Cookie-Richtlinie | Senvia',
+        desc: 'Erfahre, welche Cookies Senvia verwendet und wie du deine Cookie-Einstellungen verwaltest.',
+        crumb: 'Cookie-Richtlinie',
+        h1: 'Cookie-Richtlinie',
+        updated: 'Zuletzt aktualisiert: August 2026',
+        lead: 'Wir verwenden zwei Arten von Cookies. Notwendige, ohne die die Seite nicht funktioniert, und Analyse-Cookies, die nur aktiviert werden, wenn du sie annimmst. Hier steht genau, welche das sind und wie du deine Meinung änderst.',
+        contactTitle: 'Fragen zu Cookies',
+        contactText: 'Du kannst deine Einwilligung jederzeit widerrufen, über die Cookie-Einstellungen in der Fußzeile oder schriftlich an uns.',
+        contactMail: 'privacy@senviaapp.com',
+        sections: [
+          { h: 'Was Cookies sind',
+            p: 'Cookies sind kleine Textdateien, die beim Besuch einer Website auf deinem Gerät gespeichert werden. Sie sorgen dafür, dass die Seite richtig funktioniert, und helfen uns zu verstehen, wie du sie nutzt.' },
+          { h: 'Notwendige Cookies, immer aktiv',
+            p: 'Diese Cookies kannst du nicht abschalten, denn ohne sie funktioniert die Seite nicht. Sie erheben keine personenbezogenen Daten.',
+            rows: [['Name', 'senvia-consent'], ['Zweck', 'Speichert deine Cookie-Entscheidung'], ['Dauer', '12 Monate'], ['Verantwortlich', 'Senvia']] },
+          { h: 'Analyse-Cookies, nur mit Einwilligung',
+            p: 'Sie werden nur gesetzt, wenn du sie annimmst. Sie helfen uns zu verstehen, wie die Seite genutzt wird, die Daten sind anonym.',
+            rows: [
+              ['Name', '_ga, _ga_H8DBTNDF62'],
+              ['Zweck', 'Google Analytics, Reichweitenmessung'],
+              ['Dauer', '2 Jahre für _ga, 1 Jahr für _ga_H8DBTNDF62'],
+              ['Verantwortlich', 'Google Ireland Limited']
+            ],
+            note: 'IP-Adressen werden innerhalb der Europäischen Union anonymisiert. Daten können auf Grundlage der EU-Standardvertragsklauseln in die Vereinigten Staaten übermittelt werden. Mehr unter policies.google.com/privacy.' },
+          { h: 'Wie du Cookies verwaltest',
+            p: 'Beim ersten Besuch bieten wir dir zwei Möglichkeiten: Alle akzeptieren, womit auch Analyse-Cookies eingeschlossen sind, oder Nur notwendige, womit nur die erforderlichen bleiben. Deine Entscheidung kannst du jederzeit über Cookie-Einstellungen in der Fußzeile ändern.',
+            list: [
+              'Chrome: support.google.com/chrome/answer/95647',
+              'Firefox: support.mozilla.org/kb/cookies',
+              'Safari: support.apple.com/guide/safari/manage-cookies'
+            ],
+            note: 'Du kannst Cookies auch direkt im Browser deaktivieren, über die Links oben.' },
+          { h: 'Deine Rechte',
+            p: 'Du hast das Recht, deine Einwilligung jederzeit ohne Begründung und ohne Nachteile zu widerrufen. Wenn du der Ansicht bist, dass wir rechtswidrig handeln, kannst du dich an eine Aufsichtsbehörde wenden.',
+            rows: [['Kroatien', 'AZOP, azop.hr'], ['Österreich', 'DSB, dsb.gv.at'], ['Deutschland', 'BfDI, bfdi.bund.de']] },
+          { h: 'Änderungen dieser Richtlinie',
+            p: 'Änderungen geben wir auf dieser Seite bekannt. Das Datum der letzten Aktualisierung steht immer oben im Dokument.' }
+        ]
+      }
+    } };
+  }
+}
+</script>
+</body>
+</html>

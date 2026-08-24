@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Rutne stranice (/slanje-paketa/*) generiraju se iz feeda aktivnih ruta; ruta bez aktivnih putnika ne ulazi u sitemap. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url><loc>https://www.senviaapp.com/</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.senviaapp.com/austrija-hrvatska</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.senviaapp.com/kako-radi</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.senviaapp.com/sigurnost</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.senviaapp.com/faq</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.senviaapp.com/blog</loc><lastmod>2026-08-05</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/blog/kako-poslati-paket-u-austriju</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority><xhtml:link rel="alternate" hreflang="hr" href="https://www.senviaapp.com/blog/kako-poslati-paket-u-austriju"/><xhtml:link rel="alternate" hreflang="de" href="https://www.senviaapp.com/blog/paket-nach-kroatien-schicken"/></url>
+  <url><loc>https://www.senviaapp.com/blog/senvia-ili-klasicna-dostava</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/blog/paket-nach-kroatien-schicken</loc><lastmod>2026-08-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority><xhtml:link rel="alternate" hreflang="hr" href="https://www.senviaapp.com/blog/kako-poslati-paket-u-austriju"/><xhtml:link rel="alternate" hreflang="de" href="https://www.senviaapp.com/blog/paket-nach-kroatien-schicken"/></url>
+  <url><loc>https://www.senviaapp.com/blog/kome-koriste-rute</loc><lastmod>2026-08-07</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/blog/sto-hrvati-u-becu-salju-doma</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.senviaapp.com/blog/koliko-kosta-slanje-paketa</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq><priority>0.5</priority></url>
+  <url><loc>https://www.senviaapp.com/account-deletion</loc><lastmod>2026-08-05</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.senviaapp.com/partneri</loc><lastmod>2026-08-08</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/za-tvrtke</loc><lastmod>2026-08-08</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.senviaapp.com/popularne-rute</loc><lastmod>2026-08-06</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.senviaapp.com/usporedba-s-klasicnom-dostavom</loc><lastmod>2026-08-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.senviaapp.com/blog/slanje-paketa-unutar-hrvatske</loc><lastmod>2026-08-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.senviaapp.com/blog/dijaspora-paket-doma</loc><lastmod>2026-08-06</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/zurich-split</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/basel-rijeka</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/stuttgart-zadar</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/munchen-pula</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/split-dubrovnik</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/rijeka-zadar</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/osijek-split</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/varazdin-split</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/bec-zagreb</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/graz-zagreb</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/bec-osijek</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/osijek-graz</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/munchen-split</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/graz-varazdin</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/bec-rijeka</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/linz-split</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/klagenfurt-zagreb</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/bec-varazdin</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/salzburg-zagreb</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/munchen-zagreb</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/zagreb-split</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/zagreb-rijeka</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/zagreb-osijek</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.senviaapp.com/slanje-paketa/stuttgart-zagreb</loc><lastmod>2026-08-08</lastmod><changefreq>daily</changefreq><priority>0.6</priority></url>
+</urlset>

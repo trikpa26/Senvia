@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, follow">
+  <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
+  <script>
+    window.SENVIA_GA_ID = 'G-H8DBTNDF62';
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H8DBTNDF62');
+    window.senviaLoadAnalytics = function () {
+      if (window.senviaGaLoaded || location.hostname.indexOf('senviaapp.com') === -1) return;
+      window.senviaGaLoaded = true;
+      var el = document.createElement('script');
+      el.setAttribute('async', '');
+      el.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + window.SENVIA_GA_ID);
+      document.head.appendChild(el);
+    };
+    try { if (localStorage.getItem('senvia-consent') === 'yes') window.senviaLoadAnalytics(); } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    a { color: #1a9e44; text-decoration: none; }
+    a:hover { color: #0e7c31; }
+    ::selection { background: #c9efd6; }
+    img { max-width: 100%; }
+  </style>
+</helmet>
+
+<div style="overflow-x: clip">
+
+<dc-import name="Nav" hint-size="100%,66px"></dc-import>
+
+<nav aria-label="breadcrumb" style="max-width: 860px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
+  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ d.crumb }}</span>
+</nav>
+
+<article style="max-width: 860px; margin: 0 auto; padding: 30px clamp(16px, 4.0vw, 32px) clamp(32px, 5.5vw, 72px)">
+  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 7.2vw, 44px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 12px; text-wrap: balance">{{ d.h1 }}</h1>
+  <p style="display: inline-block; margin: 0 0 14px; font-size: 14px; font-weight: 600; color: #167a38; background: #e8f7ee; border-radius: 999px; padding: 7px 15px">{{ d.updated }}</p>
+  <p style="font-size: 18px; line-height: 1.65; color: #3c5346; margin: 0 0 clamp(26px, 4vw, 40px); max-width: 66ch; text-wrap: pretty">{{ d.lead }}</p>
+
+  <nav aria-label="{{ d.tocLabel }}" style="background: #f7fbf8; border: 1px solid #e4efe7; border-radius: 20px; padding: 22px clamp(16px, 3vw, 26px); margin-bottom: clamp(28px, 4vw, 44px)">
+    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1a9e44; margin-bottom: 14px">{{ d.tocLabel }}</div>
+    <ol style="margin: 0; padding-left: 0; list-style: none; display: grid; gap: 8px; font-size: 15.5px; line-height: 1.5; color: #3c5346">
+      <sc-for list="{{ toc }}" as="s" hint-placeholder-count="6">
+        <li><a href="{{ s.href }}">{{ s.h }}</a></li>
+      </sc-for>
+    </ol>
+  </nav>
+
+  <sc-for list="{{ sections }}" as="s" hint-placeholder-count="7">
+    <section id="{{ s.id }}" style="margin-bottom: clamp(26px, 3.6vw, 40px); scroll-margin-top: 90px">
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.2vw, 27px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance">{{ s.h }}</h2>
+      <sc-if value="{{ s.hasP }}" hint-placeholder-val="{{ true }}">
+        <p style="margin: 0 0 14px; font-size: 16.5px; line-height: 1.72; color: #29402f; text-wrap: pretty">{{ s.p }}</p>
+      </sc-if>
+      <sc-if value="{{ s.hasList }}" hint-placeholder-val="{{ false }}">
+        <ul style="margin: 0 0 14px; padding-left: 22px; display: grid; gap: 8px; font-size: 16.5px; line-height: 1.6; color: #29402f">
+          <sc-for list="{{ s.list }}" as="i" hint-placeholder-count="3">
+            <li style="text-wrap: pretty">{{ i.text }}</li>
+          </sc-for>
+        </ul>
+      </sc-if>
+      <sc-if value="{{ s.hasRows }}" hint-placeholder-val="{{ false }}">
+        <div style="border: 1px solid #e4efe7; border-radius: 18px; overflow: hidden; margin: 0 0 14px">
+          <sc-for list="{{ s.rows }}" as="r" hint-placeholder-count="3">
+            <div style="display: grid; grid-template-columns: minmax(110px, 0.9fr) minmax(0, 2fr); gap: 4px 18px; padding: 14px clamp(14px, 2.6vw, 20px); border-bottom: 1px solid #eef5f0; background: #ffffff">
+              <span style="font-size: 14.5px; font-weight: 600; color: #6b8272; overflow-wrap: anywhere">{{ r.k }}</span>
+              <span style="font-size: 15.5px; line-height: 1.55; color: #12261a; text-wrap: pretty; overflow-wrap: anywhere">{{ r.v }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </sc-if>
+      <sc-if value="{{ s.hasNote }}" hint-placeholder-val="{{ false }}">
+        <p style="margin: 0; font-size: 15px; line-height: 1.65; color: #6b8272; text-wrap: pretty">{{ s.note }}</p>
+      </sc-if>
+    </section>
+  </sc-for>
+
+  <div style="background: #f4faf6; border: 1px solid #e4efe7; border-radius: 22px; padding: 26px clamp(16px, 4.0vw, 30px); margin-top: 30px">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; margin: 0 0 10px">{{ d.contactTitle }}</h2>
+    <p style="margin: 0 0 16px; font-size: 16px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ d.contactText }}</p>
+    <a href="mailto:{{ d.contactMail }}" style="font-size: 16.5px; font-weight: 600">{{ d.contactMail }}</a>
+  </div>
+
+  <div style="margin-top: 30px; display: flex; gap: 20px; flex-wrap: wrap; font-size: 15px">
+    <sc-for list="{{ related }}" as="r" hint-placeholder-count="2">
+      <a href="{{ r.href }}">{{ r.label }}</a>
+    </sc-for>
+  </div>
+</article>
+
+<dc-import name="Podnozje" hint-size="100%,340px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;doc&quot;: {&quot;editor&quot;: null, &quot;tsType&quot;: &quot;object&quot;}, &quot;self&quot;: {&quot;editor&quot;: null, &quot;tsType&quot;: &quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { lang: 'hr' };
+
+  REL = {
+    privacy: { hr: 'Politika privatnosti', en: 'Privacy policy', de: 'Datenschutzerklärung', href: 'Politika%20privatnosti.dc.html' },
+    cookies: { hr: 'Politika kolačića', en: 'Cookie policy', de: 'Cookie-Richtlinie', href: 'Politika%20kolacica.dc.html' },
+    terms: { hr: 'Uvjeti korištenja', en: 'Terms of service', de: 'Nutzungsbedingungen', href: 'Uvjeti%20koristenja.dc.html' },
+    del: { hr: 'Brisanje računa', en: 'Delete account', de: 'Konto löschen', href: 'Senvia%20Account%20Deletion.dc.html' }
+  };
+  TOC = { hr: 'Sadržaj', en: 'Contents', de: 'Inhalt' };
+
+  componentDidMount() {
+    import('./i18n.js').then(m => {
+      this.i18n = m;
+      this.setState({ lang: m.getLang() });
+      this.off = m.onLang(l => this.setState({ lang: l }));
+    });
+  }
+  componentWillUnmount() { if (this.off) this.off(); }
+
+  doc() {
+    const raw = this.props.doc || {};
+    return raw[this.state.lang] || raw.hr || {};
+  }
+
+  writeMeta() {
+    const raw = this.props.doc || {};
+    const d = this.doc();
+    if (!d.title) return;
+    const lang = raw[this.state.lang] ? this.state.lang : 'hr';
+    const head = document.head;
+    const urls = raw.urls || {};
+    const url = urls[lang] || urls.hr || 'https://www.senviaapp.com/';
+    const img = 'https://www.senviaapp.com/uploads/1024x1024bb.png';
+
+    document.title = d.title;
+    document.documentElement.setAttribute('lang', lang);
+
+    const setMeta = (name, val) => {
+      let el = head.querySelector('meta[name="' + name + '"]');
+      if (!el) { el = document.createElement('meta'); el.setAttribute('name', name); head.appendChild(el); }
+      el.setAttribute('content', val);
+    };
+    const setOg = (prop, val) => {
+      let el = head.querySelector('meta[property="' + prop + '"]');
+      if (!el) { el = document.createElement('meta'); el.setAttribute('property', prop); head.appendChild(el); }
+      el.setAttribute('content', val);
+    };
+    const setLink = (rel, href, type) => {
+      let el = head.querySelector('link[rel="' + rel + '"]');
+      if (!el) { el = document.createElement('link'); el.setAttribute('rel', rel); if (type) el.setAttribute('type', type); head.appendChild(el); }
+      el.setAttribute('href', href);
+    };
+
+    setMeta('description', d.desc);
+    setMeta('robots', 'noindex, follow');
+    setLink('canonical', url);
+    setLink('sitemap', '/sitemap.xml', 'application/xml');
+
+    head.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => el.remove());
+    Object.keys(urls).forEach(code => {
+      const el = document.createElement('link');
+      el.setAttribute('rel', 'alternate');
+      el.setAttribute('hreflang', code);
+      el.setAttribute('href', urls[code]);
+      head.appendChild(el);
+    });
+
+    setOg('og:type', 'website');
+    setOg('og:site_name', 'Senvia');
+    setOg('og:locale', lang === 'de' ? 'de_DE' : (lang === 'en' ? 'en_GB' : 'hr_HR'));
+    setOg('og:title', d.title);
+    setOg('og:description', d.desc);
+    setOg('og:url', url);
+    setOg('og:image', img);
+    setMeta('twitter:card', 'summary_large_image');
+    setMeta('twitter:title', d.title);
+    setMeta('twitter:description', d.desc);
+    setMeta('twitter:image', img);
+
+    let ld = document.getElementById('senvia-legal-ld');
+    if (!ld) { ld = document.createElement('script'); ld.type = 'application/ld+json'; ld.id = 'senvia-legal-ld'; head.appendChild(ld); }
+    ld.textContent = JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'WebPage',
+      name: d.h1, url, description: d.desc, inLanguage: lang,
+      isPartOf: { '@type': 'WebSite', name: 'Senvia', url: 'https://www.senviaapp.com/' },
+      publisher: { '@type': 'Organization', name: 'Senvia', logo: { '@type': 'ImageObject', url: img } }
+    });
+
+    let bc = document.getElementById('senvia-breadcrumb-ld');
+    if (!bc) { bc = document.createElement('script'); bc.type = 'application/ld+json'; bc.id = 'senvia-breadcrumb-ld'; head.appendChild(bc); }
+    bc.textContent = JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Senvia', item: 'https://www.senviaapp.com/' },
+        { '@type': 'ListItem', position: 2, name: d.crumb || d.h1, item: url }
+      ]
+    });
+  }
+
+  syncMeta() {
+    this.writeMeta();
+    if (this.metaTimer) clearTimeout(this.metaTimer);
+    this.metaTimer = setTimeout(() => this.writeMeta(), 80);
+    setTimeout(() => this.writeMeta(), 500);
+  }
+
+  renderVals() {
+    this.syncMeta();
+    const d = this.doc();
+    const lang = (this.props.doc || {})[this.state.lang] ? this.state.lang : 'hr';
+    const src = d.sections || [];
+    const sections = src.map((s, i) => ({
+      id: 'sekcija-' + (i + 1),
+      h: (i + 1) + '. ' + s.h,
+      p: s.p, hasP: !!s.p,
+      list: (s.list || []).map(text => ({ text })), hasList: !!(s.list && s.list.length),
+      rows: (s.rows || []).map(r => ({ k: r[0], v: r[1] })), hasRows: !!(s.rows && s.rows.length),
+      note: s.note, hasNote: !!s.note
+    }));
+    const skip = this.props.self || '';
+    return {
+      d: { ...d, tocLabel: this.TOC[lang] || this.TOC.hr },
+      sections,
+      toc: sections.map(s => ({ h: s.h, href: '#' + s.id })),
+      related: Object.keys(this.REL).filter(k => k !== skip)
+        .map(k => ({ href: this.REL[k].href, label: this.REL[k][lang] || this.REL[k].hr }))
+    };
+  }
+}
+</script>
+</body>
+</html>

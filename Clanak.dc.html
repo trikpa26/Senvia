@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    a { color: #1a9e44; text-decoration: none; }
+    a:hover { color: #0e7c31; }
+    ::selection { background: #c9efd6; }
+    img { max-width: 100%; }
+  
+
+  </style>
+</helmet>
+
+<div style="overflow-x: clip">
+
+<dc-import name="Nav" active="blog" hint-size="100%,66px"></dc-import>
+
+<nav aria-label="breadcrumb" style="max-width: 820px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
+  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><a href="Blog.dc.html" style="color: #6b8272">Blog</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ a.tag }}</span>
+</nav>
+
+<article style="max-width: 820px; margin: 0 auto; padding: 32px clamp(16px, 4.0vw, 32px) clamp(32px, 5.5vw, 72px)">
+  <span style="display: inline-block; background: #e8f7ee; color: #167a38; font-weight: 700; font-size: 12.5px; padding: 5px 12px; border-radius: 999px; margin-bottom: 18px">{{ a.tag }}</span>
+  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(27px, 7.4vw, 46px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 16px; text-wrap: balance">{{ a.h1 }}</h1>
+  <p style="font-size: 20px; line-height: 1.6; color: #3c5346; margin: 0 0 32px; text-wrap: pretty">{{ a.lead }}</p>
+  <sc-for list="{{ blocks }}" as="b" hint-placeholder-count="5">
+    <div style="margin-bottom: 26px">
+      <sc-if value="{{ b.heading }}" hint-placeholder-val="{{ true }}">
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.2vw, 26px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance">{{ b.heading }}</h2>
+      </sc-if>
+      <p style="margin: 0; font-size: 17px; line-height: 1.72; color: #29402f; text-wrap: pretty">{{ b.text }}</p>
+    </div>
+  </sc-for>
+  <div style="background: #f4faf6; border: 1px solid #e4efe7; border-radius: 22px; padding: 28px clamp(16px, 4.0vw, 32px); margin-top: 36px">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; margin: 0 0 10px">{{ a.ctaTitle }}</h2>
+    <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #3c5346">{{ a.ctaText }}</p>
+    <div style="display: flex; gap: 12px">
+      <a href="https://apps.apple.com/us/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="uploads/Download_on_the_App_Store_Badge.svg.webp" alt="Preuzmi Senvia aplikaciju u App Storeu" height="46" style="display: block; border-radius: 9px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Preuzmi Senvia aplikaciju na Google Playu" height="46" style="display: block; border-radius: 9px"></a>
+    </div>
+  </div>
+  <div style="margin-top: 34px; display: flex; gap: 20px; font-size: 15px">
+    <a href="Blog.dc.html">{{ backLabel }}</a>
+    <a href="{{ a.relHref }}">{{ a.relTitle }}</a>
+  </div>
+</article>
+
+<dc-import name="Podnozje" hint-size="100%,300px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;article&quot;: {&quot;editor&quot;: null, &quot;tsType&quot;: &quot;object&quot;}
+}">
+class Component extends DCLogic {
+  componentDidMount() { this.applyMeta(); }
+  componentDidUpdate() { this.applyMeta(); }
+  // Zaglavlje se ponovno upisuje nakon iscrtavanja jer runtime vraća vrijednosti iz helmeta.
+  applyMeta() {
+    this.writeMeta();
+    if (this.metaTimer) clearTimeout(this.metaTimer);
+    this.metaTimer = setTimeout(() => this.writeMeta(), 80);
+    setTimeout(() => this.writeMeta(), 500);
+  }
+  writeMeta() {
+    const a = this.props.article;
+    if (!a) return;
+    const head = document.head;
+    const url = a.senviaUrl || 'https://www.senviaapp.com/blog';
+    const img = 'https://www.senviaapp.com/uploads/1024x1024bb.png';
+    document.title = a.title;
+
+    const setMeta = (name, val) => {
+      let el = head.querySelector('meta[name="' + name + '"]');
+      if (!el) { el = document.createElement('meta'); el.setAttribute('name', name); head.appendChild(el); }
+      el.setAttribute('content', val);
+    };
+    const setOg = (prop, val) => {
+      let el = head.querySelector('meta[property="' + prop + '"]');
+      if (!el) { el = document.createElement('meta'); el.setAttribute('property', prop); head.appendChild(el); }
+      el.setAttribute('content', val);
+    };
+    const setLink = (rel, href, type) => {
+      let el = head.querySelector('link[rel="' + rel + '"]');
+      if (!el) { el = document.createElement('link'); el.setAttribute('rel', rel); if (type) el.setAttribute('type', type); head.appendChild(el); }
+      el.setAttribute('href', href);
+    };
+
+    setMeta('description', a.description);
+    setMeta('robots', 'index, follow');
+    setLink('canonical', url);
+    setLink('sitemap', '/sitemap.xml', 'application/xml');
+
+    // hreflang skup, uključujući samoreferencu, jer helmet zadržava samo jednu takvu vezu
+    const lang = a.lang || 'hr';
+    const alts = Object.assign({}, a.alternates || {});
+    alts[lang] = url;
+    document.documentElement.setAttribute('lang', lang);
+    head.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => el.remove());
+    Object.keys(alts).forEach(code => {
+      const el = document.createElement('link');
+      el.setAttribute('rel', 'alternate');
+      el.setAttribute('hreflang', code);
+      el.setAttribute('href', alts[code]);
+      head.appendChild(el);
+    });
+    setOg('og:type', 'article');
+    setOg('og:locale', a.lang === 'de' ? 'de_DE' : (a.lang === 'en' ? 'en_GB' : 'hr_HR'));
+    setOg('og:site_name', 'Senvia');
+    setOg('og:title', a.h1 || a.title);
+    setOg('og:description', a.description);
+    setOg('og:url', url);
+    setOg('og:image', img);
+    setMeta('twitter:card', 'summary_large_image');
+    setMeta('twitter:title', a.title || a.h1);
+    setMeta('twitter:description', a.description || '');
+    setMeta('twitter:image', img);
+
+    let ld = document.getElementById('senvia-article-ld');
+    if (!ld) { ld = document.createElement('script'); ld.type = 'application/ld+json'; ld.id = 'senvia-article-ld'; head.appendChild(ld); }
+    ld.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: a.h1 || a.title,
+      description: a.description,
+      image: img,
+      datePublished: a.datePublished || '2026-08-05',
+      dateModified: a.datePublished || '2026-08-05',
+      inLanguage: a.lang || 'hr',
+      mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+      author: { '@type': 'Organization', name: 'Senvia', url: 'https://www.senviaapp.com/' },
+      publisher: { '@type': 'Organization', name: 'Senvia', logo: { '@type': 'ImageObject', url: img } }
+    });
+
+    let bc = document.getElementById('senvia-breadcrumb-ld');
+    if (!bc) { bc = document.createElement('script'); bc.type = 'application/ld+json'; bc.id = 'senvia-breadcrumb-ld'; head.appendChild(bc); }
+    bc.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Početna', item: 'https://www.senviaapp.com/' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.senviaapp.com/blog' },
+        { '@type': 'ListItem', position: 3, name: a.h1 || a.title, item: url }
+      ]
+    });
+  }
+  renderVals() {
+    const a = this.props.article || {};
+    const back = { hr: 'Natrag na blog', en: 'Back to the blog', de: 'Zurück zum Blog' };
+    return { a, blocks: a.blocks || [], backLabel: back[a.lang] || back.hr };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <style>
+    @media (max-width: 860px) {
+      [data-foot-top] { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 620px) {
+      [data-foot-cols] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    }
+  </style>
+</helmet>
+<footer style="background: #f4faf6; border-top: 1px solid #eaf2ec; font-family: 'Instrument Sans', sans-serif">
+  <div data-foot-top style="max-width: 1280px; margin: 0 auto; padding: clamp(30px, 4.4vw, 54px) clamp(16px, 4vw, 32px) clamp(22px, 3vw, 34px); display: grid; grid-template-columns: minmax(268px, 0.8fr) 2.6fr; gap: clamp(24px, 3.3vw, 44px); align-items: start">
+    <div style="min-width: 0">
+      <a href="Senvia%20Landing%20v2.dc.html" style="display: inline-flex; align-items: center; gap: 10px; color: #12261a; margin-bottom: 14px">
+        <img src="uploads/1024x1024bb.png" alt="Senvia logo, aplikacija za slanje paketa uz putnika" width="46" height="46" style="border-radius: 13px; display: block">
+        <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 21px; letter-spacing: -0.01em">Senvia</span>
+      </a>
+      <p style="margin: 0 0 18px; font-size: 16.5px; line-height: 1.6; color: #3c5346; max-width: 34ch; text-wrap: pretty">{{ tagline }}</p>
+      <div style="display: flex; gap: 9px; flex-wrap: wrap; margin-bottom: 20px">
+        <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="uploads/Download_on_the_App_Store_Badge.svg.webp" alt="Preuzmi Senvia aplikaciju u App Storeu" height="38" style="display: block; border-radius: 8px"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Preuzmi Senvia aplikaciju na Google Playu" height="38" style="display: block; border-radius: 8px"></a>
+      </div>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap">
+        <a href="https://www.instagram.com/senvia.app/" target="_blank" rel="noopener noreferrer" aria-label="Senvia na Instagramu" title="Instagram" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid #e4efe7; border-radius: 12px; background: #ffffff; color: #3c5346" style-hover="border-color: #2dbb54; color: #167a38">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2.8" y="2.8" width="18.4" height="18.4" rx="5.2"></rect><circle cx="12" cy="12" r="4.1"></circle><circle cx="17.4" cy="6.7" r="1.05" fill="currentColor" stroke="none"></circle></svg>
+        </a>
+        <a href="https://www.facebook.com/people/Senvia-App/61573275304879/" target="_blank" rel="noopener noreferrer" aria-label="Senvia na Facebooku" title="Facebook" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid #e4efe7; border-radius: 12px; background: #ffffff; color: #3c5346" style-hover="border-color: #2dbb54; color: #167a38">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M13.9 21.4v-8.2h2.8l.42-3.25H13.9V7.87c0-.94.26-1.58 1.61-1.58h1.72V3.38c-.3-.04-1.32-.13-2.5-.13-2.48 0-4.18 1.51-4.18 4.29v2.39H7.73v3.25h2.82v8.22z"></path></svg>
+        </a>
+        <a href="https://www.tiktok.com/@senvia_app" target="_blank" rel="noopener noreferrer" aria-label="Senvia na TikToku" title="TikTok" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid #e4efe7; border-radius: 12px; background: #ffffff; color: #3c5346" style-hover="border-color: #2dbb54; color: #167a38">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M16.1 2.6h-2.9v11.7a2.5 2.5 0 1 1-2.5-2.5c.26 0 .5.04.74.11V9a5.14 5.14 0 0 0-.74-.06 5.36 5.36 0 1 0 5.36 5.36V8.05a5.5 5.5 0 0 0 3.34 1.13V6.3a3.35 3.35 0 0 1-3.3-3.7z"></path></svg>
+        </a>
+        <a href="https://www.linkedin.com/company/senviaapp/" target="_blank" rel="noopener noreferrer" aria-label="Senvia na LinkedInu" title="LinkedIn" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid #e4efe7; border-radius: 12px; background: #ffffff; color: #3c5346" style-hover="border-color: #2dbb54; color: #167a38">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M6.2 8.9H3.5v11.6h2.7zm.18-3.3a1.53 1.53 0 1 0-3.06 0 1.53 1.53 0 0 0 3.06 0M20.5 14.1c0-3.2-1.7-4.7-4-4.7a3.5 3.5 0 0 0-3.1 1.7V8.9H10.7v11.6h2.7v-6.2c0-1.5.72-2.4 2-2.4s1.9.9 1.9 2.4v6.2h2.7z"></path></svg>
+        </a>
+        <a href="https://www.youtube.com/watch?v=mIvm4WbmMMw" target="_blank" rel="noopener noreferrer" aria-label="Senvia na YouTubeu" title="YouTube" style="display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid #e4efe7; border-radius: 12px; background: #ffffff; color: #3c5346" style-hover="border-color: #2dbb54; color: #167a38">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M21.2 7.9a2.6 2.6 0 0 0-1.83-1.85C17.75 5.6 12 5.6 12 5.6s-5.75 0-7.37.45A2.6 2.6 0 0 0 2.8 7.9C2.35 9.55 2.35 12 2.35 12s0 2.45.45 4.1a2.6 2.6 0 0 0 1.83 1.85c1.62.45 7.37.45 7.37.45s5.75 0 7.37-.45A2.6 2.6 0 0 0 21.2 16.1c.45-1.65.45-4.1.45-4.1s0-2.45-.45-4.1M10.2 15.1V8.9L15.4 12z"></path></svg>
+        </a>
+      </div>
+    </div>
+    <div data-foot-cols style="min-width: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(16px, 2.2vw, 30px)">
+    <sc-for list="{{ columns }}" as="c" hint-placeholder-count="3">
+      <div style="min-width: 0">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 14.5px; letter-spacing: -0.01em; margin-bottom: 13px">{{ c.title }}</div>
+        <div style="display: grid; gap: 9px; font-size: 14.5px; line-height: 1.45">
+          <sc-for list="{{ c.links }}" as="l" hint-placeholder-count="5">
+            <a href="{{ l.href }}" style="color: #3c5346" style-hover="color: #167a38">{{ l.label }}</a>
+          </sc-for>
+          <sc-if value="{{ c.isLegal }}" hint-placeholder-val="{{ false }}">
+            <button type="button" onClick="{{ openCookieSettings }}" style="justify-self: start; text-align: left; border: none; background: transparent; padding: 0; font-family: 'Instrument Sans', sans-serif; font-size: 14.5px; line-height: 1.45; color: #3c5346; cursor: pointer" style-hover="color: #167a38">{{ cookieSetLabel }}</button>
+          </sc-if>
+        </div>
+      </div>
+    </sc-for>
+    </div>
+  </div>
+  <div style="border-top: 1px solid #eaf2ec">
+    <div style="max-width: 1280px; margin: 0 auto; padding: clamp(15px, 2vw, 22px) clamp(16px, 4vw, 32px); display: flex; gap: 16px; flex-wrap: wrap; align-items: baseline; justify-content: space-between; font-size: 13.5px; color: #6b8272">
+      <span>© 2026 Senvia. {{ rights }}</span>
+      <a href="mailto:contact@senviaapp.com" style="color: #6b8272" style-hover="color: #167a38">contact@senviaapp.com</a>
+    </div>
+  </div>
+</footer>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1280, &quot;height&quot;: 360}}">
+class Component extends DCLogic {
+  state = { lang: 'hr' };
+
+  T = {
+    tagline: {
+      hr: 'Slanje paketa uz putnika koji već putuje tvojim smjerom. Besplatno, bez pretplate.',
+      en: 'Send a package with a traveller already heading your way. Free, no subscription.',
+      de: 'Pakete mit Reisenden senden, die ohnehin unterwegs sind. Kostenlos, ohne Abo.'
+    },
+    rights: { hr: 'Sva prava pridržana.', en: 'All rights reserved.', de: 'Alle Rechte vorbehalten.' },
+    cPages: { hr: 'Senvia', en: 'Senvia', de: 'Senvia' },
+    cRoutes: { hr: 'Rute i vodiči', en: 'Routes and guides', de: 'Strecken und Ratgeber' },
+    cLegal: { hr: 'Pravno', en: 'Legal', de: 'Rechtliches' },
+    how: { hr: 'Kako radi', en: 'How it works', de: 'So funktioniert es' },
+    send: { hr: 'Slanje paketa', en: 'Sending packages', de: 'Pakete senden' },
+    trust: { hr: 'Sigurnost', en: 'Trust and safety', de: 'Sicherheit' },
+    faq: { hr: 'Česta pitanja', en: 'FAQ', de: 'Häufige Fragen' },
+    cBiz: { hr: 'Za tvrtke', en: 'For business', de: 'Für Unternehmen' },
+    biz: { hr: 'Senvia za tvrtke', en: 'Senvia for business', de: 'Senvia für Unternehmen' },
+    bizApply: { hr: 'Prijavi svoj obrt', en: 'Register your business', de: 'Betrieb anmelden' },
+    popular: { hr: 'Popularne rute', en: 'Popular routes', de: 'Beliebte Routen' },
+    corr: { hr: 'Austrija i Hrvatska', en: 'Austria and Croatia', de: 'Österreich und Kroatien' },
+    comp: { hr: 'Usporedba s klasičnom dostavom', en: 'Compared with classic delivery', de: 'Vergleich mit klassischer Zustellung' },
+    terms: { hr: 'Uvjeti korištenja', en: 'Terms of service', de: 'Nutzungsbedingungen' },
+    privacy: { hr: 'Politika privatnosti', en: 'Privacy policy', de: 'Datenschutzerklärung' },
+    cookies: { hr: 'Politika kolačića', en: 'Cookie policy', de: 'Cookie-Richtlinie' },
+    cookieSet: { hr: 'Postavke kolačića', en: 'Cookie settings', de: 'Cookie-Einstellungen' },
+    del: { hr: 'Brisanje računa', en: 'Account deletion', de: 'Konto löschen' },
+    partners: { hr: 'Naši partneri', en: 'Our partners', de: 'Unsere Partner' }
+  };
+
+  componentDidMount() {
+    import('./i18n.js').then(m => {
+      this.i18n = m;
+      this.setState({ lang: m.getLang() });
+      this.off = m.onLang(l => this.setState({ lang: l }));
+    });
+  }
+  componentWillUnmount() { if (this.off) this.off(); }
+
+  t(k) { const o = this.T[k]; return (o && (o[this.state.lang] || o.hr)) || ''; }
+
+  renderVals() {
+    return {
+      tagline: this.t('tagline'),
+      rights: this.t('rights'),
+      cookieSetLabel: this.t('cookieSet'),
+      openCookieSettings: (e) => { if (e && e.preventDefault) e.preventDefault(); window.dispatchEvent(new CustomEvent('senvia-consent-open')); },
+      columns: [
+        { title: this.t('cPages'), links: [
+          { href: 'Kako%20radi.dc.html', label: this.t('how') },
+          { href: 'Slanje%20paketa.dc.html', label: this.t('send') },
+          { href: 'Sigurnost.dc.html', label: this.t('trust') },
+          { href: 'FAQ.dc.html', label: this.t('faq') }
+        ]},
+        { title: this.t('cRoutes'), links: [
+          { href: 'Popularne%20rute.dc.html', label: this.t('popular') },
+          { href: 'Austrija-Hrvatska.dc.html', label: this.t('corr') },
+          { href: 'Blog.dc.html', label: 'Blog' },
+          { href: 'Usporedba.dc.html', label: this.t('comp') }
+        ]},
+        { title: this.t('cBiz'), links: [
+          { href: 'Za%20tvrtke.dc.html', label: this.t('biz') },
+          { href: 'Partneri.dc.html', label: this.t('partners') },
+          { href: 'Za%20tvrtke.dc.html#prijava', label: this.t('bizApply') }
+        ]},
+        { title: this.t('cLegal'), isLegal: true, links: [
+          { href: 'Politika%20privatnosti.dc.html', label: this.t('privacy') },
+          { href: 'Politika%20kolacica.dc.html', label: this.t('cookies') },
+          { href: 'Uvjeti%20koristenja.dc.html', label: this.t('terms') },
+          { href: 'Senvia%20Account%20Deletion.dc.html', label: this.t('del') }
+        ]}
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

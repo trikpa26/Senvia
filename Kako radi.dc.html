@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta charset="utf-8">
+  <title>Kako funkcionira Senvia – Slanje paketa uz putnika | Senvia</title>
+  <meta name="description" content="Pošalji paket u 5 koraka. Senvia spaja pošiljatelje s putnicima koji već putuju istim smjerom. Besplatno i bez pretplate.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Senvia">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:title" content="Kako funkcionira Senvia – Slanje paketa uz putnika | Senvia">
+  <meta property="og:description" content="Pošalji paket u 5 koraka. Senvia spaja pošiljatelje s putnicima koji već putuju istim smjerom. Besplatno i bez pretplate.">
+  <link rel="canonical" href="https://www.senviaapp.com/kako-radi">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <meta property="og:url" content="https://www.senviaapp.com/kako-radi">
+  <meta property="og:image" content="https://www.senviaapp.com/uploads/1024x1024bb.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kako funkcionira Senvia – Slanje paketa uz putnika | Senvia">
+  <meta name="twitter:description" content="Pošalji paket u 5 koraka. Senvia spaja pošiljatelje s putnicima koji već putuju istim smjerom. Besplatno i bez pretplate.">
+  <meta name="twitter:image" content="https://www.senviaapp.com/uploads/1024x1024bb.png">
+  <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
+  <script>
+    window.SENVIA_GA_ID = 'G-H8DBTNDF62';
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H8DBTNDF62');
+    window.senviaLoadAnalytics = function () {
+      if (window.senviaGaLoaded || location.hostname.indexOf('senviaapp.com') === -1) return;
+      window.senviaGaLoaded = true;
+      var el = document.createElement('script');
+      el.setAttribute('async', '');
+      el.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + window.SENVIA_GA_ID);
+      document.head.appendChild(el);
+    };
+    try { if (localStorage.getItem('senvia-consent') === 'yes') window.senviaLoadAnalytics(); } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    a { color: #1a9e44; text-decoration: none; }
+    a:hover { color: #0e7c31; }
+    ::selection { background: #c9efd6; }
+    html { scroll-behavior: smooth; }
+    img { max-width: 100%; }
+  
+
+  </style>
+</helmet>
+
+<div style="overflow-x: clip">
+
+<dc-import name="Nav" active="how" hint-size="100%,66px"></dc-import>
+
+<nav aria-label="breadcrumb" style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
+  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.crumb }}</span>
+</nav>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 40px clamp(16px, 4.0vw, 32px) 44px">
+  <div style="color: #1a9e44; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px">{{ t.kicker }}</div>
+  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(31px, 8.7vw, 54px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; text-wrap: balance">{{ t.h1 }}</h1>
+  <p style="font-size: 19px; line-height: 1.6; color: #3c5346; margin: 0; max-width: 62ch; text-wrap: pretty">{{ t.lead }}</p>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 4.0vw, 32px) clamp(38px, 6.5vw, 84px)">
+  <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 28px; text-wrap: balance">{{ t.stepsTitle }}</h2>
+
+  <div style="display: flex; flex-wrap: wrap; gap: clamp(22px, 4.0vw, 48px); align-items: start">
+    <div style="display: grid; gap: 12px; flex: 1 1 420px; min-width: 0">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="5">
+        <div onClick="{{ s.onClick }}" style="{{ s.rowStyle }}">
+          <span style="{{ s.numStyle }}">{{ s.n }}</span>
+          <span style="flex: 1">
+            <span style="display: block; font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; margin-bottom: 7px; letter-spacing: -0.01em">{{ s.title }}</span>
+            <span style="display: block; font-size: 16px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ s.desc }}</span>
+          </span>
+        </div>
+      </sc-for>
+    </div>
+
+    <div style="position: sticky; top: 100px; display: flex; justify-content: center; flex: 0 1 340px; min-width: 0">
+      <div style="width: min(290px, 86vw); background: #12261a; border-radius: 40px; padding: 9px; box-shadow: 0 22px 54px rgba(18,38,26,0.2)">
+        <div style="background: #f7fbf8; border-radius: 32px; overflow: hidden; position: relative; aspect-ratio: 720 / 1588">
+          <div style="{{ img0 }}"><img src="assets/app-home.webp" alt="Senvia aplikacija, pregled dostupnih vožnji za slanje paketa" style="display: block; width: 100%"></div>
+          <div style="{{ img1 }}"><img src="assets/app-share.webp" alt="Senvia aplikacija, objava zahtjeva za slanje paketa s lokacijama i detaljima" style="display: block; width: 100%"></div>
+          <div style="{{ img2 }}"><img src="assets/app-profile.webp" alt="Senvia aplikacija, profil korisnika s ocjenama i recenzijama" style="display: block; width: 100%"></div>
+          <div style="{{ img3 }}"><img src="assets/app-chat.webp" alt="Senvia aplikacija, chat za dogovor cijene i primopredaje paketa" style="display: block; width: 100%"></div>
+          <div style="{{ img4 }}"><img src="assets/app-review.webp" alt="Senvia aplikacija, ocjena i recenzija nakon završene dostave" style="width: 100%; border-radius: 16px; box-shadow: 0 14px 32px rgba(18,38,26,0.16)"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="preuzmi" style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4.0vw, 32px)">
+  <div style="background: #2dbb54; border-radius: 28px; padding: clamp(29px, 4.9vw, 64px) clamp(24px, 6.0vw, 48px); text-align: center; color: #ffffff">
+    <img src="uploads/1024x1024bb.png" alt="Senvia logo" width="60" height="60" style="border-radius: 15px; box-shadow: 0 10px 26px rgba(10,60,26,0.3); margin-bottom: 24px">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(21px, 5.8vw, 36px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 14px; text-wrap: balance">{{ t.ctaTitle }}</h2>
+    <p style="margin: 0 auto 32px; font-size: 18px; line-height: 1.55; max-width: 46ch; color: rgba(255,255,255,0.92); text-wrap: pretty">{{ t.ctaText }}</p>
+    <div style="display: flex; gap: 14px; justify-content: center">
+      <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="uploads/Download_on_the_App_Store_Badge.svg.webp" alt="Preuzmi Senvia aplikaciju u App Storeu" height="54" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Preuzmi Senvia aplikaciju na Google Playu" height="54" style="display: block; border-radius: 10px"></a>
+    </div>
+  </div>
+</section>
+
+
+<dc-import name="Podnozje" hint-size="100%,300px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+
+  componentDidMount() {
+    import('./i18n.js').then(m => {
+      this.i18n = m;
+      this.setState({ lang: m.getLang() });
+      this.off = m.onLang(l => this.setState({ lang: l }));
+    });
+    let bc = document.getElementById('senvia-breadcrumb-ld');
+    if (!bc) { bc = document.createElement('script'); bc.type = 'application/ld+json'; bc.id = 'senvia-breadcrumb-ld'; document.head.appendChild(bc); }
+    bc.textContent = JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: "Početna", item: "https://www.senviaapp.com/" },
+        { '@type': 'ListItem', position: 2, name: this.t().crumb, item: "https://www.senviaapp.com/kako-radi" }
+      ]
+    });
+  }
+  componentWillUnmount() { if (this.off) this.off(); }
+
+  syncSeo() {
+    const lang = this.state.lang;
+    const t = this.t();
+    if (this.seoLang !== lang) {
+      this.seoLang = lang;
+      document.documentElement.setAttribute('lang', lang);
+      const meta = (attr, name, content) => {
+        let el = document.head.querySelector('meta[' + attr + '="' + name + '"]');
+        if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); }
+        el.setAttribute('content', content);
+      };
+      meta('name', 'description', t.desc);
+      meta('property', 'og:title', t.title);
+      meta('property', 'og:description', t.desc);
+      meta('property', 'og:locale', t.locale);
+      const bc = document.getElementById('senvia-breadcrumb-ld');
+      if (bc) bc.textContent = JSON.stringify({
+        '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Senvia', item: 'https://www.senviaapp.com/' },
+          { '@type': 'ListItem', position: 2, name: t.crumb, item: 'https://www.senviaapp.com/kako-radi' }
+        ]
+      });
+    }
+    if (this.titleTimer) clearTimeout(this.titleTimer);
+    this.titleTimer = setTimeout(() => { if (document.title !== t.title) document.title = t.title; }, 60);
+    setTimeout(() => { if (document.title !== t.title) document.title = t.title; }, 400);
+  }
+
+  state = { step: 0, lang: 'hr' };
+
+  STR = {
+    hr: {
+      crumb: 'Kako radi', kicker: 'Kako radi',
+      h1: 'Kako funkcionira Senvia',
+      lead: 'Senvia spaja pošiljatelje s putnicima koji već putuju istim smjerom. Cijeli proces, od objave zahtjeva do recenzije, odvija se unutar aplikacije. Isti koraci vrijede i kad šalješ paket i kad ga prevoziš, razlika je samo u tome objavljuješ li zahtjev ili vožnju.',
+      stepsTitle: 'Sve je gotovo u 5 koraka',
+      ctaTitle: 'Preuzmi aplikaciju besplatno',
+      ctaText: 'Objavi prvi zahtjev ili prvu vožnju u nekoliko minuta. Bez pretplate.',
+      title: 'Kako funkcionira Senvia, slanje paketa uz putnika | Senvia',
+      desc: 'Pošalji paket u 5 koraka. Senvia spaja pošiljatelje s putnicima koji već putuju istim smjerom. Besplatno i bez pretplate.',
+      locale: 'hr_HR',
+      s1t: 'Pronađi vožnju ili zahtjev za prijevozom', s1d: 'Pretraži objavljene vožnje i zahtjeve za prijevozom te odaberi ono što odgovara tvojoj ruti.',
+      s2t: 'Objavi svoj zahtjev', s2d: 'Ako ništa ne odgovara, objavi zahtjev za slanje paketa ili planiranu vožnju. Dodaj lokacije, datum, fotografiju i detalje paketa.',
+      s3t: 'Provjeri profil korisnika', s3d: 'Prije dogovora pogledaj profil s detaljima: ocjene, recenzije i dosadašnje vožnje.',
+      s4t: 'Dogovori sve u chatu', s4d: 'Dogovorite detalje u chatu i ostanite povezani tijekom cijelog putovanja.',
+      s5t: 'Ostavite recenziju', s5d: 'Nakon uspješno završene dostave, pošiljatelj i vozač ocjenjuju jedno drugo i ostavljaju recenziju.'
+    },
+    en: {
+      crumb: 'How it works', kicker: 'How it works',
+      h1: 'How Senvia works',
+      lead: 'Senvia connects senders with travellers already going the same way. The whole process, from posting a request to leaving a review, happens inside the app. The same steps apply whether you are sending a package or carrying one, the only difference is whether you post a request or a ride.',
+      stepsTitle: 'It is all done in 5 steps',
+      ctaTitle: 'Download the app for free',
+      ctaText: 'Post your first request or your first ride in a few minutes. No subscription.',
+      title: 'How Senvia works, sending packages with a traveller | Senvia',
+      desc: 'Send a package in 5 steps. Senvia connects senders with travellers already going the same way. Free and without a subscription.',
+      locale: 'en_GB',
+      s1t: 'Find a ride or a request', s1d: 'Browse posted rides and transport requests and pick the one that matches your route.',
+      s2t: 'Post your own request', s2d: 'If nothing matches, post a request for a package or a planned ride. Add locations, date, a photo and the package details.',
+      s3t: 'Check the other users profile', s3d: 'Before agreeing, look at the profile in detail: ratings, reviews and completed trips.',
+      s4t: 'Agree everything in the chat', s4d: 'Agree the details in the chat and stay in touch for the whole journey.',
+      s5t: 'Leave a review', s5d: 'After the delivery is completed, the sender and the driver rate each other and leave a review.'
+    },
+    de: {
+      crumb: 'So funktioniert es', kicker: 'So funktioniert es',
+      h1: 'So funktioniert Senvia',
+      lead: 'Senvia verbindet Absender mit Reisenden, die ohnehin in dieselbe Richtung fahren. Der gesamte Ablauf, von der Anfrage bis zur Bewertung, findet in der App statt. Die Schritte sind gleich, ob du ein Paket sendest oder eines mitnimmst, der Unterschied ist nur, ob du eine Anfrage oder eine Fahrt einstellst.',
+      stepsTitle: 'Alles erledigt in 5 Schritten',
+      ctaTitle: 'App kostenlos herunterladen',
+      ctaText: 'Stelle deine erste Anfrage oder erste Fahrt in wenigen Minuten ein. Ohne Abo.',
+      title: 'So funktioniert Senvia, Pakete mit Reisenden senden | Senvia',
+      desc: 'Sende ein Paket in 5 Schritten. Senvia verbindet Absender mit Reisenden, die ohnehin unterwegs sind. Kostenlos und ohne Abo.',
+      locale: 'de_DE',
+      s1t: 'Fahrt oder Anfrage finden', s1d: 'Sieh dir eingestellte Fahrten und Transportanfragen an und wähle, was zu deiner Strecke passt.',
+      s2t: 'Eigene Anfrage einstellen', s2d: 'Passt nichts, stelle eine Anfrage für ein Paket oder eine geplante Fahrt ein. Ergänze Orte, Datum, ein Foto und die Paketdetails.',
+      s3t: 'Profil des Nutzers prüfen', s3d: 'Sieh dir vor der Absprache das Profil im Detail an: Bewertungen, Rezensionen und bisherige Fahrten.',
+      s4t: 'Alles im Chat vereinbaren', s4d: 'Klärt die Details im Chat und bleibt während der gesamten Fahrt in Kontakt.',
+      s5t: 'Bewertung hinterlassen', s5d: 'Nach der abgeschlossenen Zustellung bewerten sich Absender und Fahrer gegenseitig und hinterlassen eine Rezension.'
+    }
+  };
+
+  t() { return { ...this.STR.hr, ...(this.STR[this.state.lang] || {}) }; }
+  list() {
+    const t = this.t();
+    return [1, 2, 3, 4, 5].map((n, i) => ({ title: t['s' + n + 't'], desc: t['s' + n + 'd'], img: i }));
+  }
+
+  renderVals() {
+    this.syncSeo();
+    const list = this.list();
+    const activeImg = list[this.state.step] ? list[this.state.step].img : 0;
+
+    const steps = list.map((s, i) => {
+      const active = this.state.step === i;
+      return {
+        n: '0' + (i + 1), title: s.title, desc: s.desc,
+        onClick: () => this.setState({ step: i }),
+        rowStyle: {
+          display: 'flex', gap: '18px', padding: '22px 24px', borderRadius: '20px', alignItems: 'flex-start', cursor: 'pointer',
+          transition: 'all .3s ease',
+          border: active ? '1px solid #e4efe7' : '1px solid transparent',
+          background: active ? '#ffffff' : 'transparent',
+          boxShadow: active ? '0 12px 32px rgba(18,38,26,0.09)' : 'none'
+        },
+        numStyle: {
+          width: '40px', height: '40px', borderRadius: '13px', flexShrink: 0, display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
+          fontFamily: "'Space Grotesk', sans-serif", fontWeight: 700, fontSize: '14px', transition: 'all .3s ease',
+          background: active ? '#2dbb54' : '#e8f7ee', color: active ? '#ffffff' : '#167a38'
+        }
+      };
+    });
+
+    const img = (n) => ({
+      position: 'absolute', inset: 0,
+      display: 'flex', alignItems: 'center', justifyContent: 'center',
+      opacity: n === activeImg ? 1 : 0,
+      pointerEvents: n === activeImg ? 'auto' : 'none',
+      transition: 'opacity .4s ease',
+      background: n === 4 ? '#e8f2ea' : 'transparent',
+      padding: n === 4 ?'20px' : '0',
+      boxSizing: 'border-box'
+    });
+
+    return {
+      t: this.t(),
+      steps,
+      img0: img(0), img1: img(1), img2: img(2), img3: img(3), img4: img(4)
+    };
+  }
+}
+</script>
+</body>
+</html>

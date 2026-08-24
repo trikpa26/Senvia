@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta charset="utf-8">
+  <title>Politika privatnosti | Senvia</title>
+  <meta name="description" content="Saznaj kako Senvia prikuplja i koristi tvoje osobne podatke u skladu s GDPR-om.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://www.senviaapp.com/politika-privatnosti">
+</helmet>
+<dc-import name="Pravni dokument" doc="{{ doc }}" self="privacy" hint-size="100%,100%"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  renderVals() {
+    return { doc: {
+      urls: {
+        hr: 'https://www.senviaapp.com/politika-privatnosti',
+        en: 'https://www.senviaapp.com/privacy-policy',
+        de: 'https://www.senviaapp.com/datenschutz'
+      },
+      hr: {
+        title: 'Politika privatnosti | Senvia',
+        desc: 'Saznaj kako Senvia prikuplja i koristi tvoje osobne podatke u skladu s GDPR-om.',
+        crumb: 'Politika privatnosti',
+        h1: 'Politika privatnosti',
+        updated: 'Zadnje ažuriranje: kolovoz 2026.',
+        lead: 'Ovdje piše koje podatke prikupljamo, zašto ih prikupljamo, koliko dugo ih čuvamo i koja prava imaš nad njima. Tekst je pisan da ga možeš pročitati bez odvjetnika.',
+        contactTitle: 'Pitanja o privatnosti',
+        contactText: 'Za svako pitanje o podacima, za ostvarivanje prava ili za povlačenje pristanka piši nam. Odgovaramo u roku od 30 dana.',
+        contactMail: 'privacy@senviaapp.com',
+        sections: [
+          { h: 'Tko je odgovoran za tvoje podatke',
+            p: 'Voditelj obrade podataka je Riddo Digital d.o.o., društvo koje razvija i održava Senvia aplikaciju.',
+            rows: [['Voditelj obrade', 'Riddo Digital d.o.o.'], ['E-pošta', 'privacy@senviaapp.com'], ['Web', 'senviaapp.com']],
+            note: 'Za sva pitanja o privatnosti obrati nam se na privacy@senviaapp.com.' },
+          { h: 'Koje podatke prikupljamo i zašto',
+            p: 'Prikupljamo samo ono što je potrebno da aplikacija radi. Podaci su podijeljeni u četiri skupine, svaka sa svojom svrhom, pravnom osnovom i rokom čuvanja.' },
+          { h: 'Podaci koje daješ pri registraciji',
+            list: ['Ime i prezime', 'Adresa e-pošte', 'Broj telefona', 'Fotografija profila, neobavezno'],
+            rows: [['Svrha', 'Otvaranje računa i upravljanje njime'], ['Pravna osnova', 'Ugovorni odnos, članak 6. stavak 1. točka b GDPR-a'], ['Čuvanje', 'Dok je račun aktivan i još 30 dana nakon brisanja']] },
+          { h: 'Podaci o pošiljkama i putovanjima',
+            list: ['Adresa preuzimanja i adresa dostave', 'Opis paketa', 'Datum i ruta putovanja'],
+            rows: [['Svrha', 'Povezivanje pošiljatelja i putnika'], ['Pravna osnova', 'Ugovorni odnos, članak 6. stavak 1. točka b GDPR-a'], ['Čuvanje', '12 mjeseci od završetka pošiljke']] },
+          { h: 'Komunikacija između korisnika',
+            list: ['Poruke razmijenjene unutar aplikacije'],
+            rows: [['Svrha', 'Dogovor između pošiljatelja i putnika'], ['Pravna osnova', 'Ugovorni odnos, članak 6. stavak 1. točka b GDPR-a'], ['Čuvanje', '6 mjeseci od završetka pošiljke']] },
+          { h: 'Tehnički podaci',
+            list: ['IP adresa, anonimizirana', 'Vrsta uređaja i preglednika', 'Stranice koje posjećuješ'],
+            rows: [['Svrha', 'Analiza korištenja i poboljšanje usluge'], ['Pravna osnova', 'Pristanak, članak 6. stavak 1. točka a GDPR-a'], ['Čuvanje', '26 mjeseci']],
+            note: 'Ove podatke prikupljamo samo ako prihvatiš analitičke kolačiće. Bez pristanka se ne prikupljaju.' },
+          { h: 'S kim dijelimo tvoje podatke',
+            p: 'Podatke dijelimo samo s pružateljima usluga koji su nam potrebni da aplikacija radi. Ne prodajemo, ne iznajmljujemo i ne dijelimo tvoje osobne podatke s trećim stranama u marketinške svrhe.',
+            rows: [
+              ['Google Analytics', 'Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irska. Mjerenje posjeta. Podaci se mogu prenijeti u Sjedinjene Američke Države na temelju standardnih ugovornih klauzula Europske unije. Više na policies.google.com/privacy'],
+              ['Firebase', 'Google Ireland Limited. Prijava korisnika i baza podataka. Više na firebase.google.com/support/privacy']
+            ] },
+          { h: 'Tvoja prava prema GDPR-u',
+            p: 'Nad svojim podacima imaš prava koja možeš iskoristiti u svakom trenutku, bez naknade i bez obrazloženja.',
+            list: [
+              'Pristup: zatražiti kopiju svojih podataka',
+              'Ispravak: ispraviti netočne podatke',
+              'Brisanje: zatražiti brisanje podataka',
+              'Ograničenje: ograničiti obradu podataka',
+              'Prenosivost: dobiti podatke u čitljivom obliku',
+              'Prigovor: prigovoriti obradi podataka',
+              'Povlačenje pristanka: u bilo kojem trenutku'
+            ],
+            note: 'Za ostvarivanje prava piši na privacy@senviaapp.com. Odgovaramo u roku od 30 dana.' },
+          { h: 'Prigovor nadzornom tijelu',
+            p: 'Ako smatraš da tvoje podatke ne obrađujemo u skladu s propisima, imaš pravo podnijeti prigovor nadzornom tijelu u svojoj zemlji.',
+            rows: [['Hrvatska', 'AZOP, azop.hr'], ['Austrija', 'DSB, dsb.gv.at'], ['Njemačka', 'BfDI, bfdi.bund.de']] },
+          { h: 'Sigurnost podataka',
+            p: 'Podatke štitimo mjerama koje su standard u struci.',
+            list: ['Enkripcija prometa preko HTTPS-a', 'Ograničen pristup podacima unutar tima', 'Redovite sigurnosne provjere'] },
+          { h: 'Djeca',
+            p: 'Senvia nije namijenjena osobama mlađim od 18 godina. Podatke maloljetnika ne prikupljamo namjerno. Ako saznamo da smo ih prikupili, brišemo ih.' },
+          { h: 'Promjene politike',
+            p: 'O značajnim promjenama obavijestit ćemo te e-poštom ili obavijesti u aplikaciji. Datum zadnjeg ažuriranja uvijek stoji na vrhu ovog dokumenta.' }
+        ]
+      },
+      en: {
+        title: 'Privacy policy | Senvia',
+        desc: 'Learn how Senvia collects and uses your personal data in line with the GDPR.',
+        crumb: 'Privacy policy',
+        h1: 'Privacy policy',
+        updated: 'Last updated: August 2026',
+        lead: 'This page sets out which data we collect, why we collect it, how long we keep it and which rights you have over it. It is written to be read without a lawyer.',
+        contactTitle: 'Questions about privacy',
+        contactText: 'For any question about your data, to exercise your rights or to withdraw consent, write to us. We reply within 30 days.',
+        contactMail: 'privacy@senviaapp.com',
+        sections: [
+          { h: 'Who is responsible for your data',
+            p: 'The data controller is Riddo Digital d.o.o., the company that develops and maintains the Senvia app.',
+            rows: [['Controller', 'Riddo Digital d.o.o.'], ['Email', 'privacy@senviaapp.com'], ['Web', 'senviaapp.com']],
+            note: 'For any privacy question contact us at privacy@senviaapp.com.' },
+          { h: 'What data we collect and why',
+            p: 'We collect only what the app needs to work. The data falls into four groups, each with its own purpose, legal basis and retention period.' },
+          { h: 'Data you give us at registration',
+            list: ['First and last name', 'Email address', 'Phone number', 'Profile photo, optional'],
+            rows: [['Purpose', 'Creating and managing a user account'], ['Legal basis', 'Contract, Article 6(1)(b) GDPR'], ['Retention', 'While the account is active plus 30 days after deletion']] },
+          { h: 'Shipment and journey data',
+            list: ['Pick-up and delivery address', 'Package description', 'Date and route of the journey'],
+            rows: [['Purpose', 'Connecting senders and travellers'], ['Legal basis', 'Contract, Article 6(1)(b) GDPR'], ['Retention', '12 months from completion of the shipment']] },
+          { h: 'Communication between users',
+            list: ['Messages exchanged inside the app'],
+            rows: [['Purpose', 'Arrangements between sender and traveller'], ['Legal basis', 'Contract, Article 6(1)(b) GDPR'], ['Retention', '6 months from completion of the shipment']] },
+          { h: 'Technical data',
+            list: ['IP address, anonymised', 'Device and browser type', 'Pages you visit'],
+            rows: [['Purpose', 'Usage analysis and service improvement'], ['Legal basis', 'Consent, Article 6(1)(a) GDPR'], ['Retention', '26 months']],
+            note: 'We collect this only if you accept analytics cookies. Without consent it is not collected.' },
+          { h: 'Who we share your data with',
+            p: 'We share data only with the service providers the app needs in order to work. We do not sell, rent or share your personal data with third parties for marketing purposes.',
+            rows: [
+              ['Google Analytics', 'Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland. Traffic measurement. Data may be transferred to the United States under the EU standard contractual clauses. More at policies.google.com/privacy'],
+              ['Firebase', 'Google Ireland Limited. Authentication and database. More at firebase.google.com/support/privacy']
+            ] },
+          { h: 'Your rights under the GDPR',
+            p: 'You have rights over your data that you can exercise at any time, free of charge and without giving a reason.',
+            list: [
+              'Access: request a copy of your data',
+              'Rectification: correct inaccurate data',
+              'Erasure: request deletion of your data',
+              'Restriction: restrict processing',
+              'Portability: receive your data in a readable format',
+              'Objection: object to processing',
+              'Withdrawal of consent: at any time'
+            ],
+            note: 'To exercise your rights write to privacy@senviaapp.com. We reply within 30 days.' },
+          { h: 'Complaint to a supervisory authority',
+            p: 'If you believe we process your data unlawfully, you have the right to lodge a complaint with the supervisory authority in your country.',
+            rows: [['Croatia', 'AZOP, azop.hr'], ['Austria', 'DSB, dsb.gv.at'], ['Germany', 'BfDI, bfdi.bund.de']] },
+          { h: 'Data security',
+            p: 'We protect your data with measures that are standard in the industry.',
+            list: ['HTTPS traffic encryption', 'Restricted access to data within the team', 'Regular security reviews'] },
+          { h: 'Children',
+            p: 'Senvia is not intended for people under 18. We do not knowingly collect data of minors. If we learn that we have, we delete it.' },
+          { h: 'Changes to this policy',
+            p: 'We will notify you of significant changes by email or through a notice in the app. The date of the last update is always at the top of this document.' }
+        ]
+      },
+      de: {
+        title: 'Datenschutzerklärung | Senvia',
+        desc: 'Erfahre, wie Senvia deine personenbezogenen Daten im Einklang mit der DSGVO erhebt und verwendet.',
+        crumb: 'Datenschutzerklärung',
+        h1: 'Datenschutzerklärung',
+        updated: 'Zuletzt aktualisiert: August 2026',
+        lead: 'Hier steht, welche Daten wir erheben, warum wir sie erheben, wie lange wir sie speichern und welche Rechte du daran hast. Der Text ist so geschrieben, dass du ihn ohne Anwalt lesen kannst.',
+        contactTitle: 'Fragen zum Datenschutz',
+        contactText: 'Bei jeder Frage zu deinen Daten, zur Ausübung deiner Rechte oder zum Widerruf der Einwilligung schreib uns. Wir antworten innerhalb von 30 Tagen.',
+        contactMail: 'privacy@senviaapp.com',
+        sections: [
+          { h: 'Wer für deine Daten verantwortlich ist',
+            p: 'Verantwortlicher ist die Riddo Digital d.o.o., das Unternehmen, das die Senvia App entwickelt und betreibt.',
+            rows: [['Verantwortlicher', 'Riddo Digital d.o.o.'], ['E-Mail', 'privacy@senviaapp.com'], ['Web', 'senviaapp.com']],
+            note: 'Bei allen Fragen zum Datenschutz wende dich an privacy@senviaapp.com.' },
+          { h: 'Welche Daten wir erheben und warum',
+            p: 'Wir erheben nur, was die App zum Funktionieren braucht. Die Daten sind in vier Gruppen unterteilt, jede mit eigenem Zweck, eigener Rechtsgrundlage und eigener Speicherdauer.' },
+          { h: 'Daten bei der Registrierung',
+            list: ['Vor- und Nachname', 'E-Mail-Adresse', 'Telefonnummer', 'Profilfoto, optional'],
+            rows: [['Zweck', 'Erstellung und Verwaltung des Nutzerkontos'], ['Rechtsgrundlage', 'Vertrag, Artikel 6 Absatz 1 Buchstabe b DSGVO'], ['Speicherdauer', 'Solange das Konto aktiv ist, plus 30 Tage nach Löschung']] },
+          { h: 'Daten zu Sendungen und Fahrten',
+            list: ['Abhol- und Lieferadresse', 'Beschreibung des Pakets', 'Datum und Strecke der Fahrt'],
+            rows: [['Zweck', 'Verbindung von Absendern und Reisenden'], ['Rechtsgrundlage', 'Vertrag, Artikel 6 Absatz 1 Buchstabe b DSGVO'], ['Speicherdauer', '12 Monate ab Abschluss der Sendung']] },
+          { h: 'Kommunikation zwischen Nutzern',
+            list: ['In der App ausgetauschte Nachrichten'],
+            rows: [['Zweck', 'Absprache zwischen Absender und Reisendem'], ['Rechtsgrundlage', 'Vertrag, Artikel 6 Absatz 1 Buchstabe b DSGVO'], ['Speicherdauer', '6 Monate ab Abschluss der Sendung']] },
+          { h: 'Technische Daten',
+            list: ['IP-Adresse, anonymisiert', 'Geräte- und Browsertyp', 'Besuchte Seiten'],
+            rows: [['Zweck', 'Nutzungsanalyse und Verbesserung des Dienstes'], ['Rechtsgrundlage', 'Einwilligung, Artikel 6 Absatz 1 Buchstabe a DSGVO'], ['Speicherdauer', '26 Monate']],
+            note: 'Diese Daten erheben wir nur, wenn du Analyse-Cookies annimmst. Ohne Einwilligung werden sie nicht erhoben.' },
+          { h: 'Mit wem wir deine Daten teilen',
+            p: 'Wir teilen Daten nur mit Dienstleistern, die die App zum Funktionieren braucht. Wir verkaufen, vermieten oder teilen deine personenbezogenen Daten nicht mit Dritten zu Marketingzwecken.',
+            rows: [
+              ['Google Analytics', 'Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Reichweitenmessung. Daten können auf Grundlage der EU-Standardvertragsklauseln in die Vereinigten Staaten übermittelt werden. Mehr unter policies.google.com/privacy'],
+              ['Firebase', 'Google Ireland Limited. Anmeldung und Datenbank. Mehr unter firebase.google.com/support/privacy']
+            ] },
+          { h: 'Deine Rechte nach der DSGVO',
+            p: 'Du hast Rechte an deinen Daten, die du jederzeit kostenlos und ohne Begründung ausüben kannst.',
+            list: [
+              'Auskunft: eine Kopie deiner Daten anfordern',
+              'Berichtigung: unrichtige Daten korrigieren',
+              'Löschung: die Löschung deiner Daten verlangen',
+              'Einschränkung: die Verarbeitung einschränken',
+              'Datenübertragbarkeit: deine Daten in lesbarem Format erhalten',
+              'Widerspruch: der Verarbeitung widersprechen',
+              'Widerruf der Einwilligung: jederzeit'
+            ],
+            note: 'Zur Ausübung deiner Rechte schreib an privacy@senviaapp.com. Wir antworten innerhalb von 30 Tagen.' },
+          { h: 'Beschwerde bei der Aufsichtsbehörde',
+            p: 'Wenn du der Ansicht bist, dass wir deine Daten nicht rechtmäßig verarbeiten, kannst du dich bei der Aufsichtsbehörde in deinem Land beschweren.',
+            rows: [['Kroatien', 'AZOP, azop.hr'], ['Österreich', 'DSB, dsb.gv.at'], ['Deutschland', 'BfDI, bfdi.bund.de']] },
+          { h: 'Datensicherheit',
+            p: 'Wir schützen deine Daten mit branchenüblichen Maßnahmen.',
+            list: ['Verschlüsselung des Datenverkehrs über HTTPS', 'Eingeschränkter Zugriff auf Daten im Team', 'Regelmäßige Sicherheitsprüfungen'] },
+          { h: 'Kinder',
+            p: 'Senvia richtet sich nicht an Personen unter 18 Jahren. Daten Minderjähriger erheben wir nicht wissentlich. Erfahren wir davon, löschen wir sie.' },
+          { h: 'Änderungen dieser Erklärung',
+            p: 'Über wesentliche Änderungen informieren wir dich per E-Mail oder über einen Hinweis in der App. Das Datum der letzten Aktualisierung steht immer oben in diesem Dokument.' }
+        ]
+      }
+    } };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta charset="utf-8">
+  <title>Senvia, Paketi putuju s lakoćom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    a { color: #1a9e44; text-decoration: none; }
+    a:hover { color: #0e7c31; }
+    ::selection { background: #c9efd6; }
+    html { scroll-behavior: smooth; }
+    img { max-width: 100%; }
+  
+    @media (max-width: 860px) {
+      header:has(> [data-hdr]) { position: static !important; }
+      [data-hdr] { flex-wrap: wrap !important; row-gap: 4px !important; }
+      [data-hdr] > nav { order: 3; flex: 1 1 100% !important; min-width: 0 !important; margin-left: 0 !important; gap: 2px !important; border-top: 1px solid #eaf2ec; }
+      [data-hdr] > nav > a { padding: 14px 11px; }
+      [data-hdr] > nav > a:first-child { padding-left: 0; }
+      [data-hdr] > [data-cta] { margin-left: auto; padding: 12px 16px !important; }
+    }
+  </style>
+</helmet>
+
+<div style="overflow-x: clip">
+
+<sc-if value="{{ showAnnouncement }}" hint-placeholder-val="{{ false }}">
+  <div style="background: #12261a; color: #dff5e7; text-align: center; padding: 10px 24px; font-size: 14px; letter-spacing: 0.01em">
+    Senvia je dostupna za iOS i Android, <a href="#preuzmi" style="color: #6fdd96; font-weight: 600">preuzmi besplatno</a>
+  </div>
+</sc-if>
+
+<header style="position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,0.86); backdrop-filter: blur(12px); border-bottom: 1px solid #eaf2ec">
+  <div data-hdr style="max-width: 1140px; margin: 0 auto; padding: 14px clamp(16px, 4.0vw, 32px); display: flex; align-items: center; gap: 32px">
+    <a href="#vrh" style="display: flex; align-items: center; gap: 10px; color: #12261a">
+      <img src="uploads/1024x1024bb.png" alt="Senvia logo" width="36" height="36" style="border-radius: 9px; display: block">
+      <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 20px; letter-spacing: 0.02em">Senvia</span>
+    </a>
+    <nav style="display: flex; gap: 28px; margin-left: auto; font-size: clamp(13.5px, 3.4vw, 15px); font-weight: 500; align-items: center; flex: 0 0 auto; overflow-x: auto; overflow-y: hidden; white-space: nowrap; scrollbar-width: none">
+      <a href="#kako" style="color: #3c5346" style-hover="color: #12261a">Kako funkcionira</a>
+      <a href="#zakoga" style="color: #3c5346" style-hover="color: #12261a">Za koga je</a>
+      <a href="#preuzmi" style="color: #3c5346" style-hover="color: #12261a">Preuzmi</a>
+    </nav>
+    <a data-cta href="#preuzmi" style="background: #2dbb54; color: #ffffff; font-weight: 600; font-size: 15px; padding: 10px 20px; border-radius: 12px; box-shadow: 0 1px 2px rgba(18,38,26,0.12)" style-hover="background: #26a449">Preuzmi aplikaciju</a>
+  </div>
+</header>
+
+<section id="vrh" style="max-width: 1140px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4.0vw, 32px) clamp(43px, 7.4vw, 96px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: clamp(25px, 4.7vw, 56px); align-items: center">
+  <div>
+    <div style="display: inline-flex; align-items: center; gap: 8px; background: #e8f7ee; color: #167a38; font-weight: 600; font-size: 13.5px; padding: 7px 14px; border-radius: 999px; margin-bottom: 24px">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg>
+      Dostava bez klasične dostave
+    </div>
+    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 9.0vw, 56px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 22px; text-wrap: balance">Tvoj paket putuje s&nbsp;nekim tko ionako ide&nbsp;tamo.</h1>
+    <p style="font-size: 19px; line-height: 1.6; color: #3c5346; margin: 0 0 34px; max-width: 52ch; text-wrap: pretty">Senvia povezuje ljude koji šalju pakete s putnicima koji idu istim smjerom. Podijelite trošak puta i dogovorite primopredaju, sve izravno u aplikaciji.</p>
+    <div style="display: flex; gap: 14px; align-items: center">
+      <a href="#preuzmi" style="display: inline-flex; align-items: center; gap: 10px; background: #12261a; color: #ffffff; padding: 13px 22px; border-radius: 14px" style-hover="background: #1e3a29">
+        <svg width="20" height="20" viewBox="0 0 384 512" fill="#ffffff"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg>
+        <span style="text-align: left; line-height: 1.15"><span style="display: block; font-size: 11px; opacity: 0.75">Preuzmi u</span><span style="display: block; font-size: 16px; font-weight: 600">App Storeu</span></span>
+      </a>
+      <a href="#preuzmi" style="display: inline-flex; align-items: center; gap: 10px; background: #12261a; color: #ffffff; padding: 13px 22px; border-radius: 14px" style-hover="background: #1e3a29">
+        <svg width="19" height="19" viewBox="0 0 512 512" fill="#ffffff"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"></path></svg>
+        <span style="text-align: left; line-height: 1.15"><span style="display: block; font-size: 11px; opacity: 0.75">Dostupno na</span><span style="display: block; font-size: 16px; font-weight: 600">Google Playu</span></span>
+      </a>
+    </div>
+    <p style="margin: 22px 0 0; font-size: 14px; color: #6b8272">Besplatno preuzimanje · Dostupno u Hrvatskoj</p>
+  </div>
+
+  <sc-if value="{{ showPhone }}" hint-placeholder-val="{{ true }}">
+    <div style="position: relative; display: flex; justify-content: center">
+      <div style="position: absolute; inset: 24px -8px -8px 24px; background: #e8f7ee; border-radius: 48px"></div>
+      <div style="position: relative; width: min(296px, 86vw); background: #12261a; border-radius: 44px; padding: 10px; box-shadow: 0 24px 60px rgba(18,38,26,0.22)">
+        <div style="background: #f7fbf8; border-radius: 36px; overflow: hidden">
+          <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 22px 4px; font-size: 12px; font-weight: 600; color: #12261a">
+            <span>9:41</span>
+            <span style="display: flex; gap: 4px; align-items: center">
+              <span style="width: 14px; height: 8px; background: #12261a; border-radius: 2px; display: inline-block"></span>
+              <span style="width: 8px; height: 8px; background: #12261a; border-radius: 50%; display: inline-block; opacity: 0.4"></span>
+            </span>
+          </div>
+          <div style="padding: 14px 18px 20px">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px">
+              <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px">Pošiljke</span>
+              <span style="width: 32px; height: 32px; border-radius: 50%; background: #2dbb54; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700">A</span>
+            </div>
+            <div style="background: #2dbb54; border-radius: 18px; padding: 16px; color: #ffffff; margin-bottom: 12px">
+              <div style="font-size: 12px; opacity: 0.85; margin-bottom: 8px; font-weight: 500">Tvoja pošiljka</div>
+              <div style="display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 17px">
+                <span>Zagreb</span>
+                <svg width="34" height="10" viewBox="0 0 34 10" fill="none" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round"><path d="M1 5h28" stroke-dasharray="3 4"></path><path d="M25 1l5 4-5 4"></path></svg>
+                <span>Split</span>
+              </div>
+              <div style="font-size: 12.5px; opacity: 0.9; margin-top: 8px">Danas · Kutija do 5 kg</div>
+            </div>
+            <div style="font-size: 12.5px; font-weight: 600; color: #6b8272; margin-bottom: 8px">PUTNICI NA TVOJOJ RUTI</div>
+            <div style="background: #ffffff; border: 1px solid #e4efe7; border-radius: 16px; padding: 13px 14px; display: flex; gap: 11px; align-items: center; margin-bottom: 10px; box-shadow: 0 1px 3px rgba(18,38,26,0.05)">
+              <span style="width: 38px; height: 38px; border-radius: 50%; background: #dff0e4; color: #167a38; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0">IK</span>
+              <span style="flex: 1; min-width: 0">
+                <span style="display: block; font-weight: 600; font-size: 14px">Ivan K. <span style="color: #6b8272; font-weight: 500; font-size: 12px">· ★ 4,9</span></span>
+                <span style="display: block; font-size: 12px; color: #6b8272">Polazak danas u 14:00</span>
+              </span>
+              <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #167a38; font-size: 15px">12 €</span>
+            </div>
+            <div style="background: #ffffff; border: 1px solid #e4efe7; border-radius: 16px; padding: 13px 14px; display: flex; gap: 11px; align-items: center; margin-bottom: 14px; box-shadow: 0 1px 3px rgba(18,38,26,0.05)">
+              <span style="width: 38px; height: 38px; border-radius: 50%; background: #dff0e4; color: #167a38; display: inline-flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px; flex-shrink: 0">MB</span>
+              <span style="flex: 1; min-width: 0">
+                <span style="display: block; font-weight: 600; font-size: 14px">Marija B. <span style="color: #6b8272; font-weight: 500; font-size: 12px">· ★ 5,0</span></span>
+                <span style="display: block; font-size: 12px; color: #6b8272">Polazak sutra u 9:30</span>
+              </span>
+              <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #167a38; font-size: 15px">10 €</span>
+            </div>
+            <div style="background: #12261a; color: #ffffff; text-align: center; font-weight: 600; font-size: 14.5px; padding: 13px; border-radius: 14px">Pošalji zahtjev</div>
+          </div>
+        </div>
+      </div>
+      <div style="position: absolute; top: 10px; left: 50%; margin-left: max(-222px, calc(-50vw + 20px)); max-width: min(220px, calc(100vw - 40px)); background: #ffffff; border: 1px solid #e4efe7; border-radius: 14px; padding: 10px 14px; display: flex; gap: 9px; align-items: center; box-shadow: 0 10px 28px rgba(18,38,26,0.14); font-size: 13.5px; font-weight: 600">
+        <span style="width: 26px; height: 26px; border-radius: 50%; background: #e8f7ee; display: inline-flex; align-items: center; justify-content: center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"></path></svg></span>
+        Paket predan
+      </div>
+      <div style="position: absolute; bottom: -18px; left: 50%; transform: translateX(-50%); max-width: min(230px, calc(100vw - 48px)); background: #ffffff; border: 1px solid #e4efe7; border-radius: 14px; padding: 10px 14px; display: flex; gap: 9px; align-items: center; box-shadow: 0 10px 28px rgba(18,38,26,0.14); font-size: 13.5px; font-weight: 600; text-wrap: balance">
+        <span style="width: 26px; height: 26px; border-radius: 50%; background: #e8f7ee; display: inline-flex; align-items: center; justify-content: center"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-5.1-7-11a7 7 0 0 1 14 0c0 5.9-7 11-7 11z"></path><circle cx="12" cy="10" r="2.6"></circle></svg></span>
+        Primopredaja dogovorena
+      </div>
+    </div>
+  </sc-if>
+</section>
+
+<section id="kako" style="background: #f4faf6; border-top: 1px solid #eaf2ec; border-bottom: 1px solid #eaf2ec">
+  <div style="max-width: 1140px; margin: 0 auto; padding: clamp(40px, 6.8vw, 88px) clamp(16px, 4.0vw, 32px)">
+    <div style="text-align: center; margin-bottom: 56px">
+      <div style="color: #1a9e44; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px">Kako funkcionira</div>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0; text-wrap: balance">Tri koraka do dostave</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 22px">
+      <div style="background: #ffffff; border: 1px solid #e4efe7; border-radius: 22px; padding: 30px clamp(14px, 3.5vw, 28px)">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px">
+          <span style="width: 46px; height: 46px; border-radius: 14px; background: #e8f7ee; display: inline-flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8l-9-5-9 5v8l9 5 9-5V8z"></path><path d="M3.3 8.3L12 13l8.7-4.7"></path><path d="M12 13v9"></path></svg></span>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px; color: #b7cfbe">01</span>
+        </div>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; margin: 0 0 10px">Objavi pošiljku</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">Unesi što šalješ, odakle i kamo. Objava traje manje od minute.</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e4efe7; border-radius: 22px; padding: 30px clamp(14px, 3.5vw, 28px)">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px">
+          <span style="width: 46px; height: 46px; border-radius: 14px; background: #e8f7ee; display: inline-flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9.5" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16.5 3.13a4 4 0 0 1 0 7.75"></path></svg></span>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px; color: #b7cfbe">02</span>
+        </div>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; margin: 0 0 10px">Poveži se s putnikom</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">Senvia pronalazi putnike koji već idu tvojim smjerom. Cijenu i primopredaju dogovorite u razgovoru.</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e4efe7; border-radius: 22px; padding: 30px clamp(14px, 3.5vw, 28px)">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px">
+          <span style="width: 46px; height: 46px; border-radius: 14px; background: #e8f7ee; display: inline-flex; align-items: center; justify-content: center"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9.5"></circle><path d="M8 12.5l2.6 2.6L16.5 9"></path></svg></span>
+          <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 15px; color: #b7cfbe">03</span>
+        </div>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; margin: 0 0 10px">Predaj i potvrdi</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">Predaj paket putniku, prati put i potvrdi primitak u aplikaciji.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="zakoga" style="max-width: 1140px; margin: 0 auto; padding: clamp(43px, 7.4vw, 96px) clamp(16px, 4.0vw, 32px)">
+  <div style="text-align: center; margin-bottom: 56px">
+    <div style="color: #1a9e44; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px">Za koga je Senvia</div>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0; text-wrap: balance">Obje strane su na dobitku</h2>
+  </div>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 22px">
+    <div style="border: 1px solid #e4efe7; border-radius: 24px; padding: 38px clamp(18px, 4.5vw, 36px); background: #ffffff">
+      <div style="display: inline-flex; align-items: center; gap: 8px; background: #e8f7ee; color: #167a38; font-weight: 700; font-size: 13px; padding: 6px 13px; border-radius: 999px; margin-bottom: 20px">ŠALJEŠ PAKET?</div>
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.2vw, 26px); font-weight: 600; margin: 0 0 12px; letter-spacing: -0.01em">Plati dio troška puta, ne punu tarifu</h3>
+      <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: #3c5346; text-wrap: pretty">Umjesto klasične dostave, tvoj paket nosi netko tko ionako putuje na odredište.</p>
+      <div style="display: grid; gap: 13px">
+        <div style="display: flex; gap: 11px; align-items: flex-start; font-size: 15.5px; color: #12261a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><path d="M20 6L9 17l-5-5"></path></svg>Jeftinije od klasične dostave</div>
+        <div style="display: flex; gap: 11px; align-items: flex-start; font-size: 15.5px; color: #12261a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><path d="M20 6L9 17l-5-5"></path></svg>Mjesto i vrijeme primopredaje biraš sam</div>
+        <div style="display: flex; gap: 11px; align-items: flex-start; font-size: 15.5px; color: #12261a"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><path d="M20 6L9 17l-5-5"></path></svg>Izravan dogovor s putnikom, bez posrednika</div>
+      </div>
+    </div>
+    <div style="border: 1px solid #1e3a29; border-radius: 24px; padding: 38px clamp(18px, 4.5vw, 36px); background: #12261a; color: #ffffff">
+      <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(45,187,84,0.18); color: #6fdd96; font-weight: 700; font-size: 13px; padding: 6px 13px; border-radius: 999px; margin-bottom: 20px">PUTUJEŠ?</div>
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.2vw, 26px); font-weight: 600; margin: 0 0 12px; letter-spacing: -0.01em">Pokrij dio troškova puta koji te ionako čeka</h3>
+      <p style="margin: 0 0 24px; font-size: 16px; line-height: 1.6; color: #b7cfbe; text-wrap: pretty">Ponesi paket koji ide tvojim smjerom i naplati prijevoz, bez skretanja s rute.</p>
+      <div style="display: grid; gap: 13px">
+        <div style="display: flex; gap: 11px; align-items: flex-start; font-size: 15.5px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6fdd96" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><path d="M20 6L9 17l-5-5"></path></svg>Zaradi na ruti koju već voziš</div>
+        <div style="display: flex; gap: 11px; align-items: flex-start; font-size: 15.5px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6fdd96" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><path d="M20 6L9 17l-5-5"></path></svg>Sam biraš što i koliko nosiš</div>
+        <div style="display: flex; gap: 11px; align-items: flex-start; font-size: 15.5px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6fdd96" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 2px"><path d="M20 6L9 17l-5-5"></path></svg>Sve dogovoreno unaprijed, u aplikaciji</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="preuzmi" style="max-width: 1140px; margin: 0 auto; padding: 0 clamp(16px, 4.0vw, 32px) clamp(43px, 7.4vw, 96px)">
+  <div style="background: #2dbb54; border-radius: 28px; padding: clamp(32px, 5.5vw, 72px) clamp(24px, 6.0vw, 48px); text-align: center; color: #ffffff">
+    <img src="uploads/1024x1024bb.png" alt="Senvia" width="64" height="64" style="border-radius: 16px; box-shadow: 0 10px 26px rgba(10,60,26,0.3); margin-bottom: 26px">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(23px, 6.5vw, 40px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 14px; text-wrap: balance">Sljedeći paket pošalji sa Senviom</h2>
+    <p style="margin: 0 auto 36px; font-size: 18px; line-height: 1.55; max-width: 46ch; color: rgba(255,255,255,0.92); text-wrap: pretty">Preuzmi aplikaciju besplatno i pronađi putnika koji već ide tvojim smjerom.</p>
+    <div style="display: flex; gap: 14px; justify-content: center">
+      <a href="#vrh" style="display: inline-flex; align-items: center; gap: 10px; background: #ffffff; color: #12261a; padding: 13px 22px; border-radius: 14px" style-hover="background: #e8f7ee">
+        <svg width="20" height="20" viewBox="0 0 384 512" fill="#12261a"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg>
+        <span style="text-align: left; line-height: 1.15"><span style="display: block; font-size: 11px; opacity: 0.65">Preuzmi u</span><span style="display: block; font-size: 16px; font-weight: 600">App Storeu</span></span>
+      </a>
+      <a href="#vrh" style="display: inline-flex; align-items: center; gap: 10px; background: #ffffff; color: #12261a; padding: 13px 22px; border-radius: 14px" style-hover="background: #e8f7ee">
+        <svg width="19" height="19" viewBox="0 0 512 512" fill="#12261a"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"></path></svg>
+        <span style="text-align: left; line-height: 1.15"><span style="display: block; font-size: 11px; opacity: 0.65">Dostupno na</span><span style="display: block; font-size: 16px; font-weight: 600">Google Playu</span></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<sc-if value="{{ lightFooter }}" hint-placeholder-val="{{ true }}">
+  <footer style="border-top: 1px solid #eaf2ec; background: #ffffff">
+    <div style="max-width: 1140px; margin: 0 auto; padding: 44px clamp(16px, 4.0vw, 32px); display: flex; align-items: center; gap: 28px">
+      <a href="#vrh" style="display: flex; align-items: center; gap: 10px; color: #12261a">
+        <img src="uploads/1024x1024bb.png" alt="Senvia logo" width="30" height="30" style="border-radius: 8px; display: block">
+        <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 17px">Senvia</span>
+      </a>
+      <span style="color: #6b8272; font-size: 14.5px">Paketi putuju s lakoćom.</span>
+      <nav style="margin-left: auto; display: flex; gap: clamp(14px, 3vw, 24px); font-size: 14.5px; flex-wrap: wrap">
+        <a href="#kako" style="color: #3c5346" style-hover="color: #12261a">Kako funkcionira</a>
+        <a href="#zakoga" style="color: #3c5346" style-hover="color: #12261a">Za koga je</a>
+        <a href="#preuzmi" style="color: #3c5346" style-hover="color: #12261a">Preuzmi</a>
+      </nav>
+      <span style="color: #6b8272; font-size: 13.5px">© 2026 Riddo Digital</span>
+    </div>
+  </footer>
+</sc-if>
+<sc-if value="{{ darkFooter }}" hint-placeholder-val="{{ false }}">
+  <footer style="background: #12261a; color: #ffffff">
+    <div style="max-width: 1140px; margin: 0 auto; padding: 44px clamp(16px, 4.0vw, 32px); display: flex; align-items: center; gap: 28px">
+      <a href="#vrh" style="display: flex; align-items: center; gap: 10px; color: #ffffff">
+        <img src="uploads/1024x1024bb.png" alt="Senvia logo" width="30" height="30" style="border-radius: 8px; display: block">
+        <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 17px">Senvia</span>
+      </a>
+      <span style="color: #b7cfbe; font-size: 14.5px">Paketi putuju s lakoćom.</span>
+      <nav style="margin-left: auto; display: flex; gap: clamp(14px, 3vw, 24px); font-size: 14.5px; flex-wrap: wrap">
+        <a href="#kako" style="color: #b7cfbe" style-hover="color: #ffffff">Kako funkcionira</a>
+        <a href="#zakoga" style="color: #b7cfbe" style-hover="color: #ffffff">Za koga je</a>
+        <a href="#preuzmi" style="color: #b7cfbe" style-hover="color: #ffffff">Preuzmi</a>
+      </nav>
+      <span style="color: #6b8272; font-size: 13.5px">© 2026 Riddo Digital</span>
+    </div>
+  </footer>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;showPhone&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Hero&quot;},
+  &quot;showAnnouncement&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Hero&quot;},
+  &quot;darkFooter&quot;: {&quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: false, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Footer&quot;}
+}">
+class Component extends DCLogic {
+  renderVals() {
+    const darkFooter = this.props.darkFooter ?? false;
+    return {
+      showAnnouncement: this.props.showAnnouncement ?? false,
+      showPhone: this.props.showPhone ?? true,
+      darkFooter,
+      lightFooter: !darkFooter,
+    };
+  }
+}
+</script>
+</body>
+</html>

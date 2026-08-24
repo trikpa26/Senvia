@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <meta charset="utf-8">
+  <title>Senvia za tvrtke, dostava istoga dana uz putnika | Senvia</title>
+  <meta name="description" content="Cvjećarnice, male trgovine, voćarne i sportske trgovine mogu slati narudžbe uz putnika koji već ide tim smjerom. Javi se za suradnju.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.senviaapp.com/za-tvrtke">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Senvia">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:title" content="Senvia za tvrtke, dostava istoga dana uz putnika | Senvia">
+  <meta property="og:description" content="Cvjećarnice, male trgovine, voćarne i sportske trgovine mogu slati narudžbe uz putnika koji već ide tim smjerom. Javi se za suradnju.">
+  <meta property="og:url" content="https://www.senviaapp.com/za-tvrtke">
+  <meta property="og:image" content="https://www.senviaapp.com/uploads/1024x1024bb.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Senvia za tvrtke, dostava istoga dana uz putnika | Senvia">
+  <meta name="twitter:description" content="Cvjećarnice, male trgovine, voćarne i sportske trgovine mogu slati narudžbe uz putnika koji već ide tim smjerom. Javi se za suradnju.">
+  <meta name="twitter:image" content="https://www.senviaapp.com/uploads/1024x1024bb.png">
+  <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
+  <script>
+    window.SENVIA_GA_ID = 'G-H8DBTNDF62';
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H8DBTNDF62');
+    window.senviaLoadAnalytics = function () {
+      if (window.senviaGaLoaded || location.hostname.indexOf('senviaapp.com') === -1) return;
+      window.senviaGaLoaded = true;
+      var el = document.createElement('script');
+      el.setAttribute('async', '');
+      el.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + window.SENVIA_GA_ID);
+      document.head.appendChild(el);
+    };
+    try { if (localStorage.getItem('senvia-consent') === 'yes') window.senviaLoadAnalytics(); } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    a { color: #1a9e44; text-decoration: none; }
+    a:hover { color: #0e7c31; }
+    ::selection { background: #c9efd6; }
+    img { max-width: 100%; }
+  </style>
+</helmet>
+
+<div style="overflow-x: clip">
+
+<dc-import name="Nav" active="business" hint-size="100%,66px"></dc-import>
+
+<nav aria-label="breadcrumb" style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
+  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.crumb }}</span>
+</nav>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 40px clamp(16px, 4vw, 32px) clamp(30px, 5vw, 60px)">
+  <div style="color: #1a9e44; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px">{{ t.kicker }}</div>
+  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 8vw, 54px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; max-width: 22ch; text-wrap: balance">{{ t.h1 }}</h1>
+  <p style="font-size: 19px; line-height: 1.6; color: #3c5346; margin: 0 0 16px; max-width: 62ch; text-wrap: pretty">{{ t.lead1 }}</p>
+  <p style="font-size: 17px; line-height: 1.65; color: #3c5346; margin: 0 0 30px; max-width: 62ch; text-wrap: pretty">{{ t.lead2 }}</p>
+  <a href="#prijava" style="display: inline-flex; align-items: center; gap: 10px; background: #2dbb54; color: #ffffff; font-weight: 600; font-size: 16.5px; padding: 15px 26px; border-radius: 14px" style-hover="background: #26a449">
+    {{ t.heroCta }}
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"></path><path d="M13 6l6 6-6 6"></path></svg>
+  </a>
+</section>
+
+<section style="background: #f4faf6; border-top: 1px solid #eaf2ec; border-bottom: 1px solid #eaf2ec">
+  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.whoTitle }}</h2>
+    <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 70ch; text-wrap: pretty">{{ t.whoSub }}</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 16px">
+      <sc-for list="{{ segments }}" as="s" hint-placeholder-count="6">
+        <div style="background: #ffffff; border: 1px solid #e4efe7; border-radius: 20px; padding: 28px 26px">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance">{{ s.title }}</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ s.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+    <p style="margin: 18px 0 0; font-size: 16px; line-height: 1.65; color: #3c5346; max-width: 76ch; text-wrap: pretty">{{ t.sMore }}</p>
+  </div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+  <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.howTitle }}</h2>
+  <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 68ch; text-wrap: pretty">{{ t.howSub }}</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 16px">
+    <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+      <div style="border: 1px solid #e4efe7; border-radius: 20px; padding: 28px 26px">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; color: #1a9e44; letter-spacing: 0.1em; margin-bottom: 14px">{{ s.n }}</div>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance">{{ s.title }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ s.desc }}</p>
+      </div>
+    </sc-for>
+  </div>
+  <p style="margin: 20px 0 0; font-size: 15.5px; line-height: 1.65; color: #6b8272; max-width: 76ch; text-wrap: pretty">{{ t.howNote }}</p>
+</section>
+
+<section style="background: #12261a; color: #ffffff">
+  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.gainTitle }}</h2>
+    <p style="font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.72); margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 70ch; text-wrap: pretty">{{ t.gainSub }}</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 12px">
+      <sc-for list="{{ gains }}" as="g" hint-placeholder-count="4">
+        <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 18px; padding: 26px 24px">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 10px">{{ g.title }}</h3>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: rgba(255,255,255,0.78); text-wrap: pretty">{{ g.desc }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="prijava" style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px); scroll-margin-top: 88px">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(20px, 3.4vw, 44px); align-items: start; border: 1px solid #e4efe7; border-radius: 26px; padding: clamp(28px, 4vw, 46px)">
+    <div>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 34px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance">{{ t.contactTitle }}</h2>
+      <p style="font-size: 16.5px; line-height: 1.65; color: #3c5346; margin: 0 0 22px; max-width: 52ch; text-wrap: pretty">{{ t.contactSub }}</p>
+      <div style="background: #f7fbf8; border: 1px solid #e4efe7; border-radius: 20px; padding: 26px 24px">
+        <div style="font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 14px">{{ t.contactListTitle }}</div>
+        <div style="display: grid; gap: 11px">
+          <sc-for list="{{ contactItems }}" as="c" hint-placeholder-count="4">
+            <div style="display: flex; gap: 11px; align-items: flex-start; font-size: 15.5px; line-height: 1.55; color: #3c5346">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; margin-top: 3px"><path d="M20 6L9 17l-5-5"></path></svg>
+              <span>{{ c.text }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <p style="margin: 16px 0 0; font-size: 14.5px; line-height: 1.6; color: #6b8272">{{ t.contactMail }} <a href="mailto:contact@senviaapp.com?subject=Senvia%20za%20tvrtke" style="font-weight: 600">contact@senviaapp.com</a></p>
+      </div>
+    </div>
+
+    <form onSubmit="{{ submit }}" style="display: grid; gap: 14px">
+      <sc-for list="{{ fields }}" as="f" hint-placeholder-count="6">
+        <label style="display: grid; gap: 7px">
+          <span style="font-size: 14.5px; font-weight: 600; color: #12261a">{{ f.label }}</span>
+          <input type="{{ f.type }}" name="{{ f.name }}" required="{{ f.required }}" placeholder="{{ f.placeholder }}" style="font-family: 'Instrument Sans', sans-serif; font-size: 16px; color: #12261a; background: #ffffff; border: 1px solid #e4efe7; border-radius: 13px; padding: 14px 16px; outline: none; width: 100%; box-sizing: border-box" style-focus="border-color: #2dbb54; box-shadow: 0 0 0 3px rgba(45,187,84,0.15)">
+        </label>
+      </sc-for>
+      <label style="display: grid; gap: 7px">
+        <span style="font-size: 14.5px; font-weight: 600; color: #12261a">{{ t.fMsg }}</span>
+        <textarea name="poruka" rows="4" placeholder="{{ t.fMsgPh }}" style="font-family: 'Instrument Sans', sans-serif; font-size: 16px; line-height: 1.55; color: #12261a; background: #ffffff; border: 1px solid #e4efe7; border-radius: 13px; padding: 14px 16px; outline: none; width: 100%; box-sizing: border-box; resize: vertical" style-focus="border-color: #2dbb54; box-shadow: 0 0 0 3px rgba(45,187,84,0.15)"></textarea>
+      </label>
+      <button type="submit" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #2dbb54; color: #ffffff; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 16.5px; padding: 16px 26px; border: none; border-radius: 14px; cursor: pointer; width: 100%" style-hover="background: #26a449">
+        {{ t.fSend }}
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"></path><path d="M13 6l6 6-6 6"></path></svg>
+      </button>
+      <sc-if value="{{ sent }}" hint-placeholder-val="{{ false }}">
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #167a38; background: #e8f7ee; border-radius: 13px; padding: 14px 16px">{{ t.fSentNote }}</p>
+      </sc-if>
+      <p style="margin: 0; font-size: 13.5px; line-height: 1.55; color: #6b8272">{{ t.fPrivacy }}</p>
+    </form>
+  </div>
+</section>
+
+<dc-import name="Podnozje" hint-size="100%,420px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { lang: 'hr', sent: false };
+
+  STR = {
+    hr: {
+      title: 'Senvia za tvrtke, dostava istoga dana | Senvia',
+      desc: 'Cvjećarnice, male trgovine, voćarne i sportske trgovine mogu slati narudžbe uz putnika koji već ide tim smjerom. Javi se za suradnju.',
+      locale: 'hr_HR',
+      crumb: 'Za tvrtke', kicker: 'Za tvrtke',
+      h1: 'Senvia za male trgovine i lokalne obrte',
+      lead1: 'Narudžba koju kupac čeka danas ne mora čekati preuzimanje pošiljke sutra. Senvia povezuje tvoju trgovinu s putnikom koji već ide u smjeru kupca, pa narudžba stiže u nekoliko sati.',
+      lead2: 'Suradnja s poslovnim partnerima je u pripremi. Ako želiš biti među prvima, javi nam se i uključit ćemo te u prvi krug.',
+      heroCta: 'Prijavi svoju tvrtku',
+      whoTitle: 'Kome je namijenjeno',
+      whoSub: 'Svima koji prodaju nešto što kupac želi danas, a klasična dostava to ne stigne ili se ne isplati zbog cijene.',
+      s1t: 'Cvjećarnice', s1d: 'Buket za rođendan ili sprovod ne može čekati dva dana. Ako netko već putuje prema kupcu, cvijeće stiže svježe i istoga dana.',
+      s2t: 'Male trgovine i butici', s2d: 'Kupac je vidio artikl na društvenim mrežama i želi ga odmah. Umjesto tarife po masi, pošiljka putuje uz nekoga tko ionako ide tim smjerom.',
+      s3t: 'Voćarne i OPG', s3d: 'Svježe voće, povrće, med i domaći proizvodi. Kraći put znači manje presjedanja i robu koja stiže onakva kakva je i krenula.',
+      s4t: 'Sportske trgovine', s4d: 'Oprema koja treba za vikend, dres, tenisice ili sitni dio opreme koji je hitan prije utakmice ili natjecanja.',
+      s5t: 'Pekarnice i slastičarnice', s5d: 'Torta za slavlje, kolači i sve što se radi na narudžbu, uz put koji traje sate umjesto dana.',
+      s6t: 'Servisi i majstori', s6d: 'Rezervni dio, alat ili uređaj na popravku, kada zastoj košta više od same dostave.',
+      howTitle: 'Kako to izgleda u praksi',
+      howSub: 'Isti sustav kao i za privatne korisnike, samo što zahtjev objavljuje trgovina umjesto pojedinca.',
+      h1t: 'Objaviš narudžbu', h1d: 'Unosiš mjesto preuzimanja, odredište, rok i fotografiju pošiljke, isto kao i svaki drugi zahtjev.',
+      h2t: 'Javlja se putnik', h2d: 'Putnici koji tim smjerom putuju vide zahtjev i javljaju se. Vidiš ocjene, recenzije i broj dosadašnjih vožnji.',
+      h3t: 'Dogovor i plaćanje', h3d: 'Rezervacija se plaća unutar aplikacije, uz Apple Pay i Google Pay. Iznos je poznat prije potvrde.',
+      h4t: 'Preuzimanje i predaja', h4d: 'Putnik preuzima pošiljku u trgovini i predaje je kupcu, a chat ostaje otvoren cijelo vrijeme.',
+      howNote: 'Ako na traženoj ruti u tom trenutku nema putnika, pošiljka jednostavno ide klasičnim putem. Senvia je brza opcija kada se putovanje poklopi, a ne zamjena za svaku dostavu.',
+      gainTitle: 'Što tvrtka dobiva',
+      gainSub: 'Prednost nije samo cijena. Prednost je vrijeme u kojem kupac dobiva ono što je naručio.',
+      g1t: 'Dostava u satima', g1d: 'Kupac dobiva narudžbu istoga dana, često unutar nekoliko sati, jer paket putuje s nekim tko je već na putu.',
+      g2t: 'Bez fiksnih ugovora', g2d: 'Nema mjesečne naknade ni minimalnog broja pošiljaka. Koristiš onda kada ti treba.',
+      g3t: 'Šire područje prodaje', g3d: 'Kupci iz drugih gradova prestaju biti problem s dostavom, pa se prodaja ne zaustavlja na granici tvojega grada.',
+      g4t: 'Svaki prijevoz ima trag', g4d: 'Profil putnika, ocjene, fotografija pošiljke i chat ostaju zabilježeni u aplikaciji.',
+      s7t: 'Trgovine tehnikom',
+      s7d: 'Mobitel, punjač, kabel ili sitni uređaj koji kupcu treba danas, a ne kroz nekoliko radnih dana.',
+      s8t: 'Autodijelovi i servisi vozila',
+      s8d: 'Dio koji drži vozilo na dizalici. Kad dio stigne u satima, servis nastavlja raditi isti dan.',
+      s9t: 'Knjižare, papirnice i vrtlarije',
+      s9d: 'Udžbenik, uredski materijal, sadnice i sve što se kupuje sezonski, a ne isplati se slati po tarifi.',
+      sMore: 'Popis nije zatvoren. Senviu može koristiti svaki obrt i svaka tvrtka kojoj se dogodi da kupac čeka, a netko upravo putuje u tom smjeru.',
+      fName: 'Naziv tvrtke ili obrta',
+      fNamePh: 'Cvjećarnica Lipa',
+      fField: 'Djelatnost',
+      fFieldPh: 'Cvjećarnica, trgovina, servis...',
+      fCity: 'Grad iz kojega šalješ',
+      fCityPh: 'Zagreb',
+      fTo: 'Gradovi u koje najčešće šalješ',
+      fToPh: 'Split, Rijeka, Beč',
+      fPerson: 'Kontakt osoba',
+      fPersonPh: 'Ime i prezime',
+      fEmail: 'E-pošta',
+      fEmailPh: 'ime@tvrtka.hr',
+      fPhone: 'Telefon',
+      fPhonePh: '+385',
+      fMsg: 'Poruka',
+      fMsgPh: 'Koliko pošiljaka tjedno očekuješ i što najčešće šalješ.',
+      fSend: 'Pošalji prijavu',
+      fSentNote: 'Otvorili smo tvoj program za e-poštu s ispunjenom prijavom. Ako se nije otvorio, pošalji podatke izravno na contact@senviaapp.com.',
+      fPrivacy: 'Podatke koristimo samo da ti se javimo u vezi suradnje.',
+      contactMail: 'Radije pišeš sam?',
+      contactTitle: 'Javi se za suradnju',
+      contactSub: 'Pripremamo program za poslovne partnere. Napiši nam čime se baviš i na kojim rutama najčešće šalješ, pa ćemo se javiti s detaljima.',
+      contactListTitle: 'Što slijedi nakon prijave',
+      ci1: 'Javljamo se e-poštom, najčešće unutar nekoliko radnih dana.',
+      ci2: 'Provjeravamo ima li putnika na rutama koje su ti važne.',
+      ci3: 'Dogovaramo probno razdoblje bez obveze i bez naknade.',
+      ci4: 'Ako sve sjedne, uključujemo te u prvi krug partnera.',
+      ci5: 'Sve što nam pošalješ ostaje kod nas, bez prosljeđivanja trećima.'
+    },
+    en: {
+      title: 'Senvia for business, same-day delivery | Senvia',
+      desc: 'Florists, small shops, greengrocers and sports shops can send orders with a traveller already heading that way. Get in touch.',
+      locale: 'en_GB',
+      crumb: 'For businesses', kicker: 'For businesses',
+      h1: 'Senvia for small shops and local trades',
+      lead1: 'An order a customer wants today does not have to wait for a pick-up tomorrow. Senvia connects your shop with a traveller already heading towards the customer, so the order arrives within hours.',
+      lead2: 'The partner programme is in preparation. If you want to be among the first, get in touch and we will include you in the first round.',
+      heroCta: 'Register your business',
+      whoTitle: 'Who it is for',
+      whoSub: 'Anyone selling something a customer wants today, where classic delivery is either too slow or too expensive to make sense.',
+      s1t: 'Florists', s1d: 'A bouquet for a birthday or a funeral cannot wait two days. If somebody is already driving towards the customer, the flowers arrive fresh the same day.',
+      s2t: 'Small shops and boutiques', s2d: 'The customer saw the item on social media and wants it now. Instead of a weight tariff, the order travels with someone already going that way.',
+      s3t: 'Greengrocers and family farms', s3d: 'Fresh fruit, vegetables, honey and homemade products. A shorter trip means fewer transfers and goods that arrive the way they left.',
+      s4t: 'Sports shops', s4d: 'Gear needed for the weekend, a jersey, trainers or a small part that is urgent before a match.',
+      s5t: 'Bakeries and cake shops', s5d: 'A celebration cake, pastries and everything made to order, on a trip that takes hours instead of days.',
+      s6t: 'Repair shops and tradespeople', s6d: 'A spare part, a tool or a device under repair, when downtime costs more than the delivery itself.',
+      howTitle: 'How it works in practice',
+      howSub: 'The same system as for private users, except the request is posted by the shop rather than an individual.',
+      h1t: 'You post the order', h1d: 'You enter the pick-up point, destination, deadline and a photo of the shipment, exactly like any other request.',
+      h2t: 'A traveller replies', h2d: 'Travellers heading that way see the request and get in touch. You see ratings, reviews and the number of completed trips.',
+      h3t: 'Agreement and payment', h3d: 'The booking is paid inside the app, with Apple Pay and Google Pay. The amount is known before you confirm.',
+      h4t: 'Pick-up and hand-over', h4d: 'The traveller collects the shipment at the shop and hands it to the customer, with the chat open the whole time.',
+      howNote: 'If there is no traveller on that route at that moment, the shipment simply goes the classic way. Senvia is the fast option when journeys line up, not a replacement for every delivery.',
+      gainTitle: 'What the business gets',
+      gainSub: 'The advantage is not only price. The advantage is the time in which the customer receives what they ordered.',
+      g1t: 'Delivery in hours', g1d: 'The customer gets the order the same day, often within hours, because the package travels with someone already on the road.',
+      g2t: 'No fixed contracts', g2d: 'No monthly fee and no minimum number of shipments. You use it when you need it.',
+      g3t: 'A wider selling area', g3d: 'Customers in other cities stop being a delivery problem, so sales no longer stop at the edge of your town.',
+      g4t: 'Every trip leaves a record', g4d: 'The traveller profile, ratings, the photo of the shipment and the chat all stay recorded in the app.',
+      s7t: 'Electronics shops',
+      s7d: 'A phone, charger, cable or small device the customer needs today rather than in several working days.',
+      s8t: 'Car parts and garages',
+      s8d: 'The part that keeps a car on the lift. When it arrives in hours, the garage keeps working the same day.',
+      s9t: 'Bookshops, stationers and garden centres',
+      s9d: 'A textbook, office supplies, seedlings and everything bought seasonally that is not worth sending on a tariff.',
+      sMore: 'The list is open. Senvia works for any trade or company where a customer is waiting and somebody happens to be travelling that way.',
+      fName: 'Company or trade name',
+      fNamePh: 'Lipa Florist',
+      fField: 'Line of business',
+      fFieldPh: 'Florist, shop, garage...',
+      fCity: 'City you send from',
+      fCityPh: 'Zagreb',
+      fTo: 'Cities you send to most',
+      fToPh: 'Split, Rijeka, Vienna',
+      fPerson: 'Contact person',
+      fPersonPh: 'Full name',
+      fEmail: 'Email',
+      fEmailPh: 'name@company.com',
+      fPhone: 'Phone',
+      fPhonePh: '+385',
+      fMsg: 'Message',
+      fMsgPh: 'How many shipments a week you expect and what you usually send.',
+      fSend: 'Send application',
+      fSentNote: 'We opened your email app with the application filled in. If it did not open, send the details straight to contact@senviaapp.com.',
+      fPrivacy: 'We use these details only to get back to you about the partnership.',
+      contactMail: 'Prefer to write yourself?',
+      contactTitle: 'Get in touch',
+      contactSub: 'We are preparing a programme for business partners. Tell us what you do and which routes you send on most, and we will come back with the details.',
+      contactListTitle: 'What happens after you apply',
+      ci1: 'We reply by email, usually within a few working days.',
+      ci2: 'We check whether there are travellers on the routes that matter to you.',
+      ci3: 'We agree a trial period with no obligation and no fee.',
+      ci4: 'If it works, we include you in the first round of partners.',
+      ci5: 'Everything you send stays with us and is never passed to third parties.'
+    },
+    de: {
+      title: 'Senvia für Unternehmen, Zustellung am Tag | Senvia',
+      desc: 'Floristen, kleine Geschäfte, Obstläden und Sportgeschäfte senden Bestellungen mit einem Reisenden, der ohnehin fährt. Melde dich.',
+      locale: 'de_DE',
+      crumb: 'Für Unternehmen', kicker: 'Für Unternehmen',
+      h1: 'Senvia für kleine Geschäfte und lokale Betriebe',
+      lead1: 'Eine Bestellung, die der Kunde heute möchte, muss nicht auf die Abholung von morgen warten. Senvia verbindet dein Geschäft mit einem Reisenden, der ohnehin Richtung Kunde fährt, so kommt die Bestellung in wenigen Stunden an.',
+      lead2: 'Das Partnerprogramm ist in Vorbereitung. Wenn du zu den Ersten gehören willst, melde dich, wir nehmen dich in die erste Runde auf.',
+      heroCta: 'Unternehmen anmelden',
+      whoTitle: 'Für wen es gedacht ist',
+      whoSub: 'Für alle, die etwas verkaufen, das der Kunde heute möchte, und für die klassische Zustellung entweder zu langsam oder zu teuer ist.',
+      s1t: 'Blumengeschäfte', s1d: 'Ein Strauß zum Geburtstag oder zur Beerdigung kann nicht zwei Tage warten. Fährt jemand ohnehin zum Kunden, kommen die Blumen frisch und am selben Tag an.',
+      s2t: 'Kleine Geschäfte und Boutiquen', s2d: 'Der Kunde hat den Artikel in den sozialen Medien gesehen und möchte ihn sofort. Statt Gewichtstarif reist die Bestellung mit jemandem, der ohnehin dorthin fährt.',
+      s3t: 'Obstläden und Familienbetriebe', s3d: 'Frisches Obst, Gemüse, Honig und hausgemachte Produkte. Ein kürzerer Weg bedeutet weniger Umladen und Ware, die so ankommt, wie sie losgefahren ist.',
+      s4t: 'Sportgeschäfte', s4d: 'Ausrüstung fürs Wochenende, ein Trikot, Schuhe oder ein kleines Teil, das vor dem Spiel dringend gebraucht wird.',
+      s5t: 'Bäckereien und Konditoreien', s5d: 'Die Torte fürs Fest, Gebäck und alles auf Bestellung, auf einem Weg, der Stunden statt Tage dauert.',
+      s6t: 'Werkstätten und Handwerk', s6d: 'Ein Ersatzteil, ein Werkzeug oder ein Gerät in Reparatur, wenn Stillstand mehr kostet als die Zustellung selbst.',
+      howTitle: 'So sieht es in der Praxis aus',
+      howSub: 'Dasselbe System wie für private Nutzer, nur stellt das Geschäft die Anfrage statt einer Einzelperson.',
+      h1t: 'Du stellst die Bestellung ein', h1d: 'Du gibst Abholort, Ziel, Frist und ein Foto der Sendung an, genau wie bei jeder anderen Anfrage.',
+      h2t: 'Ein Reisender meldet sich', h2d: 'Reisende auf dieser Strecke sehen die Anfrage und melden sich. Du siehst Bewertungen, Rezensionen und die Zahl bisheriger Fahrten.',
+      h3t: 'Absprache und Zahlung', h3d: 'Die Buchung wird in der App bezahlt, mit Apple Pay und Google Pay. Der Betrag steht vor der Bestätigung fest.',
+      h4t: 'Abholung und Übergabe', h4d: 'Der Reisende holt die Sendung im Geschäft ab und übergibt sie dem Kunden, der Chat bleibt die ganze Zeit offen.',
+      howNote: 'Gibt es zu dem Zeitpunkt keinen Reisenden auf der Strecke, geht die Sendung einfach den klassischen Weg. Senvia ist die schnelle Option, wenn Fahrten zusammenpassen, kein Ersatz für jede Zustellung.',
+      gainTitle: 'Was das Unternehmen davon hat',
+      gainSub: 'Der Vorteil ist nicht nur der Preis. Der Vorteil ist die Zeit, in der der Kunde bekommt, was er bestellt hat.',
+      g1t: 'Zustellung in Stunden', g1d: 'Der Kunde erhält die Bestellung am selben Tag, oft in wenigen Stunden, weil das Paket mit jemandem reist, der bereits unterwegs ist.',
+      g2t: 'Keine festen Verträge', g2d: 'Keine Monatsgebühr und keine Mindestmenge an Sendungen. Du nutzt es, wenn du es brauchst.',
+      g3t: 'Größeres Verkaufsgebiet', g3d: 'Kunden in anderen Städten sind kein Zustellproblem mehr, der Verkauf endet nicht an der Stadtgrenze.',
+      g4t: 'Jeder Transport ist dokumentiert', g4d: 'Profil des Reisenden, Bewertungen, Foto der Sendung und Chat bleiben in der App gespeichert.',
+      s7t: 'Elektronikgeschäfte',
+      s7d: 'Handy, Ladegerät, Kabel oder ein kleines Gerät, das der Kunde heute braucht und nicht in mehreren Werktagen.',
+      s8t: 'Autoteile und Werkstätten',
+      s8d: 'Das Teil, das ein Auto auf der Hebebühne hält. Kommt es in Stunden an, arbeitet die Werkstatt am selben Tag weiter.',
+      s9t: 'Buchhandlungen, Schreibwaren und Gärtnereien',
+      s9d: 'Ein Lehrbuch, Bürobedarf, Setzlinge und alles Saisonale, dessen Versand sich nach Tarif nicht lohnt.',
+      sMore: 'Die Liste ist offen. Senvia passt zu jedem Betrieb und jedem Unternehmen, bei dem ein Kunde wartet und gerade jemand in diese Richtung fährt.',
+      fName: 'Firmen- oder Betriebsname',
+      fNamePh: 'Blumen Lipa',
+      fField: 'Branche',
+      fFieldPh: 'Blumen, Geschäft, Werkstatt...',
+      fCity: 'Stadt, aus der du sendest',
+      fCityPh: 'Zagreb',
+      fTo: 'Städte, in die du am häufigsten sendest',
+      fToPh: 'Split, Rijeka, Wien',
+      fPerson: 'Ansprechpartner',
+      fPersonPh: 'Vor- und Nachname',
+      fEmail: 'E-Mail',
+      fEmailPh: 'name@firma.de',
+      fPhone: 'Telefon',
+      fPhonePh: '+385',
+      fMsg: 'Nachricht',
+      fMsgPh: 'Wie viele Sendungen pro Woche du erwartest und was du meistens sendest.',
+      fSend: 'Anmeldung senden',
+      fSentNote: 'Wir haben dein E-Mail-Programm mit der ausgefüllten Anmeldung geöffnet. Falls nicht, sende die Angaben direkt an contact@senviaapp.com.',
+      fPrivacy: 'Wir nutzen diese Angaben nur, um uns wegen der Zusammenarbeit zu melden.',
+      contactMail: 'Lieber selbst schreiben?',
+      contactTitle: 'Melde dich für eine Zusammenarbeit',
+      contactSub: 'Wir bereiten ein Programm für Geschäftspartner vor. Schreib uns, was du machst und auf welchen Strecken du am häufigsten sendest, wir melden uns mit den Details.',
+      contactListTitle: 'Was nach der Anmeldung passiert',
+      ci1: 'Wir melden uns per E-Mail, meist innerhalb weniger Werktage.',
+      ci2: 'Wir prüfen, ob es Reisende auf den für dich wichtigen Strecken gibt.',
+      ci3: 'Wir vereinbaren eine Testphase ohne Verpflichtung und ohne Gebühr.',
+      ci4: 'Passt alles, nehmen wir dich in die erste Partnerrunde auf.',
+      ci5: 'Alles, was du uns schickst, bleibt bei uns und wird nicht weitergegeben.'
+    }
+  };
+
+
+  addBreadcrumbLd() {
+    let bc = document.getElementById('senvia-breadcrumb-ld');
+    if (!bc) { bc = document.createElement('script'); bc.type = 'application/ld+json'; bc.id = 'senvia-breadcrumb-ld'; document.head.appendChild(bc); }
+    bc.textContent = JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+      itemListElement: [{"@type":"ListItem","position":1,"name":"Senvia","item":"https://www.senviaapp.com/"},{"@type":"ListItem","position":2,"name":"Za poslovne korisnike","item":"https://www.senviaapp.com/za-tvrtke"}]
+    });
+  }
+  componentDidMount() {
+    this.addBreadcrumbLd();
+    import('./i18n.js').then(m => {
+      this.i18n = m;
+      this.setState({ lang: m.getLang() });
+      this.off = m.onLang(l => this.setState({ lang: l }));
+    });
+  }
+  componentWillUnmount() { if (this.off) this.off(); }
+
+
+  // Zaglavlje prati odabrani jezik; naslov se ponovno upisuje jer ga runtime vraća na vrijednost iz helmeta.
+  syncSeo(t) {
+    const lang = this.state.lang;
+    if (this.seoLang !== lang) {
+      this.seoLang = lang;
+      document.documentElement.setAttribute('lang', lang);
+      const meta = (attr, name, content) => {
+        let el = document.head.querySelector('meta[' + attr + '="' + name + '"]');
+        if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); }
+        el.setAttribute('content', content);
+      };
+      meta('name', 'description', t.desc);
+      meta('property', 'og:title', t.title);
+      meta('property', 'og:description', t.desc);
+      meta('property', 'og:locale', t.locale);
+      let bc = document.getElementById('senvia-breadcrumb-ld');
+      if (!bc) { bc = document.createElement('script'); bc.type = 'application/ld+json'; bc.id = 'senvia-breadcrumb-ld'; document.head.appendChild(bc); }
+      bc.textContent = JSON.stringify({
+        '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+        itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Senvia', item: 'https://www.senviaapp.com/' },
+        { '@type': 'ListItem', position: 2, name: t.crumb, item: 'https://www.senviaapp.com/za-tvrtke' }
+        ]
+      });
+    }
+    if (this.titleTimer) clearTimeout(this.titleTimer);
+    this.titleTimer = setTimeout(() => { if (document.title !== t.title) document.title = t.title; }, 60);
+    setTimeout(() => { if (document.title !== t.title) document.title = t.title; }, 400);
+  }
+
+  renderVals() {
+    const t = { ...this.STR.hr, ...(this.STR[this.state.lang] || {}) };
+    this.syncSeo(t);
+    const pair = (n) => ({ title: t['s' + n + 't'], desc: t['s' + n + 'd'] });
+    return {
+      t,
+      segments: [1, 2, 3, 4, 5, 6, 7, 8, 9].map(pair),
+      steps: [1, 2, 3, 4].map(n => ({ n: '0' + n, title: t['h' + n + 't'], desc: t['h' + n + 'd'] })),
+      gains: [1, 2, 3, 4].map(n => ({ title: t['g' + n + 't'], desc: t['g' + n + 'd'] })),
+      contactItems: [1, 2, 3, 4, 5].map(n => ({ text: t['ci' + n] })),
+      sent: this.state.sent,
+      fields: [
+        { name: 'tvrtka', label: t.fName, placeholder: t.fNamePh, type: 'text', required: true },
+        { name: 'djelatnost', label: t.fField, placeholder: t.fFieldPh, type: 'text', required: true },
+        { name: 'grad', label: t.fCity, placeholder: t.fCityPh, type: 'text', required: true },
+        { name: 'odrediste', label: t.fTo, placeholder: t.fToPh, type: 'text', required: false },
+        { name: 'osoba', label: t.fPerson, placeholder: t.fPersonPh, type: 'text', required: true },
+        { name: 'email', label: t.fEmail, placeholder: t.fEmailPh, type: 'email', required: true },
+        { name: 'telefon', label: t.fPhone, placeholder: t.fPhonePh, type: 'tel', required: false }
+      ],
+      submit: (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const get = (n) => (form.elements[n] && form.elements[n].value || '').trim();
+        const rows = [
+          [t.fName, get('tvrtka')], [t.fField, get('djelatnost')], [t.fCity, get('grad')],
+          [t.fTo, get('odrediste')], [t.fPerson, get('osoba')], [t.fEmail, get('email')],
+          [t.fPhone, get('telefon')], [t.fMsg, get('poruka')]
+        ].filter(r => r[1]).map(r => r[0] + ': ' + r[1]).join('\n');
+        const subject = 'Senvia za tvrtke: ' + (get('tvrtka') || get('osoba'));
+        window.location.href = 'mailto:contact@senviaapp.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(rows);
+        this.setState({ sent: true });
+      }
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta charset="utf-8">
+  <title>Senvia – Jeftino slanje stvari uz putnika koji putuje</title>
+  <meta name="description" content="Pošalji stvari, od ključeva do namještaja, uz putnika koji već ide tvojim smjerom. Brže i jeftinije od klasične dostave. Preuzmi Senviu besplatno.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.senviaapp.com/">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Senvia">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:title" content="Senvia – Jeftino slanje stvari uz putnika koji putuje">
+  <meta property="og:description" content="Pošalji stvari, od ključeva do namještaja, uz putnika koji već ide tvojim smjerom. Brže i jeftinije od klasične dostave. Preuzmi Senviu besplatno.">
+  <meta property="og:url" content="https://www.senviaapp.com/">
+  <meta property="og:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Senvia – Jeftino slanje stvari uz putnika koji putuje">
+  <meta name="twitter:description" content="Pošalji stvari, od ključeva do namještaja, uz putnika koji već ide tvojim smjerom. Brže i jeftinije od klasične dostave. Preuzmi Senviu besplatno.">
+  <meta name="twitter:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
+  <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
+  <script>
+    window.SENVIA_GA_ID = 'G-H8DBTNDF62';
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H8DBTNDF62');
+    window.senviaLoadAnalytics = function () {
+      if (window.senviaGaLoaded || location.hostname.indexOf('senviaapp.com') === -1) return;
+      window.senviaGaLoaded = true;
+      var el = document.createElement('script');
+      el.setAttribute('async', '');
+      el.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + window.SENVIA_GA_ID);
+      document.head.appendChild(el);
+    };
+    try { if (localStorage.getItem('senvia-consent') === 'yes') window.senviaLoadAnalytics(); } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    a { color: #1a9e44; text-decoration: none; }
+    a:hover { color: #0e7c31; }
+    ::selection { background: #c9efd6; }
+    img { max-width: 100%; }
+    [data-rev-scroll]::-webkit-scrollbar, [data-route-strip]::-webkit-scrollbar { height: 8px; }
+    [data-rev-scroll]::-webkit-scrollbar-track, [data-route-strip]::-webkit-scrollbar-track { background: #e9e6dd; border-radius: 999px; }
+    [data-rev-scroll]::-webkit-scrollbar-thumb, [data-route-strip]::-webkit-scrollbar-thumb { background: #cfcabc; border-radius: 999px; }
+    @keyframes senvia-marq-a { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+    @keyframes senvia-marq-b { from { transform: translateX(-50%); } to { transform: translateX(0); } }
+    [data-home-faq] summary::-webkit-details-marker { display: none; }
+    [data-home-faq][open] summary svg { transform: rotate(180deg); }
+    @media (max-width: 1100px) { [data-why-grid] { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+    @media (max-width: 620px) { [data-why-grid] { grid-template-columns: 1fr !important; } }
+    @media (prefers-reduced-motion: reduce) { [data-marquee] { animation: none !important; } }
+  </style>
+</helmet>
+
+<div style="overflow-x: clip">
+
+<dc-import name="Nav" hint-size="100%,66px"></dc-import>
+
+<section id="vrh" style="max-width: 1280px; margin: 0 auto; padding: clamp(28px, 5.5vw, 80px) clamp(16px, 4.0vw, 32px) clamp(40px, 6vw, 88px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: clamp(22px, 4.0vw, 48px); align-items: center">
+  <div>
+    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(38px, 6.2vw, 72px); line-height: 1.02; letter-spacing: -0.03em; font-weight: 700; margin: 0 0 24px; text-wrap: balance">{{ t.heroTitle }}</h1>
+    <p style="font-size: clamp(18px, 1.6vw, 21px); line-height: 1.6; color: #3c5346; margin: 0 0 34px; max-width: 46ch; text-wrap: pretty">{{ t.heroSub }}</p>
+    <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap">
+      <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform .2s ease" style-hover="transform: translateY(-2px)"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform .2s ease" style-hover="transform: translateY(-2px)"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
+    </div>
+    <div style="margin-top: 30px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; font-size: 14.5px; color: #5b6f62">
+      <span style="display: inline-flex; align-items: center; gap: 8px"><span style="color: #f5b301; font-size: 14px; letter-spacing: 1px">★★★★★</span><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #12261a">{{ iosRating }}</span>App Store</span>
+      <span aria-hidden="true" style="width: 1px; height: 18px; background: #dcd8cc"></span>
+      <span style="display: inline-flex; align-items: center; gap: 8px"><span style="color: #f5b301; font-size: 14px; letter-spacing: 1px">★★★★★</span><span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #12261a">{{ androidRating }}</span>Google Play</span>
+    </div>
+  </div>
+
+  <div style="position: relative; display: flex; justify-content: center">
+    <div role="region" aria-roledescription="carousel" aria-label="{{ heroAria }}" style="position: relative; width: min(540px, 100%); aspect-ratio: 4 / 5; border-radius: 32px; overflow: hidden; background: #e9e6dd; box-shadow: 0 24px 50px rgba(18,38,26,0.16)">
+      <sc-for list="{{ heroSlides }}" as="s" hint-placeholder-count="1">
+        <div aria-hidden="{{ s.hidden }}" style="position: absolute; inset: 0; opacity: {{ s.op }}; transition: opacity .9s ease">
+          <img src="{{ s.src }}" alt="{{ s.alt }}" width="960" height="1200" loading="{{ s.loading }}" style="display: block; width: 100%; height: 100%; object-fit: cover; transform: scale({{ s.scale }}); transition: transform 6s ease-out">
+          <div style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,30,18,0.28) 0%, rgba(10,30,18,0) 20%, rgba(10,30,18,0) 75%, rgba(10,30,18,0.22) 100%)"></div>
+          <div style="position: absolute; left: 18px; bottom: 18px; display: flex; align-items: center; gap: 10px; background: #ffffff; padding: 7px 7px 7px 16px; border-radius: 999px; box-shadow: 0 8px 22px rgba(10,30,18,0.18)">
+            <span style="font-size: 15px; font-weight: 600; color: #12261a">{{ s.item }}</span>
+            <span style="font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 700; color: #ffffff; background: #2dbb54; padding: 4px 11px; border-radius: 999px">{{ s.size }}</span>
+          </div>
+        </div>
+      </sc-for>
+      <button onClick="{{ heroPrev }}" aria-label="{{ heroPrevLabel }}" style="position: absolute; top: 0; bottom: 0; left: 0; width: 50%; z-index: 1; border: none; background: transparent; padding: 0; cursor: pointer; -webkit-tap-highlight-color: transparent"></button>
+      <button onClick="{{ heroNext }}" aria-label="{{ heroNextLabel }}" style="position: absolute; top: 0; bottom: 0; right: 0; width: 50%; z-index: 1; border: none; background: transparent; padding: 0; cursor: pointer; -webkit-tap-highlight-color: transparent"></button>
+      <div style="position: absolute; top: 14px; left: 18px; right: 18px; display: flex; gap: 6px; z-index: 2">
+        <sc-for list="{{ heroDots }}" as="d" hint-placeholder-count="5">
+          <button onClick="{{ d.go }}" aria-label="{{ d.label }}" aria-current="{{ d.current }}" style="flex: 1; height: 16px; padding: 6px 0; border: none; background: transparent; cursor: pointer; display: flex; align-items: center">
+            <span style="display: block; width: 100%; height: 4px; border-radius: 999px; background: {{ d.bg }}; transition: background .4s ease"></span>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="prazan-prostor" style="max-width: 1280px; margin: 0 auto; padding: clamp(8px, 2vw, 24px) clamp(16px, 4.0vw, 32px) clamp(44px, 6vw, 88px); scroll-margin-top: 90px">
+  <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 32px; padding: clamp(28px, 5vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: clamp(24px, 4vw, 64px); align-items: center; box-shadow: 0 20px 50px rgba(18,38,26,0.06)">
+    <div>
+      <span style="display: inline-block; width: 44px; height: 4px; border-radius: 999px; background: #2dbb54; margin-bottom: 22px"></span>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 4.2vw, 44px); line-height: 1.08; font-weight: 700; letter-spacing: -0.025em; margin: 0 0 16px; color: #12261a; text-wrap: balance">{{ mis.title }}</h2>
+      <p style="font-size: 17.5px; line-height: 1.65; color: #3c5346; margin: 0 0 24px; max-width: 46ch; text-wrap: pretty">{{ mis.lead }}</p>
+      <a href="Blog%20-%20Zasto%20postoji%20Senvia.dc.html" style="display: inline-flex; align-items: center; gap: 9px; font-size: 15px; font-weight: 600; color: #ffffff; background: #2dbb54; padding: 12px 20px; border-radius: 999px" style-hover="background: #26a449; color: #ffffff">
+        {{ mis.link }}
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"></path><path d="M13 6l6 6-6 6"></path></svg>
+      </a>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 12px">
+      <sc-for list="{{ mis.points }}" as="p" hint-placeholder-count="3">
+        <div style="display: flex; align-items: center; gap: 16px; background: #faf9f6; border: 1px solid #e9e6dd; border-radius: 20px; padding: 18px 20px">
+          <span style="width: 48px; height: 48px; border-radius: 14px; background: #2dbb54; display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; box-shadow: 0 8px 18px rgba(45,187,84,0.28)"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" dangerouslySetInnerHTML="{{ p.icon }}"></svg></span>
+          <span style="min-width: 0">
+            <span style="display: block; font-family: 'Space Grotesk', sans-serif; font-size: 17.5px; font-weight: 600; color: #12261a">{{ p.t }}</span>
+            <span style="display: block; font-size: 14.5px; line-height: 1.5; color: #5b6f62; margin-top: 2px">{{ p.d }}</span>
+          </span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="okolis" style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 4.0vw, 32px) clamp(44px, 6vw, 88px); scroll-margin-top: 90px">
+  <div style="background: #eef9f1; border: 1px solid #bfe8cb; border-radius: 32px; padding: clamp(24px, 4vw, 48px); display: flex; gap: clamp(20px, 4vw, 48px); align-items: center; flex-wrap: wrap">
+    <div style="position: relative; flex: 0 0 auto">
+      <svg width="150" height="150" viewBox="0 0 128 128" role="img" aria-label="Senvia maskota" style="flex: 0 0 auto; display: block; overflow: visible">
+      <ellipse cx="64" cy="118" rx="38" ry="6" fill="#12261a" opacity="0.10"></ellipse>
+      <path d="M64 34 C64 24 60 16 52 12" fill="none" stroke="#1a9e44" stroke-width="4" stroke-linecap="round"></path>
+      <path d="M64 30 C56 14 40 12 34 18 C40 30 54 34 64 30 Z" fill="#7ad995"></path>
+      <path d="M64 28 C70 10 88 6 96 12 C90 28 74 34 64 28 Z" fill="#2dbb54"></path>
+      <rect x="22" y="38" width="84" height="74" rx="22" fill="#2dbb54"></rect>
+      <rect x="22" y="38" width="84" height="26" rx="22" fill="#3fcc66"></rect>
+      <rect x="58" y="38" width="12" height="74" fill="#ffffff" opacity="0.28"></rect>
+      <ellipse cx="48" cy="76" rx="6" ry="7.5" fill="#12261a"></ellipse>
+      <ellipse cx="80" cy="76" rx="6" ry="7.5" fill="#12261a"></ellipse>
+      <circle cx="50" cy="73" r="2" fill="#ffffff"></circle>
+      <circle cx="82" cy="73" r="2" fill="#ffffff"></circle>
+      <ellipse cx="38" cy="90" rx="6" ry="3.5" fill="#ff9fb1" opacity="0.7"></ellipse>
+      <ellipse cx="90" cy="90" rx="6" ry="3.5" fill="#ff9fb1" opacity="0.7"></ellipse>
+      <path d="M54 92 Q64 101 74 92" fill="none" stroke="#12261a" stroke-width="3.5" stroke-linecap="round"></path>
+      <path d="M22 84 C12 82 8 72 12 66" fill="none" stroke="#2dbb54" stroke-width="7" stroke-linecap="round"></path>
+      <path d="M106 84 C116 80 120 70 116 62" fill="none" stroke="#2dbb54" stroke-width="7" stroke-linecap="round"></path>
+    </svg>
+      <span style="position: absolute; top: -6px; right: -18px; display: inline-flex; align-items: baseline; gap: 2px; background: #ffffff; color: #1a9e44; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; line-height: 1; padding: 9px 13px; border-radius: 999px; border: 2px solid #2dbb54; box-shadow: 0 8px 18px rgba(45,187,84,0.22); transform: rotate(8deg)">−CO₂</span>
+    </div>
+    <div style="flex: 1 1 340px; min-width: 0">
+      <div style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(56px, 9vw, 96px); line-height: 0.9; font-weight: 700; letter-spacing: -0.04em; color: #2dbb54; margin: 0 0 14px">CO₂</div>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 3.4vw, 34px); line-height: 1.12; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 10px; color: #12261a; text-wrap: balance">{{ eco.title }}</h2>
+      <p style="font-size: 17.5px; line-height: 1.6; color: #3c5346; margin: 0; max-width: 56ch; text-wrap: pretty">{{ eco.text }}</p>
+    </div>
+  </div>
+</section>
+
+
+
+<section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
+  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(32px, 5.2vw, 64px) clamp(16px, 4.0vw, 32px)">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: clamp(18px, 2.8vw, 26px)">
+      <div>
+        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0; text-wrap: balance">{{ t.reviewsTitle }}</h2>
+      </div>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap">
+        <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 18px; padding: 14px 20px; display: flex; align-items: center; gap: 14px">
+          <span style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: #167a38; letter-spacing: -0.02em">{{ iosRating }}</span>
+          <span>
+            <span style="display: block; color: #f5b301; font-size: 13px; letter-spacing: 2px">★★★★★</span>
+            <span style="display: block; font-size: 13.5px; color: #3c5346; margin-top: 3px">{{ iosLabel }}</span>
+          </span>
+        </div>
+        <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 18px; padding: 14px 20px; display: flex; align-items: center; gap: 14px">
+          <span style="font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; color: #167a38; letter-spacing: -0.02em">{{ androidRating }}</span>
+          <span>
+            <span style="display: block; color: #f5b301; font-size: 13px; letter-spacing: 2px">★★★★★</span>
+            <span style="display: block; font-size: 13.5px; color: #3c5346; margin-top: 3px">{{ androidLabel }}</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+
+    <div data-rev-scroll style="display: flex; gap: 14px; overflow-x: auto; overflow-y: hidden; padding: 4px 4px 16px; scroll-snap-type: x mandatory">
+      <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="6">
+        <div style="flex: 0 0 auto; width: min(340px, 82vw); scroll-snap-align: start; background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 22px 24px; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+            <span style="color: #f5b301; font-size: 14px; letter-spacing: 2px">{{ r.stars }}</span>
+            <span style="font-size: 12.5px; font-weight: 600; color: #6b8272; background: #f2f0ea; border-radius: 999px; padding: 4px 10px">{{ r.storeLabel }}</span>
+          </div>
+          <sc-if value="{{ r.hasTitle }}" hint-placeholder-val="{{ true }}">
+            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 16.5px; font-weight: 600; margin: 0; letter-spacing: -0.01em">{{ r.title }}</h3>
+          </sc-if>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty; flex: 1">{{ r.text }}</p>
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; font-size: 13.5px; color: #6b8272">
+            <span style="font-weight: 600; color: #3c5346">{{ r.author }}</span>
+            <span>{{ r.date }}</span>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+    <p style="margin: 0; font-size: 14px; color: #6b8272">{{ t.reviewsHint }}</p>
+  </div>
+</section>
+
+<section id="price" style="max-width: 1280px; margin: 0 auto; padding: clamp(20px, 4vw, 56px) clamp(16px, 4.0vw, 32px) clamp(20px, 4vw, 56px); scroll-margin-top: 90px">
+  <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; flex-wrap: wrap; margin-bottom: clamp(18px, 2.8vw, 26px)">
+    <div>
+      <span style="display: inline-block; width: 44px; height: 4px; border-radius: 999px; background: #2dbb54; margin-bottom: 18px"></span>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 8px; text-wrap: balance">{{ storiesTitle }}</h2>
+      <p style="margin: 0; font-size: 16.5px; line-height: 1.6; color: #3c5346; max-width: 52ch; text-wrap: pretty">{{ storiesSub }}</p>
+    </div>
+  </div>
+  <div style="display: flex; gap: 14px; overflow-x: auto; overflow-y: hidden; padding: 4px 4px 16px; scroll-snap-type: x mandatory">
+    <sc-for list="{{ stories }}" as="p" hint-placeholder-count="4">
+      <figure style="flex: 0 0 auto; width: min(360px, 84vw); scroll-snap-align: start; margin: 0; background: #ffffff; border: 1px solid #e6e3da; border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+        <div style="display: flex; align-items: center; gap: 12px">
+          <span style="width: 44px; height: 44px; border-radius: 999px; background: #2dbb54; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; flex: 0 0 auto">{{ p.initial }}</span>
+          <span style="min-width: 0">
+            <span style="display: block; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: #12261a">{{ p.name }}</span>
+            <span style="display: block; font-size: 14px; color: #5b6f62">{{ p.route }}</span>
+          </span>
+        </div>
+        <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty; flex: 1">{{ p.quote }}</blockquote>
+        <figcaption style="display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: #5b6f62; border-top: 1px solid #e9e6dd; padding-top: 14px">
+          <span style="font-weight: 600; color: #12261a; background: #e8f7ee; padding: 3px 10px; border-radius: 999px">{{ p.role }}</span>
+          <span>{{ p.what }}</span>
+        </figcaption>
+      </figure>
+    </sc-for>
+  </div>
+</section>
+
+
+
+
+
+
+
+<section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
+  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4.0vw, 32px)">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 clamp(24px, 3.5vw, 36px); text-wrap: balance">{{ t.whyTitle }}</h2>
+    <div data-why-grid style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px">
+      <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 28px 26px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 13px; background: #e8f7ee; margin-bottom: 18px"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h4l2-9 3 13 3-9 2 5h4"></path></svg></span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 10px">{{ t.why1t }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.why1d }}</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 28px 26px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 13px; background: #e8f7ee; margin-bottom: 18px"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8l-9-5-9 5v8l9 5z"></path><path d="M3.5 8.5L12 13l8.5-4.5"></path><path d="M12 13v9"></path></svg></span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 10px">{{ t.why2t }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.why2d }}</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 28px 26px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 13px; background: #e8f7ee; margin-bottom: 18px"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 10px">{{ t.why3t }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.why3d }}</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 28px 26px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 13px; background: #e8f7ee; margin-bottom: 18px"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 9 9 0 0 1-3.5-.7L3 21l1.8-5A8.4 8.4 0 0 1 12 3.1a8.4 8.4 0 0 1 9 8.4z"></path></svg></span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 10px">{{ t.why4t }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.why4d }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pitanja" style="max-width: 1280px; margin: 0 auto; padding: clamp(44px, 7vw, 100px) clamp(16px, 4.0vw, 32px); scroll-margin-top: 90px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(24px, 5vw, 80px); align-items: start">
+  <div>
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(26px, 4.4vw, 44px); line-height: 1.08; font-weight: 700; letter-spacing: -0.025em; margin: 0 0 16px; text-wrap: balance">{{ faqTitle }}</h2>
+    <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 24px; max-width: 36ch; text-wrap: pretty">{{ faqSub }}</p>
+    <a href="FAQ.dc.html" style="display: inline-flex; align-items: center; gap: 9px; font-size: 15px; font-weight: 600; color: #12261a; background: #ffffff; border: 1px solid #dcd8cc; padding: 12px 18px; border-radius: 999px" style-hover="border-color: #12261a; color: #12261a">
+      {{ faqAll }}
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13"></path><path d="M13 6l6 6-6 6"></path></svg>
+    </a>
+  </div>
+  <div style="display: flex; flex-direction: column; gap: 10px">
+    <sc-for list="{{ homeFaq }}" as="f" hint-placeholder-count="5">
+      <details data-home-faq style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 18px; padding: 0 22px">
+        <summary style="list-style: none; cursor: pointer; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(16.5px, 2vw, 18.5px); font-weight: 600; color: #12261a">
+          <span>{{ f.q }}</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; transition: transform .2s ease"><path d="M6 9l6 6 6-6"></path></svg>
+        </summary>
+        <p style="margin: 0; padding: 0 0 22px; font-size: 16px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ f.a }}</p>
+      </details>
+    </sc-for>
+  </div>
+</section>
+
+<dc-import name="Podnozje" hint-size="100%,300px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1280, &quot;height&quot;: 900}}">
+class Component extends DCLogic {
+  state = { lang: 'hr', statP: 0, feed: null, revTab: 'all', hero: 0 };
+
+  HERO = [
+    { src: 'assets/hero-cipele.webp', item: { hr: 'Cipele', en: 'Shoes', de: 'Schuhe' }, size: 'S', from: ['Graz', 'Graz', 'Graz'], to: ['Zagreb', 'Zagreb', 'Zagreb'], km: 190 },
+    { src: 'assets/hero-voce2.png', item: { hr: 'Kašeta s voćem', en: 'Crate of fruit', de: 'Obstkiste' }, size: 'M', from: ['Zagreb', 'Zagreb', 'Zagreb'], to: ['Split', 'Split', 'Split'], km: 410 },
+    { src: 'assets/hero-stolica.png', item: { hr: 'Stolica', en: 'Chair', de: 'Stuhl' }, size: 'L', from: ['Zagreb', 'Zagreb', 'Zagreb'], to: ['Rijeka', 'Rijeka', 'Rijeka'], km: 160 },
+    { src: 'assets/hero-gume.webp', item: { hr: 'Gume', en: 'Tyres', de: 'Reifen' }, size: 'XL', from: ['Stuttgart', 'Stuttgart', 'Stuttgart'], to: ['Zadar', 'Zadar', 'Zadar'], km: 1000 },
+    { src: 'assets/hero-krevet.webp', item: { hr: 'Bračni krevet', en: 'Double bed', de: 'Doppelbett' }, size: 'XXL', from: ['Zagreb', 'Zagreb', 'Zagreb'], to: ['Split', 'Split', 'Split'], km: 410 }
+  ];
+
+  LANDING_FAQ = {"hr":[{"q":"Što je Senvia?","a":"Senvia je aplikacija koja povezuje pošiljatelje stvari s putnicima koji već putuju istom rutom. Umjesto klasične dostave, stvari putuju uz vožnju koja se ionako odvija, a cijeli dogovor odvija se izravno u aplikaciji."},{"q":"Je li Senvia besplatna?","a":"Da, aplikacija je besplatna za preuzimanje i korištenje, bez pretplate i mjesečne naknade. Trošak rezervacije prijevoza plaća se tek kada pronađeš putnika i potvrdiš rezervaciju stvari."},{"q":"Je li Senvia dostavna služba?","a":"Nije. Senvia ne prevozi stvari, nema vozni park ni skladišta. Aplikacija povezuje pošiljatelja i putnika koji već putuje tim smjerom, a prijevoz je dogovor između njih dvoje."},{"q":"Koliko košta slanje stvari?","a":"Naknadu određuje pošiljatelj prilikom objave zahtjeva, unutar minimalnog i maksimalnog raspona koji predlaže Senvia."},{"q":"Koliko traje dostava stvari?","a":"Koliko traje sama vožnja. Beč i Zagreb dijele četiri do pet sati vožnje, Graz i Zagreb dva do tri sata, pa stvari stižu u satima, a ne danima. Klasična dostava na istim koridorima traži tri do četiri radna dana."},{"q":"Što ako stvari kasne ili se izgubi?","a":"Najprije se javi putniku u chatu, jer se većina zastoja rješava u nekoliko poruka. Ako se problem ne riješi, piši nam na contact@senviaapp.com i pomoći ćemo u komunikaciji između strana. Zato je važno stvari fotografirati pri primopredaji i opisati sadržaj unaprijed."},{"q":"Što ne smijem poslati?","a":"Oružje, opojna sredstva, zapaljive i otrovne materijale, žive životinje, ljudske ostatke i biološke uzorke, krivotvorenu robu te sve čiji prijevoz predstavlja kazneno djelo ili prekršaj. Cijeli popis nalazi se na stranici Slanje stvari."}],"en":[{"q":"What is Senvia?","a":"Senvia is an app that connects people sending items with travellers already going the same way. Instead of classic delivery, the items ride along on a journey that is happening anyway, and the whole arrangement takes place in the app."},{"q":"Is Senvia free?","a":"Yes, the app is free to download and use, with no subscription and no monthly fee. You only pay for the booking once you find a traveller and confirm the items."},{"q":"Is Senvia a delivery company?","a":"No. Senvia does not carry items and has no fleet or warehouses. The app connects a sender with a traveller already going that way, and the transport is an agreement between the two of them."},{"q":"What does sending items cost?","a":"The sender sets the fee when posting a request, within the minimum and maximum range Senvia suggests. For smaller items on shorter routes it is usually between 5 and 20 euros, and the amount shown in the app is the one that applies."},{"q":"How long does delivery take?","a":"As long as the drive itself. Vienna and Zagreb are four to five hours apart, Graz and Zagreb two to three, so the items arrive in hours rather than days. Classic delivery on the same corridors takes three to four working days."},{"q":"What if the items are late or go missing?","a":"Message the traveller in the chat first, as most delays are sorted out in a few messages. If the problem persists, write to contact@senviaapp.com and we will help with communication between the two sides. This is why photographing the items at hand-over and describing the contents upfront matters."},{"q":"What am I not allowed to send?","a":"Weapons, narcotics, flammable and toxic materials, live animals, human remains and biological samples, counterfeit goods and anything whose transport is a criminal offence or a misdemeanour. The full list is on the Sending items page."}],"de":[{"q":"Was ist Senvia?","a":"Senvia ist eine App, die Absender mit Reisenden verbindet, die ohnehin dieselbe Strecke fahren. Statt klassischer Zustellung reisen die Sachen auf einer Fahrt mit, die sowieso stattfindet, und die gesamte Absprache läuft in der App."},{"q":"Ist Senvia kostenlos?","a":"Ja, die App ist kostenlos zum Herunterladen und Nutzen, ohne Abo und ohne Monatsgebühr. Bezahlt wird erst die Buchung, sobald du einen Reisenden gefunden und die Sachen bestätigt hast."},{"q":"Ist Senvia ein Zustelldienst?","a":"Nein. Senvia transportiert keine Sachen und hat weder Fuhrpark noch Lager. Die App verbindet Absender und Reisende, die ohnehin in diese Richtung fahren, der Transport ist eine Absprache zwischen den beiden."},{"q":"Was kostet der Versand von Sachen?","a":"Den Kostenbeitrag legt der Absender bei der Anfrage fest, innerhalb der Spanne, die Senvia vorschlägt. Für kleinere Sachen auf kürzeren Strecken liegt er meist zwischen 5 und 20 Euro, und es gilt der Betrag, der in der App steht."},{"q":"Wie lange dauert die Zustellung?","a":"So lange wie die Fahrt selbst. Wien und Zagreb trennen vier bis fünf Stunden, Graz und Zagreb zwei bis drei, die Sachen kommen also in Stunden statt Tagen an. Die klassische Zustellung braucht auf denselben Strecken drei bis vier Werktage."},{"q":"Was, wenn die Sachen zu spät kommen oder verloren gehen?","a":"Schreib zuerst dem Reisenden im Chat, die meisten Verzögerungen klären sich in wenigen Nachrichten. Bleibt das Problem, schreib an contact@senviaapp.com, wir helfen bei der Kommunikation zwischen beiden Seiten. Deshalb ist es wichtig, die Sachen bei der Übergabe zu fotografieren und den Inhalt vorab zu beschreiben."},{"q":"Was darf ich nicht senden?","a":"Waffen, Betäubungsmittel, entflammbare und giftige Stoffe, lebende Tiere, menschliche Überreste und biologische Proben, gefälschte Waren sowie alles, dessen Transport eine Straftat oder ein Vergehen darstellt. Die vollständige Liste steht auf der Seite Sachen senden."}]};
+  FAQ_STR = { hr: { t: 'Česta pitanja', s: 'Najkraći odgovori na ono što nas najčešće pitaju prije prvog slanja.', all: 'Sva pitanja' }, en: { t: 'Frequently asked questions', s: 'Short answers to what people ask most before their first send.', all: 'All questions' }, de: { t: 'Häufige Fragen', s: 'Kurze Antworten auf das, was vor dem ersten Versand am häufigsten gefragt wird.', all: 'Alle Fragen' } };
+  addFaqLd(lang) {
+    let el = document.getElementById('senvia-home-faq-ld');
+    if (!el) { el = document.createElement('script'); el.type = 'application/ld+json'; el.id = 'senvia-home-faq-ld'; document.head.appendChild(el); }
+    el.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: (this.LANDING_FAQ[lang] || this.LANDING_FAQ.hr).filter((f, i) => [0, 1, 3, 4, 6].includes(i)).map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
+  }
+
+  MISSION = {
+    hr: { title: 'Prazno mjesto u autu nekome može puno značiti', lead: 'Mnogi auti i kombiji putuju s napola praznim prtljažnikom. Senvia povezuje vozače i pošiljatelje, pa stvari putuju uz nekoga tko već ide istim smjerom, a troškovi puta se dijele.', link: 'Pročitaj zašto postoji Senvia',
+      points: [{ t: 'Vozači dijele troškove puta', d: 'Gorivo i cestarina nisu samo tvoj trošak.' }, { t: 'Stvari stižu brže', d: 'Kreću s prvim putnikom na tvojoj ruti.' }, { t: 'Manje CO₂ i čišći okoliš', d: 'Popunjena vožnja umjesto nove znači manje ispušnih plinova.' }] },
+    en: { title: 'An empty seat in your car can mean a lot to someone', lead: 'Many cars and vans travel with a half empty boot. Senvia connects drivers and senders, so items travel with someone already heading the same way, and the cost of the trip is shared.', link: 'Read why Senvia exists',
+      points: [{ t: 'Drivers share the cost of the trip', d: 'Fuel and tolls are not yours alone.' }, { t: 'Items arrive sooner', d: 'They leave with the first traveller on your route.' }, { t: 'Less CO₂, cleaner air', d: 'Filling a trip instead of adding one means fewer exhaust emissions.' }] },
+    de: { title: 'Ein freier Platz im Auto kann jemandem viel bedeuten', lead: 'Viele Autos und Transporter fahren mit halb leerem Kofferraum. Senvia verbindet Fahrer und Absender, damit Sachen mit jemandem reisen, der ohnehin in dieselbe Richtung fährt, und die Fahrtkosten geteilt werden.', link: 'Warum es Senvia gibt',
+      points: [{ t: 'Fahrer teilen die Fahrtkosten', d: 'Sprit und Maut trägst du nicht allein.' }, { t: 'Sachen kommen schneller an', d: 'Sie reisen mit dem ersten Fahrer auf deiner Strecke.' }, { t: 'Weniger CO₂, sauberere Umwelt', d: 'Eine gefüllte Fahrt statt einer neuen bedeutet weniger Abgase.' }] }
+  };  MIS_ICONS = ["<path d=\"M3 17h2l1-5h12l1 5h2\"></path><path d=\"M6 12l1.5-4h9L18 12\"></path><circle cx=\"7.5\" cy=\"17.5\" r=\"1.5\"></circle><circle cx=\"16.5\" cy=\"17.5\" r=\"1.5\"></circle>","<circle cx=\"12\" cy=\"12\" r=\"9\"></circle><path d=\"M12 7v5l3 2\"></path>","<path d=\"M5 19c8 0 14-6 14-14-8 0-14 6-14 14z\"></path><path d=\"M5 19l7-7\"></path>"];
+  HERO_SIZES = { S: [5, 0.027], M: [8, 0.040], L: [22, 0.062], XL: [36, 0.089], XXL: [55, 0.150] };
+  HERO_STR = {
+    hr: { via: 'Putuje uz putnika', rec: 'preporučeno', sz: 'Veličina pošiljke', aria: 'Primjeri stvari koje putuju uz Senviu', slide: 'Primjer', on: 'na ruti' },
+    en: { via: 'Rides along with a traveller', rec: 'suggested', sz: 'Item size', aria: 'Examples of items travelling with Senvia', slide: 'Example', on: 'on the route' },
+    de: { via: 'Fährt mit einem Reisenden mit', rec: 'empfohlen', sz: 'Größe der Sendung', aria: 'Beispiele für Sachen, die mit Senvia reisen', slide: 'Beispiel', on: 'auf der Strecke' }
+  };
+  heroVals(lang) {
+    const L = this.HERO_STR[lang] || this.HERO_STR.hr, li = { hr: 0, en: 1, de: 2 }[lang] || 0, cur = this.state.hero || 0;
+    const go = (i) => () => { this.setState({ hero: i }); this.startHero(); };
+    const slides = this.HERO.map((h, i) => {
+      const [fix, rate] = this.HERO_SIZES[h.size];
+      const p = Math.round(fix + h.km * rate);
+      const item = h.item[lang] || h.item.hr, from = h.from[li], to = h.to[li];
+      const scale5 = ['S', 'M', 'L', 'XL', 'XXL'].map(k => ({ k, bg: k === h.size ? '#2dbb54' : '#f1f6f2', fg: k === h.size ? '#ffffff' : '#6b8272' }));
+      return { src: h.src, item, size: h.size, scale5, sizeLabel: L.sz, from, to, via: L.via, recLabel: L.rec,
+        price: lang === 'en' ? '~€' + p : '~' + p + ' €',
+        alt: item + ', ' + L.sz.toLowerCase() + ' ' + h.size,
+        op: i === cur ? 1 : 0, scale: i === cur ? 1.04 : 1, hidden: i === cur ? 'false' : 'true', loading: i === 0 ? 'eager' : 'lazy' };
+    });
+    const dots = this.HERO.map((h, i) => ({ go: go(i), label: L.slide + ' ' + (i + 1), current: i === cur ? 'true' : 'false', bg: i === cur ? '#ffffff' : 'rgba(255,255,255,0.45)' }));
+    const n = this.HERO.length, step = (d) => () => { this.setState(st => ({ hero: (((st.hero || 0) + d) % n + n) % n })); this.startHero(); };
+    const pn = { hr: ['Prethodni primjer', 'Sljedeći primjer'], en: ['Previous example', 'Next example'], de: ['Vorheriges Beispiel', 'Nächstes Beispiel'] }[lang] || ['Prethodni primjer', 'Sljedeći primjer'];
+    return { heroSlides: slides, heroDots: dots, heroAria: L.aria, heroPrev: step(-1), heroNext: step(1), heroPrevLabel: pn[0], heroNextLabel: pn[1] };
+  }
+  startHero() {
+    clearInterval(this.heroTimer);
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    this.heroTimer = setInterval(() => this.setState(s => ({ hero: ((s.hero || 0) + 1) % this.HERO.length })), 5000);
+  }
+
+
+  STORIES = [{"n":"Ana","r":"Zagreb – München","role":"sf","what":"Odjeću i osobne stvari","q":"Trebala sam poslati nekoliko stvari obitelji u Njemačku, a nisam htjela plaćati skupu dostavu. Preko Senvije pronašla sam putnika koji je već išao u München. Od tada prvo provjerim Senviu kad god nešto trebam poslati."},{"n":"Marko","r":"Beč – Zagreb","role":"d","what":"Osobne stvari","q":"Ionako sam putovao prema Zagrebu pa sam odlučio ponuditi slobodan prostor u automobilu. Preko Senvije sam pronašao osobu kojoj je trebao prijevoz, podijelio troškove puta i imao odlično iskustvo. Sada redovito provjeravam nove zahtjeve na svojoj ruti."},{"n":"Martina","r":"Split – Zagreb","role":"sf","what":"Poklon za rođendan","q":"Trebala sam poslati poklon prijateljici u Zagreb i pronašla sam putnika koji je već išao u tom smjeru. Sve smo dogovorili jednostavno i bez nepotrebnih komplikacija. Senvia mi je sada među prvim opcijama kada trebam nešto poslati."},{"n":"Ivan","r":"Rijeka – Graz","role":"d","what":"Manje kućanske predmete","q":"Na putu prema Grazu imao sam dovoljno prostora u automobilu pa sam preko Senvije dogovorio prijevoz nekoliko predmeta. Sve je prošlo prema dogovoru, a sljedeći put kada budem putovao istom rutom, ponovno ću ponuditi slobodan prostor."},{"n":"Petra","r":"Osijek – Beč","role":"sf","what":"Odjeću i obuću","q":"Trebala sam poslati nekoliko stvari rodbini u Austriju i nisam znala koja mi je opcija najpraktičnija. Preko Senvije pronašla sam putnika koji je već putovao prema Beču. Sada znam gdje prvo potražiti rješenje kada ponovno budem nešto slala."},{"n":"Luka","r":"Zagreb – Split","role":"d","what":"Sportsku opremu","q":"Često putujem između Zagreba i Splita pa mi je drago kada mogu nekome pomoći usput. Preko Senvije sam dogovorio prijevoz stvari bez potrebe za dodatnim putovanjem. Nastavit ću koristiti aplikaciju kad god imam slobodnog prostora."},{"n":"Ivana","r":"München – Vinkovci","role":"sf","what":"Stvari obitelji","q":"Kada živiš u inozemstvu, često trebaš poslati nešto svojima kod kuće. Senvia mi olakšava pronalazak putnika koji već putuje prema mom odredištu. Posebno mi se sviđa što mogu pronaći rješenje prilagođeno svojoj ruti."},{"n":"Filip","r":"Graz – Zagreb","role":"d","what":"Torbe i osobne stvari","q":"Često putujem u Hrvatsku i prije sam imao neiskorištenog prostora u automobilu. Preko Senvije mogu ponuditi taj prostor nekome kome treba prijevoz i pritom podijeliti troškove puta. Zato se uvijek vraćam aplikaciji kada planiram novo putovanje."},{"n":"Ema","r":"Zadar – Zagreb","role":"sf","what":"Manji komad namještaja","q":"Trebala sam prevesti manji komad namještaja i tražila sam praktično rješenje. Na Senviji sam mogla potražiti putnika koji već ide u istom smjeru. Dobro je imati aplikaciju kojoj se mogu vratiti i za buduće potrebe."},{"n":"Marija","r":"Beč – Osijek","role":"df","what":"Vrećice i osobne stvari","q":"Redovito putujem kući i često imam mjesta za dodatne stvari. Preko Senvije mogu povezati svoje putovanje s nekim kome je potreban prijevoz, a pritom podijeliti troškove. Aplikaciju ponovno otvorim kad god planiram sljedeći put."}];
+  STORY_STR = {
+    hr: { t: 'Priče korisnika', s: 'Ljudi koji šalju stvari i vozači koji dijele troškove puta, na rutama između Hrvatske, Austrije i Njemačke.', s_: 'Slala', s__: 'Slao', d_: 'Vozila', d__: 'Vozio' },
+    en: { t: 'User stories', s: 'People sending items and drivers sharing the cost of the trip, on routes between Croatia, Austria and Germany.', s_: 'Sent', s__: 'Sent', d_: 'Drove', d__: 'Drove' },
+    de: { t: 'Geschichten unserer Nutzer', s: 'Menschen, die Sachen verschicken, und Fahrer, die Fahrtkosten teilen, auf Strecken zwischen Kroatien, Österreich und Deutschland.', s_: 'Verschickt', s__: 'Verschickt', d_: 'Gefahren', d__: 'Gefahren' }
+  };
+  storyVals(lang) {
+    const L = this.STORY_STR[lang] || this.STORY_STR.hr;
+    const role = { sf: L.s_, s: L.s__, df: L.d_, d: L.d__ };
+    return { storiesTitle: L.t, storiesSub: L.s, stories: this.STORIES.map(x => ({ name: x.n, initial: x.n[0], route: x.r, quote: '„' + x.q + '”', role: role[x.role], what: x.what })) };
+  }
+  ECO_STR = {
+    hr: { title: 'Manje ispušnih plinova, čišći okoliš', text: 'Stvari putuju u autu koji ionako ide tim smjerom. Nema dodatnih vožnji, pa ni dodatnog CO₂. Tako svakim slanjem čuvamo okoliš.' },
+    en: { title: 'Fewer exhaust fumes, a cleaner environment', text: 'Items travel in a car already heading that way. No extra trips means no extra CO₂. Every send helps protect the environment.' },
+    de: { title: 'Weniger Abgase, sauberere Umwelt', text: 'Sachen reisen in einem Auto, das ohnehin in diese Richtung fährt. Keine Extrafahrten, also kein zusätzliches CO₂. So schützt jeder Versand die Umwelt.' }
+  };
+  ecoVals(lang) { return { eco: this.ECO_STR[lang] || this.ECO_STR.hr }; }
+  FALLBACK = {
+    users: 521, rides: 182,
+    stores: { ios: { rating: 5.0, reviews: null }, android: { rating: 4.7, reviews: null } }
+  };
+
+  FALLBACK_ROUTES = [
+    { slug: 'bec-zagreb', from: 'Beč', to: 'Zagreb', fromEn: 'Vienna', priceMin: 16, priceMax: 30, durationHours: [4, 5] },
+    { slug: 'zagreb-split', from: 'Zagreb', to: 'Split', priceMin: 17, priceMax: 32, durationHours: [4, 5] },
+    { slug: 'graz-zagreb', from: 'Graz', to: 'Zagreb', priceMin: 11, priceMax: 20, durationHours: [2, 3] },
+    { slug: 'zagreb-rijeka', from: 'Zagreb', to: 'Rijeka', priceMin: 10, priceMax: 19, durationHours: [2, 3] },
+    { slug: 'klagenfurt-zagreb', from: 'Klagenfurt', to: 'Zagreb', priceMin: 12, priceMax: 22, durationHours: [3, 4] },
+    { slug: 'graz-varazdin', from: 'Graz', to: 'Varaždin', priceMin: 13, priceMax: 23, durationHours: [3, 4] },
+    { slug: 'zagreb-osijek', from: 'Zagreb', to: 'Osijek', priceMin: 13, priceMax: 25, durationHours: [3, 4] },
+    { slug: 'bec-varazdin', from: 'Beč', to: 'Varaždin', fromEn: 'Vienna', priceMin: 14, priceMax: 27, durationHours: [3, 4] },
+    { slug: 'bec-osijek', from: 'Beč', to: 'Osijek', fromEn: 'Vienna', priceMin: 19, priceMax: 35, durationHours: [5, 6] },
+    { slug: 'bec-rijeka', from: 'Beč', to: 'Rijeka', fromEn: 'Vienna', priceMin: 20, priceMax: 37, durationHours: [5, 6] },
+    { slug: 'munchen-zagreb', from: 'München', to: 'Zagreb', fromEn: 'Munich', priceMin: 22, priceMax: 40, durationHours: [6, 7] },
+    { slug: 'linz-split', from: 'Linz', to: 'Split', priceMin: 28, priceMax: 52, durationHours: [8, 9] }
+  ];
+
+  FALLBACK_REVIEWS = [
+    { store: 'ios', author: 'Jficjcicivi', rating: 5, date: '2026-07-02', title: 'Top aplikacija', text: 'Odlična aplikacija, pogotovo ako ste stalno na putu' },
+    { store: 'android', author: 'Trpimir Kovačić', rating: 5, date: '2026-08-06', title: '', text: 'Već nekoliko puta me spasila ova aplikacija u zadnji tren. Izuzetno pouzdana, jednostavna za korištenje i brzo se sve dogovori i riješi. Preporuke svima!' },
+    { store: 'ios', author: 'BabaHappy', rating: 5, date: '2026-04-17', title: 'SuperDriver', text: 'Vrlo jednostavna aplikacija koja napokon daje alternativu za slanje stvari' },
+    { store: 'android', author: 'Leon Jakopović', rating: 5, date: '2026-03-15', title: '', text: 'Odlična aplikacija, intuitivno korištenje. Slanje stvari brzo i pouzdano.' },
+    { store: 'ios', author: 'Bella Frida', rating: 5, date: '2026-04-13', title: 'Preporuke', text: 'Ovo sam baš trebala, super iskustvo' },
+    { store: 'android', author: 'Denis Loparić', rating: 5, date: '2026-04-14', title: '', text: 'Vrhunska aplikacija, svakako preporučam' },
+    { store: 'ios', author: 'Nenobell', rating: 5, date: '2026-04-09', title: '10/10', text: 'Konačno jako korisna i jednostavna aplikacija koja omogućuje slanje stvari na brz i efikasan način' },
+    { store: 'android', author: 'Ivan Klanac', rating: 5, date: '2026-08-06', title: '', text: 'Fantastična aplikacija. Sve pohvale! Samo jako!' },
+    { store: 'android', author: 'Domagoj Lovković', rating: 5, date: '2026-04-15', title: '', text: 'Odlično, lakše je poslati stvari' }
+  ];
+
+  STR = {
+    hr: {
+      altHero: 'Senvia aplikacija, pretraga i predložene vožnje s ocjenama korisnika i naknadom',
+      videoFrame: 'Kako radi Senvia, aplikacija za slanje stvari uz putnika',
+      heroBadge: 'Stvari putuju s nekim kome je put ionako na rasporedu',
+      heroTitle: 'Senvia: pošalji stvari uz nekoga tko već putuje.',
+      heroSub: 'Senvia spaja pošiljatelje i putnike na istoj ruti. Dogovor, naknada i primopredaja rješavaju se u aplikaciji, u nekoliko poruka.',
+      note1: 'Besplatno za preuzimanje', note2: 'Bez pretplate',
+      heroAudience: 'Senvia je za svakoga, a najviše pomaže onima kojima stvari trebaju stići brzo. Dijaspori u Austriji, Njemačkoj i Švicarskoj, studentima izvan svojega grada, sezonskim radnicima na obali i svima koji rade daleko od kuće.',
+      reviewsTitle: 'Što kažu korisnici',
+      reviewsSub: 'na App Storeu i na Google Playu',
+      reviewsHint: 'Povuci u stranu za ostale recenzije.',
+      ratingsWord: 'ocjena',
+      revAll: 'Sve', revIos: 'App Store', revAndroid: 'Google Play',
+      videoKicker: 'Video',
+      videoLead: 'Minuta i pol koja pokazuje cijeli put stvari, od objave zahtjeva do primopredaje i recenzije.',
+      v1: 'Objaviš zahtjev s rutom, datumom i fotografijom stvari.',
+      v2: 'Javljaju se putnici koji tim smjerom ionako putuju.',
+      v3: 'Dogovor, plaćanje i primopredaja idu kroz aplikaciju.',
+      videoLink: 'Pročitaj svih pet koraka',
+      videoTitle: 'Kako radi Senvia',
+      statsTitle: 'Senvia u brojkama',
+      statUsers: 'Registriranih korisnika', statRides: 'Objavljenih vožnji', statSupport: 'Podrška korisnicima',
+      routesTitle: 'Rute na kojima se najviše šalje',
+      routesSub: '',
+      routesAll: 'Sve rute i naknade',
+      avgPrice: 'Prosječna naknada',
+      whyTitle: 'Zašto Senvia',
+      why1t: 'Ljudi već putuju tom rutom', why1d: 'Ne plaćaš novu vožnju, nego mjesto u onoj koja se ionako vozi.',
+      why2t: 'Fleksibilno preuzimanje i dostava', why2d: 'Mjesto i vrijeme primopredaje dogovarate međusobno, bez radnog vremena poslovnice.',
+      why3t: 'Provjereni korisnici', why3d: 'Verifikacija prije prve pošiljke, javne ocjene i recenzije nakon svake dostave.',
+      why4t: 'Dogovor izravno s putnikom', why4d: 'Naknadu i detalje dogovaraš u chatu, bez posrednika i skrivenih naknada.',
+      ctaTitle: 'Preuzmi Senviu i pošalji prve stvari', ctaSub: 'Besplatno, bez pretplate. Objavi zahtjev i vidi tko ide tvojom rutom.'
+    },
+    en: {
+      altHero: 'Senvia app, search and suggested rides with user ratings and fees',
+      videoFrame: 'How Senvia works, the app for sending items with travellers',
+      heroBadge: 'Your items ride along on a trip that is already planned',
+      heroTitle: 'Senvia: send items with someone who is already travelling.',
+      heroSub: 'Senvia connects senders and travellers on the same route. The deal, the fee and the hand off are settled in the app, in a few messages.',
+      note1: 'Free to download', note2: 'No subscription',
+      heroAudience: 'Senvia is for everyone, and it helps most when items have to arrive fast. The Croatian diaspora in Austria, Germany and Switzerland, students away from home, seasonal workers on the coast and anyone working far from home.',
+      reviewsTitle: 'What users say',
+      reviewsSub: 'on the App Store and on Google Play',
+      reviewsHint: 'Swipe sideways for the other reviews.',
+      ratingsWord: 'ratings',
+      revAll: 'All', revIos: 'App Store', revAndroid: 'Google Play',
+      videoKicker: 'Video',
+      videoLead: 'A minute and a half showing the whole journey of items, from posting a request to hand-over and the review.',
+      v1: 'You post a request with the route, date and a photo of the items.',
+      v2: 'Travellers already going that way get in touch.',
+      v3: 'The agreement, payment and hand-over all happen in the app.',
+      videoLink: 'Read all five steps',
+      videoTitle: 'How Senvia works',
+      statsTitle: 'Senvia in numbers',
+      statUsers: 'Registered users', statRides: 'Rides posted', statSupport: 'Customer support',
+      routesTitle: 'Routes people send on most',
+      routesSub: '',
+      routesAll: 'All routes and fees',
+      avgPrice: 'Average fee',
+      whyTitle: 'Why Senvia',
+      why1t: 'People already drive that route', why1d: 'You are not paying for a new trip, just for a spot in one that is happening anyway.',
+      why2t: 'Flexible pickup and drop off', why2d: 'You agree the place and time between yourselves, with no branch opening hours.',
+      why3t: 'Verified users', why3d: 'Verification before the first shipment, public ratings and reviews after every delivery.',
+      why4t: 'Deal directly with the traveller', why4d: 'Fee and details are agreed in chat, with no middlemen or hidden fees.',
+      ctaTitle: 'Get Senvia and send your first item', ctaSub: 'Free, no subscription. Post a request and see who is heading your way.'
+    },
+    de: {
+      altHero: 'Senvia App, Suche und vorgeschlagene Fahrten mit Bewertungen und Kostenbeiträgen',
+      videoFrame: 'So funktioniert Senvia, die App zum Versenden von Sachen mit Reisenden',
+      heroBadge: 'Deine Sachen fahren mit, wenn die Reise ohnehin ansteht',
+      heroTitle: 'Senvia: schick Sachen mit jemandem, der ohnehin unterwegs ist.',
+      heroSub: 'Senvia bringt Absender und Reisende auf derselben Strecke zusammen. Absprache, Kostenbeitrag und Übergabe klärt ihr in der App, in wenigen Nachrichten.',
+      note1: 'Kostenloser Download', note2: 'Kein Abo',
+      heroAudience: 'Senvia ist für alle da und hilft am meisten, wenn Sachen schnell ankommen müssen. Der kroatischen Diaspora in Österreich, Deutschland und der Schweiz, Studierenden ausserhalb der Heimatstadt, Saisonarbeitern an der Küste und allen, die weit von zu Hause arbeiten.',
+      reviewsTitle: 'Was Nutzer sagen',
+      reviewsSub: 'im App Store und bei Google Play',
+      reviewsHint: 'Zur Seite wischen für die weiteren Bewertungen.',
+      ratingsWord: 'Bewertungen',
+      revAll: 'Alle', revIos: 'App Store', revAndroid: 'Google Play',
+      videoKicker: 'Video',
+      videoLead: 'Anderthalb Minuten, die den ganzen Weg deiner Sachen zeigen, von der Anfrage bis zur Übergabe und Bewertung.',
+      v1: 'Du stellst eine Anfrage mit Strecke, Datum und einem Foto der Sachen ein.',
+      v2: 'Reisende, die ohnehin dorthin fahren, melden sich.',
+      v3: 'Absprache, Zahlung und Übergabe laufen in der App.',
+      videoLink: 'Alle fünf Schritte lesen',
+      videoTitle: 'So funktioniert Senvia',
+      statsTitle: 'Senvia in Zahlen',
+      statUsers: 'Registrierte Nutzer', statRides: 'Veröffentlichte Fahrten', statSupport: 'Kundensupport',
+      routesTitle: 'Strecken mit den meisten Sendungen',
+      routesSub: '',
+      routesAll: 'Alle Routen und Kostenbeiträge',
+      avgPrice: 'Durchschnittlicher Kostenbeitrag',
+      whyTitle: 'Warum Senvia',
+      why1t: 'Die Strecke wird ohnehin gefahren', why1d: 'Du bezahlst keine neue Fahrt, sondern nur einen Platz in einer, die sowieso stattfindet.',
+      why2t: 'Flexible Übergabe', why2d: 'Ort und Zeit legt ihr gemeinsam fest, ohne Öffnungszeiten einer Filiale.',
+      why3t: 'Geprüfte Nutzer', why3d: 'Verifizierung vor der ersten Sendung, öffentliche Bewertungen nach jeder Zustellung.',
+      why4t: 'Direkte Absprache', why4d: 'Kostenbeitrag und Details klärt ihr im Chat, ohne Vermittler und versteckte Gebühren.',
+      ctaTitle: 'Lade Senvia und verschicke deine ersten Sachen', ctaSub: 'Kostenlos, ohne Abo. Stelle eine Anfrage und sieh, wer deine Strecke fährt.'
+    }
+  };
+
+
+  addOrgLd() {
+    let ld = document.getElementById('senvia-org-ld');
+    if (!ld) { ld = document.createElement('script'); ld.type = 'application/ld+json'; ld.id = 'senvia-org-ld'; document.head.appendChild(ld); }
+    ld.textContent = JSON.stringify([
+      {
+        '@context': 'https://schema.org', '@type': 'Organization', name: 'Senvia', alternateName: ['Senvia app', 'Senvia aplikacija', 'senviaapp.com'],
+        url: 'https://www.senviaapp.com/', logo: 'https://www.senviaapp.com/assets/senvia-logo.png',
+        email: 'contact@senviaapp.com',
+        sameAs: ['https://apps.apple.com/hr/app/senvia/id6759839112', 'https://play.google.com/store/apps/details?id=com.senviaapp.senvia']
+      },
+      {
+        '@context': 'https://schema.org', '@type': 'WebSite', name: 'Senvia', alternateName: ['Senvia app', 'Senvia aplikacija', 'senviaapp.com'],
+        url: 'https://www.senviaapp.com/', inLanguage: ['hr', 'en', 'de']
+      },
+      {
+        '@context': 'https://schema.org', '@type': 'MobileApplication', name: 'Senvia',
+        applicationCategory: 'TravelApplication', operatingSystem: 'iOS, Android',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+        aggregateRating: { '@type': 'AggregateRating', ratingValue: '5', bestRating: '5', ratingCount: '9' }
+      }
+    ]);
+  }
+  componentDidMount() {
+    this.startHero();
+    this.addOrgLd();
+    const addLd = (id, data) => {
+      let el = document.getElementById(id);
+      if (!el) { el = document.createElement('script'); el.type = 'application/ld+json'; el.id = id; document.head.appendChild(el); }
+      el.textContent = JSON.stringify(data);
+    };
+    addLd('senvia-org-ld', {
+      '@context': 'https://schema.org', '@type': 'Organization',
+      name: 'Senvia', alternateName: ['Senvia app', 'Senvia aplikacija', 'senviaapp.com'], url: 'https://www.senviaapp.com/',
+      logo: 'https://www.senviaapp.com/assets/senvia-logo.png',
+      email: 'contact@senviaapp.com',
+      sameAs: ['https://apps.apple.com/hr/app/senvia/id6759839112', 'https://play.google.com/store/apps/details?id=com.senviaapp.senvia']
+    });
+    addLd('senvia-website-ld', {
+      '@context': 'https://schema.org', '@type': 'WebSite',
+      name: 'Senvia', url: 'https://www.senviaapp.com/', inLanguage: 'hr'
+    });
+    addLd('senvia-app-ld', {
+      '@context': 'https://schema.org', '@type': 'MobileApplication',
+      name: 'Senvia', applicationCategory: 'TravelApplication', operatingSystem: 'iOS, Android',
+      offers: { '@type': 'Offer', price: '0', priceCurrency: 'EUR' },
+      downloadUrl: 'https://apps.apple.com/hr/app/senvia/id6759839112'
+    });
+
+    import('./i18n.js').then(m => {
+      this.i18n = m;
+      this.setState({ lang: m.getLang() });
+      this.offLang = m.onLang(l => this.setState({ lang: l }));
+    });
+    this.loadFeed();
+    this.refresh = setInterval(() => this.loadFeed(), 60000);
+    const t0 = Date.now();
+    this.statTimer = setInterval(() => {
+      const p = Math.min(1, (Date.now() - t0) / 1600);
+      this.setState({ statP: p });
+      if (p >= 1) clearInterval(this.statTimer);
+    }, 40);
+  }
+  componentWillUnmount() { clearInterval(this.heroTimer); clearInterval(this.refresh); clearInterval(this.statTimer); if (this.offLang) this.offLang(); }
+
+  async loadFeed() {
+    try {
+      const m = await import('./routes-data.js');
+      const routes = m.activeRoutes().filter(r => r.durationHours)
+        .sort((a, b) => a.durationHours[0] - b.durationHours[0]).slice(0, 12);
+      this.setState({ feed: { stats: m.liveStats(), routes, reviews: m.storeReviews(), total: m.totalReviews() } });
+    } catch (e) {
+      this.setState({ feed: { stats: this.FALLBACK, routes: this.FALLBACK_ROUTES, reviews: this.FALLBACK_REVIEWS, total: 55 } });
+    }
+  }
+
+  renderVals() {
+    const lang = this.state.lang || 'hr';
+    if (this.faqLdLang !== lang && typeof document !== 'undefined') { this.faqLdLang = lang; this.addFaqLd(lang); }
+    const t = { ...this.STR.hr, ...(this.STR[lang] || {}) };
+    const feed = this.state.feed || {};
+    const stats = feed.stats || this.FALLBACK;
+    const list = feed.routes || this.FALLBACK_ROUTES;
+    const allReviews = feed.reviews || this.FALLBACK_REVIEWS;
+    const loc = { hr: 'hr-HR', en: 'en-GB', de: 'de-DE' }[lang] || 'hr-HR';
+    const ease = 1 - Math.pow(1 - (this.state.statP || 0), 3);
+    const n = (v) => Math.round(v * ease).toLocaleString(loc);
+    const dec = (v) => { const x = Number(v).toFixed(1); return lang === 'en' ? x : x.replace('.', ','); };
+
+    const unitFor = (h) => {
+      if (lang === 'en') return 'hour drive';
+      if (lang === 'de') return 'Stunden Fahrt';
+      return (h && h[1] >= 5) ? 'sati vožnje' : 'sata vožnje';
+    };
+    const routes = list.map(r => {
+      const avg = r.priceMin ? Math.round((r.priceMin + r.priceMax) / 2) : null;
+      const hourUnit = unitFor(r.durationHours);
+      return {
+        from: lang === 'en' ? (r.fromEn || r.from) : r.from,
+        to: lang === 'en' ? (r.toEn || r.to) : r.to,
+        hours: r.durationHours ? r.durationHours[0] + '\u2013' + r.durationHours[1] : '',
+        hourUnit,
+        price: avg ? t.avgPrice + ' ' + avg + ' \u20ac' : ''
+      };
+    });
+
+    const shortName = (name) => {
+      const parts = String(name || '').trim().split(/\s+/);
+      if (parts.length < 2) return parts[0] || '';
+      return parts[0] + ' ' + parts[parts.length - 1][0] + '.';
+    };
+    const storeLabel = { ios: 'App Store', android: 'Google Play' };
+    const iosTotal = stats.stores.ios.reviews;
+    const androidTotal = stats.stores.android.reviews;
+    const cnt = () => '';
+    const half = Math.ceil(routes.length / 2);
+    const rowA = routes.slice(0, half), rowB = routes.slice(half).concat(routes.slice(0, 2));
+
+    return {
+      t,
+      ...this.heroVals(lang),
+      homeFaq: (this.LANDING_FAQ[lang] || this.LANDING_FAQ.hr).filter((f, i) => [0, 1, 3, 4, 6].includes(i)),
+      faqSub: (this.FAQ_STR[lang] || this.FAQ_STR.hr).s,
+      mis: (() => { const m = this.MISSION[lang] || this.MISSION.hr; return { ...m, points: m.points.map((p, i) => ({ ...p, n: String(i + 1), icon: { __html: this.MIS_ICONS[i] } })) }; })(),
+      faqTitle: (this.FAQ_STR[lang] || this.FAQ_STR.hr).t, faqAll: (this.FAQ_STR[lang] || this.FAQ_STR.hr).all,
+      statUsers: n(stats.users), statRides: n(stats.rides),
+      iosRating: dec(stats.stores.ios.rating),
+      androidRating: dec(stats.stores.android.rating),
+      iosLabel: 'App Store' + cnt(iosTotal),
+      androidLabel: 'Google Play' + cnt(androidTotal),
+      reviewsSubLabel: dec(stats.stores.ios.rating) + ' ' + t.reviewsSub,
+      routesRowA: rowA.concat(rowA), routesRowB: rowB.concat(rowB),
+      videoPoints: [t.v1, t.v2, t.v3].map(text => ({ text })),
+      ...this.storyVals(lang),
+      ...this.ecoVals(lang),
+      reviews: allReviews.map(r => ({
+        stars: '★★★★★'.slice(0, r.rating) + '☆☆☆☆☆'.slice(0, 5 - r.rating),
+        storeLabel: storeLabel[r.store],
+        title: r.title, hasTitle: !!r.title, text: r.text, author: shortName(r.author),
+        date: new Date(r.date).toLocaleDateString(loc, { month: 'short', year: 'numeric' })
+      })),
+      routes
+    };
+  }
+}
+</script>
+</body>
+</html>

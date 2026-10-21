@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta charset="utf-8">
+  <title>O nama | Senvia</title>
+  <meta name="description" content="Tko stoji iza Senvie: tim koji svakodnevno razvija aplikaciju za slanje stvari uz putnike koji već putuju istim smjerom.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.senviaapp.com/o-nama/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Senvia">
+  <meta property="og:title" content="O nama | Senvia">
+  <meta property="og:description" content="Tim koji svakodnevno razvija Senviu.">
+  <meta property="og:url" content="https://www.senviaapp.com/o-nama/">
+  <meta property="og:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
+  <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    a { color: #1a9e44; text-decoration: none; }
+    a:hover { color: #0e7c31; }
+  </style>
+</helmet>
+<dc-import name="Nav" hint-size="100%,66px"></dc-import>
+<main style="max-width: 1120px; margin: 0 auto; padding: clamp(32px, 6vw, 80px) clamp(16px, 4vw, 32px) clamp(44px, 7vw, 96px)">
+
+  <header style="max-width: 760px; margin-bottom: clamp(36px, 6vw, 64px)">
+    <span style="display: inline-block; width: 44px; height: 4px; border-radius: 999px; background: #2dbb54; margin-bottom: 22px"></span>
+    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 6vw, 60px); line-height: 1.04; letter-spacing: -0.03em; font-weight: 700; margin: 0 0 20px; text-wrap: balance">{{ t.h1 }}</h1>
+    <p style="font-size: clamp(18px, 1.6vw, 21px); line-height: 1.6; color: #3c5346; margin: 0; text-wrap: pretty">{{ t.lead }}</p>
+  </header>
+
+  <section style="max-width: 760px; margin-bottom: clamp(36px, 6vw, 64px)">
+    <div>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 3vw, 32px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 16px">{{ t.storyT }}</h2>
+      <sc-for list="{{ t.story }}" as="p" hint-placeholder-count="3">
+        <p style="margin: 0 0 14px; font-size: 16.5px; line-height: 1.7; color: #3c5346; text-wrap: pretty">{{ p }}</p>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="margin-bottom: clamp(36px, 6vw, 64px)">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 3vw, 32px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px">{{ t.workT }}</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 14px">
+      <sc-for list="{{ t.work }}" as="w" hint-placeholder-count="4">
+        <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 22px; padding: 24px">
+          <p style="font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; margin: 0 0 8px; color: #12261a">{{ w.t }}</p>
+          <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ w.d }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="margin-bottom: clamp(36px, 6vw, 64px)">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 3vw, 32px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px">{{ t.valT }}</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px">
+      <sc-for list="{{ t.values }}" as="v" hint-placeholder-count="3">
+        <div style="display: flex; gap: 14px; align-items: flex-start; background: #eef9f1; border: 1px solid #bfe8cb; border-radius: 22px; padding: 22px">
+          <span style="width: 10px; height: 10px; border-radius: 999px; background: #2dbb54; margin-top: 8px; flex: 0 0 auto"></span>
+          <span>
+            <span style="display: block; font-family: 'Space Grotesk', sans-serif; font-size: 17.5px; font-weight: 700; color: #12261a; margin-bottom: 4px">{{ v.t }}</span>
+            <span style="display: block; font-size: 15.5px; line-height: 1.6; color: #3c5346">{{ v.d }}</span>
+          </span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 28px; padding: clamp(24px, 4vw, 40px); margin-bottom: 14px">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 2.6vw, 28px); font-weight: 700; margin: 0 0 18px">{{ t.compT }}</h2>
+    <dl style="margin: 0; display: grid; grid-template-columns: minmax(110px, 180px) minmax(0, 1fr)">
+      <sc-for list="{{ rows }}" as="r" hint-placeholder-count="4">
+        <dt style="padding: 14px 0; border-top: 1px solid #e9e6dd; font-size: 15px; font-weight: 600; color: #5b6f62">{{ r.k }}</dt>
+        <dd style="margin: 0; padding: 14px 0; border-top: 1px solid #e9e6dd; font-size: 15.5px; color: #12261a">{{ r.v }}</dd>
+      </sc-for>
+    </dl>
+  </section>
+
+  <section style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 28px; padding: clamp(24px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
+    <div style="min-width: 0">
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 2.6vw, 28px); font-weight: 700; margin: 0 0 6px">{{ t.contactT }}</h2>
+      <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3c5346">{{ t.contactD }}</p>
+    </div>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap">
+      <a href="{{ mailHref }}" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; background: #2dbb54; color: #ffffff; font-size: 15.5px; font-weight: 600" style-hover="background: #26a449; color: #ffffff">{{ email }}</a>
+      <a href="{{ telHref }}" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 22px; border-radius: 999px; background: #ffffff; border: 1px solid #dcd8cc; color: #12261a; font-size: 15.5px; font-weight: 600" style-hover="border-color: #12261a; color: #12261a">{{ phone }}</a>
+    </div>
+  </section>
+</main>
+<dc-import name="Podnozje" hint-size="100%,300px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'hr' };
+  // Podaci o tvrtki (OIB se namjerno ne prikazuje).
+  COMPANY = { legalName: 'Riddo Digital', email: 'contact@senviaapp.com', phone: '+385997898261', phoneShow: '+385 99 789 8261', street: 'Rapska 35', city: 'Zagreb', postal: '10000', country: 'HR' };
+  STR = {
+    hr: {
+      h1: 'Iza Senvie stoji tim s velikom idejom',
+      lead: 'Senvia povezuje ljude koji trebaju nešto poslati s vozačima koji ionako putuju istim smjerom. Prazno mjesto u autu ili kombiju postaje prijevoz za nečije stvari, a troškovi puta se dijele. Jednostavno, pošteno i bez dodatnih vožnji.',
+      storyT: 'Kako je sve počelo',
+      story: [
+        'Svi znamo taj osjećaj: treba poslati kutiju obitelji, poklon prijatelju ili komad namještaja u drugi grad, a klasična dostava je skupa, spora ili uopće ne prima takvu stvar. U isto vrijeme, na istoj cesti, svaki dan prolaze tisuće automobila s praznim prtljažnikom.',
+        'Senvia je nastala iz jednostavnog pitanja: zašto ta dva svijeta ne bismo spojili? Umjesto da se stvari voze posebno, mogu putovati s nekim kome je put ionako na rasporedu. Vozač podijeli troškove puta, pošiljatelj dobije brži i povoljniji prijevoz, a na cesti nema nijedne vožnje više.',
+        'Danas Senviu koriste ljudi na rutama svih duljina, od susjednih gradova do putovanja preko granica. Svaka nova ruta i svaki novi korisnik čine mrežu gušćom, a slanje jednostavnijim za sve.'
+      ],
+      workT: 'Na čemu radimo',
+      work: [
+        { t: 'Razvoj aplikacije', d: 'Nove verzije izlaze redovito. Slušamo korisnike i neprestano poboljšavamo objavu vožnji, pretragu i chat.' },
+        { t: 'Sigurnost i povjerenje', d: 'Provjera korisnika, ocjene nakon svake vožnje i jasna pravila o tome što se smije slati.' },
+        { t: 'Podrška korisnicima', d: 'Stvarni ljudi odgovaraju na upite, brzo i bez automatiziranih odgovora.' },
+        { t: 'Nove rute', d: 'Širimo mrežu putnika i pošiljatelja kako bi za svaku stvar postojao netko tko ide u pravom smjeru.' }
+      ],
+      valT: 'U što vjerujemo',
+      values: [
+        { t: 'Dijeljenje, a ne posao', d: 'Senvia nije prijevoznička tvrtka. Vozači samo dijele troškove puta koji ionako imaju.' },
+        { t: 'Poštenje prema svima', d: 'Jasna naknada, jasna pravila i ocjene koje pokazuju s kim imaš posla.' },
+        { t: 'Briga za okoliš', d: 'Svaka stvar koja putuje u postojećoj vožnji znači manje dodatnih kilometara i manje CO₂.' }
+      ],
+      compT: 'Podaci o tvrtki', kName: 'Naziv', kAddr: 'Adresa', kMail: 'E-mail', kPhone: 'Telefon',
+      contactT: 'Javi nam se',
+      contactD: 'Imaš pitanje, prijedlog ili želiš surađivati? Odgovaramo brzo.'
+    },
+    en: {
+      h1: 'A team with a big idea behind Senvia',
+      lead: 'Senvia connects people who need to send something with drivers already travelling the same way. Empty space in a car or van becomes transport for someone\'s items, and the cost of the trip is shared. Simple, fair and without extra trips.',
+      storyT: 'How it all started',
+      story: [
+        'We all know the feeling: you need to send a box to family, a gift to a friend or a piece of furniture to another city, and classic delivery is expensive, slow or does not take that kind of item at all. Meanwhile, on the same road, thousands of cars drive by every day with an empty boot.',
+        'Senvia started from a simple question: why not connect the two? Instead of being driven separately, items can travel with someone who is making the trip anyway. The driver shares the cost of the trip, the sender gets faster and more affordable transport, and there is not a single extra trip on the road.',
+        'Today people use Senvia on routes of every length, from neighbouring towns to journeys across borders. Every new route and every new user makes the network denser and sending easier for everyone.'
+      ],
+      workT: 'What we work on',
+      work: [
+        { t: 'App development', d: 'New versions ship regularly. We listen to users and keep improving trip posting, search and chat.' },
+        { t: 'Safety and trust', d: 'User verification, ratings after every trip and clear rules on what can be sent.' },
+        { t: 'Customer support', d: 'Real people answer your questions, quickly and without automated replies.' },
+        { t: 'New routes', d: 'We grow the network of travellers and senders so there is someone heading the right way for every item.' }
+      ],
+      valT: 'What we believe in',
+      values: [
+        { t: 'Sharing, not business', d: 'Senvia is not a transport company. Drivers simply share the cost of a trip they are making anyway.' },
+        { t: 'Fair to everyone', d: 'A clear fee, clear rules and ratings that show who you are dealing with.' },
+        { t: 'Care for the environment', d: 'Every item travelling in an existing trip means fewer extra kilometres and less CO₂.' }
+      ],
+      compT: 'Company details', kName: 'Name', kAddr: 'Address', kMail: 'Email', kPhone: 'Phone',
+      contactT: 'Get in touch',
+      contactD: 'Have a question, an idea or want to work with us? We reply quickly.'
+    },
+    de: {
+      h1: 'Hinter Senvia steht ein Team mit einer großen Idee',
+      lead: 'Senvia verbindet Menschen, die etwas verschicken möchten, mit Fahrern, die ohnehin in dieselbe Richtung fahren. Freier Platz im Auto oder Transporter wird zum Transport für Sachen, und die Fahrtkosten werden geteilt. Einfach, fair und ohne Extrafahrten.',
+      storyT: 'Wie alles begann',
+      story: [
+        'Wir alle kennen das: Man möchte der Familie einen Karton, einem Freund ein Geschenk oder ein Möbelstück in eine andere Stadt schicken, und die klassische Zustellung ist teuer, langsam oder nimmt so etwas gar nicht an. Gleichzeitig fahren auf derselben Straße jeden Tag Tausende Autos mit leerem Kofferraum.',
+        'Senvia entstand aus einer einfachen Frage: Warum bringen wir das nicht zusammen? Statt extra gefahren zu werden, können Sachen mit jemandem reisen, der die Fahrt ohnehin macht. Der Fahrer teilt die Fahrtkosten, der Absender bekommt einen schnelleren und günstigeren Transport, und auf der Straße gibt es keine einzige Fahrt mehr.',
+        'Heute nutzen Menschen Senvia auf Strecken jeder Länge, von Nachbarorten bis zu Fahrten über Grenzen hinweg. Jede neue Strecke und jeder neue Nutzer macht das Netz dichter und das Versenden für alle einfacher.'
+      ],
+      workT: 'Woran wir arbeiten',
+      work: [
+        { t: 'App-Entwicklung', d: 'Neue Versionen erscheinen regelmäßig. Wir hören auf Nutzer und verbessern laufend Fahrten, Suche und Chat.' },
+        { t: 'Sicherheit und Vertrauen', d: 'Verifizierung, Bewertungen nach jeder Fahrt und klare Regeln, was verschickt werden darf.' },
+        { t: 'Kundensupport', d: 'Echte Menschen beantworten Anfragen, schnell und ohne automatische Antworten.' },
+        { t: 'Neue Strecken', d: 'Wir erweitern das Netz aus Reisenden und Absendern, damit für jede Sache jemand in die richtige Richtung fährt.' }
+      ],
+      valT: 'Woran wir glauben',
+      values: [
+        { t: 'Teilen statt Geschäft', d: 'Senvia ist kein Transportunternehmen. Fahrer teilen einfach die Kosten einer Fahrt, die sie ohnehin machen.' },
+        { t: 'Fair zu allen', d: 'Ein klarer Kostenbeitrag, klare Regeln und Bewertungen, die zeigen, mit wem man es zu tun hat.' },
+        { t: 'Umweltschutz', d: 'Jede Sache in einer bestehenden Fahrt bedeutet weniger Extrakilometer und weniger CO₂.' }
+      ],
+      compT: 'Firmendaten', kName: 'Name', kAddr: 'Adresse', kMail: 'E-Mail', kPhone: 'Telefon',
+      contactT: 'Schreib uns',
+      contactD: 'Eine Frage, eine Idee oder Interesse an Zusammenarbeit? Wir antworten schnell.'
+    }
+  };
+  componentDidMount() {
+    import('./i18n.js').then(m => { this.setState({ lang: m.getLang() }); this.off = m.onLang(l => this.setState({ lang: l })); }).catch(() => {});
+    const c = this.COMPANY;
+    const el = document.createElement('script'); el.type = 'application/ld+json';
+    el.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'Organization', name: 'Senvia', legalName: c.legalName, url: 'https://www.senviaapp.com/', email: c.email, telephone: c.phone, logo: 'https://www.senviaapp.com/assets/senvia-logo.png', address: { '@type': 'PostalAddress', streetAddress: c.street, addressLocality: c.city, postalCode: c.postal, addressCountry: c.country } });
+    document.head.appendChild(el);
+  }
+  componentWillUnmount() { if (this.off) this.off(); }
+  renderVals() {
+    const c = this.COMPANY;
+    const t = this.STR[this.state.lang] || this.STR.hr;
+    return { t, rows: [{ k: t.kName, v: c.legalName }, { k: t.kAddr, v: c.street + ', ' + c.postal + ' ' + c.city }, { k: t.kMail, v: c.email }, { k: t.kPhone, v: c.phoneShow }], email: c.email, mailHref: 'mailto:' + c.email, phone: c.phoneShow, telHref: 'tel:' + c.phone };
+  }
+}
+</script>
+</body>
+</html>

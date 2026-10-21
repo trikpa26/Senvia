@@ -8,23 +8,24 @@
 <body>
 <x-dc>
 <helmet>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta charset="utf-8">
   <title>Senvia za tvrtke, dostava istoga dana uz putnika | Senvia</title>
   <meta name="description" content="Cvjećarnice, male trgovine, voćarne i sportske trgovine mogu slati narudžbe uz putnika koji već ide tim smjerom. Javi se za suradnju.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.senviaapp.com/za-tvrtke">
+  <link rel="canonical" href="https://www.senviaapp.com/za-tvrtke/">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Senvia">
   <meta property="og:locale" content="hr_HR">
   <meta property="og:title" content="Senvia za tvrtke, dostava istoga dana uz putnika | Senvia">
   <meta property="og:description" content="Cvjećarnice, male trgovine, voćarne i sportske trgovine mogu slati narudžbe uz putnika koji već ide tim smjerom. Javi se za suradnju.">
-  <meta property="og:url" content="https://www.senviaapp.com/za-tvrtke">
-  <meta property="og:image" content="https://www.senviaapp.com/uploads/1024x1024bb.png">
+  <meta property="og:url" content="https://www.senviaapp.com/za-tvrtke/">
+  <meta property="og:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Senvia za tvrtke, dostava istoga dana uz putnika | Senvia">
   <meta name="twitter:description" content="Cvjećarnice, male trgovine, voćarne i sportske trgovine mogu slati narudžbe uz putnika koji već ide tim smjerom. Javi se za suradnju.">
-  <meta name="twitter:image" content="https://www.senviaapp.com/uploads/1024x1024bb.png">
+  <meta name="twitter:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
   <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
   <script>
     window.SENVIA_GA_ID = 'G-H8DBTNDF62';
@@ -46,7 +47,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -73,13 +74,13 @@
   </a>
 </section>
 
-<section style="background: #f4faf6; border-top: 1px solid #eaf2ec; border-bottom: 1px solid #eaf2ec">
+<section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
   <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
     <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.whoTitle }}</h2>
     <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 70ch; text-wrap: pretty">{{ t.whoSub }}</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 16px">
       <sc-for list="{{ segments }}" as="s" hint-placeholder-count="6">
-        <div style="background: #ffffff; border: 1px solid #e4efe7; border-radius: 20px; padding: 28px 26px">
+        <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 28px 26px">
           <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance">{{ s.title }}</h3>
           <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ s.desc }}</p>
         </div>
@@ -94,7 +95,7 @@
   <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 68ch; text-wrap: pretty">{{ t.howSub }}</p>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 16px">
     <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
-      <div style="border: 1px solid #e4efe7; border-radius: 20px; padding: 28px 26px">
+      <div style="border: 1px solid #e6e3da; border-radius: 20px; padding: 28px 26px">
         <div style="font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; color: #1a9e44; letter-spacing: 0.1em; margin-bottom: 14px">{{ s.n }}</div>
         <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance">{{ s.title }}</h3>
         <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ s.desc }}</p>
@@ -120,11 +121,11 @@
 </section>
 
 <section id="prijava" style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px); scroll-margin-top: 88px">
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(20px, 3.4vw, 44px); align-items: start; border: 1px solid #e4efe7; border-radius: 26px; padding: clamp(28px, 4vw, 46px)">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: clamp(20px, 3.4vw, 44px); align-items: start; border: 1px solid #e6e3da; border-radius: 26px; padding: clamp(28px, 4vw, 46px)">
     <div>
       <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 34px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance">{{ t.contactTitle }}</h2>
       <p style="font-size: 16.5px; line-height: 1.65; color: #3c5346; margin: 0 0 22px; max-width: 52ch; text-wrap: pretty">{{ t.contactSub }}</p>
-      <div style="background: #f7fbf8; border: 1px solid #e4efe7; border-radius: 20px; padding: 26px 24px">
+      <div style="background: #f7f6f2; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
         <div style="font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: 14px">{{ t.contactListTitle }}</div>
         <div style="display: grid; gap: 11px">
           <sc-for list="{{ contactItems }}" as="c" hint-placeholder-count="4">
@@ -142,12 +143,12 @@
       <sc-for list="{{ fields }}" as="f" hint-placeholder-count="6">
         <label style="display: grid; gap: 7px">
           <span style="font-size: 14.5px; font-weight: 600; color: #12261a">{{ f.label }}</span>
-          <input type="{{ f.type }}" name="{{ f.name }}" required="{{ f.required }}" placeholder="{{ f.placeholder }}" style="font-family: 'Instrument Sans', sans-serif; font-size: 16px; color: #12261a; background: #ffffff; border: 1px solid #e4efe7; border-radius: 13px; padding: 14px 16px; outline: none; width: 100%; box-sizing: border-box" style-focus="border-color: #2dbb54; box-shadow: 0 0 0 3px rgba(45,187,84,0.15)">
+          <input type="{{ f.type }}" name="{{ f.name }}" required="{{ f.required }}" placeholder="{{ f.placeholder }}" style="font-family: 'Instrument Sans', sans-serif; font-size: 16px; color: #12261a; background: #ffffff; border: 1px solid #e6e3da; border-radius: 13px; padding: 14px 16px; outline: none; width: 100%; box-sizing: border-box" style-focus="border-color: #2dbb54; box-shadow: 0 0 0 3px rgba(45,187,84,0.15)">
         </label>
       </sc-for>
       <label style="display: grid; gap: 7px">
         <span style="font-size: 14.5px; font-weight: 600; color: #12261a">{{ t.fMsg }}</span>
-        <textarea name="poruka" rows="4" placeholder="{{ t.fMsgPh }}" style="font-family: 'Instrument Sans', sans-serif; font-size: 16px; line-height: 1.55; color: #12261a; background: #ffffff; border: 1px solid #e4efe7; border-radius: 13px; padding: 14px 16px; outline: none; width: 100%; box-sizing: border-box; resize: vertical" style-focus="border-color: #2dbb54; box-shadow: 0 0 0 3px rgba(45,187,84,0.15)"></textarea>
+        <textarea name="poruka" rows="4" placeholder="{{ t.fMsgPh }}" style="font-family: 'Instrument Sans', sans-serif; font-size: 16px; line-height: 1.55; color: #12261a; background: #ffffff; border: 1px solid #e6e3da; border-radius: 13px; padding: 14px 16px; outline: none; width: 100%; box-sizing: border-box; resize: vertical" style-focus="border-color: #2dbb54; box-shadow: 0 0 0 3px rgba(45,187,84,0.15)"></textarea>
       </label>
       <button type="submit" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #2dbb54; color: #ffffff; font-family: 'Instrument Sans', sans-serif; font-weight: 600; font-size: 16.5px; padding: 16px 26px; border: none; border-radius: 14px; cursor: pointer; width: 100%" style-hover="background: #26a449">
         {{ t.fSend }}
@@ -180,7 +181,7 @@ class Component extends DCLogic {
       lead2: 'Suradnja s poslovnim partnerima je u pripremi. Ako želiš biti među prvima, javi nam se i uključit ćemo te u prvi krug.',
       heroCta: 'Prijavi svoju tvrtku',
       whoTitle: 'Kome je namijenjeno',
-      whoSub: 'Svima koji prodaju nešto što kupac želi danas, a klasična dostava to ne stigne ili se ne isplati zbog cijene.',
+      whoSub: 'Svima koji prodaju nešto što kupac želi danas, a klasična dostava to ne stigne ili se ne isplati zbog naknade.',
       s1t: 'Cvjećarnice', s1d: 'Buket za rođendan ili sprovod ne može čekati dva dana. Ako netko već putuje prema kupcu, cvijeće stiže svježe i istoga dana.',
       s2t: 'Male trgovine i butici', s2d: 'Kupac je vidio artikl na društvenim mrežama i želi ga odmah. Umjesto tarife po masi, pošiljka putuje uz nekoga tko ionako ide tim smjerom.',
       s3t: 'Voćarne i OPG', s3d: 'Svježe voće, povrće, med i domaći proizvodi. Kraći put znači manje presjedanja i robu koja stiže onakva kakva je i krenula.',
@@ -195,8 +196,8 @@ class Component extends DCLogic {
       h4t: 'Preuzimanje i predaja', h4d: 'Putnik preuzima pošiljku u trgovini i predaje je kupcu, a chat ostaje otvoren cijelo vrijeme.',
       howNote: 'Ako na traženoj ruti u tom trenutku nema putnika, pošiljka jednostavno ide klasičnim putem. Senvia je brza opcija kada se putovanje poklopi, a ne zamjena za svaku dostavu.',
       gainTitle: 'Što tvrtka dobiva',
-      gainSub: 'Prednost nije samo cijena. Prednost je vrijeme u kojem kupac dobiva ono što je naručio.',
-      g1t: 'Dostava u satima', g1d: 'Kupac dobiva narudžbu istoga dana, često unutar nekoliko sati, jer paket putuje s nekim tko je već na putu.',
+      gainSub: 'Prednost nije samo naknada. Prednost je vrijeme u kojem kupac dobiva ono što je naručio.',
+      g1t: 'Dostava u satima', g1d: 'Kupac dobiva narudžbu istoga dana, često unutar nekoliko sati, jer stvari putuju s nekim tko je već na putu.',
       g2t: 'Bez fiksnih ugovora', g2d: 'Nema mjesečne naknade ni minimalnog broja pošiljaka. Koristiš onda kada ti treba.',
       g3t: 'Šire područje prodaje', g3d: 'Kupci iz drugih gradova prestaju biti problem s dostavom, pa se prodaja ne zaustavlja na granici tvojega grada.',
       g4t: 'Svaki prijevoz ima trag', g4d: 'Profil putnika, ocjene, fotografija pošiljke i chat ostaju zabilježeni u aplikaciji.',
@@ -261,8 +262,8 @@ class Component extends DCLogic {
       h4t: 'Pick-up and hand-over', h4d: 'The traveller collects the shipment at the shop and hands it to the customer, with the chat open the whole time.',
       howNote: 'If there is no traveller on that route at that moment, the shipment simply goes the classic way. Senvia is the fast option when journeys line up, not a replacement for every delivery.',
       gainTitle: 'What the business gets',
-      gainSub: 'The advantage is not only price. The advantage is the time in which the customer receives what they ordered.',
-      g1t: 'Delivery in hours', g1d: 'The customer gets the order the same day, often within hours, because the package travels with someone already on the road.',
+      gainSub: 'The advantage is not only fee. The advantage is the time in which the customer receives what they ordered.',
+      g1t: 'Delivery in hours', g1d: 'The customer gets the order the same day, often within hours, because the items travel with someone already on the road.',
       g2t: 'No fixed contracts', g2d: 'No monthly fee and no minimum number of shipments. You use it when you need it.',
       g3t: 'A wider selling area', g3d: 'Customers in other cities stop being a delivery problem, so sales no longer stop at the edge of your town.',
       g4t: 'Every trip leaves a record', g4d: 'The traveller profile, ratings, the photo of the shipment and the chat all stay recorded in the app.',
@@ -327,8 +328,8 @@ class Component extends DCLogic {
       h4t: 'Abholung und Übergabe', h4d: 'Der Reisende holt die Sendung im Geschäft ab und übergibt sie dem Kunden, der Chat bleibt die ganze Zeit offen.',
       howNote: 'Gibt es zu dem Zeitpunkt keinen Reisenden auf der Strecke, geht die Sendung einfach den klassischen Weg. Senvia ist die schnelle Option, wenn Fahrten zusammenpassen, kein Ersatz für jede Zustellung.',
       gainTitle: 'Was das Unternehmen davon hat',
-      gainSub: 'Der Vorteil ist nicht nur der Preis. Der Vorteil ist die Zeit, in der der Kunde bekommt, was er bestellt hat.',
-      g1t: 'Zustellung in Stunden', g1d: 'Der Kunde erhält die Bestellung am selben Tag, oft in wenigen Stunden, weil das Paket mit jemandem reist, der bereits unterwegs ist.',
+      gainSub: 'Der Vorteil ist nicht nur der Kostenbeitrag. Der Vorteil ist die Zeit, in der der Kunde bekommt, was er bestellt hat.',
+      g1t: 'Zustellung in Stunden', g1d: 'Der Kunde erhält die Bestellung am selben Tag, oft in wenigen Stunden, weil die Sachen mit jemandem reisen, der bereits unterwegs ist.',
       g2t: 'Keine festen Verträge', g2d: 'Keine Monatsgebühr und keine Mindestmenge an Sendungen. Du nutzt es, wenn du es brauchst.',
       g3t: 'Größeres Verkaufsgebiet', g3d: 'Kunden in anderen Städten sind kein Zustellproblem mehr, der Verkauf endet nicht an der Stadtgrenze.',
       g4t: 'Jeder Transport ist dokumentiert', g4d: 'Profil des Reisenden, Bewertungen, Foto der Sendung und Chat bleiben in der App gespeichert.',
@@ -376,7 +377,7 @@ class Component extends DCLogic {
     if (!bc) { bc = document.createElement('script'); bc.type = 'application/ld+json'; bc.id = 'senvia-breadcrumb-ld'; document.head.appendChild(bc); }
     bc.textContent = JSON.stringify({
       '@context': 'https://schema.org', '@type': 'BreadcrumbList',
-      itemListElement: [{"@type":"ListItem","position":1,"name":"Senvia","item":"https://www.senviaapp.com/"},{"@type":"ListItem","position":2,"name":"Za poslovne korisnike","item":"https://www.senviaapp.com/za-tvrtke"}]
+      itemListElement: [{"@type":"ListItem","position":1,"name":"Senvia","item":"https://www.senviaapp.com/"},{"@type":"ListItem","position":2,"name":"Za poslovne korisnike","item":"https://www.senviaapp.com/za-tvrtke/"}]
     });
   }
   componentDidMount() {
@@ -411,7 +412,7 @@ class Component extends DCLogic {
         '@context': 'https://schema.org', '@type': 'BreadcrumbList',
         itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Senvia', item: 'https://www.senviaapp.com/' },
-        { '@type': 'ListItem', position: 2, name: t.crumb, item: 'https://www.senviaapp.com/za-tvrtke' }
+        { '@type': 'ListItem', position: 2, name: t.crumb, item: 'https://www.senviaapp.com/za-tvrtke/' }
         ]
       });
     }

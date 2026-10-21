@@ -8,6 +8,7 @@
 <body>
 <x-dc>
 <helmet>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta charset="utf-8">
   <title>Interno: generator stranica po ruti | Senvia</title>
   <meta name="robots" content="noindex, nofollow">
@@ -33,7 +34,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -48,8 +49,8 @@
   <p style="font-size: 17.5px; line-height: 1.65; color: #3c5346; margin: 0 0 36px; max-width: 66ch; text-wrap: pretty">Stranica postoji samo dok ruta ima najmanje jednog aktivnog vozača. Rute bez pokrivenosti vraćaju 404 i ne ulaze u sitemap.</p>
 
   <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 3.9vw, 24px); font-weight: 700; margin: 0 0 16px">Trenutni feed</h2>
-  <div style="border: 1px solid #e4efe7; border-radius: 18px; overflow: auto hidden; margin-bottom: 40px">
-    <div style="display: grid; grid-template-columns: 1.4fr 0.7fr 0.8fr 0.8fr 1fr; background: #f4faf6; border-bottom: 1px solid #e4efe7; font-size: 12.5px; font-weight: 700; letter-spacing: 0.06em; color: #6b8272; padding: 12px 20px">
+  <div style="border: 1px solid #e6e3da; border-radius: 18px; overflow: auto hidden; margin-bottom: 40px">
+    <div style="display: grid; grid-template-columns: 1.4fr 0.7fr 0.8fr 0.8fr 1fr; background: #f2f0ea; border-bottom: 1px solid #e6e3da; font-size: 12.5px; font-weight: 700; letter-spacing: 0.06em; color: #6b8272; padding: 12px 20px">
       <span>RUTA</span><span>VOZAČI</span><span>CIJENA</span><span>STATUS</span><span>URL</span>
     </div>
     <sc-for list="{{ rows }}" as="r" hint-placeholder-count="6">
@@ -65,11 +66,11 @@
 
   <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 3.9vw, 24px); font-weight: 700; margin: 0 0 16px">Pravila generiranja</h2>
   <div style="display: grid; gap: 12px; margin-bottom: 40px">
-    <div style="background: #f7fbf8; border: 1px solid #e4efe7; border-radius: 16px; padding: 20px 24px; font-size: 15.5px; line-height: 1.6; color: #29402f">Ruta s <strong>≥ 1 aktivnim vozačem</strong> dobiva stranicu na <code>/slanje-paketa/[grad-a]-[grad-b]</code>, ulazi u sitemap i indeksira se.</div>
-    <div style="background: #f7fbf8; border: 1px solid #e4efe7; border-radius: 16px; padding: 20px 24px; font-size: 15.5px; line-height: 1.6; color: #29402f">Ruta bez vozača vraća <strong>404</strong> i dobiva <code>noindex</code>; nestaje iz sitemapa do prvog novog vozača.</div>
-    <div style="background: #f7fbf8; border: 1px solid #e4efe7; border-radius: 16px; padding: 20px 24px; font-size: 15.5px; line-height: 1.6; color: #29402f">Sekcija s brojkama prikazuje samo polja koja backend stvarno ima. Nema cijene u feedu, nema ni okvira s cijenom.</div>
-    <div style="background: #f7fbf8; border: 1px solid #e4efe7; border-radius: 16px; padding: 20px 24px; font-size: 15.5px; line-height: 1.6; color: #29402f">FAQ je generički blok plus 0–2 pitanja specifična za rutu iz feeda; svi odgovori su u HTML-u i pokriveni <code>FAQPage</code> shemom.</div>
-    <div style="background: #f7fbf8; border: 1px solid #e4efe7; border-radius: 16px; padding: 20px 24px; font-size: 15.5px; line-height: 1.6; color: #29402f">Rute se <strong>ne pojavljuju u izborniku</strong>. Dolazi se preko tražilice, sitemapa i bloka „Ljudi također šalju” na dnu druge rutne stranice.</div>
+    <div style="background: #f7f6f2; border: 1px solid #e6e3da; border-radius: 16px; padding: 20px 24px; font-size: 15.5px; line-height: 1.6; color: #29402f">Ruta s <strong>≥ 1 aktivnim vozačem</strong> dobiva stranicu na <code>/slanje-stvari/[grad-a]-[grad-b]</code>, ulazi u sitemap i indeksira se.</div>
+    <div style="background: #f7f6f2; border: 1px solid #e6e3da; border-radius: 16px; padding: 20px 24px; font-size: 15.5px; line-height: 1.6; color: #29402f">Ruta bez vozača vraća <strong>404</strong> i dobiva <code>noindex</code>; nestaje iz sitemapa do prvog novog vozača.</div>
+    <div style="background: #f7f6f2; border: 1px solid #e6e3da; border-radius: 16px; padding: 20px 24px; font-size: 15.5px; line-height: 1.6; color: #29402f">Sekcija s brojkama prikazuje samo polja koja backend stvarno ima. Nema naknade u feedu, nema ni okvira s naknadom.</div>
+    <div style="background: #f7f6f2; border: 1px solid #e6e3da; border-radius: 16px; padding: 20px 24px; font-size: 15.5px; line-height: 1.6; color: #29402f">FAQ je generički blok plus 0–2 pitanja specifična za rutu iz feeda; svi odgovori su u HTML-u i pokriveni <code>FAQPage</code> shemom.</div>
+    <div style="background: #f7f6f2; border: 1px solid #e6e3da; border-radius: 16px; padding: 20px 24px; font-size: 15.5px; line-height: 1.6; color: #29402f">Rute se <strong>ne pojavljuju u izborniku</strong>. Dolazi se preko tražilice, sitemapa i bloka „Ljudi također šalju” na dnu druge rutne stranice.</div>
   </div>
 
   <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 3.9vw, 24px); font-weight: 700; margin: 0 0 16px">Oblik podataka</h2>
@@ -105,11 +106,11 @@ class Component extends DCLogic {
         drivers: String(r.activeDrivers),
         price: r.priceMin ? r.priceMin + '–' + r.priceMax + ' €' : '—',
         status: on ? 'Objavljena' : '404',
-        url: '/slanje-paketa/' + r.slug,
+        url: '/slanje-stvari/' + r.slug,
         href: 'Ruta%20-%20' + r.slug + '.dc.html',
         rowStyle: {
           display: 'grid', gridTemplateColumns: '1.4fr 0.7fr 0.8fr 0.8fr 1fr', alignItems: 'center',
-          padding: '14px 20px', borderBottom: i === this.FEED.length - 1 ? 'none' : '1px solid #eaf2ec',
+          padding: '14px 20px', borderBottom: i === this.FEED.length - 1 ? 'none' : '1px solid #e9e6dd',
           background: on ? '#ffffff' : '#fdf7f3'
         },
         badgeStyle: {

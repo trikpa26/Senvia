@@ -11,7 +11,7 @@ export const ROUTES = [
     activeDrivers: 5,
     distanceKm: 1010,
     durationHours: [11, 12],
-    priceMin: 30, priceMax: 50,
+    priceMin: 34, priceMax: 63,
     routeFaqs: []
   },
   {
@@ -20,7 +20,7 @@ export const ROUTES = [
     activeDrivers: 4,
     distanceKm: 830,
     durationHours: [8, 9],
-    priceMin: 25, priceMax: 42,
+    priceMin: 29, priceMax: 54,
     routeFaqs: []
   },
   {
@@ -29,7 +29,7 @@ export const ROUTES = [
     activeDrivers: 4,
     distanceKm: 1000,
     durationHours: [10, 11],
-    priceMin: 25, priceMax: 45,
+    priceMin: 34, priceMax: 62,
     routeFaqs: []
   },
   {
@@ -39,7 +39,7 @@ export const ROUTES = [
     activeDrivers: 6,
     distanceKm: 600,
     durationHours: [6, 7],
-    priceMin: 18, priceMax: 32,
+    priceMin: 22, priceMax: 42,
     routeFaqs: []
   },
   {
@@ -48,7 +48,7 @@ export const ROUTES = [
     activeDrivers: 8,
     distanceKm: 230,
     durationHours: [3, 4],
-    priceMin: 8, priceMax: 16,
+    priceMin: 12, priceMax: 22,
     routeFaqs: []
   },
   {
@@ -57,7 +57,7 @@ export const ROUTES = [
     activeDrivers: 7,
     distanceKm: 230,
     durationHours: [2, 3],
-    priceMin: 7, priceMax: 15,
+    priceMin: 12, priceMax: 22,
     routeFaqs: []
   },
   {
@@ -66,7 +66,7 @@ export const ROUTES = [
     activeDrivers: 5,
     distanceKm: 500,
     durationHours: [5, 6],
-    priceMin: 12, priceMax: 24,
+    priceMin: 20, priceMax: 36,
     routeFaqs: []
   },
   {
@@ -75,7 +75,7 @@ export const ROUTES = [
     activeDrivers: 5,
     distanceKm: 480,
     durationHours: [5, 6],
-    priceMin: 12, priceMax: 24,
+    priceMin: 19, priceMax: 35,
     routeFaqs: []
   },
   {
@@ -85,9 +85,9 @@ export const ROUTES = [
     activeDrivers: 14,
     distanceKm: 370,
     durationHours: [4, 5],
-    priceMin: 10, priceMax: 20,
+    priceMin: 16, priceMax: 30,
     routeFaqs: [
-      { q: "Koliko dana treba paket iz Beča do Zagreba?", a: "Koliko i sama vožnja. Vozači tu rutu prijeđu za četiri do pet sati, pa paket najčešće stigne isti dan kada je preuzet, ovisno o dogovorenom terminu polaska." }
+      { q: "Koliko dana treba stvari iz Beča do Zagreba?", a: "Koliko i sama vožnja. Vozači tu rutu prijeđu za četiri do pet sati, pa stvari najčešće stignu isti dan kada su preuzete, ovisno o dogovorenom terminu polaska." }
     ]
   },
   {
@@ -96,9 +96,9 @@ export const ROUTES = [
     activeDrivers: 9,
     distanceKm: 190,
     durationHours: [2, 3],
-    priceMin: 8, priceMax: 15,
+    priceMin: 11, priceMax: 20,
     routeFaqs: [
-      { q: "Stiže li paket iz Graza u Zagreb isti dan?", a: "U pravilu da. Ruta se vozi za dva do tri sata, pa paket stiže isti dan kada ga vozač preuzme." }
+      { q: "Stiže li stvari iz Graza u Zagreb isti dan?", a: "U pravilu da. Ruta se vozi za dva do tri sata, pa stvari stižu isti dan kada ih vozač preuzme." }
     ]
   },
   {
@@ -108,7 +108,7 @@ export const ROUTES = [
     activeDrivers: 6,
     distanceKm: 480,
     durationHours: [5, 6],
-    priceMin: 12, priceMax: 25,
+    priceMin: 19, priceMax: 35,
     routeFaqs: []
   },
   {
@@ -126,7 +126,7 @@ export const ROUTES = [
     activeDrivers: 2,
     distanceKm: 880,
     durationHours: [9, 10],
-    priceMin: 20, priceMax: 35,
+    priceMin: 30, priceMax: 56,
     routeFaqs: []
   },
   {
@@ -135,7 +135,7 @@ export const ROUTES = [
     activeDrivers: 7,
     distanceKm: 250,
     durationHours: [3, 4],
-    priceMin: 8, priceMax: 18,
+    priceMin: 13, priceMax: 23,
     routeFaqs: []
   },
   {
@@ -145,7 +145,7 @@ export const ROUTES = [
     activeDrivers: 5,
     distanceKm: 520,
     durationHours: [5, 6],
-    priceMin: 12, priceMax: 25,
+    priceMin: 20, priceMax: 37,
     routeFaqs: []
   },
   {
@@ -154,7 +154,7 @@ export const ROUTES = [
     activeDrivers: 4,
     distanceKm: 800,
     durationHours: [8, 9],
-    priceMin: 15, priceMax: 30,
+    priceMin: 28, priceMax: 52,
     routeFaqs: []
   },
   {
@@ -170,7 +170,7 @@ export const ROUTES = [
     activeDrivers: 8,
     distanceKm: 230,
     durationHours: [3, 4],
-    priceMin: 10, priceMax: 20,
+    priceMin: 12, priceMax: 22,
     routeFaqs: []
   },
   {
@@ -180,7 +180,7 @@ export const ROUTES = [
     activeDrivers: 6,
     distanceKm: 310,
     durationHours: [3, 4],
-    priceMin: 10, priceMax: 20,
+    priceMin: 14, priceMax: 27,
     routeFaqs: []
   },
   {
@@ -189,7 +189,7 @@ export const ROUTES = [
     activeDrivers: 4,
     distanceKm: 480,
     durationHours: [5, 6],
-    priceMin: 15, priceMax: 28,
+    priceMin: 19, priceMax: 35,
     routeFaqs: []
   },
   {
@@ -199,7 +199,7 @@ export const ROUTES = [
     activeDrivers: 5,
     distanceKm: 570,
     durationHours: [6, 7],
-    priceMin: 18, priceMax: 32,
+    priceMin: 22, priceMax: 40,
     routeFaqs: []
   },
   {
@@ -208,7 +208,7 @@ export const ROUTES = [
     activeDrivers: 11,
     distanceKm: 410,
     durationHours: [4, 5],
-    priceMin: 8, priceMax: 18,
+    priceMin: 17, priceMax: 32,
     routeFaqs: []
   },
   {
@@ -217,7 +217,7 @@ export const ROUTES = [
     activeDrivers: 9,
     distanceKm: 160,
     durationHours: [2, 3],
-    priceMin: 6, priceMax: 14,
+    priceMin: 10, priceMax: 19,
     routeFaqs: []
   },
   {
@@ -226,7 +226,7 @@ export const ROUTES = [
     activeDrivers: 7,
     distanceKm: 280,
     durationHours: [3, 4],
-    priceMin: 8, priceMax: 16,
+    priceMin: 13, priceMax: 25,
     routeFaqs: []
   },
   {
@@ -235,7 +235,7 @@ export const ROUTES = [
     activeDrivers: 3,
     distanceKm: 780,
     durationHours: [8, 9],
-    priceMin: 20, priceMax: 35,
+    priceMin: 27, priceMax: 51,
     routeFaqs: []
   }
 ];
@@ -244,7 +244,7 @@ export const isActive = (r) => r && r.activeDrivers >= 1;
 export const getRoute = (slug) => ROUTES.find((r) => r.slug === slug && isActive(r)) || null;
 export const activeRoutes = () => ROUTES.filter(isActive);
 export const sitemapUrls = (origin = "https://www.senviaapp.com") =>
-  activeRoutes().map((r) => `${origin}/slanje-paketa/${r.slug}`);
+  activeRoutes().map((r) => `${origin}/slanje-stvari/${r.slug}/`);
 
 /**
  * Brojke platforme — oblik podataka koje isporučuje backend (/api/stats).
@@ -255,7 +255,7 @@ export const STATS_BASELINE = {
   users: 521, rides: 182, requests: 143, delivered: 96,
   perWeek: { users: 10, rides: 4, requests: 3, delivered: 2 },
   // Ocjene su stvarne, povučene sa storeova 7.8.2026. Android broj ocjena upisati kad Google Play API vrati podatak.
-  stores: { ios: { rating: 5.0, reviews: 9 }, android: { rating: 5.0, reviews: null } }
+  stores: { ios: { rating: 5.0, reviews: 9 }, android: { rating: 4.7, reviews: null } }
 };
 
 export const liveStats = (now = Date.now()) => {
@@ -285,13 +285,13 @@ export const topRoutes = (limit = 6) =>
 export const STORE_REVIEWS = [
   { store: 'ios', author: 'Jficjcicivi', rating: 5, date: '2026-07-02', title: 'Top aplikacija', text: 'Odlična aplikacija, pogotovo ako ste stalno na putu' },
   { store: 'android', author: 'Trpimir Kovačić', rating: 5, date: '2026-08-06', title: '', text: 'Već nekoliko puta me spasila ova aplikacija u zadnji tren. Izuzetno pouzdana, jednostavna za korištenje i brzo se sve dogovori i riješi. Preporuke svima!' },
-  { store: 'ios', author: 'BabaHappy', rating: 5, date: '2026-04-17', title: 'SuperDriver', text: 'Vrlo jednostavna aplikacija koja napokon daje alternativu za slanje paketa' },
-  { store: 'android', author: 'Leon Jakopović', rating: 5, date: '2026-03-15', title: '', text: 'Odlična aplikacija, intuitivno korištenje. Slanje paketa brzo i pouzdano.' },
+  { store: 'ios', author: 'BabaHappy', rating: 5, date: '2026-04-17', title: 'SuperDriver', text: 'Vrlo jednostavna aplikacija koja napokon daje alternativu za slanje stvari' },
+  { store: 'android', author: 'Leon Jakopović', rating: 5, date: '2026-03-15', title: '', text: 'Odlična aplikacija, intuitivno korištenje. Slanje stvari brzo i pouzdano.' },
   { store: 'ios', author: 'Bella Frida', rating: 5, date: '2026-04-13', title: 'Preporuke', text: 'Ovo sam baš trebala, super iskustvo' },
   { store: 'android', author: 'Denis Loparić', rating: 5, date: '2026-04-14', title: '', text: 'Vrhunska aplikacija, svakako preporučam' },
-  { store: 'ios', author: 'Nenobell', rating: 5, date: '2026-04-09', title: '10/10', text: 'Konačno jako korisna i jednostavna aplikacija koja omogućuje slanje paketa na brz i efikasan način' },
+  { store: 'ios', author: 'Nenobell', rating: 5, date: '2026-04-09', title: '10/10', text: 'Konačno jako korisna i jednostavna aplikacija koja omogućuje slanje stvari na brz i efikasan način' },
   { store: 'android', author: 'Ivan Klanac', rating: 5, date: '2026-08-06', title: '', text: 'Fantastična aplikacija. Sve pohvale! Samo jako!' },
-  { store: 'android', author: 'Domagoj Lovković', rating: 5, date: '2026-04-15', title: '', text: 'Odlično, lakše je poslati paket' }
+  { store: 'android', author: 'Domagoj Lovković', rating: 5, date: '2026-04-15', title: '', text: 'Odlično, lakše je poslati stvari' }
 ];
 
 export const totalReviews = () =>

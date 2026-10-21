@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta charset="utf-8">
+  <title>Slanje stvari u Austriju, Njemačku i po Hrvatskoj | Senvia</title>
+  <meta name="description" content="Pošalji stvari od koverte do namještaja uz putnika koji već ide tvojim smjerom, u Austriju, Njemačku, Švicarsku i po Hrvatskoj. Najčešće isti dan.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Senvia">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:title" content="Slanje stvari u Austriju, Njemačku i po Hrvatskoj | Senvia">
+  <meta property="og:description" content="Pošalji stvari od koverte do namještaja uz putnika koji već ide tvojim smjerom, u Austriju, Njemačku, Švicarsku i po Hrvatskoj. Najčešće isti dan.">
+  <link rel="canonical" href="https://www.senviaapp.com/slanje-stvari/">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <meta property="og:url" content="https://www.senviaapp.com/slanje-stvari/">
+  <meta property="og:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Slanje stvari u Austriju, Njemačku i po Hrvatskoj | Senvia">
+  <meta name="twitter:description" content="Pošalji stvari od koverte do namještaja uz putnika koji već ide tvojim smjerom, u Austriju, Njemačku, Švicarsku i po Hrvatskoj. Najčešće isti dan.">
+  <meta name="twitter:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
+  <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
+  <script>
+    window.SENVIA_GA_ID = 'G-H8DBTNDF62';
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H8DBTNDF62');
+    window.senviaLoadAnalytics = function () {
+      if (window.senviaGaLoaded || location.hostname.indexOf('senviaapp.com') === -1) return;
+      window.senviaGaLoaded = true;
+      var el = document.createElement('script');
+      el.setAttribute('async', '');
+      el.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + window.SENVIA_GA_ID);
+      document.head.appendChild(el);
+    };
+    try { if (localStorage.getItem('senvia-consent') === 'yes') window.senviaLoadAnalytics(); } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    a { color: #1a9e44; text-decoration: none; }
+    a:hover { color: #0e7c31; }
+    ::selection { background: #c9efd6; }
+    img { max-width: 100%; }
+  </style>
+</helmet>
+
+<div style="overflow-x: clip">
+
+<dc-import name="Nav" active="send" hint-size="100%,66px"></dc-import>
+
+<nav aria-label="breadcrumb" style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
+  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.crumb }}</span>
+</nav>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: 40px clamp(16px, 4vw, 32px) clamp(30px, 5vw, 60px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(24px, 4vw, 56px); align-items: center">
+  <div>
+    <div style="color: #1a9e44; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px">{{ t.kicker }}</div>
+    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 8vw, 54px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; text-wrap: balance">{{ t.h1 }}</h1>
+    <p style="font-size: 19px; line-height: 1.6; color: #3c5346; margin: 0 0 14px; max-width: 56ch; text-wrap: pretty">{{ t.lead1 }}</p>
+    <p style="font-size: 17px; line-height: 1.65; color: #3c5346; margin: 0; max-width: 56ch; text-wrap: pretty">{{ t.lead3 }}</p>
+  </div>
+  <div style="background: #f2f0ea; border: 1px solid #e6e3da; border-radius: 24px; padding: clamp(22px, 3.4vw, 34px)">
+    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; margin-bottom: 16px">{{ t.quickTitle }}</div>
+    <div style="display: grid; gap: 12px">
+      <sc-for list="{{ quick }}" as="q" hint-placeholder-count="4">
+        <div style="display: flex; gap: 12px; align-items: flex-start; font-size: 15.5px; line-height: 1.55; color: #29402f">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; margin-top: 3px"><path d="M20 6L9 17l-5-5"></path></svg>
+          <span>{{ q.text }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
+  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.catTitle }}</h2>
+    <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 64ch; text-wrap: pretty">{{ t.catSub }}</p>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 16px">
+      <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="M9 13h6"></path><path d="M9 17h4"></path></svg></span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c1t }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c1d }}</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3l3 2 3-2 5 3-2 4h-2v11H8V10H6L4 6z"></path></svg></span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c2t }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c2d }}</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16a8 8 0 0 1-8 8 8 8 0 0 1-8-8z"></path><path d="M3 20h18"></path><path d="M9 8c0-1.5 1-2 1-3.5"></path><path d="M13 8c0-1.5 1-2 1-3.5"></path></svg></span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c3t }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c3d }}</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"></rect><path d="M3 12h18"></path><path d="M12 8v13"></path><path d="M12 8S9.5 3 7.5 4.5 9 8 12 8z"></path><path d="M12 8s2.5-5 4.5-3.5S15 8 12 8z"></path></svg></span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c4t }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c4d }}</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M2 20h20"></path></svg></span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c5t }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c5d }}</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 1-5 5L5 16v3h3l4.7-4.7a4 4 0 0 0 5-5z"></path></svg></span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c6t }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c6d }}</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="4"></circle><path d="M11 11l9 9"></path><path d="M17 17l2-2"></path></svg></span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c7t }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c7d }}</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"></path><path d="M8 3v18"></path></svg></span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c8t }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c8d }}</p>
+      </div>
+      <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
+        <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></span>
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c9t }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c9d }}</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 18px; background: #ffffff; border: 1px dashed #cfcabc; border-radius: 20px; padding: 24px 26px; display: flex; gap: 16px; align-items: flex-start">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; margin-top: 2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5"></path><path d="M12 16h.01"></path></svg>
+      <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #29402f; text-wrap: pretty">{{ t.bigNote }}</p>
+    </div>
+  </div>
+</section>
+
+
+<section style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+  <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.sizeTitle }}</h2>
+  <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 64ch; text-wrap: pretty">{{ t.sizeSub }}</p>
+  <div style="display: grid; gap: 12px">
+    <sc-for list="{{ sizes }}" as="s" hint-placeholder-count="4">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(14px, 2.6vw, 36px); align-items: center; background: #f7f6f2; border: 1px solid #e6e3da; border-radius: 18px; padding: clamp(20px, 2.4vw, 26px) clamp(20px, 2.8vw, 30px)">
+        <div>
+          <div style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 14px">
+            <span style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">{{ s.title }}</span>
+            <span style="font-size: 13.5px; font-weight: 700; color: #167a38; background: #e8f7ee; border-radius: 999px; padding: 4px 12px">{{ s.size }}</span>
+          </div>
+          <div style="height: 10px; border-radius: 999px; background: #e6e3da; overflow: hidden">
+            <div style="width: {{ s.bar }}; height: 100%; border-radius: 999px; background: #2dbb54"></div>
+          </div>
+        </div>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ s.desc }}</p>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
+  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.dirTitle }}</h2>
+    <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 70ch; text-wrap: pretty">{{ t.dirSub }}</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px">
+      <sc-for list="{{ dirs }}" as="d" hint-placeholder-count="2">
+        <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 28px 26px">
+          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 12px; text-wrap: balance">{{ d.title }}</h3>
+          <p style="margin: 0 0 18px; font-size: 15.5px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ d.desc }}</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px">
+            <sc-for list="{{ d.items }}" as="i" hint-placeholder-count="6">
+              <span style="font-size: 14.5px; font-weight: 600; color: #167a38; background: #f2f0ea; border: 1px solid #e6e3da; border-radius: 999px; padding: 7px 14px">{{ i.text }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+  <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.payTitle }}</h2>
+  <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 70ch; text-wrap: pretty">{{ t.paySub }}</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px">
+    <div style="background: #12261a; color: #ffffff; border-radius: 22px; padding: 30px 28px">
+      <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 20px">
+        <span style="display: inline-flex; align-items: center; gap: 8px; background: #ffffff; color: #12261a; border-radius: 12px; padding: 10px 16px; font-size: 15px; font-weight: 600">
+          <svg width="16" height="19" viewBox="0 0 17 20" fill="currentColor" aria-hidden="true"><path d="M13.9 10.6c0-2.2 1.8-3.3 1.9-3.3-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.4.8-.7 0-1.7-.8-2.9-.8-1.5 0-2.9.9-3.6 2.2-1.6 2.7-.4 6.7 1.1 8.9.7 1.1 1.6 2.3 2.8 2.2 1.1 0 1.5-.7 2.9-.7 1.3 0 1.7.7 2.9.7 1.2 0 2-1.1 2.7-2.1.8-1.2 1.2-2.4 1.2-2.5-.1 0-2.4-.9-2.4-3.7zM11.6 3.9c.6-.8 1-1.8.9-2.9-.9 0-2 .6-2.6 1.4-.6.7-1.1 1.8-.9 2.8 1 0 2-.5 2.6-1.3z"></path></svg>
+          Apple&nbsp;Pay
+        </span>
+        <span style="display: inline-flex; align-items: center; gap: 8px; background: #ffffff; color: #12261a; border-radius: 12px; padding: 10px 16px; font-size: 15px; font-weight: 600">
+          <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#4285f4" d="M45.1 24.5c0-1.6-.1-3.2-.4-4.7H24v8.9h11.8c-.5 2.8-2.1 5.1-4.5 6.7v5.5h7.3c4.2-3.9 6.5-9.7 6.5-16.4z"></path><path fill="#34a853" d="M24 46c6.1 0 11.2-2 14.9-5.5l-7.3-5.5c-2 1.4-4.6 2.2-7.6 2.2-5.8 0-10.8-3.9-12.5-9.2H3.9v5.7C7.6 41.1 15.2 46 24 46z"></path><path fill="#fbbc04" d="M11.5 28c-.5-1.4-.7-2.9-.7-4.4s.3-3 .7-4.4v-5.7H3.9C2.3 16.7 1.4 20.2 1.4 23.6s.9 6.9 2.5 10.1l7.6-5.7z"></path><path fill="#ea4335" d="M24 10c3.3 0 6.2 1.1 8.5 3.3l6.4-6.4C35.2 3.3 30.1 1 24 1 15.2 1 7.6 6 3.9 13.4l7.6 5.7C13.2 13.9 18.2 10 24 10z"></path></svg>
+          Google&nbsp;Pay
+        </span>
+        <span style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 12px; padding: 10px 16px; font-size: 15px; font-weight: 600">
+          <svg width="20" height="16" viewBox="0 0 24 18" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><rect x="1.2" y="1.2" width="21.6" height="15.6" rx="3"></rect><path d="M1.4 6.4h21.2" stroke-width="2.6"></path><path d="M5 12.2h4" stroke-linecap="round"></path></svg>
+          {{ t.payCard }}
+        </span>
+      </div>
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em">{{ t.pay1t }}</h3>
+      <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: rgba(255,255,255,0.78); text-wrap: pretty">{{ t.pay1d }}</p>
+    </div>
+    <div style="background: #f7f6f2; border: 1px solid #e6e3da; border-radius: 22px; padding: 30px 28px">
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em">{{ t.pay2t }}</h3>
+      <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ t.pay2d }}</p>
+    </div>
+    <div style="background: #f7f6f2; border: 1px solid #e6e3da; border-radius: 22px; padding: 30px 28px">
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em">{{ t.pay3t }}</h3>
+      <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ t.pay3d }}</p>
+    </div>
+  </div>
+</section>
+
+<section style="background: #12261a; color: #ffffff">
+  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.noTitle }}</h2>
+    <p style="font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.72); margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 78ch; text-wrap: pretty">{{ t.noSub }}</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 12px">
+      <sc-for list="{{ forbidden }}" as="f" hint-placeholder-count="9">
+        <div style="display: flex; gap: 12px; align-items: flex-start; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: 16px; padding: 18px 20px; font-size: 15.5px; line-height: 1.55">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#ff8f6b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; margin-top: 3px"><circle cx="12" cy="12" r="9"></circle><path d="M6.5 6.5l11 11"></path></svg>
+          <span>{{ f.text }}</span>
+        </div>
+      </sc-for>
+    </div>
+    <div style="margin-top: 18px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.16); border-radius: 20px; padding: 26px 26px">
+      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.01em">{{ t.disTitle }}</h3>
+      <p style="margin: 0 0 12px; font-size: 15.5px; line-height: 1.7; color: rgba(255,255,255,0.78); max-width: 84ch; text-wrap: pretty">{{ t.dis1 }}</p>
+      <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: rgba(255,255,255,0.78); max-width: 84ch; text-wrap: pretty">{{ t.dis2 }}</p>
+    </div>
+  </div>
+</section>
+
+<section style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
+  <div style="background: #2dbb54; border-radius: 28px; padding: clamp(30px, 5.3vw, 64px) clamp(24px, 6vw, 48px); text-align: center; color: #ffffff">
+    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 14px; text-wrap: balance">{{ t.ctaTitle }}</h2>
+    <p style="margin: 0 auto 30px; font-size: 18px; line-height: 1.55; max-width: 48ch; color: rgba(255,255,255,0.92); text-wrap: pretty">{{ t.ctaSub }}</p>
+    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap">
+      <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
+    </div>
+  </div>
+</section>
+
+<dc-import name="Podnozje" hint-size="100%,300px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;: {&quot;width&quot;: 1280, &quot;height&quot;: 900}}">
+class Component extends DCLogic {
+  state = { lang: 'hr' };
+
+  STR = {
+    hr: {
+      crumb: 'Slanje stvari', kicker: 'Slanje stvari',
+      h1: 'Pošalji stvari bilo gdje, uz putnika koji već putuje',
+      lead1: 'Od koverte do namještaja. Putnik nosi tvoje stvari na vožnji koju ionako ima, pa nema ograničenja tipa „samo do 2 kg” ni tablice naknada po dimenzijama.',
+      lead3: 'Stvari putuju s osobom, ne kroz skladište, pa najčešće stižu isti dan. Naknada ovisi samo o udaljenosti i veličini, plaća se kroz aplikaciju, a putnika biraš prema profilu, ocjenama i recenzijama.',
+      quickTitle: 'Ukratko',
+      catTitle: 'Što korisnici najčešće šalju',
+      catSub: 'Popis nije zatvoren, ovo su kategorije koje se najčešće pojavljuju u zahtjevima na rutama između Hrvatske, Austrije, Njemačke i Švicarske, kao i na vožnjama unutar Hrvatske.',
+      c1t: 'Dokumenti i papiri', c1d: 'Ugovori, računi, potvrde s fakulteta, diploma, poslovna dokumentacija i papiri koji trebaju potpis već sutra.',
+      c2t: 'Odjeća i obuća', c2d: 'Zaboravljena jakna s vikenda, sezonska garderoba, radna odjeća, dres, cipele, čak i vjenčanica u navlaci.',
+      c3t: 'Domaća hrana', c3d: 'Ajvar, zimnica, pršut, sir, med, rakija i kolači. Kako stvari putuju nekoliko sati, a ne danima, stižu svježe i onda kada je vani vruće.',
+      c4t: 'Pokloni i prigodni stvari', c4d: 'Rođendanski poklon koji ne može čekati tjedan dana, božićni stvari, igračke, cvijeće u kutiji.',
+      c5t: 'Elektronika', c5d: 'Mobitel, laptop, tablet, punjač, konzola, fotoaparat, vanjski disk, najbolje u originalnoj kutiji.',
+      c6t: 'Alat i auto-dijelovi', c6d: 'Ručni alat, bušilica, retrovizor, filteri, sitniji dijelovi koje je skupo slati klasičnom dostavom.',
+      c7t: 'Ključevi i sitnice', c7d: 'Ključevi od stana ili auta, naočale, sat, nakit, novčanik, male stvari koje inače koštaju kao veliki stvari.',
+      c8t: 'Knjige i studentske stvari', c8d: 'Skripte, knjige, laptop, posteljina i oprema koja putuje između rodnoga grada i studentskog stana na početku i na kraju semestra.',
+      c9t: 'Kofer i putna prtljaga', c9d: 'Cijeli kofer koji nisi stigao ponijeti, ruksak, dječja kolica, sportska torba ili oprema za skijanje.',
+      bigNote: 'Šalju se i velike stvari: namještaj, bijela tehnika, bicikli, stvari za selidbu. Putnici voze osobne automobile, kombije i vozila s prikolicom. U zahtjevu navedi dimenzije i dodaj fotografiju, pa se javljaju putnici koji imaju dovoljno mjesta.',
+      sizeTitle: 'Od koverte do namještaja',
+      sizeSub: 'Nema službenih razreda ni gornje granice kao kod klasične dostave. Ovo su okviri koji se najčešće šalju, a konačan dogovor uvijek je na vama dvoje.',
+      dirTitle: 'Što se najčešće šalje u Hrvatsku i iz Hrvatske',
+      dirSub: 'Slanje stvari ide u oba smjera. Iz Hrvatske najviše putuje ono što se ne može kupiti u inozemstvu, a prema Hrvatskoj ono što je tamo jeftinije ili se kod nas ne prodaje.',
+      d1t: 'Iz Hrvatske prema Austriji, Njemačkoj i Švicarskoj', d1d: 'Najviše šalju roditelji i rodbina prema dijaspori u Beču, Grazu, Linzu, Salzburgu, Münchenu, Stuttgartu, Zürichu i Baselu, a uz njih i studenti koji se vraćaju na fakultet.', d1i: 'Domaća hrana i zimnica|Pršut, sir i suhomesnato|Rakija i vino|Dokumenti s fakulteta|Dječje i osobne stvari|Pokloni za rođendan|Ključevi i sitnice',
+      d2t: 'Prema Hrvatskoj iz Austrije, Njemačke i Švicarske', d2d: 'Ovim smjerom putuje ono što je u DACH regiji jeftinije ili dostupnije, plus stvari koje ljudi šalju kući prije nego što se i sami vrate.', d2i: 'Elektronika i mobiteli|Alat i strojevi|Dijelovi za auto|Odjeća i obuća|Dječja kolica i oprema|Kozmetika i dodaci prehrani|Pokloni za rodbinu',
+      payCard: 'Kartica',
+      payTitle: 'Plaćanje ide kroz aplikaciju',
+      paySub: 'Rezervacija prijevoza plaća se unutar Senvia aplikacije. Možeš platiti Apple Payom, Google Payom ili karticom, kako ti odgovara. Iznos je poznat prije potvrde, pa nema pregovaranja pri primopredaji.',
+      pay1t: 'Apple Pay, Google Pay ili kartica',
+      pay1d: 'Ako koristiš Apple Pay ili Google Pay, plaćanje traje nekoliko sekundi. Ako ne, unosiš karticu i plaćaš na isti način kao u svakoj drugoj trgovini. Podaci o kartici ne dijele se s drugom osobom.',
+      pay2t: 'Iznos je poznat unaprijed',
+      pay2d: 'Naknadu predlažeš pri objavi zahtjeva, unutar raspona koji nudi aplikacija. Ono što piše u aplikaciji je iznos koji vrijedi.',
+      pay3t: 'Ostatak dogovora ide u chatu',
+      pay3d: 'Vrijeme i mjesto primopredaje dogovarate u chatu. Sve ostalo, od potvrde do recenzije, ostaje zabilježeno u aplikaciji.',
+      noTitle: 'Što ne ide u stvari',
+      noSub: 'Korištenjem Senvia aplikacije korisnici se obvezuju da ni u kojem slučaju neće slati, prevoziti, omogućavati slanje ili prijevoz, niti pristajati na prijevoz zabranjenog, sumnjivog, nepoznatog, opasnog ili ilegalnog sadržaja. Točka 4.4 Uvjeta korištenja navodi, uključujući ali ne ograničavajući se na:',
+      disTitle: 'Odgovornost je na korisnicima',
+      dis1: 'Senvia je isključivo tehnička platforma koja povezuje pošiljatelja i putnika. Senvia ne prevozi stvari, ne provjerava njihov sadržaj i ne odgovara za sadržaj, stanje, vrijednost, kašnjenje, oštećenje ili gubitak pošiljke, kao ni za dogovor između korisnika. Prijevoz je ugovor između dvije osobe i odgovornost je na njima.',
+      dis2: 'Sve je dobrovoljno. Nitko nije obvezan prihvatiti vožnju, prihvatiti zahtjev ni prevesti stvari. Ako sadržaj, opis, fotografija, naknada ili termin ne odgovaraju, prijevoz se jednostavno ne prihvaća, bez objašnjenja i bez posljedica za profil. Pošiljatelj odgovara za to što šalje, a putnik odlučuje što prevozi.',
+      prepTitle: 'Kako pripremiti stvari za put',
+      ctaTitle: 'Objavi zahtjev i vidi tko putuje',
+      ctaSub: 'Opiši što šalješ, dodaj fotografiju i pusti da ti se putnici jave s ponudom.',
+      lHow: 'Kako radi', lHowD: 'Pet koraka od zahtjeva do dostave.',
+      lTrust: 'Sigurnost', lTrustD: 'Verifikacija, ocjene i zaštićen dogovor.',
+      lFaq: 'Česta pitanja', lFaqD: 'Naknade, rute, plaćanje i podrška.'
+    },
+    en: {
+      crumb: 'Sending items', kicker: 'Sending items',
+      h1: 'What you can send with Senvia',
+      lead1: 'From an envelope to furniture. A traveller carries your items on a drive that is happening anyway, so there is no "up to 2 kg" rule and no fee list by dimensions.',
+      lead3: 'Items travel with a person, not through a warehouse, so they usually arrive the same day. The fee depends only on distance and size, payment goes through the app, and you choose the traveller by profile, ratings and reviews.',
+      quickTitle: 'In short',
+      catTitle: 'What people send most often',
+      catSub: 'The list is open, these are the categories that show up most often in requests between Croatia, Austria, Germany and Switzerland, and on rides inside Croatia.',
+      c1t: 'Documents and paperwork', c1d: 'Contracts, invoices, university certificates, diplomas, business paperwork and papers that need a signature tomorrow.',
+      c2t: 'Clothes and shoes', c2d: 'The jacket left behind after a weekend, seasonal wardrobe, work clothes, a jersey, shoes, even a wedding dress in its cover.',
+      c3t: 'Homemade food', c3d: 'Ajvar, preserves, prosciutto, cheese, honey, rakija and cakes. The items travel for hours rather than days, so they arrive fresh even in summer.',
+      c4t: 'Gifts and seasonal items', c4d: 'A birthday present that cannot wait a week, a Christmas item, toys, flowers packed in a box.',
+      c5t: 'Electronics', c5d: 'Phone, laptop, tablet, charger, console, camera, external drive, ideally in the original box.',
+      c6t: 'Tools and car parts', c6d: 'Hand tools, a drill, a wing mirror, filters and smaller parts that cost a fortune with classic delivery.',
+      c7t: 'Keys and small items', c7d: 'Flat or car keys, glasses, a watch, jewellery, a wallet, small things that otherwise cost as much as a big item.',
+      c8t: 'Books and student things', c8d: 'Notes, books, a laptop, bedding and the gear that travels between the family home and a student flat at the start and end of each semester.',
+      c9t: 'Suitcases and luggage', c9d: 'A whole suitcase you could not take with you, a backpack, a pram, a sports bag or ski gear.',
+      bigNote: 'Large items travel too: furniture, appliances, bikes, moving boxes. Travellers drive cars, vans and vehicles with trailers. Add the dimensions and a photo to your request, and travellers with enough room will reply.',
+      sizeTitle: 'From an envelope to furniture',
+      sizeSub: 'There are no official size classes and no upper limit like in classic delivery. These are the ranges people send most, and the final call is always between the two of you.',
+      dirTitle: 'What people send to Croatia and from Croatia',
+      dirSub: 'Sending items works both ways. Out of Croatia travel the things you cannot buy abroad, and towards Croatia the things that are cheaper or simply not sold at home.',
+      d1t: 'From Croatia to Austria, Germany and Switzerland', d1d: 'Mostly sent by parents and relatives to the diaspora in Vienna, Graz, Linz, Salzburg, Munich, Stuttgart, Zurich and Basel, and by students heading back to university.', d1i: 'Homemade food and preserves|Prosciutto, cheese and cured meat|Rakija and wine|University paperwork|Personal and childrens things|Birthday gifts|Keys and small items',
+      d2t: 'Towards Croatia from Austria, Germany and Switzerland', d2d: 'This direction carries what is cheaper or easier to find in the DACH region, plus the things people send home before returning themselves.', d2i: 'Electronics and phones|Tools and machines|Car parts|Clothes and shoes|Prams and baby gear|Cosmetics and supplements|Gifts for relatives',
+      payCard: 'Card',
+      payTitle: 'Payment goes through the app',
+      paySub: 'The booking is paid inside the Senvia app. You can pay with Apple Pay, Google Pay or a card, whichever suits you. The amount is known before you confirm, so there is nothing to negotiate at hand-over.',
+      pay1t: 'Apple Pay, Google Pay or a card',
+      pay1d: 'With Apple Pay or Google Pay it takes seconds. If you prefer, you enter a card and pay the same way as in any other shop. Card details are never shared with the other person.',
+      pay2t: 'The amount is known upfront',
+      pay2d: 'You propose the fee when posting a request, within the range the app offers. What the app shows is the amount that applies.',
+      pay3t: 'The rest is agreed in chat',
+      pay3d: 'You agree the time and place of hand-over in the chat. Everything else, from confirmation to review, stays recorded in the app.',
+      noTitle: 'What never goes in items',
+      noSub: 'By using the Senvia app users undertake never to send, carry, enable the sending or carrying of, or agree to carry prohibited, suspicious, unknown, dangerous or illegal content. Clause 4.4 of the Terms of Use lists, including but not limited to:',
+      disTitle: 'Responsibility sits with the users',
+      dis1: 'Senvia is purely a technical platform that connects a sender and a traveller. Senvia does not carry items, does not inspect their contents and is not responsible for the contents, condition, value, delay, damage or loss of a shipment, nor for the agreement between users. The transport is a contract between two people and the responsibility is theirs.',
+      dis2: 'Everything is voluntary. Nobody is obliged to accept a ride, to accept a request or to carry items. If the contents, description, photo, fee or timing do not suit you, you simply do not accept, with no explanation and no consequences for your profile. The sender is responsible for what they send, the traveller decides what they carry.',
+      prepTitle: 'How to prepare the items',
+      ctaTitle: 'Post a request and see who is travelling',
+      ctaSub: 'Describe what you are sending, add a photo and let travellers come to you with an offer.',
+      lHow: 'How it works', lHowD: 'Five steps from request to delivery.',
+      lTrust: 'Trust & safety', lTrustD: 'Verification, ratings and a protected deal.',
+      lFaq: 'FAQ', lFaqD: 'Fees, routes, payment and support.'
+    },
+    de: {
+      crumb: 'Sachen senden', kicker: 'Sachen senden',
+      h1: 'Was du mit Senvia verschicken kannst',
+      lead1: 'Vom Umschlag bis zum Möbelstück. Ein Reisender nimmt deine Sachen auf einer Fahrt mit, die ohnehin stattfindet, also keine „bis 2 kg”-Regel und keine Tabelle nach Maßen.',
+      lead3: 'Die Sachen reisen mit einer Person, nicht über ein Lager, und kommen meist am selben Tag an. Der Kostenbeitrag hängt nur von Entfernung und Größe ab, bezahlt wird in der App, und den Reisenden wählst du nach Profil, Bewertungen und Rezensionen.',
+      quickTitle: 'Kurz gesagt',
+      catTitle: 'Was am häufigsten verschickt wird',
+      catSub: 'Die Liste ist offen, das sind die Kategorien, die in Anfragen zwischen Kroatien, Österreich, Deutschland und der Schweiz sowie auf Fahrten innerhalb Kroatiens am häufigsten vorkommen.',
+      c1t: 'Dokumente und Unterlagen', c1d: 'Verträge, Rechnungen, Uni-Bescheinigungen, Diplome, Geschäftsunterlagen und Papiere, die schon morgen unterschrieben werden müssen.',
+      c2t: 'Kleidung und Schuhe', c2d: 'Die vergessene Jacke vom Wochenende, Saisongarderobe, Arbeitskleidung, ein Trikot, Schuhe, sogar ein Brautkleid im Kleidersack.',
+      c3t: 'Hausgemachtes Essen', c3d: 'Ajvar, Eingemachtes, Prosciutto, Käse, Honig, Rakija und Kuchen. Die Sachen sind Stunden statt Tage unterwegs und kommen auch im Sommer frisch an.',
+      c4t: 'Geschenke und Festtagspakete', c4d: 'Ein Geburtstagsgeschenk, das keine Woche warten kann, ein Weihnachtspaket, Spielzeug, Blumen in einer Box.',
+      c5t: 'Elektronik', c5d: 'Handy, Laptop, Tablet, Ladegerät, Konsole, Kamera, externe Festplatte, am besten in der Originalverpackung.',
+      c6t: 'Werkzeug und Autoteile', c6d: 'Handwerkzeug, Bohrmaschine, Außenspiegel, Filter und kleinere Teile, deren Versand mit klassischer Zustellung teuer ist.',
+      c7t: 'Schlüssel und Kleinigkeiten', c7d: 'Wohnungs- oder Autoschlüssel, Brille, Uhr, Schmuck, Geldbörse, Kleinigkeiten, die sonst so viel kosten wie große Sachen.',
+      c8t: 'Bücher und Studentensachen', c8d: 'Skripte, Bücher, Laptop, Bettwäsche und Ausrüstung, die zu Semesterbeginn und Semesterende zwischen Elternhaus und Studentenwohnung reist.',
+      c9t: 'Koffer und Reisegepäck', c9d: 'Ein ganzer Koffer, den du nicht mitnehmen konntest, ein Rucksack, ein Kinderwagen, eine Sporttasche oder Skiausrüstung.',
+      bigNote: 'Auch große Sachen reisen mit: Möbel, Haushaltsgeräte, Fahrräder, Umzugskartons. Reisende fahren Autos, Transporter und Fahrzeuge mit Anhänger. Gib in der Anfrage die Maße an und füge ein Foto hinzu; dann melden sich Reisende mit genug Platz.',
+      sizeTitle: 'Vom Umschlag bis zum Möbelstück',
+      sizeSub: 'Es gibt keine offiziellen Größenklassen und keine Obergrenze wie bei der klassischen Zustellung. Das sind die Größen, die am häufigsten verschickt werden, entschieden wird immer zwischen euch beiden.',
+      dirTitle: 'Was am häufigsten nach Kroatien und aus Kroatien geschickt wird',
+      dirSub: 'Sachen reisen in beide Richtungen. Aus Kroatien geht vor allem das, was es im Ausland nicht gibt, und nach Kroatien das, was in der DACH Region günstiger oder gar nicht erhältlich ist.',
+      d1t: 'Aus Kroatien nach Österreich, Deutschland und in die Schweiz', d1d: 'Vor allem von Eltern und Verwandten an die Diaspora in Wien, Graz, Linz, Salzburg, München, Stuttgart, Zürich und Basel, dazu Studierende auf dem Weg zurück an die Uni.', d1i: 'Hausgemachtes und Eingemachtes|Prosciutto, Käse und Geräuchertes|Rakija und Wein|Uni Unterlagen|Persönliche und Kindersachen|Geburtstagsgeschenke|Schlüssel und Kleinigkeiten',
+      d2t: 'Nach Kroatien aus Österreich, Deutschland und der Schweiz', d2d: 'In dieser Richtung reist, was in der DACH Region günstiger oder leichter zu finden ist, dazu Dinge, die Menschen nach Hause schicken, bevor sie selbst zurückfahren.', d2i: 'Elektronik und Handys|Werkzeug und Maschinen|Autoteile|Kleidung und Schuhe|Kinderwagen und Babyausstattung|Kosmetik und Nahrungsergänzung|Geschenke für Verwandte',
+      payCard: 'Karte',
+      payTitle: 'Die Zahlung läuft über die App',
+      paySub: 'Die Buchung wird in der Senvia App bezahlt. Du kannst mit Apple Pay, Google Pay oder Karte zahlen, ganz wie es dir passt. Der Betrag steht vor der Bestätigung fest, bei der Übergabe wird nichts mehr verhandelt.',
+      pay1t: 'Apple Pay, Google Pay oder Karte',
+      pay1d: 'Mit Apple Pay oder Google Pay dauert es Sekunden. Wenn du möchtest, gibst du eine Karte ein und zahlst wie in jedem anderen Geschäft. Kartendaten werden nie mit der anderen Person geteilt.',
+      pay2t: 'Der Betrag steht vorher fest',
+      pay2d: 'Den Kostenbeitrag schlägst du bei der Anfrage vor, innerhalb der Spanne, die die App anbietet. Was in der App steht, ist der geltende Betrag.',
+      pay3t: 'Der Rest wird im Chat vereinbart',
+      pay3d: 'Zeit und Ort der Übergabe vereinbart ihr im Chat. Alles andere, von der Bestätigung bis zur Bewertung, bleibt in der App dokumentiert.',
+      noTitle: 'Was nie ins Stvari gehört',
+      noSub: 'Mit der Nutzung der Senvia App verpflichten sich Nutzer, niemals verbotene, verdächtige, unbekannte, gefährliche oder illegale Inhalte zu senden, zu transportieren, deren Versand zu ermöglichen oder deren Transport zuzusagen. Punkt 4.4 der Nutzungsbedingungen nennt, einschließlich aber nicht beschränkt auf:',
+      disTitle: 'Die Verantwortung liegt bei den Nutzern',
+      dis1: 'Senvia ist ausschliesslich eine technische Plattform, die Absender und Reisende verbindet. Senvia transportiert keine Sachen, prüft keinen Inhalt und haftet nicht für Inhalt, Zustand, Wert, Verspätung, Beschädigung oder Verlust einer Sendung und auch nicht für die Absprache zwischen Nutzern. Der Transport ist ein Vertrag zwischen zwei Personen, die Verantwortung liegt bei ihnen.',
+      dis2: 'Alles ist freiwillig. Niemand ist verpflichtet, eine Fahrt anzunehmen, eine Anfrage zu akzeptieren oder Sachen zu transportieren. Passen Inhalt, Beschreibung, Foto, Kostenbeitrag oder Termin nicht, wird der Transport einfach nicht angenommen, ohne Begründung und ohne Folgen für das Profil. Der Absender haftet für das, was er verschickt, der Reisende entscheidet, was er mitnimmt.',
+      prepTitle: 'So bereitest du die Sachen vor',
+      ctaTitle: 'Stelle eine Anfrage und sieh, wer unterwegs ist',
+      ctaSub: 'Beschreibe, was du verschickst, füge ein Foto hinzu und lass Reisende mit einem Angebot auf dich zukommen.',
+      lHow: 'So funktioniert es', lHowD: 'Fünf Schritte von der Anfrage bis zur Zustellung.',
+      lTrust: 'Sicherheit', lTrustD: 'Verifizierung, Bewertungen und ein geschützter Ablauf.',
+      lFaq: 'Häufige Fragen', lFaqD: 'Kostenbeiträge, Routen, Zahlung und Support.'
+    }
+  };
+
+  DATA = {
+    quick: {
+      hr: ['Bez ograničenja težine, mjerodavan je prostor u vozilu putnika.', 'Sadržaj opisuješ sam, uz fotografiju u zahtjevu.', 'Uz opis i fotografiju napiši i ako nešto treba pažnju, na primjer lomljivo, kvarljivo ili vrijedno.', 'Rezervacija se plaća u aplikaciji, Apple Payom, Google Payom ili karticom, bez naknada po kilogramu.'],
+      en: ['No weight limit, what matters is the space in the traveller\u2019s car.', 'You describe the contents yourself, with a photo in the request.', 'Along with the description and the photo, note anything that needs care, for example fragile, perishable or valuable.', 'The booking is paid in the app with Apple Pay, Google Pay or a card, with no per-kilo fees.'],
+      de: ['Kein Gewichtslimit, entscheidend ist der Platz im Auto des Reisenden.', 'Den Inhalt beschreibst du selbst, mit Foto in der Anfrage.', 'Notiere zur Beschreibung und zum Foto auch, wenn etwas Aufmerksamkeit braucht, etwa zerbrechlich, verderblich oder wertvoll.', 'Die Buchung wird in der App mit Apple Pay, Google Pay oder Karte bezahlt, ohne Kilo-Gebühren.']
+    },
+    sizes: {
+      hr: [
+        { title: 'Koverta', size: 'do 1 kg', bar: '20%', desc: 'Dokumenti, ključevi, kartice. Putnik to najčešće nosi bez dodatnog dogovora.' },
+        { title: 'Manja kutija', size: 'do 5 kg', bar: '40%', desc: 'Elektronika, poklon, knjige, kozmetika. Stane u prtljažnik uz osobnu prtljagu.' },
+        { title: 'Veća kutija ili torba', size: 'do 15 kg', bar: '60%', desc: 'Zimnica, sezonska odjeća, alat. Vrijedi provjeriti ima li putnik mjesta.' },
+        { title: 'Kofer i prtljaga', size: '15 kg i više', bar: '80%', desc: 'Kofer, kolica, sportska oprema, bicikl. Dogovara se unaprijed, uz dimenzije i fotografiju.' },
+        { title: 'Namještaj i velike stvari', size: 'bez gornje granice', bar: '100%', desc: 'Namještaj, bijela tehnika, selidba. Putnici s kombijem ili prikolicom, uz dimenzije i fotografiju.' }
+      ],
+      en: [
+        { title: 'Envelope', size: 'up to 1 kg', bar: '20%', desc: 'Documents, keys, cards. Travellers usually take this with no extra arrangement.' },
+        { title: 'Small box', size: 'up to 5 kg', bar: '40%', desc: 'Electronics, a gift, books, cosmetics. Fits in the boot alongside personal luggage.' },
+        { title: 'Large box or bag', size: 'up to 15 kg', bar: '60%', desc: 'Preserves, seasonal clothes, tools. Worth checking whether the traveller has room.' },
+        { title: 'Suitcase and luggage', size: '15 kg and up', bar: '80%', desc: 'A suitcase, a pram, sports gear, a bike. Agreed in advance, with dimensions and a photo.' },
+        { title: 'Furniture and large items', size: 'no upper limit', bar: '100%', desc: 'Furniture, appliances, a house move. Travellers with a van or trailer, with dimensions and a photo.' }
+      ],
+      de: [
+        { title: 'Umschlag', size: 'bis 1 kg', bar: '20%', desc: 'Dokumente, Schlüssel, Karten. Das nehmen Reisende meist ohne weitere Absprache mit.' },
+        { title: 'Kleiner Karton', size: 'bis 5 kg', bar: '40%', desc: 'Elektronik, ein Geschenk, Bücher, Kosmetik. Passt neben das eigene Gepäck in den Kofferraum.' },
+        { title: 'Großer Karton oder Tasche', size: 'bis 15 kg', bar: '60%', desc: 'Eingemachtes, Saisonkleidung, Werkzeug. Am besten vorher nach Platz fragen.' },
+        { title: 'Koffer und Gepäck', size: 'ab 15 kg', bar: '80%', desc: 'Koffer, Kinderwagen, Sportausrüstung, Fahrrad. Vorab absprechen, mit Maßen und Foto.' },
+        { title: 'Möbel und große Sachen', size: 'keine Obergrenze', bar: '100%', desc: 'Möbel, Haushaltsgeräte, Umzüge. Reisende mit Transporter oder Anhänger, mit Maßen und Foto.' }
+      ]
+    },
+    forbidden: {
+      hr: ['vatreno ili hladno oružje, eksplozivne tvari, streljivo ili pirotehniku', 'opojna sredstva, psihotropne tvari i prekursore, bez obzira na količinu i oblik', 'alkohol i duhanske proizvode ako je zabranjeno njihovo slanje u odredišnoj zemlji', 'žive životinje, zaštićene biljne ili životinjske vrste, ili njihove dijelove', 'materijale koji su zapaljivi, otrovni, radioaktivni, nagrizajući ili štetni po zdravlje', 'ljudske ostatke, organe, krv, biološke uzorke ili bilo kakav medicinski otpad', 'materijale koji krše prava intelektualnog vlasništva, uključujući krivotvorene proizvode', 'stvari čiji sadržaj pošiljatelj ne poznaje u potpunosti, uključujući uslužno slanje za treće strane', 'bilo koji drugi sadržaj čije posjedovanje, prijenos, prijevoz ili distribucija predstavljaju kazneno djelo, prekršaj ili kršenje zakonskih propisa važećih u zemlji polazišta, tranzita ili odredišta'],
+      en: ['firearms or bladed weapons, explosives, ammunition or pyrotechnics', 'narcotics, psychotropic substances and precursors, regardless of quantity or form', 'alcohol and tobacco products where sending them into the destination country is prohibited', 'live animals, protected plant or animal species, or parts of them', 'materials that are flammable, toxic, radioactive, corrosive or harmful to health', 'human remains, organs, blood, biological samples or any medical waste', 'materials that infringe intellectual property rights, including counterfeit goods', 'items whose contents the sender does not fully know, including sending as a favour for third parties', 'any other content whose possession, transfer, transport or distribution constitutes a criminal offence, a misdemeanour or a breach of the law in the country of origin, transit or destination'],
+      de: ['Schuss oder Stichwaffen, Explosivstoffe, Munition oder Pyrotechnik', 'Betäubungsmittel, psychotrope Substanzen und Grundstoffe, unabhängig von Menge und Form', 'Alkohol und Tabakwaren, wenn deren Versand ins Zielland verboten ist', 'lebende Tiere, geschützte Pflanzen oder Tierarten oder Teile davon', 'Materialien, die entflammbar, giftig, radioaktiv, ätzend oder gesundheitsschädlich sind', 'menschliche Überreste, Organe, Blut, biologische Proben oder medizinischen Abfall', 'Materialien, die geistige Eigentumsrechte verletzen, einschließlich gefälschter Produkte', 'Sachen, deren Inhalt der Absender nicht vollständig kennt, einschließlich Versand als Gefallen für Dritte', 'jeden weiteren Inhalt, dessen Besitz, Übergabe, Transport oder Verbreitung im Land des Versands, des Transits oder des Ziels eine Straftat, ein Vergehen oder einen Rechtsverstoß darstellt']
+    },
+  };
+
+componentDidMount() {
+    let bc = document.getElementById('senvia-breadcrumb-ld');
+    if (!bc) { bc = document.createElement('script'); bc.type = 'application/ld+json'; bc.id = 'senvia-breadcrumb-ld'; document.head.appendChild(bc); }
+    bc.textContent = JSON.stringify({
+      '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: "Početna", item: "https://www.senviaapp.com/" },
+        { '@type': 'ListItem', position: 2, name: "Slanje stvari", item: "https://www.senviaapp.com/slanje-stvari/" }
+      ]
+    });
+    import('./i18n.js').then(m => {
+      this.i18n = m;
+      this.setState({ lang: m.getLang() });
+      this.off = m.onLang(l => this.setState({ lang: l }));
+    });
+  }
+  componentWillUnmount() { if (this.off) this.off(); }
+
+  renderVals() {
+    const lang = this.state.lang || 'hr';
+    const t = { ...this.STR.hr, ...(this.STR[lang] || {}) };
+    const d = (k) => this.DATA[k][lang] || this.DATA[k].hr;
+    return {
+      t,
+      quick: d('quick').map(text => ({ text })),
+      sizes: d('sizes'),
+      forbidden: d('forbidden').map(text => ({ text })),
+      dirs: [
+        { title: t.d1t, desc: t.d1d, items: t.d1i.split('|').map(text => ({ text })) },
+        { title: t.d2t, desc: t.d2d, items: t.d2i.split('|').map(text => ({ text })) }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

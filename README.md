@@ -32,18 +32,19 @@ Iz svake datoteke treba: markup, inline stilove, tekstove i state-logiku. Sve os
 | Datoteka | Produkcijski URL | Napomena |
 |---|---|---|
 | `Senvia Landing v2.dc.html` | `/` | naslovnica |
-| `Slanje paketa.dc.html` | `/slanje-paketa` | u glavnoj navigaciji |
-| `Kako radi.dc.html` | `/kako-radi` | u glavnoj navigaciji |
-| `Sigurnost.dc.html` | `/sigurnost` | u glavnoj navigaciji |
-| `FAQ.dc.html` | `/faq` | dropdown "Više" |
-| `Blog.dc.html` | `/blog` | dropdown "Više" |
-| `Usporedba.dc.html` | `/usporedba-s-klasicnom-dostavom` | dropdown "Više" |
-| `Popularne rute.dc.html` | `/popularne-rute` | dropdown "Više" |
-| `Austrija-Hrvatska.dc.html` | `/austrija-hrvatska` | SEO koridor, nije u navigaciji |
-| `Blog - *.dc.html` | `/blog/<slug>` | 7 članaka |
-| `Ruta - <slug>.dc.html` | `/slanje-paketa/<slug>` | generirano iz feeda |
+| `Slanje stvari.dc.html` | `/slanje-stvari/` | u glavnoj navigaciji |
+| `Kako radi.dc.html` | `/kako-radi/` | u glavnoj navigaciji |
+| `Sigurnost.dc.html` | `/sigurnost/` | u glavnoj navigaciji |
+| `FAQ.dc.html` | `/faq/` | samo u podnožju |
+| `Blog.dc.html` | `/blog/` | samo u podnožju |
+| `Usporedba.dc.html` | `/usporedba-s-klasicnom-dostavom/` | samo u podnožju |
+| `Popularne rute.dc.html` | `/popularne-rute/` | samo u podnožju |
+| `Austrija-Hrvatska.dc.html` | `/austrija-hrvatska/` | samo preusmjerava na `/popularne-rute/` (spojeno) |
+| `Blog - Senvia vs kurirska sluzba.dc.html` | `/blog/senvia-ili-klasicna-dostava/` | samo preusmjerava na `/usporedba-s-klasicnom-dostavom/` (spojeno) |
+| `Blog - *.dc.html` | `/blog/<slug>/` | članci |
+| `Ruta - <slug>.dc.html` | `/slanje-stvari/<slug>` | generirano iz feeda |
 | `404.dc.html` | 404 | custom |
-| `Senvia Account Deletion.dc.html` | `/brisanje-racuna` | zahtjev App Storea |
+| `Senvia Account Deletion.dc.html` | `/brisanje-racuna/` | zahtjev App Storea |
 
 Zajedničke komponente: `Nav.dc.html` (header) i `Podnozje.dc.html` (footer) — koriste ih
 sve stranice. `Ruta.dc.html` je predložak rutne stranice, `Clanak.dc.html` predložak članka.
@@ -110,7 +111,7 @@ panel/tablica `24px` · veliki CTA blok `28px` · mockup telefona `40px` (ekran 
 
 Sticky header, `rgba(255,255,255,0.94)` + `backdrop-filter: blur(14px)`, donji rub `#eaf2ec`.
 
-Redoslijed: logo → Kako radi · Slanje paketa · Sigurnost · dropdown **Više** →
+Redoslijed: logo → Kako radi · Slanje stvari · Sigurnost · dropdown **Više** →
 (auto margin) → izbornik jezika → CTA "Preuzmi aplikaciju" → hamburger (mobile).
 
 **Dropdown "Više"**: Česta pitanja, Blog, Usporedba s kurirskom službom, Popularne rute —
@@ -154,7 +155,7 @@ diferencijacija od kurirskih službi i ne smije biti statični dizajn.
   users: 521,          // registriranih korisnika
   rides: 182,          // objavljenih vožnji
   requests: 143,       // objavljenih zahtjeva
-  delivered: 96,       // uspješno dostavljenih paketa
+  delivered: 96,       // uspješnih dostava
   stores: {
     ios:     { rating: 4.9, reviews: 34 },
     android: { rating: 4.8, reviews: 21 }
@@ -185,14 +186,14 @@ Vrijeme osvježavanja prikazuje se kao "Osvježeno u HH:MM" s pulsirajućom zele
 ## Rutne stranice (`Ruta.dc.html`)
 
 Jedan predložak, podaci iz feeda. **Nisu u glavnoj navigaciji** — dostupne preko sitemapa
-i internih linkova s `/popularne-rute` i naslovnice.
+i internih linkova s `/popularne-rute/` i naslovnice.
 
 Pravila:
 - Stranica postoji **samo ako ruta ima ≥1 aktivnog vozača**
-- Ruta bez vozača → 404 ili redirect na `/slanje-paketa`
+- Ruta bez vozača → 404 ili redirect na `/slanje-stvari/`
 - Cijena i trajanje prikazuju se samo ako backend ima podatke
 - Sitemap se automatski regenerira s aktivnim rutama
-- Meta title: `Slanje paketa {Grad A}–{Grad B} | Senvia`
+- Meta title: `Slanje stvari {Grad A}–{Grad B} | Senvia`
 
 Trenutno u projektu: 9 primjera (`bec-zagreb`, `graz-zagreb`, `graz-varazdin`,
 `bec-osijek`, `bec-rijeka`, `linz-split`, `munchen-split`, `osijek-graz`, `rovinj-bec`).
@@ -205,9 +206,9 @@ Tri dokumenta, svaki na hrvatskom, engleskom i njemačkom, svaki s `noindex, fol
 
 | Datoteka | HR | EN | DE |
 |---|---|---|---|
-| `Politika privatnosti.dc.html` | `/politika-privatnosti` | `/privacy-policy` | `/datenschutz` |
-| `Politika kolacica.dc.html` | `/politika-kolacica` | `/cookie-policy` | `/cookie-richtlinie` |
-| `Uvjeti koristenja.dc.html` | `/uvjeti-koristenja` | `/terms-of-service` | `/nutzungsbedingungen` |
+| `Politika privatnosti.dc.html` | `/politika-privatnosti/` | `/privacy-policy/` | `/datenschutz/` |
+| `Politika kolacica.dc.html` | `/politika-kolacica/` | `/cookie-policy/` | `/cookie-richtlinie/` |
+| `Uvjeti koristenja.dc.html` | `/uvjeti-koristenja/` | `/terms-of-service/` | `/nutzungsbedingungen/` |
 
 Sve tri koriste zajedničku ovojnicu `Pravni dokument.dc.html`, koja crta zaglavlje, sadržaj,
 odjeljke, tablice, kontakt blok i WebPage schemu, te upisuje `hreflang` za sva tri jezika.
@@ -217,8 +218,7 @@ Stranice NISU u sitemapu jer nose `noindex`. Dostupne su bez registracije, jedni
 iz podnožja svake stranice. Datum zadnjeg ažuriranja stoji na vrhu svakog dokumenta i mijenja
 se u polju `updated` unutar odgovarajućeg jezika.
 
-Adrese e-pošte koje treba otvoriti prije objave: `privacy@senviaapp.com` (privatnost i kolačići)
-i `info@senviaapp.com` (uvjeti korištenja).
+Sve pravne stranice koriste `contact@senviaapp.com`. OIB se nalazi samo u Općim uvjetima poslovanja.
 
 ---
 
@@ -286,7 +286,7 @@ Na naslovnici je ugrađen YouTube video `mIvm4WbmMMw` preko `youtube-nocookie.co
 ## Pravilo za generator rutnih stranica
 
 Ako ruta ima `activeDrivers: 0`, generator NE smije emitirati `<meta name="robots" content="index, follow">`
-ni rutni `<title>`. Takva stranica mora vratiti 404, preusmjeriti na `/slanje-paketa` ili barem
+ni rutni `<title>`. Takva stranica mora vratiti 404, preusmjeriti na `/slanje-stvari/` ili barem
 nositi `noindex, follow` i naslov praznog stanja, inače Google vidi indeksabilnu stranicu
 čiji sadržaj kaže da ruta ne postoji (lažni 404). Ruta bez vozača također ne ide u sitemap.
 Primjer u prototipu: `Ruta - rovinj-bec.dc.html`.
@@ -309,7 +309,7 @@ Primjer u prototipu: `Ruta - rovinj-bec.dc.html`.
 
 ## Partneri
 
-Stranica `/partneri` (`Partneri.dc.html`) nabraja poslovne partnere s logotipom.
+Stranica `/partneri/` (`Partneri.dc.html`) nabraja poslovne partnere s logotipom.
 Popis se u prototipu čita iz praznog polja `PARTNERS` u logici stranice, pa se prikazuje
 samo poziv na prijavu. U produkciji popis dolazi iz backenda: `{ name, logo, meta, url }`.
 Logotip i naziv objavljuju se samo uz suglasnost partnera.
@@ -321,7 +321,7 @@ kako radi za tvrtke, naši partneri i prijava obrta (`/za-tvrtke#prijava`).
 
 ## Obrazac Za tvrtke
 
-Stranica `/za-tvrtke` ima prijavni obrazac (naziv, djelatnost, grad polaska,
+Stranica `/za-tvrtke/` ima prijavni obrazac (naziv, djelatnost, grad polaska,
 gradovi dostave, kontakt osoba, e-pošta, telefon, poruka). U prototipu nema backenda,
 pa se prijava sastavlja u `mailto:` poruku prema contact@senviaapp.com.
 
@@ -337,13 +337,13 @@ odrediste, osoba, email, telefon, poruka.
 1. **FAQ odgovori u HTML-u od učitavanja.** U prototipu su odgovori obični `<p>` elementi,
    uvijek prisutni u DOM-u. Ako uvodiš accordion, smije samo vizualno sakriti tekst
    (`max-height`/`overflow`), nikad ga ne micati iz DOM-a. Google ga inače ne indeksira.
-2. **FAQPage schema.org** na `/faq`, `/sigurnost`, `/slanje-paketa`, `/austrija-hrvatska`.
+2. **FAQPage schema.org** na `/faq/`, `/sigurnost/`, `/slanje-stvari/`, `/austrija-hrvatska/`.
    Rutne stranice nemaju FAQ blok, pa ni FAQPage schemu. **Važno:** u prototipu se
    `ld+json` ubacuje JavaScriptom jer su ovo statične datoteke. U produkciji sve
    `ld+json` blokove (FAQPage, Article, BreadcrumbList) renderiraj server-side,
    u izvornom HTML-u.
 3. **Alt tekstovi** na svim slikama, opisni i na hrvatskom
-   (npr. "Senvia aplikacija — pregled dostupnih vožnji za slanje paketa").
+   (npr. "Senvia aplikacija — pregled dostupnih vožnji za slanje stvari").
 4. **Unique title + meta description** po stranici (već napisani u svakom `<helmet>`).
 5. **Open Graph + Twitter card** na svim stranicama.
 6. **Breadcrumbs** na svim podstranicama, ne na naslovnici.
@@ -352,7 +352,7 @@ odrediste, osoba, email, telefon, poruka.
    ruta bez aktivnih putnika renderira `noindex` stranicu, pa je slanje u sitemap greška
    koju Search Console prijavljuje kao "Submitted URL marked noindex". **`robots.txt`** ne blokira rutne stranice.
 8. **Interno linkanje**: naslovnica → sve stranice; podnožje na svakoj stranici vodi na
-   naslovnicu, /slanje-paketa, /kako-radi, /sigurnost, /faq, rute i blog članke.
+   naslovnicu, /slanje-stvari, /kako-radi, /sigurnost, /faq, rute i blog članke.
 9. **Jedan H1 po stranici**, sadrži primarnu ključnu riječ te stranice.
 10. **Canonical + `<link rel="sitemap">`** u `<head>` svake stranice.
 11. **Jezici**: prototip mijenja jezik klijentski. U produkciji svaki jezik treba svoj URL
@@ -360,7 +360,7 @@ odrediste, osoba, email, telefon, poruka.
 12. **Google Search Console i analitika**: prototipovi nemaju verifikacijski meta tag ni
     mjerni kod. Dodaj ih u produkcijski `<head>` prije objave.
 
-Title naslovnice: `Senvia – Jeftino slanje paketa uz putnika koji putuje` (52 znaka)
+Title naslovnice: `Senvia – Jeftino slanje stvari uz putnika koji putuje` (52 znaka)
 
 ---
 
@@ -429,8 +429,8 @@ vanjske biblioteke. Ako codebase ima svoj icon set, koristiti njega uz isti vizu
 - App Store: `https://apps.apple.com/hr/app/senvia/id6759839112?l=hr`
 - Google Play: `https://play.google.com/store/apps/details?id=com.senviaapp.senvia&hl=hr`
 - Kontakt: `contact@senviaapp.com`
-- Uvjeti: `https://www.senviaapp.com/terms-and-conditions`
-- Privatnost: `https://www.senviaapp.com/terms-and-conditions` (privatnost je trenutno dio uvjeta;
+- Uvjeti: `https://www.senviaapp.com/terms-and-conditions/`
+- Privatnost: `https://www.senviaapp.com/terms-and-conditions/` (privatnost je trenutno dio uvjeta;
   kad dobije vlastitu stranicu, zamijeni ovu adresu u `Podnozje.dc.html` i u traci za pristanak u `Nav.dc.html`)
 
 ---
@@ -452,3 +452,31 @@ Svi `.dc.html` prototipovi, `i18n.js`, `routes-data.js`, `sitemap.xml`, `robots.
 
 `Popularne rute - standalone.html` je samostalna verzija te stranice (radi offline,
 dvoklik u pregledniku) — korisna za brzi pregled bez pokretanja projekta.
+
+
+## Kosa crta na kraju adrese
+
+Server već dodaje kosu crtu (`/kako-radi` → `/kako-radi/`), pa sve canonical, hreflang, og:url, sitemap i strukturirani podaci koriste adrese **s kosom crtom**. Na serveru ne treba ništa mijenjati.
+
+## 301 preusmjeravanja (promjena "paket" → "stvari")
+
+Stare adrese su možda već indeksirane na Googleu. Postavi trajna (301) preusmjeravanja:
+
+- `/slanje-paketa/` → `/slanje-stvari/`
+- `/slanje-paketa/<slug>` → `/slanje-stvari/<slug>`
+- `/blog/kako-poslati-paket-u-austriju/` → `/blog/kako-poslati-stvari-u-austriju/`
+- `/blog/koliko-kosta-slanje-paketa/` → `/blog/koliko-kosta-slanje-stvari/`
+- `/blog/dijaspora-paket-doma/` → `/blog/dijaspora-stvari-doma/`
+- `/blog/slanje-paketa-unutar-hrvatske/` → `/blog/slanje-stvari-unutar-hrvatske/`
+- `/blog/paket-nach-kroatien-schicken/` → `/blog/sachen-nach-kroatien-schicken/`
+
+(Provjeri točne putanje bloga u sitemap.xml.) Nakon deploya pošalji novi sitemap u Google Search Console.
+
+## Spojene stranice (bez rada na serveru)
+
+`Austrija-Hrvatska.dc.html` i `Blog - Senvia vs kurirska sluzba.dc.html` ostaju na starim adresama, ali sadrže samo `meta refresh` + canonical prema novoj stranici. Google to tretira kao trajno preusmjeravanje, pa server ne treba dirati. Obje su maknute iz sitemapa i iz poveznica.
+
+## Ne objavljivati
+
+- `Rute - generator.dc.html` — interni alat (noindex)
+- mapa `_radne-datoteke/` u projektu (stara verzija naslovnice, offline rute) nije dio ove mape i ne ide na produkciju

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="hr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,11 +8,40 @@
 <body>
 <x-dc>
 <helmet>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta charset="utf-8">
   <title>Politika privatnosti | Senvia</title>
   <meta name="description" content="Saznaj kako Senvia prikuplja i koristi tvoje osobne podatke u skladu s GDPR-om.">
   <meta name="robots" content="noindex, follow">
-  <link rel="canonical" href="https://www.senviaapp.com/politika-privatnosti">
+  <link rel="canonical" href="https://www.senviaapp.com/politika-privatnosti/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Senvia">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:title" content="Politika privatnosti | Senvia">
+  <meta property="og:description" content="Saznaj kako Senvia prikuplja i koristi tvoje osobne podatke u skladu s GDPR-om.">
+  <meta property="og:url" content="https://www.senviaapp.com/politika-privatnosti/">
+  <meta property="og:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Politika privatnosti | Senvia">
+  <meta name="twitter:description" content="Saznaj kako Senvia prikuplja i koristi tvoje osobne podatke u skladu s GDPR-om.">
+  <meta name="twitter:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
+  <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
+  <script>
+    window.SENVIA_GA_ID = 'G-H8DBTNDF62';
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H8DBTNDF62');
+    window.senviaLoadAnalytics = function () {
+      if (window.senviaGaLoaded || location.hostname.indexOf('senviaapp.com') === -1) return;
+      window.senviaGaLoaded = true;
+      var el = document.createElement('script');
+      el.setAttribute('async', '');
+      el.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + window.SENVIA_GA_ID);
+      document.head.appendChild(el);
+    };
+    try { if (localStorage.getItem('senvia-consent') === 'yes') window.senviaLoadAnalytics(); } catch (e) {}
+  </script>
 </helmet>
 <dc-import name="Pravni dokument" doc="{{ doc }}" self="privacy" hint-size="100%,100%"></dc-import>
 </x-dc>
@@ -21,9 +50,9 @@ class Component extends DCLogic {
   renderVals() {
     return { doc: {
       urls: {
-        hr: 'https://www.senviaapp.com/politika-privatnosti',
-        en: 'https://www.senviaapp.com/privacy-policy',
-        de: 'https://www.senviaapp.com/datenschutz'
+        hr: 'https://www.senviaapp.com/politika-privatnosti/',
+        en: 'https://www.senviaapp.com/privacy-policy/',
+        de: 'https://www.senviaapp.com/datenschutz/'
       },
       hr: {
         title: 'Politika privatnosti | Senvia',
@@ -34,19 +63,19 @@ class Component extends DCLogic {
         lead: 'Ovdje piše koje podatke prikupljamo, zašto ih prikupljamo, koliko dugo ih čuvamo i koja prava imaš nad njima. Tekst je pisan da ga možeš pročitati bez odvjetnika.',
         contactTitle: 'Pitanja o privatnosti',
         contactText: 'Za svako pitanje o podacima, za ostvarivanje prava ili za povlačenje pristanka piši nam. Odgovaramo u roku od 30 dana.',
-        contactMail: 'privacy@senviaapp.com',
+        contactMail: 'contact@senviaapp.com',
         sections: [
           { h: 'Tko je odgovoran za tvoje podatke',
-            p: 'Voditelj obrade podataka je Riddo Digital d.o.o., društvo koje razvija i održava Senvia aplikaciju.',
-            rows: [['Voditelj obrade', 'Riddo Digital d.o.o.'], ['E-pošta', 'privacy@senviaapp.com'], ['Web', 'senviaapp.com']],
-            note: 'Za sva pitanja o privatnosti obrati nam se na privacy@senviaapp.com.' },
+            p: 'Voditelj obrade podataka je Riddo Digital, obrt koji razvija i održava Senvia aplikaciju.',
+            rows: [['Voditelj obrade', 'Riddo Digital'], ['Adresa', 'Rapska 35, 10000 Zagreb'], ['E-pošta', 'contact@senviaapp.com'], ['Web', 'senviaapp.com']],
+            note: 'Za sva pitanja o privatnosti obrati nam se na contact@senviaapp.com.' },
           { h: 'Koje podatke prikupljamo i zašto',
             p: 'Prikupljamo samo ono što je potrebno da aplikacija radi. Podaci su podijeljeni u četiri skupine, svaka sa svojom svrhom, pravnom osnovom i rokom čuvanja.' },
           { h: 'Podaci koje daješ pri registraciji',
             list: ['Ime i prezime', 'Adresa e-pošte', 'Broj telefona', 'Fotografija profila, neobavezno'],
             rows: [['Svrha', 'Otvaranje računa i upravljanje njime'], ['Pravna osnova', 'Ugovorni odnos, članak 6. stavak 1. točka b GDPR-a'], ['Čuvanje', 'Dok je račun aktivan i još 30 dana nakon brisanja']] },
           { h: 'Podaci o pošiljkama i putovanjima',
-            list: ['Adresa preuzimanja i adresa dostave', 'Opis paketa', 'Datum i ruta putovanja'],
+            list: ['Adresa preuzimanja i adresa dostave', 'Opis stvari', 'Datum i ruta putovanja'],
             rows: [['Svrha', 'Povezivanje pošiljatelja i putnika'], ['Pravna osnova', 'Ugovorni odnos, članak 6. stavak 1. točka b GDPR-a'], ['Čuvanje', '12 mjeseci od završetka pošiljke']] },
           { h: 'Komunikacija između korisnika',
             list: ['Poruke razmijenjene unutar aplikacije'],
@@ -72,7 +101,7 @@ class Component extends DCLogic {
               'Prigovor: prigovoriti obradi podataka',
               'Povlačenje pristanka: u bilo kojem trenutku'
             ],
-            note: 'Za ostvarivanje prava piši na privacy@senviaapp.com. Odgovaramo u roku od 30 dana.' },
+            note: 'Za ostvarivanje prava piši na contact@senviaapp.com. Odgovaramo u roku od 30 dana.' },
           { h: 'Prigovor nadzornom tijelu',
             p: 'Ako smatraš da tvoje podatke ne obrađujemo u skladu s propisima, imaš pravo podnijeti prigovor nadzornom tijelu u svojoj zemlji.',
             rows: [['Hrvatska', 'AZOP, azop.hr'], ['Austrija', 'DSB, dsb.gv.at'], ['Njemačka', 'BfDI, bfdi.bund.de']] },
@@ -94,19 +123,19 @@ class Component extends DCLogic {
         lead: 'This page sets out which data we collect, why we collect it, how long we keep it and which rights you have over it. It is written to be read without a lawyer.',
         contactTitle: 'Questions about privacy',
         contactText: 'For any question about your data, to exercise your rights or to withdraw consent, write to us. We reply within 30 days.',
-        contactMail: 'privacy@senviaapp.com',
+        contactMail: 'contact@senviaapp.com',
         sections: [
           { h: 'Who is responsible for your data',
-            p: 'The data controller is Riddo Digital d.o.o., the company that develops and maintains the Senvia app.',
-            rows: [['Controller', 'Riddo Digital d.o.o.'], ['Email', 'privacy@senviaapp.com'], ['Web', 'senviaapp.com']],
-            note: 'For any privacy question contact us at privacy@senviaapp.com.' },
+            p: 'The data controller is Riddo Digital, the business that develops and maintains the Senvia app.',
+            rows: [['Controller', 'Riddo Digital'], ['Address', 'Rapska 35, 10000 Zagreb, Croatia'], ['Email', 'contact@senviaapp.com'], ['Web', 'senviaapp.com']],
+            note: 'For any privacy question contact us at contact@senviaapp.com.' },
           { h: 'What data we collect and why',
             p: 'We collect only what the app needs to work. The data falls into four groups, each with its own purpose, legal basis and retention period.' },
           { h: 'Data you give us at registration',
             list: ['First and last name', 'Email address', 'Phone number', 'Profile photo, optional'],
             rows: [['Purpose', 'Creating and managing a user account'], ['Legal basis', 'Contract, Article 6(1)(b) GDPR'], ['Retention', 'While the account is active plus 30 days after deletion']] },
           { h: 'Shipment and journey data',
-            list: ['Pick-up and delivery address', 'Package description', 'Date and route of the journey'],
+            list: ['Pick-up and delivery address', 'Item description', 'Date and route of the journey'],
             rows: [['Purpose', 'Connecting senders and travellers'], ['Legal basis', 'Contract, Article 6(1)(b) GDPR'], ['Retention', '12 months from completion of the shipment']] },
           { h: 'Communication between users',
             list: ['Messages exchanged inside the app'],
@@ -132,7 +161,7 @@ class Component extends DCLogic {
               'Objection: object to processing',
               'Withdrawal of consent: at any time'
             ],
-            note: 'To exercise your rights write to privacy@senviaapp.com. We reply within 30 days.' },
+            note: 'To exercise your rights write to contact@senviaapp.com. We reply within 30 days.' },
           { h: 'Complaint to a supervisory authority',
             p: 'If you believe we process your data unlawfully, you have the right to lodge a complaint with the supervisory authority in your country.',
             rows: [['Croatia', 'AZOP, azop.hr'], ['Austria', 'DSB, dsb.gv.at'], ['Germany', 'BfDI, bfdi.bund.de']] },
@@ -154,19 +183,19 @@ class Component extends DCLogic {
         lead: 'Hier steht, welche Daten wir erheben, warum wir sie erheben, wie lange wir sie speichern und welche Rechte du daran hast. Der Text ist so geschrieben, dass du ihn ohne Anwalt lesen kannst.',
         contactTitle: 'Fragen zum Datenschutz',
         contactText: 'Bei jeder Frage zu deinen Daten, zur Ausübung deiner Rechte oder zum Widerruf der Einwilligung schreib uns. Wir antworten innerhalb von 30 Tagen.',
-        contactMail: 'privacy@senviaapp.com',
+        contactMail: 'contact@senviaapp.com',
         sections: [
           { h: 'Wer für deine Daten verantwortlich ist',
-            p: 'Verantwortlicher ist die Riddo Digital d.o.o., das Unternehmen, das die Senvia App entwickelt und betreibt.',
-            rows: [['Verantwortlicher', 'Riddo Digital d.o.o.'], ['E-Mail', 'privacy@senviaapp.com'], ['Web', 'senviaapp.com']],
-            note: 'Bei allen Fragen zum Datenschutz wende dich an privacy@senviaapp.com.' },
+            p: 'Verantwortlicher ist Riddo Digital, das Unternehmen, das die Senvia App entwickelt und betreibt.',
+            rows: [['Verantwortlicher', 'Riddo Digital'], ['Adresse', 'Rapska 35, 10000 Zagreb, Kroatien'], ['E-Mail', 'contact@senviaapp.com'], ['Web', 'senviaapp.com']],
+            note: 'Bei allen Fragen zum Datenschutz wende dich an contact@senviaapp.com.' },
           { h: 'Welche Daten wir erheben und warum',
             p: 'Wir erheben nur, was die App zum Funktionieren braucht. Die Daten sind in vier Gruppen unterteilt, jede mit eigenem Zweck, eigener Rechtsgrundlage und eigener Speicherdauer.' },
           { h: 'Daten bei der Registrierung',
             list: ['Vor- und Nachname', 'E-Mail-Adresse', 'Telefonnummer', 'Profilfoto, optional'],
             rows: [['Zweck', 'Erstellung und Verwaltung des Nutzerkontos'], ['Rechtsgrundlage', 'Vertrag, Artikel 6 Absatz 1 Buchstabe b DSGVO'], ['Speicherdauer', 'Solange das Konto aktiv ist, plus 30 Tage nach Löschung']] },
           { h: 'Daten zu Sendungen und Fahrten',
-            list: ['Abhol- und Lieferadresse', 'Beschreibung des Pakets', 'Datum und Strecke der Fahrt'],
+            list: ['Abhol- und Lieferadresse', 'Beschreibung der Sachen', 'Datum und Strecke der Fahrt'],
             rows: [['Zweck', 'Verbindung von Absendern und Reisenden'], ['Rechtsgrundlage', 'Vertrag, Artikel 6 Absatz 1 Buchstabe b DSGVO'], ['Speicherdauer', '12 Monate ab Abschluss der Sendung']] },
           { h: 'Kommunikation zwischen Nutzern',
             list: ['In der App ausgetauschte Nachrichten'],
@@ -192,7 +221,7 @@ class Component extends DCLogic {
               'Widerspruch: der Verarbeitung widersprechen',
               'Widerruf der Einwilligung: jederzeit'
             ],
-            note: 'Zur Ausübung deiner Rechte schreib an privacy@senviaapp.com. Wir antworten innerhalb von 30 Tagen.' },
+            note: 'Zur Ausübung deiner Rechte schreib an contact@senviaapp.com. Wir antworten innerhalb von 30 Tagen.' },
           { h: 'Beschwerde bei der Aufsichtsbehörde',
             p: 'Wenn du der Ansicht bist, dass wir deine Daten nicht rechtmäßig verarbeiten, kannst du dich bei der Aufsichtsbehörde in deinem Land beschweren.',
             rows: [['Kroatien', 'AZOP, azop.hr'], ['Österreich', 'DSB, dsb.gv.at'], ['Deutschland', 'BfDI, bfdi.bund.de']] },

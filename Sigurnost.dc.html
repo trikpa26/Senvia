@@ -8,23 +8,24 @@
 <body>
 <x-dc>
 <helmet>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta charset="utf-8">
   <title>Sigurnost u Senvia aplikaciji, provjereni korisnici | Senvia</title>
-  <meta name="description" content="Verifikacija korisnika, obavezna fotografija paketa, pravo da odbiješ svaki prijevoz, ocjene nakon svake dostave i chat bez dijeljenja osobnih podataka.">
+  <meta name="description" content="Verifikacija korisnika, obavezna fotografija stvari, pravo da odbiješ svaki prijevoz, ocjene nakon svake dostave i chat bez dijeljenja osobnih podataka.">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Senvia">
   <meta property="og:locale" content="hr_HR">
   <meta property="og:title" content="Sigurnost u Senvia aplikaciji, provjereni korisnici | Senvia">
-  <meta property="og:description" content="Ništa nije obavezno: ako nisi siguran, ne prihvaćaš prijevoz. Svaki paket ima fotografiju, svaki korisnik ocjene.">
-  <link rel="canonical" href="https://www.senviaapp.com/sigurnost">
+  <meta property="og:description" content="Ništa nije obavezno: ako nisi siguran, ne prihvaćaš prijevoz. Sve stvari imaju fotografiju, svaki korisnik ocjene.">
+  <link rel="canonical" href="https://www.senviaapp.com/sigurnost/">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-  <meta property="og:url" content="https://www.senviaapp.com/sigurnost">
-  <meta property="og:image" content="https://www.senviaapp.com/uploads/1024x1024bb.png">
+  <meta property="og:url" content="https://www.senviaapp.com/sigurnost/">
+  <meta property="og:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Sigurnost u Senvia aplikaciji, provjereni korisnici | Senvia">
-  <meta name="twitter:description" content="Ništa nije obavezno: ako nisi siguran, ne prihvaćaš prijevoz. Svaki paket ima fotografiju, svaki korisnik ocjene.">
-  <meta name="twitter:image" content="https://www.senviaapp.com/uploads/1024x1024bb.png">
+  <meta name="twitter:description" content="Ništa nije obavezno: ako nisi siguran, ne prihvaćaš prijevoz. Sve stvari imaju fotografiju, svaki korisnik ocjene.">
+  <meta name="twitter:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
   <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
   <script>
     window.SENVIA_GA_ID = 'G-H8DBTNDF62';
@@ -46,7 +47,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -86,14 +87,14 @@
 </section>
 
 
-<section style="background: #f4faf6; border-top: 1px solid #eaf2ec; border-bottom: 1px solid #eaf2ec">
+<section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
   <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(24px, 4vw, 48px)">
       <div>
         <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.4vw, 26px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 18px; text-wrap: balance">{{ t.senderTitle }}</h2>
         <div style="display: grid; gap: 10px">
           <sc-for list="{{ senderTips }}" as="s" hint-placeholder-count="4">
-            <div style="display: flex; gap: 12px; align-items: flex-start; background: #ffffff; border: 1px solid #e4efe7; border-radius: 16px; padding: 18px 20px; font-size: 15.5px; line-height: 1.6; color: #29402f">
+            <div style="display: flex; gap: 12px; align-items: flex-start; background: #ffffff; border: 1px solid #e6e3da; border-radius: 16px; padding: 18px 20px; font-size: 15.5px; line-height: 1.6; color: #29402f">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; margin-top: 3px"><path d="M20 6L9 17l-5-5"></path></svg>
               <span>{{ s.text }}</span>
             </div>
@@ -104,7 +105,7 @@
         <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.4vw, 26px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 18px; text-wrap: balance">{{ t.driverTitle }}</h2>
         <div style="display: grid; gap: 10px">
           <sc-for list="{{ driverTips }}" as="s" hint-placeholder-count="4">
-            <div style="display: flex; gap: 12px; align-items: flex-start; background: #ffffff; border: 1px solid #e4efe7; border-radius: 16px; padding: 18px 20px; font-size: 15.5px; line-height: 1.6; color: #29402f">
+            <div style="display: flex; gap: 12px; align-items: flex-start; background: #ffffff; border: 1px solid #e6e3da; border-radius: 16px; padding: 18px 20px; font-size: 15.5px; line-height: 1.6; color: #29402f">
               <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#2dbb54" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" style="flex: 0 0 auto; margin-top: 3px"><path d="M20 6L9 17l-5-5"></path></svg>
               <span>{{ s.text }}</span>
             </div>
@@ -115,11 +116,50 @@
   </div>
 </section>
 
+<section id="pravila" style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px) 0; scroll-margin-top: 90px">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 18px; align-items: stretch">
+    <div id="zabranjeno" style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 28px; padding: clamp(24px, 4vw, 40px); scroll-margin-top: 90px">
+      <span style="display: inline-flex; width: 48px; height: 48px; border-radius: 14px; background: #fdecec; align-items: center; justify-content: center; margin-bottom: 18px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c2412d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg>
+      </span>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 2.8vw, 30px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 10px">{{ t.banT }}</h2>
+      <p style="margin: 0 0 18px; font-size: 16px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.banD }}</p>
+      <ul style="margin: 0; padding: 0; list-style: none; display: grid; gap: 10px">
+        <sc-for list="{{ banList }}" as="b" hint-placeholder-count="8">
+          <li style="display: flex; gap: 12px; align-items: flex-start; font-size: 15.5px; line-height: 1.5; color: #12261a">
+            <span style="width: 7px; height: 7px; border-radius: 999px; background: #c2412d; margin-top: 8px; flex: 0 0 auto"></span>{{ b }}
+          </li>
+        </sc-for>
+      </ul>
+      <p style="margin: 18px 0 0; font-size: 14.5px; line-height: 1.55; color: #5b6f62; text-wrap: pretty">{{ t.banNote }}</p>
+    </div>
+    <div id="steta" style="background: #eef9f1; border: 1px solid #bfe8cb; border-radius: 28px; padding: clamp(24px, 4vw, 40px); scroll-margin-top: 90px">
+      <span style="display: inline-flex; width: 48px; height: 48px; border-radius: 14px; background: #2dbb54; align-items: center; justify-content: center; margin-bottom: 18px">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"></path><path d="M12 8v5"></path><path d="M12 16.5v.01"></path></svg>
+      </span>
+      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 2.8vw, 30px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 10px">{{ t.dmgT }}</h2>
+      <p style="margin: 0 0 18px; font-size: 16px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.dmgD }}</p>
+      <ol style="margin: 0; padding: 0; list-style: none; display: grid; gap: 12px">
+        <sc-for list="{{ dmgSteps }}" as="s" hint-placeholder-count="4">
+          <li style="display: flex; gap: 14px; align-items: flex-start; background: #ffffff; border-radius: 16px; padding: 14px 16px">
+            <span style="width: 28px; height: 28px; border-radius: 999px; background: #2dbb54; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; flex: 0 0 auto">{{ s.n }}</span>
+            <span>
+              <span style="display: block; font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; color: #12261a">{{ s.t }}</span>
+              <span style="display: block; font-size: 14.5px; line-height: 1.55; color: #3c5346; margin-top: 2px">{{ s.d }}</span>
+            </span>
+          </li>
+        </sc-for>
+      </ol>
+      <p style="margin: 18px 0 0; font-size: 14.5px; line-height: 1.55; color: #3c5346; text-wrap: pretty">{{ t.dmgNote }} <a href="Uvjeti%20koristenja.dc.html" style="font-weight: 600">{{ t.dmgLink }}</a></p>
+    </div>
+  </div>
+</section>
+
 <section style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
   <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 clamp(20px, 3vw, 28px); max-width: 26ch; text-wrap: balance">{{ t.faqTitle }}</h2>
   <div style="max-width: 900px">
     <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
-      <div style="border-bottom: 1px solid #eaf2ec">
+      <div style="border-bottom: 1px solid #e9e6dd">
         <div onClick="{{ f.toggle }}" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 4px; cursor: pointer">
           <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0; text-wrap: pretty">{{ f.q }}</h3>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b8272" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="{{ f.chevStyle }}"><path d="M6 9l6 6 6-6"></path></svg>
@@ -140,8 +180,8 @@
       <p style="margin: 0; font-size: 18px; line-height: 1.55; max-width: 44ch; color: rgba(255,255,255,0.92); text-wrap: pretty">{{ t.ctaSub }}</p>
     </div>
     <div style="display: flex; gap: 14px; flex-wrap: wrap; flex: 0 0 auto">
-      <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="uploads/Download_on_the_App_Store_Badge.svg.webp" alt="Preuzmi Senvia aplikaciju u App Storeu" height="52" style="display: block; border-radius: 10px"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Preuzmi Senvia aplikaciju na Google Playu" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
     </div>
   </div>
 </section>
@@ -157,126 +197,126 @@ class Component extends DCLogic {
   STR = {
     hr: {
       crumb: 'Sigurnost', kicker: 'Sigurnost',
-      h1: 'Sigurnost u Senvia aplikaciji, kako štitimo tebe i tvoj paket',
-      lead1: 'Paket predaješ osobi, ne skladištu. Zato je svaki korak u Senvia aplikaciji dobrovoljan i vidljiv: nitko ne mora prihvatiti prijevoz, nitko ne mora predati paket, a svaki dogovor ostaje zapisan u aplikaciji.',
-      lead2: 'Ako ti nešto ne izgleda u redu, bilo profil, sadržaj paketa, cijena ili termin, jednostavno ne potvrdiš dogovor. Bez objašnjenja, bez kazne i bez utjecaja na tvoj profil.',
+      h1: 'Sigurnost u Senvia aplikaciji, kako štitimo tebe i tvoje stvari',
+      lead1: 'Stvari predaješ osobi, ne skladištu. Zato je svaki korak u Senvia aplikaciji dobrovoljan i vidljiv: nitko ne mora prihvatiti prijevoz, nitko ne mora predati stvari, a svaki dogovor ostaje zapisan u aplikaciji.',
+      lead2: 'Ako ti nešto ne izgleda u redu, bilo profil, sadržaj pošiljke, naknada ili termin, jednostavno ne potvrdiš dogovor. Bez objašnjenja, bez kazne i bez utjecaja na tvoj profil.',
       freeKicker: 'Ti odlučuješ',
       freeTitle: 'Ako nisi siguran, ne prihvaćaš prijevoz',
       freeSub: 'Ovo nije posao s obvezama, nego dogovor dvije strane. Svaka od njih može reći ne, u svakom trenutku prije primopredaje.',
       fr1t: 'Prijevoz odbijaš bez objašnjenja', fr1d: 'Vozač vidi zahtjev i odlučuje. Ako mu sadržaj, ruta ili termin ne odgovaraju, samo ne prihvati, nema kazne ni pada ocjene.',
-      fr2t: 'Nema fotografije, nema obveze', fr2d: 'Svaki paket mora biti poslikan u zahtjevu. Ako fotografije nema ili ne odgovara opisu, prijevoz ne moraš prihvatiti.',
-      fr3t: 'Možeš vidjeti što nosiš', fr3d: 'Prije preuzimanja imaš pravo pitati da se paket otvori i pokaže sadržaj. Ako pošiljatelj to odbije, ne preuzimaš.',
-      fr4t: 'Pošiljatelj isto ne mora pristati', fr4d: 'Ne odgovara ti profil, ocjena ili ponuđena cijena? Ponudu jednostavno ne prihvatiš i čekaš drugog putnika.',
-      fr5t: 'Bez minimalnog broja vožnji', fr5d: 'Nema obveze, kvota ni pretplate. Vožnju objavljuješ kad ti se putuje i nosiš paket kad ti se javi netko s tvoje rute.',
-      photoTitle: 'Fotografija paketa je pravilo, ne preporuka',
+      fr2t: 'Nema fotografije, nema obveze', fr2d: 'Sve stvari moraju biti poslikane u zahtjevu. Ako fotografije nema ili ne odgovara opisu, prijevoz ne moraš prihvatiti.',
+      fr3t: 'Možeš vidjeti što nosiš', fr3d: 'Prije preuzimanja imaš pravo pitati da se stvari otvore i pokaže sadržaj. Ako pošiljatelj to odbije, ne preuzimaš.',
+      fr4t: 'Pošiljatelj isto ne mora pristati', fr4d: 'Ne odgovara ti profil, ocjena ili ponuđena naknada? Ponudu jednostavno ne prihvatiš i čekaš drugog putnika.',
+      fr5t: 'Bez minimalnog broja vožnji', fr5d: 'Nema obveze, kvota ni pretplate. Vožnju objavljuješ kad ti se putuje i nosiš stvari kad ti se javi netko s tvoje rute.',
+      photoTitle: 'Fotografija stvari je pravilo, ne preporuka',
       photoSub: 'Fotografija je jedina stvar koja i pošiljatelja i vozača štiti od nesporazuma, zato je dio svakog zahtjeva.',
-      p1t: 'Uz zahtjev ide fotografija', p1d: 'Pošiljatelj fotografira paket prije objave. Vozač točno zna što preuzima i koliko mjesta treba u autu.',
-      p2t: 'Fotografija ostaje u chatu', p2d: 'Snimka i opis vezani su za dogovor. Oboje imate isti zapis o tome kako je paket izgledao na predaji.',
-      p3t: 'Bez fotografije nema preuzimanja', p3d: 'Ako paket nije poslikan ili izgleda drugačije od fotografije, vozač ga ima pravo odbiti na licu mjesta.',
+      p1t: 'Uz zahtjev ide fotografija', p1d: 'Pošiljatelj fotografira stvari prije objave. Vozač točno zna što preuzima i koliko mjesta treba u autu.',
+      p2t: 'Fotografija ostaje u chatu', p2d: 'Snimka i opis vezani su za dogovor. Oboje imate isti zapis o tome kako su stvari izgledale na predaji.',
+      p3t: 'Bez fotografije nema preuzimanja', p3d: 'Ako stvari nisu poslikane ili izgledaju drugačije od fotografije, vozač ih ima pravo odbiti na licu mjesta.',
       builtTitle: 'Što je ugrađeno u svaku pošiljku',
-      b1t: 'Verifikacija prije prve pošiljke', b1d: 'Svaki novi račun odobrava se prije prve pošiljke ili prve objavljene vožnje. Neverificirani profil ne može preuzeti paket.',
+      b1t: 'Verifikacija prije prve pošiljke', b1d: 'Svaki novi račun odobrava se prije prve pošiljke ili prve objavljene vožnje. Neverificirani profil ne može preuzeti stvari.',
       b2t: 'Ocjene i recenzije', b2d: 'Nakon svake dostave obje strane ostavljaju ocjenu. Broj dovršenih vožnji i recenzije javno su vidljivi na profilu.',
       b3t: 'Chat bez osobnih podataka', b3d: 'Dogovor se vodi u aplikaciji. Ne dijeliš broj telefona, adresu e-pošte ni podatke o plaćanju.',
       b4t: 'Plaćanje u aplikaciji', b4d: 'Rezervacija se plaća Apple Payom, Google Payom ili karticom. Iznos je poznat prije potvrde, bez naknada nakon dostave.',
-      senderTitle: 'Ako šalješ paket',
-      driverTitle: 'Ako prevoziš paket',
-      s1: 'Fotografiraj paket i sadržaj prije predaje.', s2: 'Napiši točno što je unutra i koliko vrijedi.', s3: 'Primopredaju dogovori na javnom mjestu.', s4: 'Sve dogovaraj u aplikaciji, razgovor izvan Senvia aplikacije ne možemo provjeriti.',
-      d1: 'Pogledaj fotografiju prije nego prihvatiš zahtjev.', d2: 'Zatraži da se paket otvori ako nisi siguran.', d3: 'Ne prevozi ništa što ne bi prijavio na granici.', d4: 'Odbij prijevoz koji ti ne odgovara, to je tvoje pravo.',
+      senderTitle: 'Ako šalješ stvari',
+      driverTitle: 'Ako prevoziš stvari',
+      s1: 'Fotografiraj stvari i sadržaj prije predaje.', s2: 'Napiši točno što je unutra i koliko vrijedi.', s3: 'Primopredaju dogovori na javnom mjestu.', s4: 'Sve dogovaraj u aplikaciji, razgovor izvan Senvia aplikacije ne možemo provjeriti.',
+      d1: 'Pogledaj fotografiju prije nego prihvatiš zahtjev.', d2: 'Zatraži da se stvari otvore ako nisi siguran.', d3: 'Ne prevozi ništa što ne bi prijavio na granici.', d4: 'Odbij prijevoz koji ti ne odgovara, to je tvoje pravo.',
       faqTitle: 'Česta pitanja o sigurnosti',
-      faqMore: 'Pitanja o cijenama, rutama i plaćanju su na stranici', faqLink: 'Česta pitanja',
+      faqMore: 'Pitanja o naknadama, rutama i plaćanju su na stranici', faqLink: 'Česta pitanja',
       ctaTitle: 'Provjeri profile prije nego se dogovoriš', ctaSub: 'Preuzmi aplikaciju besplatno i pogledaj ocjene putnika na svojoj ruti.'
     },
     en: {
       crumb: 'Trust & safety', kicker: 'Trust & safety',
       h1: 'Safety starts with nothing being mandatory',
-      lead1: 'You hand your package to a person, not a warehouse. That is why every step on Senvia is voluntary and visible: nobody has to accept a delivery, nobody has to hand over a package, and every agreement stays recorded in the app.',
-      lead2: 'If something does not look right, whether the profile, the contents, the price or the timing, you simply do not confirm. No explanation, no penalty, no effect on your profile.',
+      lead1: 'You hand your items to a person, not a warehouse. That is why every step on Senvia is voluntary and visible: nobody has to accept a delivery, nobody has to hand over items, and every agreement stays recorded in the app.',
+      lead2: 'If something does not look right, whether the profile, the contents, the fee or the timing, you simply do not confirm. No explanation, no penalty, no effect on your profile.',
       freeKicker: 'You decide',
       freeTitle: 'If you are not sure, you do not accept the delivery',
       freeSub: 'This is not a job with obligations, it is an agreement between two people. Either side can say no, at any point before hand-off.',
       fr1t: 'Refuse without explaining', fr1d: 'The driver sees the request and decides. If the contents, route or timing do not suit them, they simply do not accept, no penalty, no rating drop.',
-      fr2t: 'No photo, no obligation', fr2d: 'Every package must be photographed in the request. If the photo is missing or does not match the description, you do not have to accept the job.',
-      fr3t: 'You may see what you carry', fr3d: 'Before pickup you can ask for the package to be opened and shown. If the sender refuses, you do not take it.',
-      fr4t: 'The sender is free too', fr4d: 'Not happy with the profile, the rating or the offered price? Do not accept the offer and wait for another traveller.',
-      fr5t: 'No minimum number of trips', fr5d: 'No quotas, no obligations, no subscription. Post a ride when you happen to travel, carry a package when someone on your route gets in touch.',
-      photoTitle: 'A photo of the package is a rule, not a suggestion',
+      fr2t: 'No photo, no obligation', fr2d: 'Every item must be photographed in the request. If the photo is missing or does not match the description, you do not have to accept the job.',
+      fr3t: 'You may see what you carry', fr3d: 'Before pickup you can ask for the items to be opened and shown. If the sender refuses, you do not take it.',
+      fr4t: 'The sender is free too', fr4d: 'Not happy with the profile, the rating or the offered fee? Do not accept the offer and wait for another traveller.',
+      fr5t: 'No minimum number of trips', fr5d: 'No quotas, no obligations, no subscription. Post a ride when you happen to travel, carry items when someone on your route gets in touch.',
+      photoTitle: 'A photo of the items are a rule, not a suggestion',
       photoSub: 'The photo is the one thing that protects both sender and driver from misunderstandings, so it is part of every request.',
-      p1t: 'The request includes a photo', p1d: 'The sender photographs the package before posting. The driver knows exactly what they are collecting and how much room it needs.',
-      p2t: 'The photo stays in the chat', p2d: 'The image and description are tied to the agreement. You both hold the same record of how the package looked at hand-off.',
-      p3t: 'No photo means no pickup', p3d: 'If the package was not photographed or looks different from the photo, the driver may refuse it on the spot.',
+      p1t: 'The request includes a photo', p1d: 'The sender photographs the items before posting. The driver knows exactly what they are collecting and how much room it needs.',
+      p2t: 'The photo stays in the chat', p2d: 'The image and description are tied to the agreement. You both hold the same record of how the items looked at hand-off.',
+      p3t: 'No photo means no pickup', p3d: 'If the items were not photographed or look different from the photo, the driver may refuse them on the spot.',
       builtTitle: 'What is built into every shipment',
-      b1t: 'Verification before the first shipment', b1d: 'Every new account is approved before the first shipment or the first posted ride. An unverified profile cannot collect a package.',
+      b1t: 'Verification before the first shipment', b1d: 'Every new account is approved before the first shipment or the first posted ride. An unverified profile cannot collect items.',
       b2t: 'Ratings and reviews', b2d: 'After each delivery both sides leave a rating. The number of completed trips and the reviews are public on the profile.',
       b3t: 'Chat without personal data', b3d: 'The deal happens in the app. You do not share your phone number, email address or payment details.',
       b4t: 'Payment in the app', b4d: 'The booking is paid with Apple Pay, Google Pay or a card. The amount is known before confirmation, with no fees after delivery.',
       senderTitle: 'If you are sending',
       driverTitle: 'If you are carrying',
-      s1: 'Photograph the package and its contents before hand-off.', s2: 'Write down exactly what is inside and what it is worth.', s3: 'Arrange the hand-off in a public place.', s4: 'Keep everything in the app, we cannot verify conversations outside Senvia.',
-      d1: 'Look at the photo before you accept a request.', d2: 'Ask for the package to be opened if you are unsure.', d3: 'Never carry anything you could not declare at the border.', d4: 'Refuse any job that does not suit you, that is your right.',
+      s1: 'Photograph the items and their contents before hand-off.', s2: 'Write down exactly what is inside and what it is worth.', s3: 'Arrange the hand-off in a public place.', s4: 'Keep everything in the app, we cannot verify conversations outside Senvia.',
+      d1: 'Look at the photo before you accept a request.', d2: 'Ask for the items to be opened if you are unsure.', d3: 'Never carry anything you could not declare at the border.', d4: 'Refuse any job that does not suit you, that is your right.',
       faqTitle: 'Safety questions',
-      faqMore: 'Questions about prices, routes and payment are on the', faqLink: 'FAQ page',
+      faqMore: 'Questions about fees, routes and payment are on the', faqLink: 'FAQ page',
       ctaTitle: 'Check the profiles before you agree', ctaSub: 'Download the app for free and look at the ratings of travellers on your route.'
     },
     de: {
       crumb: 'Sicherheit', kicker: 'Sicherheit',
       h1: 'Sicherheit beginnt damit, dass nichts verpflichtend ist',
-      lead1: 'Du übergibst dein Paket einem Menschen, nicht einem Lager. Deshalb ist jeder Schritt bei Senvia freiwillig und nachvollziehbar: niemand muss einen Transport annehmen, niemand muss ein Paket übergeben, und jede Absprache bleibt in der App dokumentiert.',
-      lead2: 'Wenn etwas nicht passt, ob Profil, Inhalt, Preis oder Termin, bestätigst du einfach nicht. Ohne Begründung, ohne Strafe, ohne Folgen für dein Profil.',
+      lead1: 'Du übergibst deine Sachen einem Menschen, nicht einem Lager. Deshalb ist jeder Schritt bei Senvia freiwillig und nachvollziehbar: niemand muss einen Transport annehmen, niemand muss Sachen übergeben, und jede Absprache bleibt in der App dokumentiert.',
+      lead2: 'Wenn etwas nicht passt, ob Profil, Inhalt, Kostenbeitrag oder Termin, bestätigst du einfach nicht. Ohne Begründung, ohne Strafe, ohne Folgen für dein Profil.',
       freeKicker: 'Du entscheidest',
       freeTitle: 'Wenn du unsicher bist, nimmst du den Transport nicht an',
       freeSub: 'Das ist kein Job mit Pflichten, sondern eine Absprache zwischen zwei Menschen. Beide Seiten dürfen jederzeit vor der Übergabe nein sagen.',
       fr1t: 'Ablehnen ohne Begründung', fr1d: 'Der Fahrer sieht die Anfrage und entscheidet. Passen Inhalt, Route oder Termin nicht, nimmt er sie einfach nicht an, keine Strafe, keine schlechtere Bewertung.',
-      fr2t: 'Kein Foto, keine Pflicht', fr2d: 'Jedes Paket muss in der Anfrage fotografiert sein. Fehlt das Foto oder passt es nicht zur Beschreibung, musst du den Transport nicht annehmen.',
-      fr3t: 'Du darfst sehen, was du transportierst', fr3d: 'Vor der Abholung kannst du verlangen, dass das Paket geöffnet und gezeigt wird. Weigert sich der Absender, nimmst du es nicht mit.',
-      fr4t: 'Auch der Absender muss nicht zustimmen', fr4d: 'Profil, Bewertung oder angebotener Preis passen nicht? Angebot nicht annehmen und auf den nächsten Reisenden warten.',
-      fr5t: 'Keine Mindestanzahl an Fahrten', fr5d: 'Keine Quoten, keine Verpflichtung, kein Abo. Du veröffentlichst eine Fahrt, wenn du unterwegs bist, und nimmst ein Paket mit, wenn sich jemand auf deiner Route meldet.',
-      photoTitle: 'Das Foto des Pakets ist Pflicht, keine Empfehlung',
+      fr2t: 'Kein Foto, keine Pflicht', fr2d: 'Alle Sachen müssen in der Anfrage fotografiert sein. Fehlt das Foto oder passt es nicht zur Beschreibung, musst du den Transport nicht annehmen.',
+      fr3t: 'Du darfst sehen, was du transportierst', fr3d: 'Vor der Abholung kannst du verlangen, dass die Sachen geöffnet und gezeigt werden. Weigert sich der Absender, nimmst du es nicht mit.',
+      fr4t: 'Auch der Absender muss nicht zustimmen', fr4d: 'Profil, Bewertung oder angebotener Kostenbeitrag passen nicht? Angebot nicht annehmen und auf den nächsten Reisenden warten.',
+      fr5t: 'Keine Mindestanzahl an Fahrten', fr5d: 'Keine Quoten, keine Verpflichtung, kein Abo. Du veröffentlichst eine Fahrt, wenn du unterwegs bist, und nimmst Sachen mit, wenn sich jemand auf deiner Route meldet.',
+      photoTitle: 'Das Foto der Sachen ist Pflicht, keine Empfehlung',
       photoSub: 'Das Foto ist das Einzige, was Absender und Fahrer gleichermaßen vor Missverständnissen schützt, deshalb gehört es zu jeder Anfrage.',
-      p1t: 'Zur Anfrage gehört ein Foto', p1d: 'Der Absender fotografiert das Paket vor der Veröffentlichung. Der Fahrer weiß genau, was er abholt und wie viel Platz er braucht.',
-      p2t: 'Das Foto bleibt im Chat', p2d: 'Bild und Beschreibung sind an die Absprache gebunden. Beide haben denselben Nachweis, wie das Paket bei der Übergabe aussah.',
-      p3t: 'Kein Foto bedeutet keine Abholung', p3d: 'Ist das Paket nicht fotografiert oder sieht es anders aus als auf dem Foto, darf der Fahrer es vor Ort ablehnen.',
+      p1t: 'Zur Anfrage gehört ein Foto', p1d: 'Der Absender fotografiert die Sachen vor der Veröffentlichung. Der Fahrer weiß genau, was er abholt und wie viel Platz er braucht.',
+      p2t: 'Das Foto bleibt im Chat', p2d: 'Bild und Beschreibung sind an die Absprache gebunden. Beide haben denselben Nachweis, wie die Sachen bei der Übergabe aussah.',
+      p3t: 'Kein Foto bedeutet keine Abholung', p3d: 'Sind die Sachen nicht fotografiert oder sehen sie anders aus als auf dem Foto, darf der Fahrer sie vor Ort ablehnen.',
       builtTitle: 'Was in jeder Sendung eingebaut ist',
-      b1t: 'Verifizierung vor der ersten Sendung', b1d: 'Jedes neue Konto wird vor der ersten Sendung oder der ersten veröffentlichten Fahrt freigegeben. Ein unverifiziertes Profil kann kein Paket abholen.',
+      b1t: 'Verifizierung vor der ersten Sendung', b1d: 'Jedes neue Konto wird vor der ersten Sendung oder der ersten veröffentlichten Fahrt freigegeben. Ein unverifiziertes Profil kann keine Sachen abholen.',
       b2t: 'Bewertungen und Rezensionen', b2d: 'Nach jeder Zustellung bewerten beide Seiten. Anzahl der abgeschlossenen Fahrten und Rezensionen sind öffentlich im Profil sichtbar.',
       b3t: 'Chat ohne persönliche Daten', b3d: 'Die Absprache läuft in der App. Du teilst weder Telefonnummer noch E-Mail-Adresse oder Zahlungsdaten.',
       b4t: 'Zahlung in der App', b4d: 'Die Buchung wird mit Apple Pay, Google Pay oder Karte bezahlt. Der Betrag steht vor der Bestätigung fest, ohne Gebühren nach der Zustellung.',
       senderTitle: 'Wenn du sendest',
       driverTitle: 'Wenn du transportierst',
-      s1: 'Fotografiere Paket und Inhalt vor der Übergabe.', s2: 'Schreib genau auf, was drin ist und was es wert ist.', s3: 'Vereinbare die Übergabe an einem öffentlichen Ort.', s4: 'Halte alles in der App, Gespräche außerhalb von Senvia können wir nicht prüfen.',
-      d1: 'Sieh dir das Foto an, bevor du eine Anfrage annimmst.', d2: 'Verlange, dass das Paket geöffnet wird, wenn du unsicher bist.', d3: 'Transportiere nichts, was du an der Grenze nicht angeben könntest.', d4: 'Lehne jeden Transport ab, der dir nicht passt, das ist dein Recht.',
+      s1: 'Fotografiere die Sachen vor der Übergabe.', s2: 'Schreib genau auf, was drin ist und was es wert ist.', s3: 'Vereinbare die Übergabe an einem öffentlichen Ort.', s4: 'Halte alles in der App, Gespräche außerhalb von Senvia können wir nicht prüfen.',
+      d1: 'Sieh dir das Foto an, bevor du eine Anfrage annimmst.', d2: 'Verlange, dass die Sachen geöffnet werden, wenn du unsicher bist.', d3: 'Transportiere nichts, was du an der Grenze nicht angeben könntest.', d4: 'Lehne jeden Transport ab, der dir nicht passt, das ist dein Recht.',
       faqTitle: 'Häufige Fragen zur Sicherheit',
-      faqMore: 'Fragen zu Preisen, Routen und Zahlung findest du auf der Seite', faqLink: 'Häufige Fragen',
+      faqMore: 'Fragen zu Kostenbeiträgen, Routen und Zahlung findest du auf der Seite', faqLink: 'Häufige Fragen',
       ctaTitle: 'Prüfe die Profile, bevor du zusagst', ctaSub: 'Lade die App kostenlos und sieh die Bewertungen der Reisenden auf deiner Route.'
     }
   };
 
   FAQ = {
     hr: [
-      { q: 'Moram li prihvatiti prijevoz ako mi se javi pošiljatelj?', a: 'Ne. Prihvaćanje zahtjeva je uvijek tvoja odluka. Ako ti sadržaj paketa, ruta, termin ili ponuđena cijena ne odgovaraju, zahtjev jednostavno ne prihvatiš. Nema kazne, nema obveznog broja vožnji i nema utjecaja na ocjenu tvog profila.' },
-      { q: 'Što ako paket nije poslikan?', a: 'Fotografija je dio svakog zahtjeva. Ako je nema ili paket na primopredaji izgleda drugačije od fotografije, prijevoz ne moraš prihvatiti. Isto vrijedi ako pošiljatelj odbije pokazati sadržaj, tada paket ne preuzimaš.' },
-      { q: 'Mogu li vidjeti što je u paketu prije preuzimanja?', a: 'Da. Vozač ima pravo zamoliti da se paket otvori i sadržaj pokaže prije preuzimanja. To je normalan dio dogovora, posebno kod prelaska granice, i pošiljatelji su na to naviknuti.' },
-      { q: 'Kako funkcionira verifikacija korisnika?', a: 'Svaki novi račun odobrava se prije prve pošiljke ili prve objavljene vožnje. Dok verifikacija nije dovršena, korisnik ne može preuzeti paket niti prihvatiti zahtjev za prijevoz.' },
-      { q: 'Što se događa ako paket kasni ili se izgubi?', a: 'Chat s putnikom ostaje aktivan tijekom cijelog putovanja, pa je prvi korak dogovor unutar aplikacije. Ako se problem ne riješi, prijavi pošiljku na contact@senviaapp.com, imamo povijest razgovora, fotografije i dogovora i pomažemo u rješavanju.' },
+      { q: 'Moram li prihvatiti prijevoz ako mi se javi pošiljatelj?', a: 'Ne. Prihvaćanje zahtjeva je uvijek tvoja odluka. Ako ti sadržaj pošiljke, ruta, termin ili ponuđena naknada ne odgovaraju, zahtjev jednostavno ne prihvatiš. Nema kazne, nema obveznog broja vožnji i nema utjecaja na ocjenu tvog profila.' },
+      { q: 'Što ako stvari nisu poslikan?', a: 'Fotografija je dio svakog zahtjeva. Ako je nema ili stvari na primopredaji izgleda drugačije od fotografije, prijevoz ne moraš prihvatiti. Isto vrijedi ako pošiljatelj odbije pokazati sadržaj, tada stvari ne preuzimaš.' },
+      { q: 'Mogu li vidjeti što je u stvarima prije preuzimanja?', a: 'Da. Vozač ima pravo zamoliti da se stvari otvore i sadržaj pokaže prije preuzimanja. To je normalan dio dogovora, posebno kod prelaska granice, i pošiljatelji su na to naviknuti.' },
+      { q: 'Kako funkcionira verifikacija korisnika?', a: 'Svaki novi račun odobrava se prije prve pošiljke ili prve objavljene vožnje. Dok verifikacija nije dovršena, korisnik ne može preuzeti stvari niti prihvatiti zahtjev za prijevoz.' },
+      { q: 'Što se događa ako stvari kasne ili se izgubi?', a: 'Chat s putnikom ostaje aktivan tijekom cijelog putovanja, pa je prvi korak dogovor unutar aplikacije. Ako se problem ne riješi, prijavi pošiljku na contact@senviaapp.com, imamo povijest razgovora, fotografije i dogovora i pomažemo u rješavanju.' },
       { q: 'Moram li dijeliti broj telefona ili adresu?', a: 'Ne. Komunikacija ide kroz Senvia aplikaciju, bez dijeljenja broja telefona, e-pošte ili podataka o plaćanju. Točno mjesto primopredaje dogovaraš sam, u chatu.' },
-      { q: 'Kako se odvija plaćanje?', a: 'Rezervacija se plaća unutar Senvia aplikacije, Apple Payom, Google Payom ili karticom. Cijenu predlažeš pri objavi zahtjeva, unutar raspona koji nudi aplikacija, a vrijedi iznos koji piše u aplikaciji. Nema plaćanja na licu mjesta ni dodatnih naknada nakon dostave.' }
+      { q: 'Kako se odvija plaćanje?', a: 'Rezervacija se plaća unutar Senvia aplikacije, Apple Payom, Google Payom ili karticom. Naknadu predlažeš pri objavi zahtjeva, unutar raspona koji nudi aplikacija, a vrijedi iznos koji piše u aplikaciji. Nema plaćanja na licu mjesta ni dodatnih naknada nakon dostave.' }
     ],
     en: [
-      { q: 'Do I have to accept a delivery when a sender contacts me?', a: 'No. Accepting a request is always your decision. If the contents, route, timing or the offered price do not suit you, you simply do not accept. There is no penalty, no required number of trips and no effect on your rating.' },
-      { q: 'What if the package has no photo?', a: 'A photo is part of every request. If it is missing, or the package at hand-off looks different from the photo, you do not have to accept the job. The same applies if the sender refuses to show the contents, then you do not take it.' },
-      { q: 'Can I see what is inside before pickup?', a: 'Yes. The driver may ask for the package to be opened and the contents shown before pickup. That is a normal part of the deal, especially when crossing a border, and senders are used to it.' },
-      { q: 'How does user verification work?', a: 'Every new account is approved before the first shipment or the first posted ride. Until verification is complete, a user cannot collect a package or accept a transport request.' },
-      { q: 'What happens if a package is late or lost?', a: 'The chat stays active for the whole trip, so the first step is to sort it out in the app. If that does not work, report the shipment to contact@senviaapp.com, we have the conversation history, photos and agreement, and we help resolve it.' },
+      { q: 'Do I have to accept a delivery when a sender contacts me?', a: 'No. Accepting a request is always your decision. If the contents, route, timing or the offered fee do not suit you, you simply do not accept. There is no penalty, no required number of trips and no effect on your rating.' },
+      { q: 'What if the items have no photo?', a: 'A photo is part of every request. If it is missing, or the items at hand-off looks different from the photo, you do not have to accept the job. The same applies if the sender refuses to show the contents, then you do not take it.' },
+      { q: 'Can I see what is inside before pickup?', a: 'Yes. The driver may ask for the items to be opened and the contents shown before pickup. That is a normal part of the deal, especially when crossing a border, and senders are used to it.' },
+      { q: 'How does user verification work?', a: 'Every new account is approved before the first shipment or the first posted ride. Until verification is complete, a user cannot collect items or accept a transport request.' },
+      { q: 'What happens if items are late or lost?', a: 'The chat stays active for the whole trip, so the first step is to sort it out in the app. If that does not work, report the shipment to contact@senviaapp.com, we have the conversation history, photos and agreement, and we help resolve it.' },
       { q: 'Do I have to share my phone number or address?', a: 'No. Communication goes through Senvia, with no sharing of phone numbers, email addresses or payment details. You agree the exact hand-off spot yourself, in the chat.' },
-      { q: 'How does payment work?', a: 'The booking is paid inside the Senvia app, with Apple Pay, Google Pay or a card. You propose the price when posting the request, within the range the app offers, and the amount shown in the app is the one that applies. There is no paying on the spot and no extra fees after delivery.' }
+      { q: 'How does payment work?', a: 'The booking is paid inside the Senvia app, with Apple Pay, Google Pay or a card. You propose the fee when posting the request, within the range the app offers, and the amount shown in the app is the one that applies. There is no paying on the spot and no extra fees after delivery.' }
     ],
     de: [
-      { q: 'Muss ich einen Transport annehmen, wenn sich ein Absender meldet?', a: 'Nein. Die Annahme einer Anfrage ist immer deine Entscheidung. Passen Inhalt, Route, Termin oder der angebotene Preis nicht, nimmst du sie einfach nicht an. Keine Strafe, keine Mindestanzahl an Fahrten, keine Auswirkung auf deine Bewertung.' },
-      { q: 'Was, wenn das Paket kein Foto hat?', a: 'Ein Foto gehört zu jeder Anfrage. Fehlt es oder sieht das Paket bei der Übergabe anders aus als auf dem Foto, musst du den Transport nicht annehmen. Dasselbe gilt, wenn der Absender den Inhalt nicht zeigen will, dann nimmst du es nicht mit.' },
-      { q: 'Darf ich vor der Abholung sehen, was drin ist?', a: 'Ja. Der Fahrer darf verlangen, dass das Paket geöffnet und der Inhalt gezeigt wird. Das ist ein normaler Teil der Absprache, besonders bei Grenzübertritt, und Absender sind daran gewöhnt.' },
-      { q: 'Wie funktioniert die Verifizierung?', a: 'Jedes neue Konto wird vor der ersten Sendung oder der ersten veröffentlichten Fahrt freigegeben. Bis die Verifizierung abgeschlossen ist, kann niemand ein Paket abholen oder eine Anfrage annehmen.' },
-      { q: 'Was passiert, wenn ein Paket verspätet ist oder verloren geht?', a: 'Der Chat bleibt während der ganzen Fahrt aktiv, der erste Schritt ist also die Klärung in der App. Gelingt das nicht, melde die Sendung an contact@senviaapp.com, wir haben Gesprächsverlauf, Fotos und Absprache und helfen bei der Lösung.' },
+      { q: 'Muss ich einen Transport annehmen, wenn sich ein Absender meldet?', a: 'Nein. Die Annahme einer Anfrage ist immer deine Entscheidung. Passen Inhalt, Route, Termin oder der angebotene Kostenbeitrag nicht, nimmst du sie einfach nicht an. Keine Strafe, keine Mindestanzahl an Fahrten, keine Auswirkung auf deine Bewertung.' },
+      { q: 'Was, wenn die Sachen kein Foto haben?', a: 'Ein Foto gehört zu jeder Anfrage. Fehlt es oder sieht die Sachen bei der Übergabe anders aus als auf dem Foto, musst du den Transport nicht annehmen. Dasselbe gilt, wenn der Absender den Inhalt nicht zeigen will, dann nimmst du es nicht mit.' },
+      { q: 'Darf ich vor der Abholung sehen, was drin ist?', a: 'Ja. Der Fahrer darf verlangen, dass die Sachen geöffnet und der Inhalt gezeigt wird. Das ist ein normaler Teil der Absprache, besonders bei Grenzübertritt, und Absender sind daran gewöhnt.' },
+      { q: 'Wie funktioniert die Verifizierung?', a: 'Jedes neue Konto wird vor der ersten Sendung oder der ersten veröffentlichten Fahrt freigegeben. Bis die Verifizierung abgeschlossen ist, kann niemand Sachen abholen oder eine Anfrage annehmen.' },
+      { q: 'Was passiert, wenn Sachen verspätet sind oder verloren gehen?', a: 'Der Chat bleibt während der ganzen Fahrt aktiv, der erste Schritt ist also die Klärung in der App. Gelingt das nicht, melde die Sendung an contact@senviaapp.com, wir haben Gesprächsverlauf, Fotos und Absprache und helfen bei der Lösung.' },
       { q: 'Muss ich Telefonnummer oder Adresse teilen?', a: 'Nein. Die Kommunikation läuft über Senvia, ohne Telefonnummer, E-Mail-Adresse oder Zahlungsdaten. Den genauen Übergabeort vereinbarst du selbst im Chat.' },
-      { q: 'Wie läuft die Zahlung?', a: 'Die Buchung wird in der Senvia App mit Apple Pay, Google Pay oder Karte bezahlt. Den Preis schlägst du bei der Anfrage vor, innerhalb der Spanne, die die App anbietet, und es gilt der Betrag, der in der App steht. Es wird nicht vor Ort bezahlt und es kommen keine Gebühren hinzu.' }
+      { q: 'Wie läuft die Zahlung?', a: 'Die Buchung wird in der Senvia App mit Apple Pay, Google Pay oder Karte bezahlt. Den Kostenbeitrag schlägst du bei der Anfrage vor, innerhalb der Spanne, die die App anbietet, und es gilt der Betrag, der in der App steht. Es wird nicht vor Ort bezahlt und es kommen keine Gebühren hinzu.' }
     ]
   };
 
@@ -287,7 +327,7 @@ componentDidMount() {
       '@context': 'https://schema.org', '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: "Početna", item: "https://www.senviaapp.com/" },
-        { '@type': 'ListItem', position: 2, name: "Sigurnost", item: "https://www.senviaapp.com/sigurnost" }
+        { '@type': 'ListItem', position: 2, name: "Sigurnost", item: "https://www.senviaapp.com/sigurnost/" }
       ]
     });
     import('./i18n.js').then(m => {
@@ -298,8 +338,8 @@ componentDidMount() {
     this.writeSchema('hr');
   }
   componentWillUnmount() { if (this.off) this.off(); }
-  componentDidUpdate(prev, prevState) {
-    if (prevState.lang !== this.state.lang) this.writeSchema(this.state.lang);
+  componentDidUpdate() {
+    if (this._lastLang !== this.state.lang) { this._lastLang = this.state.lang; this.writeSchema(this.state.lang); }
   }
 
   writeSchema(lang) {
@@ -312,13 +352,17 @@ componentDidMount() {
     });
   }
 
+  PRAVILA = {"hr":{"banT":"Što se ne smije slati","banD":"Kroz Senviu se mogu slati samo stvari koje je legalno prevoziti. Ovo je zabranjeno uvijek, bez iznimke:","ban":["Droge, lijekovi na recept bez dokumentacije i opijati","Oružje, streljivo, eksplozivi i pirotehnika","Novac, vrijednosni papiri, zlato i nakit veće vrijednosti","Lako zapaljive, otrovne i opasne tvari (plin, kiseline, boje, gorivo)","Živa bića: životinje i biljke koje zahtijevaju dozvolu","Kvarljiva hrana bez odgovarajućeg pakiranja","Krivotvorena ili ukradena roba","Bilo što što ne bi mogao prijaviti na granici"],"banNote":"Vozač uvijek smije pogledati sadržaj i odbiti prijevoz. Kršenje pravila znači trajno blokiranje računa.","dmgT":"Što ako se nešto ošteti ili izgubi","dmgD":"Rijetko se dogodi, ali je dobro znati što učiniti. Najvažnije je da sve bude dokumentirano u aplikaciji.","steps":[["Prije predaje","Fotografiraj stvar i pakiranje, a u zahtjevu napiši što je unutra i koliko vrijedi."],["Odmah prijavi","Ako stvar stigne oštećena ili ne stigne, prijavi to kroz aplikaciju, po mogućnosti u roku od 24 sata."],["Dogovor u chatu","Razgovor s vozačem ostaje sačuvan. Najčešće se problem riješi dogovorom između vas dvoje."],["Podrška pomaže","Ako se ne dogovorite, naša podrška pregledava fotografije i poruke, posreduje i po potrebi blokira korisnika."]],"dmgNote":"Senvia povezuje korisnike i nije prijevoznik, pa za stvar odgovara osoba koja ju je preuzela. Detalji su u","dmgLink":"Uvjetima korištenja"},"en":{"banT":"What you must not send","banD":"Only items that are legal to transport may be sent through Senvia. The following is always prohibited, without exception:","ban":["Drugs, prescription medicines without documentation and narcotics","Weapons, ammunition, explosives and fireworks","Cash, securities, gold and high-value jewellery","Flammable, toxic or hazardous substances (gas, acids, paint, fuel)","Live animals and plants that require a permit","Perishable food without proper packaging","Counterfeit or stolen goods","Anything you could not declare at a border"],"banNote":"The driver may always check the contents and refuse the job. Breaking the rules means the account is permanently blocked.","dmgT":"What if something is damaged or lost","dmgD":"It rarely happens, but it is good to know what to do. The key is to have everything documented in the app.","steps":[["Before hand-off","Photograph the item and packaging, and state in the request what is inside and what it is worth."],["Report right away","If the item arrives damaged or does not arrive, report it in the app, ideally within 24 hours."],["Agree in the chat","The conversation with the driver is saved. Most issues are resolved by agreement between the two of you."],["Support steps in","If you cannot agree, our support reviews the photos and messages, mediates and blocks the user if needed."]],"dmgNote":"Senvia connects users and is not a carrier, so the person who took the item is responsible for it. Details are in the","dmgLink":"Terms of use"},"de":{"banT":"Was nicht verschickt werden darf","banD":"Über Senvia dürfen nur Sachen verschickt werden, deren Transport legal ist. Folgendes ist immer verboten, ohne Ausnahme:","ban":["Drogen, verschreibungspflichtige Medikamente ohne Unterlagen und Betäubungsmittel","Waffen, Munition, Sprengstoffe und Pyrotechnik","Bargeld, Wertpapiere, Gold und wertvoller Schmuck","Brennbare, giftige oder gefährliche Stoffe (Gas, Säuren, Farben, Kraftstoff)","Lebende Tiere und genehmigungspflichtige Pflanzen","Verderbliche Lebensmittel ohne geeignete Verpackung","Gefälschte oder gestohlene Ware","Alles, was du an der Grenze nicht angeben könntest"],"banNote":"Der Fahrer darf den Inhalt jederzeit prüfen und den Transport ablehnen. Verstöße führen zur dauerhaften Sperrung des Kontos.","dmgT":"Was tun bei Schaden oder Verlust","dmgD":"Es kommt selten vor, aber es ist gut zu wissen, was zu tun ist. Wichtig ist, dass alles in der App dokumentiert ist.","steps":[["Vor der Übergabe","Fotografiere Sache und Verpackung und gib in der Anfrage an, was drin ist und was es wert ist."],["Sofort melden","Kommt die Sache beschädigt oder gar nicht an, melde es in der App, am besten innerhalb von 24 Stunden."],["Einigung im Chat","Der Chat mit dem Fahrer bleibt gespeichert. Meist wird das Problem direkt zwischen euch gelöst."],["Support hilft","Wenn ihr euch nicht einigt, prüft unser Support Fotos und Nachrichten, vermittelt und sperrt den Nutzer bei Bedarf."]],"dmgNote":"Senvia verbindet Nutzer und ist kein Frachtführer, daher haftet die Person, die die Sache übernommen hat. Details stehen in den","dmgLink":"Nutzungsbedingungen"}};
   renderVals() {
     const lang = this.state.lang || 'hr';
     const t = { ...this.STR.hr, ...(this.STR[lang] || {}) };
     const faqList = this.FAQ[lang] || this.FAQ.hr;
 
+    const P = this.PRAVILA[lang] || this.PRAVILA.hr;
     return {
-      t,
+      t: { ...t, ...P },
+      banList: P.ban,
+      dmgSteps: P.steps.map((x, i) => ({ n: i + 1, t: x[0], d: x[1] })),
       freedoms: [
         { title: t.fr1t, desc: t.fr1d }, { title: t.fr2t, desc: t.fr2d }, { title: t.fr3t, desc: t.fr3d },
         { title: t.fr4t, desc: t.fr4d }, { title: t.fr5t, desc: t.fr5d }

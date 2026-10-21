@@ -8,6 +8,7 @@
 <body>
 <x-dc>
 <helmet>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta charset="utf-8">
   <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
   <script>
@@ -30,7 +31,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -51,10 +52,10 @@
     <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(23px, 6.5vw, 40px); line-height: 1.1; font-weight: 700; margin: 0 0 16px; text-wrap: balance">{{ nfTitle }}</h1>
     <p style="font-size: 18px; line-height: 1.6; color: #3c5346; margin: 0 0 28px; text-wrap: pretty">{{ nfText }}</p>
     <div style="display: flex; gap: 14px; justify-content: center; margin-bottom: 26px">
-      <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="uploads/Download_on_the_App_Store_Badge.svg.webp" alt="Preuzmi Senvia aplikaciju u App Storeu" height="50" style="display: block; border-radius: 10px"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Preuzmi Senvia aplikaciju na Google Playu" height="50" style="display: block; border-radius: 10px"></a>
+      <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="50" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="50" style="display: block; border-radius: 10px"></a>
     </div>
-    <a href="Slanje%20paketa.dc.html" style="font-weight: 600; font-size: 15.5px">{{ nfLink }}</a>
+    <a href="Slanje%20stvari.dc.html" style="font-weight: 600; font-size: 15.5px">{{ nfLink }}</a>
   </section>
 </sc-if>
 
@@ -63,7 +64,7 @@
   <nav aria-label="breadcrumb" style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
     <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a>
     <span>/</span>
-    <a href="Slanje%20paketa.dc.html" style="color: #6b8272">{{ crumbSend }}</a>
+    <a href="Slanje%20stvari.dc.html" style="color: #6b8272">{{ crumbSend }}</a>
     <span>/</span>
     <span style="color: #12261a; font-weight: 600">{{ pair }}</span>
   </div>
@@ -74,26 +75,26 @@
       <p style="font-size: 20px; line-height: 1.6; color: #3c5346; margin: 0 0 18px; max-width: 56ch; text-wrap: pretty">{{ intro }}</p>
       <p style="font-size: 17px; line-height: 1.65; color: #3c5346; margin: 0 0 32px; max-width: 60ch; text-wrap: pretty">{{ intro2 }}</p>
       <div style="display: flex; gap: 14px; align-items: center">
-        <a href="https://apps.apple.com/us/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform .2s ease" style-hover="transform: translateY(-2px)"><img src="uploads/Download_on_the_App_Store_Badge.svg.webp" alt="Preuzmi Senvia aplikaciju u App Storeu" height="52" style="display: block; border-radius: 10px"></a>
-        <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform .2s ease" style-hover="transform: translateY(-2px)"><img src="assets/google-play-badge.png" alt="Preuzmi Senvia aplikaciju na Google Playu" height="52" style="display: block; border-radius: 10px"></a>
+        <a href="https://apps.apple.com/us/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform .2s ease" style-hover="transform: translateY(-2px)"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform .2s ease" style-hover="transform: translateY(-2px)"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
       </div>
     </div>
     <div style="display: flex; justify-content: center">
       <div style="width: min(300px, 86vw); background: #12261a; border-radius: 40px; padding: 9px; box-shadow: 0 24px 60px rgba(18,38,26,0.22)">
-        <div style="background: #f7fbf8; border-radius: 32px; overflow: hidden">
-          <img src="assets/app-home.webp" alt="Senvia aplikacija, popis predloženih vožnji s ocjenama vozača i cijenom prijevoza" style="display: block; width: 100%">
+        <div style="background: #f7f6f2; border-radius: 32px; overflow: hidden">
+          <img src="assets/app-home.webp" alt="{{ altShot }}" style="display: block; width: 100%">
         </div>
       </div>
     </div>
   </section>
 
   <sc-if value="{{ hasFacts }}" hint-placeholder-val="{{ true }}">
-    <section style="background: #f4faf6; border-top: 1px solid #eaf2ec; border-bottom: 1px solid #eaf2ec">
+    <section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
       <div style="max-width: 1280px; margin: 0 auto; padding: clamp(34px, 5vw, 60px) clamp(16px, 4.0vw, 32px)">
         <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.2vw, 26px); font-weight: 700; letter-spacing: -0.01em; margin: 0 0 22px">{{ factsTitle }}</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 14px">
           <sc-for list="{{ facts }}" as="f" hint-placeholder-count="5">
-            <div style="background: #ffffff; border: 1px solid #e4efe7; border-radius: 20px; padding: 24px 24px">
+            <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 24px 24px">
               <div style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 5.2vw, 34px); font-weight: 700; letter-spacing: -0.02em; color: #167a38">{{ f.value }}</div>
               <div style="margin-top: 8px; font-size: 15px; font-weight: 600; color: #12261a">{{ f.label }}</div>
               <div style="margin-top: 4px; font-size: 14px; line-height: 1.5; color: #6b8272; text-wrap: pretty">{{ f.hint }}</div>
@@ -109,12 +110,12 @@
 
   <section id="preuzmi" style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4.0vw, 32px)">
     <div style="background: #2dbb54; border-radius: 28px; padding: clamp(29px, 4.9vw, 64px) clamp(24px, 6.0vw, 48px); text-align: center; color: #ffffff">
-      <img src="uploads/1024x1024bb.png" alt="Senvia logo" width="60" height="60" style="border-radius: 15px; box-shadow: 0 10px 26px rgba(10,60,26,0.3); margin-bottom: 24px">
+      <img src="assets/senvia-logo.png" alt="Senvia logo" width="60" height="60" style="border-radius: 15px; box-shadow: 0 10px 26px rgba(10,60,26,0.3); margin-bottom: 24px">
       <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(21px, 5.8vw, 36px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 14px; text-wrap: balance">{{ ctaTitle }}</h2>
       <p style="margin: 0 auto 32px; font-size: 18px; line-height: 1.55; max-width: 48ch; color: rgba(255,255,255,0.92); text-wrap: pretty">{{ ctaSub }}</p>
       <div style="display: flex; gap: 14px; justify-content: center">
-        <a href="https://apps.apple.com/us/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="uploads/Download_on_the_App_Store_Badge.svg.webp" alt="Preuzmi Senvia aplikaciju u App Storeu" height="54" style="display: block; border-radius: 10px"></a>
-        <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Preuzmi Senvia aplikaciju na Google Playu" height="54" style="display: block; border-radius: 10px"></a>
+        <a href="https://apps.apple.com/us/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="54" style="display: block; border-radius: 10px"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="54" style="display: block; border-radius: 10px"></a>
       </div>
     </div>
   </section>
@@ -123,7 +124,7 @@
     <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.2vw, 26px); font-weight: 700; margin: 0 0 20px">{{ alsoTitle }}</h2>
     <div style="display: flex; gap: 16px; flex-wrap: wrap">
       <sc-for list="{{ related }}" as="r" hint-placeholder-count="3">
-        <a href="{{ r.href }}" style="display: block; flex: 1 1 280px; border: 1px solid #e4efe7; border-radius: 18px; padding: 22px 24px; color: #12261a" style-hover="border-color: #2dbb54; background: #f7fbf8">
+        <a href="{{ r.href }}" style="display: block; flex: 1 1 280px; border: 1px solid #e6e3da; border-radius: 18px; padding: 22px 24px; color: #12261a" style-hover="border-color: #2dbb54; background: #f7f6f2">
           <span style="display: block; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 18px; margin-bottom: 6px">{{ r.title }}</span>
           <span style="display: block; font-size: 14px; color: #3c5346; line-height: 1.5">{{ r.meta }}</span>
         </a>
@@ -147,31 +148,31 @@
 class Component extends DCLogic {
   // Izvor istine je routes-data.js. Ovdje je ista lista jer prototip nema backend.
   BACKEND = [
-    { slug: 'zurich-split', from: 'Zürich', to: 'Split', activeDrivers: 5, distanceKm: 1010, durationHours: [11, 12], priceMin: 30, priceMax: 50, ridesLast30: 9, sameDayShare: 67, routeFaqs: [] },
-    { slug: 'basel-rijeka', from: 'Basel', to: 'Rijeka', activeDrivers: 4, distanceKm: 830, durationHours: [8, 9], priceMin: 25, priceMax: 42, ridesLast30: 7, sameDayShare: 71, routeFaqs: [] },
-    { slug: 'stuttgart-zadar', from: 'Stuttgart', to: 'Zadar', activeDrivers: 4, distanceKm: 1000, durationHours: [10, 11], priceMin: 25, priceMax: 45, ridesLast30: 7, sameDayShare: 67, routeFaqs: [] },
-    { slug: 'munchen-pula', from: 'München', to: 'Pula', fromEn: 'Munich', toEn: 'Pula', activeDrivers: 6, distanceKm: 600, durationHours: [6, 7], priceMin: 18, priceMax: 32, ridesLast30: 11, sameDayShare: 77, routeFaqs: [] },
-    { slug: 'split-dubrovnik', from: 'Split', to: 'Dubrovnik', activeDrivers: 8, distanceKm: 230, durationHours: [3, 4], priceMin: 8, priceMax: 16, ridesLast30: 14, sameDayShare: 86, routeFaqs: [] },
-    { slug: 'rijeka-zadar', from: 'Rijeka', to: 'Zadar', activeDrivers: 7, distanceKm: 230, durationHours: [2, 3], priceMin: 7, priceMax: 15, ridesLast30: 13, sameDayShare: 86, routeFaqs: [] },
-    { slug: 'osijek-split', from: 'Osijek', to: 'Split', activeDrivers: 5, distanceKm: 500, durationHours: [5, 6], priceMin: 12, priceMax: 24, ridesLast30: 9, sameDayShare: 79, routeFaqs: [] },
-    { slug: 'varazdin-split', from: 'Varaždin', to: 'Split', activeDrivers: 5, distanceKm: 480, durationHours: [5, 6], priceMin: 12, priceMax: 24, ridesLast30: 9, sameDayShare: 80, routeFaqs: [] },
-    { slug: 'bec-zagreb', from: 'Beč', to: 'Zagreb', fromEn: 'Vienna', toEn: 'Zagreb', activeDrivers: 14, distanceKm: 370, durationHours: [4, 5], priceMin: 10, priceMax: 20, ridesLast30: 23, sameDayShare: 82, routeFaqs: [] },
-    { slug: 'graz-zagreb', from: 'Graz', to: 'Zagreb', activeDrivers: 9, distanceKm: 190, durationHours: [2, 3], priceMin: 8, priceMax: 15, ridesLast30: 17, sameDayShare: 88, routeFaqs: [] },
-    { slug: 'bec-osijek', from: 'Beč', to: 'Osijek', fromEn: 'Vienna', toEn: 'Osijek', activeDrivers: 6, distanceKm: 480, durationHours: [5, 6], priceMin: 12, priceMax: 25, ridesLast30: 11, sameDayShare: 80, routeFaqs: [] },
+    { slug: 'zurich-split', from: 'Zürich', to: 'Split', activeDrivers: 5, distanceKm: 1010, durationHours: [11, 12], priceMin: 34, priceMax: 63, ridesLast30: 9, sameDayShare: 67, routeFaqs: [] },
+    { slug: 'basel-rijeka', from: 'Basel', to: 'Rijeka', activeDrivers: 4, distanceKm: 830, durationHours: [8, 9], priceMin: 29, priceMax: 54, ridesLast30: 7, sameDayShare: 71, routeFaqs: [] },
+    { slug: 'stuttgart-zadar', from: 'Stuttgart', to: 'Zadar', activeDrivers: 4, distanceKm: 1000, durationHours: [10, 11], priceMin: 34, priceMax: 62, ridesLast30: 7, sameDayShare: 67, routeFaqs: [] },
+    { slug: 'munchen-pula', from: 'München', to: 'Pula', fromEn: 'Munich', toEn: 'Pula', activeDrivers: 6, distanceKm: 600, durationHours: [6, 7], priceMin: 22, priceMax: 42, ridesLast30: 11, sameDayShare: 77, routeFaqs: [] },
+    { slug: 'split-dubrovnik', from: 'Split', to: 'Dubrovnik', activeDrivers: 8, distanceKm: 230, durationHours: [3, 4], priceMin: 12, priceMax: 22, ridesLast30: 14, sameDayShare: 86, routeFaqs: [] },
+    { slug: 'rijeka-zadar', from: 'Rijeka', to: 'Zadar', activeDrivers: 7, distanceKm: 230, durationHours: [2, 3], priceMin: 12, priceMax: 22, ridesLast30: 13, sameDayShare: 86, routeFaqs: [] },
+    { slug: 'osijek-split', from: 'Osijek', to: 'Split', activeDrivers: 5, distanceKm: 500, durationHours: [5, 6], priceMin: 20, priceMax: 36, ridesLast30: 9, sameDayShare: 79, routeFaqs: [] },
+    { slug: 'varazdin-split', from: 'Varaždin', to: 'Split', activeDrivers: 5, distanceKm: 480, durationHours: [5, 6], priceMin: 19, priceMax: 35, ridesLast30: 9, sameDayShare: 80, routeFaqs: [] },
+    { slug: 'bec-zagreb', from: 'Beč', to: 'Zagreb', fromEn: 'Vienna', toEn: 'Zagreb', activeDrivers: 14, distanceKm: 370, durationHours: [4, 5], priceMin: 16, priceMax: 30, ridesLast30: 23, sameDayShare: 82, routeFaqs: [] },
+    { slug: 'graz-zagreb', from: 'Graz', to: 'Zagreb', activeDrivers: 9, distanceKm: 190, durationHours: [2, 3], priceMin: 11, priceMax: 20, ridesLast30: 17, sameDayShare: 88, routeFaqs: [] },
+    { slug: 'bec-osijek', from: 'Beč', to: 'Osijek', fromEn: 'Vienna', toEn: 'Osijek', activeDrivers: 6, distanceKm: 480, durationHours: [5, 6], priceMin: 19, priceMax: 35, ridesLast30: 11, sameDayShare: 80, routeFaqs: [] },
     { slug: 'osijek-graz', from: 'Osijek', to: 'Graz', activeDrivers: 3, distanceKm: 420, durationHours: [4, 5], ridesLast30: 5, sameDayShare: 81, routeFaqs: [] },
-    { slug: 'munchen-split', from: 'München', to: 'Split', fromEn: 'Munich', toEn: 'Split', activeDrivers: 2, distanceKm: 880, durationHours: [9, 10], priceMin: 20, priceMax: 35, ridesLast30: 9, sameDayShare: 74, routeFaqs: [] },
-    { slug: 'graz-varazdin', from: 'Graz', to: 'Varaždin', activeDrivers: 7, distanceKm: 250, durationHours: [3, 4], priceMin: 8, priceMax: 18, ridesLast30: 13, sameDayShare: 86, routeFaqs: [] },
-    { slug: 'bec-rijeka', from: 'Beč', to: 'Rijeka', fromEn: 'Vienna', toEn: 'Rijeka', activeDrivers: 5, distanceKm: 520, durationHours: [5, 6], priceMin: 12, priceMax: 25, ridesLast30: 9, sameDayShare: 79, routeFaqs: [] },
-    { slug: 'linz-split', from: 'Linz', to: 'Split', activeDrivers: 4, distanceKm: 800, durationHours: [8, 9], priceMin: 15, priceMax: 30, ridesLast30: 4, sameDayShare: 61, routeFaqs: [] },
+    { slug: 'munchen-split', from: 'München', to: 'Split', fromEn: 'Munich', toEn: 'Split', activeDrivers: 2, distanceKm: 880, durationHours: [9, 10], priceMin: 30, priceMax: 56, ridesLast30: 9, sameDayShare: 74, routeFaqs: [] },
+    { slug: 'graz-varazdin', from: 'Graz', to: 'Varaždin', activeDrivers: 7, distanceKm: 250, durationHours: [3, 4], priceMin: 13, priceMax: 23, ridesLast30: 13, sameDayShare: 86, routeFaqs: [] },
+    { slug: 'bec-rijeka', from: 'Beč', to: 'Rijeka', fromEn: 'Vienna', toEn: 'Rijeka', activeDrivers: 5, distanceKm: 520, durationHours: [5, 6], priceMin: 20, priceMax: 37, ridesLast30: 9, sameDayShare: 79, routeFaqs: [] },
+    { slug: 'linz-split', from: 'Linz', to: 'Split', activeDrivers: 4, distanceKm: 800, durationHours: [8, 9], priceMin: 28, priceMax: 52, ridesLast30: 4, sameDayShare: 61, routeFaqs: [] },
     { slug: 'rovinj-bec', from: 'Rovinj', to: 'Beč', fromEn: 'Rovinj', toEn: 'Vienna', activeDrivers: 0, ridesLast30: 3, sameDayShare: 84, routeFaqs: [] },
-    { slug: 'klagenfurt-zagreb', from: 'Klagenfurt', to: 'Zagreb', activeDrivers: 8, distanceKm: 230, durationHours: [3, 4], priceMin: 10, priceMax: 20, ridesLast30: 14, sameDayShare: 86, routeFaqs: [] },
-    { slug: 'bec-varazdin', from: 'Beč', to: 'Varaždin', fromEn: 'Vienna', toEn: 'Varaždin', activeDrivers: 6, distanceKm: 310, durationHours: [3, 4], priceMin: 10, priceMax: 20, ridesLast30: 11, sameDayShare: 84, routeFaqs: [] },
-    { slug: 'salzburg-zagreb', from: 'Salzburg', to: 'Zagreb', activeDrivers: 4, distanceKm: 480, durationHours: [5, 6], priceMin: 15, priceMax: 28, ridesLast30: 7, sameDayShare: 80, routeFaqs: [] },
-    { slug: 'munchen-zagreb', from: 'München', to: 'Zagreb', fromEn: 'Munich', toEn: 'Zagreb', activeDrivers: 5, distanceKm: 570, durationHours: [6, 7], priceMin: 18, priceMax: 32, ridesLast30: 9, sameDayShare: 78, routeFaqs: [] },
-    { slug: 'zagreb-split', from: 'Zagreb', to: 'Split', activeDrivers: 11, distanceKm: 410, durationHours: [4, 5], priceMin: 8, priceMax: 18, ridesLast30: 5, sameDayShare: 70, routeFaqs: [] },
-    { slug: 'zagreb-rijeka', from: 'Zagreb', to: 'Rijeka', activeDrivers: 9, distanceKm: 160, durationHours: [2, 3], priceMin: 6, priceMax: 14, ridesLast30: 16, sameDayShare: 88, routeFaqs: [] },
-    { slug: 'zagreb-osijek', from: 'Zagreb', to: 'Osijek', activeDrivers: 7, distanceKm: 280, durationHours: [3, 4], priceMin: 8, priceMax: 16, ridesLast30: 13, sameDayShare: 85, routeFaqs: [] },
-    { slug: 'stuttgart-zagreb', from: 'Stuttgart', to: 'Zagreb', activeDrivers: 3, distanceKm: 780, durationHours: [8, 9], priceMin: 20, priceMax: 35, ridesLast30: 5, sameDayShare: 72, routeFaqs: [] }
+    { slug: 'klagenfurt-zagreb', from: 'Klagenfurt', to: 'Zagreb', activeDrivers: 8, distanceKm: 230, durationHours: [3, 4], priceMin: 12, priceMax: 22, ridesLast30: 14, sameDayShare: 86, routeFaqs: [] },
+    { slug: 'bec-varazdin', from: 'Beč', to: 'Varaždin', fromEn: 'Vienna', toEn: 'Varaždin', activeDrivers: 6, distanceKm: 310, durationHours: [3, 4], priceMin: 14, priceMax: 27, ridesLast30: 11, sameDayShare: 84, routeFaqs: [] },
+    { slug: 'salzburg-zagreb', from: 'Salzburg', to: 'Zagreb', activeDrivers: 4, distanceKm: 480, durationHours: [5, 6], priceMin: 19, priceMax: 35, ridesLast30: 7, sameDayShare: 80, routeFaqs: [] },
+    { slug: 'munchen-zagreb', from: 'München', to: 'Zagreb', fromEn: 'Munich', toEn: 'Zagreb', activeDrivers: 5, distanceKm: 570, durationHours: [6, 7], priceMin: 22, priceMax: 40, ridesLast30: 9, sameDayShare: 78, routeFaqs: [] },
+    { slug: 'zagreb-split', from: 'Zagreb', to: 'Split', activeDrivers: 11, distanceKm: 410, durationHours: [4, 5], priceMin: 17, priceMax: 32, ridesLast30: 5, sameDayShare: 70, routeFaqs: [] },
+    { slug: 'zagreb-rijeka', from: 'Zagreb', to: 'Rijeka', activeDrivers: 9, distanceKm: 160, durationHours: [2, 3], priceMin: 10, priceMax: 19, ridesLast30: 16, sameDayShare: 88, routeFaqs: [] },
+    { slug: 'zagreb-osijek', from: 'Zagreb', to: 'Osijek', activeDrivers: 7, distanceKm: 280, durationHours: [3, 4], priceMin: 13, priceMax: 25, ridesLast30: 13, sameDayShare: 85, routeFaqs: [] },
+    { slug: 'stuttgart-zagreb', from: 'Stuttgart', to: 'Zagreb', activeDrivers: 3, distanceKm: 780, durationHours: [8, 9], priceMin: 27, priceMax: 51, ridesLast30: 5, sameDayShare: 72, routeFaqs: [] }
   ];
 
   active() { return this.BACKEND.filter(r => r.activeDrivers >= 1); }
@@ -180,78 +181,81 @@ class Component extends DCLogic {
 
   STR = {
     hr: {
-      crumbSend: 'Slanje paketa', crumbHome: 'Senvia',
+      altShot: 'Senvia aplikacija, popis predloženih vožnji s ocjenama vozača i naknadom prijevoza',
+      crumbSend: 'Slanje stvari', crumbHome: 'Senvia',
       nfTitle: 'Za ovu rutu trenutno nema aktivnih vozača',
       nfText: 'Stranica rute postoji samo dok na njoj ima aktivnih putnika. Objavi zahtjev u aplikaciji i putnici se javljaju sami kad planiraju vožnju tvojim smjerom.',
-      nfLink: 'Pogledaj sve načine slanja paketa',
+      nfLink: 'Pogledaj sve načine slanja stvari',
       nfTitleTag: 'Ruta nije dostupna | Senvia',
       nfDesc: 'Za ovu rutu trenutno nema aktivnih vozača u Senvia aplikaciji.',
-      titleTpl: 'Slanje paketa {pair} | Senvia',
-      descTpl: 'Paket na ruti {pair} putuje uz putnika koji već ide tim smjerom. Brže i jeftinije od klasične dostave. Senvia aplikacija.',
-      h1Tpl: 'Slanje paketa {pair}, iz ruke u ruku',
+      titleTpl: 'Slanje stvari {pair} | Senvia',
+      descTpl: 'Stvari na ruti {pair} putuje uz putnika koji već ide tim smjerom. Brže i jeftinije od klasične dostave. Senvia aplikacija.',
+      h1Tpl: 'Slanje stvari {pair}, iz ruke u ruku',
       factsTitleTpl: 'Ruta {pair} u brojkama',
       factsNote: 'Podaci se osvježavaju iz Senvia aplikacije. Rokovi klasične dostave odgovaraju objavljenim tranzitnim vremenima za Austriju i Njemačku.',
-      introTpl: 'Ruta {pair} vozi se redovito. Senvia te povezuje s ljudima koji njome putuju, pa tvoj paket ide uz vožnju koja se ionako odvija.',
-      intro2: 'Umjesto klasične dostave i pune tarife, cijenu predlažeš sam, a vrijeme i mjesto primopredaje dogovaraš izravno s vozačem u chatu. Paket putuje iz ruke u ruku, bez skladišta i pretovara.',
-      ctaTitleTpl: 'Pošalji paket na ruti {pair}',
+      introTpl: 'Ruta {pair} vozi se redovito. Senvia te povezuje s ljudima koji njome putuju, pa tvoje stvari idu uz vožnju koja se ionako odvija.',
+      intro2: 'Umjesto klasične dostave i pune tarife, naknadu predlažeš sam, a vrijeme i mjesto primopredaje dogovaraš izravno s vozačem u chatu. Stvari putuju iz ruke u ruku, bez skladišta i pretovara.',
+      ctaTitleTpl: 'Pošalji stvari na ruti {pair}',
       ctaSub: 'Preuzmi Senvia aplikaciju besplatno i javi se vozaču koji već putuje tvojom rutom.',
       alsoTitle: 'Ljudi također šalju',
-      relTpl: 'Slanje paketa {pair}',
+      relTpl: 'Slanje stvari {pair}',
       fDist: 'Udaljenost', fDistHint: 'Cestovna udaljenost {pair}.',
-      fDur: 'Trajanje vožnje', fDurHint: 'Toliko traje sama vožnja, a paket putuje s vozačem.',
-      fPrice: 'Prosječna cijena dogovora', fPriceHint: 'Raspon na ovoj ruti kreće se od {min} do {max} eura.',
+      fDur: 'Trajanje vožnje', fDurHint: 'Toliko traje sama vožnja, a stvari putuju s vozačem.',
+      fPrice: 'Prosječna naknada dogovora', fPriceHint: 'Raspon na ovoj ruti kreće se od {min} do {max} eura.',
       fRides: 'Objavljenih vožnji u 30 dana', fRidesHint: 'Broj vožnji koje su korisnici objavili na ovoj ruti.',
       fSame: 'Dostava istoga dana', fSameHint: 'Klasična dostava na ovom koridoru traži tri do četiri radna dana.',
       hours: 'h', hoursWord: 'do', drive: 'h vožnje', activeRoute: 'Aktivna ruta', avg: 'prosječno',
       locale: 'hr_HR'
     },
     en: {
-      crumbSend: 'Sending packages', crumbHome: 'Senvia',
+      altShot: 'Senvia app, suggested rides with driver ratings and fees',
+      crumbSend: 'Sending items', crumbHome: 'Senvia',
       nfTitle: 'There are no active drivers on this route right now',
       nfText: 'A route page exists only while there are active travellers on it. Post a request in the app and travellers get in touch when they plan a trip your way.',
-      nfLink: 'See all the ways to send a package',
+      nfLink: 'See all the ways to send items',
       nfTitleTag: 'Route unavailable | Senvia',
       nfDesc: 'There are no active drivers on this route in the Senvia app right now.',
-      titleTpl: 'Sending packages {pair} | Senvia',
-      descTpl: 'A package on the {pair} route travels with someone already heading that way. Faster and cheaper than classic delivery. The Senvia app.',
-      h1Tpl: 'Sending packages {pair}, hand to hand',
+      titleTpl: 'Sending items {pair} | Senvia',
+      descTpl: 'Items on the {pair} route travel with someone already heading that way. Faster and cheaper than classic delivery. The Senvia app.',
+      h1Tpl: 'Sending items {pair}, hand to hand',
       factsTitleTpl: 'The {pair} route in numbers',
       factsNote: 'The figures refresh from the Senvia app. Classic delivery times match published transit times for Austria and Germany.',
-      introTpl: 'The {pair} route is driven regularly. Senvia connects you with the people travelling it, so your package rides along on a journey that is happening anyway.',
-      intro2: 'Instead of classic delivery and a full tariff, you propose the price yourself and agree the time and place of hand-over directly with the driver in the chat. The package travels hand to hand, with no warehouse and no transfers.',
-      ctaTitleTpl: 'Send a package on the {pair} route',
+      introTpl: 'The {pair} route is driven regularly. Senvia connects you with the people travelling it, so your items ride along on a journey that is happening anyway.',
+      intro2: 'Instead of classic delivery and a full tariff, you propose the fee yourself and agree the time and place of hand-over directly with the driver in the chat. The items travel hand to hand, with no warehouse and no transfers.',
+      ctaTitleTpl: 'Send items on the {pair} route',
       ctaSub: 'Download Senvia for free and reach a driver already travelling your route.',
       alsoTitle: 'People also send',
-      relTpl: 'Sending packages {pair}',
+      relTpl: 'Sending items {pair}',
       fDist: 'Distance', fDistHint: 'Road distance {pair}.',
-      fDur: 'Drive time', fDurHint: 'That is how long the drive takes, and the package travels with the driver.',
-      fPrice: 'Average agreed price', fPriceHint: 'The range on this route runs from {min} to {max} euros.',
+      fDur: 'Drive time', fDurHint: 'That is how long the drive takes, and the items travel with the driver.',
+      fPrice: 'Average agreed fee', fPriceHint: 'The range on this route runs from {min} to {max} euros.',
       fRides: 'Rides posted in 30 days', fRidesHint: 'The number of rides users posted on this route.',
       fSame: 'Same-day delivery', fSameHint: 'Classic delivery on this corridor takes three to four working days.',
       hours: 'h', hoursWord: 'to', drive: 'h drive', activeRoute: 'Active route', avg: 'average',
       locale: 'en_GB'
     },
     de: {
-      crumbSend: 'Pakete senden', crumbHome: 'Senvia',
+      altShot: 'Senvia App, vorgeschlagene Fahrten mit Fahrerbewertungen und Kostenbeiträgen',
+      crumbSend: 'Sachen senden', crumbHome: 'Senvia',
       nfTitle: 'Auf dieser Strecke gibt es derzeit keine aktiven Fahrer',
       nfText: 'Eine Streckenseite existiert nur, solange es dort aktive Reisende gibt. Stelle eine Anfrage in der App ein, Reisende melden sich, sobald sie eine Fahrt in deine Richtung planen.',
       nfLink: 'Alle Versandwege ansehen',
       nfTitleTag: 'Strecke nicht verfügbar | Senvia',
       nfDesc: 'Auf dieser Strecke gibt es derzeit keine aktiven Fahrer in der Senvia App.',
-      titleTpl: 'Paket senden {pair} | Senvia',
-      descTpl: 'Ein Paket auf der Strecke {pair} reist mit jemandem, der ohnehin dorthin fährt. Schneller und günstiger als klassische Zustellung. Die Senvia App.',
-      h1Tpl: 'Paket senden {pair}, von Hand zu Hand',
+      titleTpl: 'Sachen senden {pair} | Senvia',
+      descTpl: 'Sachen auf der Strecke {pair} reisen mit jemandem, der ohnehin dorthin fährt. Schneller und günstiger als klassische Zustellung. Die Senvia App.',
+      h1Tpl: 'Sachen senden {pair}, von Hand zu Hand',
       factsTitleTpl: 'Die Strecke {pair} in Zahlen',
       factsNote: 'Die Zahlen werden aus der Senvia App aktualisiert. Die Zeiten der klassischen Zustellung entsprechen veröffentlichten Transitzeiten für Österreich und Deutschland.',
-      introTpl: 'Die Strecke {pair} wird regelmäßig gefahren. Senvia verbindet dich mit den Menschen, die sie fahren, dein Paket reist also auf einer Fahrt mit, die ohnehin stattfindet.',
-      intro2: 'Statt klassischer Zustellung und vollem Tarif schlägst du den Preis selbst vor und vereinbarst Zeit und Ort der Übergabe direkt mit dem Fahrer im Chat. Das Paket reist von Hand zu Hand, ohne Lager und ohne Umladen.',
-      ctaTitleTpl: 'Sende ein Paket auf der Strecke {pair}',
+      introTpl: 'Die Strecke {pair} wird regelmäßig gefahren. Senvia verbindet dich mit den Menschen, die sie fahren, deine Sachen reisen also auf einer Fahrt mit, die ohnehin stattfindet.',
+      intro2: 'Statt klassischer Zustellung und vollem Tarif schlägst du den Kostenbeitrag selbst vor und vereinbarst Zeit und Ort der Übergabe direkt mit dem Fahrer im Chat. Die Sachen reisen von Hand zu Hand, ohne Lager und ohne Umladen.',
+      ctaTitleTpl: 'Sende Sachen auf der Strecke {pair}',
       ctaSub: 'Lade die Senvia App kostenlos herunter und melde dich bei einem Fahrer auf deiner Strecke.',
       alsoTitle: 'Menschen senden auch',
-      relTpl: 'Paket senden {pair}',
+      relTpl: 'Sachen senden {pair}',
       fDist: 'Entfernung', fDistHint: 'Straßenentfernung {pair}.',
-      fDur: 'Fahrtdauer', fDurHint: 'So lange dauert die Fahrt, das Paket reist mit dem Fahrer mit.',
-      fPrice: 'Durchschnittlich vereinbarter Preis', fPriceHint: 'Die Spanne auf dieser Strecke reicht von {min} bis {max} Euro.',
+      fDur: 'Fahrtdauer', fDurHint: 'So lange dauert die Fahrt, die Sachen reisen mit dem Fahrer mit.',
+      fPrice: 'Durchschnittlich vereinbarter Kostenbeitrag', fPriceHint: 'Die Spanne auf dieser Strecke reicht von {min} bis {max} Euro.',
       fRides: 'Fahrten in 30 Tagen eingestellt', fRidesHint: 'Zahl der Fahrten, die Nutzer auf dieser Strecke eingestellt haben.',
       fSame: 'Zustellung am selben Tag', fSameHint: 'Klassische Zustellung braucht auf diesem Korridor drei bis vier Werktage.',
       hours: 'h', hoursWord: 'bis', drive: 'h Fahrt', activeRoute: 'Aktive Strecke', avg: 'im Schnitt',
@@ -309,17 +313,17 @@ class Component extends DCLogic {
     const setOg = (p, v) => { let el = document.querySelector('meta[property="' + p + '"]'); if (!el) { el = document.createElement('meta'); el.setAttribute('property', p); head.appendChild(el); } el.setAttribute('content', v); };
     setOg('og:title', pageTitle);
     setOg('og:description', desc);
-    const routeUrl = 'https://www.senviaapp.com/slanje-paketa/' + r.slug;
+    const routeUrl = 'https://www.senviaapp.com/slanje-stvari/' + r.slug + '/';
     setOg('og:url', routeUrl);
     setOg('og:type', 'website');
     setOg('og:site_name', 'Senvia');
     setOg('og:locale', t.locale);
-    setOg('og:image', 'https://www.senviaapp.com/uploads/1024x1024bb.png');
+    setOg('og:image', 'https://www.senviaapp.com/assets/senvia-logo.png');
     const setTw = (n, v) => { let el = document.querySelector('meta[name="' + n + '"]'); if (!el) { el = document.createElement('meta'); el.setAttribute('name', n); head.appendChild(el); } el.setAttribute('content', v); };
     setTw('twitter:card', 'summary_large_image');
     setTw('twitter:title', pageTitle);
     setTw('twitter:description', desc);
-    setTw('twitter:image', 'https://www.senviaapp.com/uploads/1024x1024bb.png');
+    setTw('twitter:image', 'https://www.senviaapp.com/assets/senvia-logo.png');
     rb.setAttribute('content', 'index, follow');
     const setLink = (rel, href, type) => {
       let el = head.querySelector('link[rel="' + rel + '"]');
@@ -334,7 +338,7 @@ class Component extends DCLogic {
       '@context': 'https://schema.org', '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Senvia', item: 'https://www.senviaapp.com/' },
-        { '@type': 'ListItem', position: 2, name: t.crumbSend, item: 'https://www.senviaapp.com/slanje-paketa' },
+        { '@type': 'ListItem', position: 2, name: t.crumbSend, item: 'https://www.senviaapp.com/slanje-stvari/' },
         { '@type': 'ListItem', position: 3, name: pair, item: routeUrl }
       ]
     });
@@ -372,7 +376,7 @@ class Component extends DCLogic {
       }));
 
     return {
-      found: true, notFound: false, pair, facts, related,
+      found: true, notFound: false, pair, facts, related, altShot: t.altShot,
       hasFacts: facts.length > 0,
       crumbSend: t.crumbSend, alsoTitle: t.alsoTitle,
       nfTitle: t.nfTitle, nfText: t.nfText, nfLink: t.nfLink,

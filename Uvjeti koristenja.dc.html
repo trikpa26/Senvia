@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="hr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,11 +8,40 @@
 <body>
 <x-dc>
 <helmet>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta charset="utf-8">
   <title>Uvjeti korištenja | Senvia</title>
-  <meta name="description" content="Uvjeti korištenja Senvia platforme za slanje paketa uz putnika koji već putuje.">
+  <meta name="description" content="Uvjeti korištenja Senvia platforme za slanje stvari uz putnika koji već putuje.">
   <meta name="robots" content="noindex, follow">
-  <link rel="canonical" href="https://www.senviaapp.com/uvjeti-koristenja">
+  <link rel="canonical" href="https://www.senviaapp.com/uvjeti-koristenja/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Senvia">
+  <meta property="og:locale" content="hr_HR">
+  <meta property="og:title" content="Uvjeti korištenja | Senvia">
+  <meta property="og:description" content="Uvjeti korištenja Senvia platforme za slanje stvari uz putnika koji već putuje.">
+  <meta property="og:url" content="https://www.senviaapp.com/uvjeti-koristenja/">
+  <meta property="og:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Uvjeti korištenja | Senvia">
+  <meta name="twitter:description" content="Uvjeti korištenja Senvia platforme za slanje stvari uz putnika koji već putuje.">
+  <meta name="twitter:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
+  <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
+  <script>
+    window.SENVIA_GA_ID = 'G-H8DBTNDF62';
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H8DBTNDF62');
+    window.senviaLoadAnalytics = function () {
+      if (window.senviaGaLoaded || location.hostname.indexOf('senviaapp.com') === -1) return;
+      window.senviaGaLoaded = true;
+      var el = document.createElement('script');
+      el.setAttribute('async', '');
+      el.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + window.SENVIA_GA_ID);
+      document.head.appendChild(el);
+    };
+    try { if (localStorage.getItem('senvia-consent') === 'yes') window.senviaLoadAnalytics(); } catch (e) {}
+  </script>
 </helmet>
 <dc-import name="Pravni dokument" doc="{{ doc }}" self="terms" hint-size="100%,100%"></dc-import>
 </x-dc>
@@ -21,24 +50,24 @@ class Component extends DCLogic {
   renderVals() {
     return { doc: {
       urls: {
-        hr: 'https://www.senviaapp.com/uvjeti-koristenja',
-        en: 'https://www.senviaapp.com/terms-of-service',
-        de: 'https://www.senviaapp.com/nutzungsbedingungen'
+        hr: 'https://www.senviaapp.com/uvjeti-koristenja/',
+        en: 'https://www.senviaapp.com/terms-of-service/',
+        de: 'https://www.senviaapp.com/nutzungsbedingungen/'
       },
       hr: {
         title: 'Uvjeti korištenja | Senvia',
-        desc: 'Uvjeti korištenja Senvia platforme za slanje paketa uz putnika koji već putuje.',
+        desc: 'Uvjeti korištenja Senvia platforme za slanje stvari uz putnika koji već putuje.',
         crumb: 'Uvjeti korištenja',
         h1: 'Uvjeti korištenja',
         updated: 'Zadnje ažuriranje: kolovoz 2026.',
-        lead: 'Senvia povezuje ljude, ne prevozi pakete. Ovdje piše što to znači u praksi, tko za što odgovara i pod kojim uvjetima koristiš platformu.',
+        lead: 'Senvia povezuje ljude, ne prevozi stvari. Ovdje piše što to znači u praksi, tko za što odgovara i pod kojim uvjetima koristiš platformu.',
         contactTitle: 'Pitanja o uvjetima',
         contactText: 'Za pitanja o uvjetima korištenja, o računu ili o načinu rada platforme piši nam.',
-        contactMail: 'info@senviaapp.com',
+        contactMail: 'contact@senviaapp.com',
         sections: [
           { h: 'O usluzi',
-            p: 'Senvia je platforma koja povezuje pošiljatelje paketa s putnicima koji putuju istim smjerom. Senvia nije prijevoznik ni dostavna služba i ne preuzima odgovornost za pakete.',
-            rows: [['Operator', 'Riddo Digital d.o.o.'], ['E-pošta', 'info@senviaapp.com']] },
+            p: 'Senvia je platforma koja povezuje pošiljatelje stvari s putnicima koji putuju istim smjerom. Senvia nije prijevoznik ni dostavna služba i ne preuzima odgovornost za stvari.',
+            rows: [['Operator', 'Riddo Digital'], ['Adresa', 'Rapska 35, 10000 Zagreb'], ['E-pošta', 'contact@senviaapp.com']] },
           { h: 'Uvjeti korištenja platforme',
             p: 'Korištenjem Senvia aplikacije prihvaćaš uvjete koji slijede. Ako se s njima ne slažeš, aplikaciju nemoj koristiti.' },
           { h: 'Dob korisnika',
@@ -55,7 +84,7 @@ class Component extends DCLogic {
             ],
             note: 'Korisnik koji šalje zabranjene predmete isključivo sam snosi zakonsku odgovornost.' },
           { h: 'Odgovornost korisnika',
-            p: 'Pošiljatelj odgovara za sadržaj paketa. Putnik odgovara za preuzimanje i dostavu. Senvia ne odgovara za izgubljen, oštećen ni zakasnjeli paket.' },
+            p: 'Pošiljatelj odgovara za sadržaj pošiljke. Putnik odgovara za preuzimanje i dostavu. Senvia ne odgovara za izgubljen, oštećen ni zakasnjeli stvari.' },
           { h: 'Odgovornost Senvie',
             p: 'Senvia pruža platformu za povezivanje korisnika. Senvia nije stranka ugovora između pošiljatelja i putnika, nego posrednik koji im omogućuje da se pronađu i dogovore.' },
           { h: 'Plaćanje i naknade',
@@ -70,18 +99,18 @@ class Component extends DCLogic {
       },
       en: {
         title: 'Terms of service | Senvia',
-        desc: 'Terms of service for the Senvia platform for sending packages with a traveller already on the road.',
+        desc: 'Terms of service for the Senvia platform for sending items with a traveller already on the road.',
         crumb: 'Terms of service',
         h1: 'Terms of service',
         updated: 'Last updated: August 2026',
-        lead: 'Senvia connects people, it does not carry packages. This page sets out what that means in practice, who is responsible for what, and on which terms you use the platform.',
+        lead: 'Senvia connects people, it does not carry items. This page sets out what that means in practice, who is responsible for what, and on which terms you use the platform.',
         contactTitle: 'Questions about the terms',
         contactText: 'For questions about these terms, about your account or about how the platform works, write to us.',
-        contactMail: 'info@senviaapp.com',
+        contactMail: 'contact@senviaapp.com',
         sections: [
           { h: 'About the service',
-            p: 'Senvia is a platform that connects people sending packages with travellers going the same way. Senvia is not a carrier or a delivery company and takes no responsibility for packages.',
-            rows: [['Operator', 'Riddo Digital d.o.o.'], ['Email', 'info@senviaapp.com']] },
+            p: 'Senvia is a platform that connects people sending items with travellers going the same way. Senvia is not a carrier or a delivery company and takes no responsibility for items.',
+            rows: [['Operator', 'Riddo Digital'], ['Address', 'Rapska 35, 10000 Zagreb, Croatia'], ['Email', 'contact@senviaapp.com']] },
           { h: 'Terms of use',
             p: 'By using the Senvia app you accept the terms below. If you do not agree with them, do not use the app.' },
           { h: 'Age of users',
@@ -98,7 +127,7 @@ class Component extends DCLogic {
             ],
             note: 'A user who sends prohibited items bears sole legal responsibility.' },
           { h: 'User responsibility',
-            p: 'The sender is responsible for the contents of the package. The traveller is responsible for pick-up and delivery. Senvia is not responsible for a lost, damaged or delayed package.' },
+            p: 'The sender is responsible for the contents of the items. The traveller is responsible for pick-up and delivery. Senvia is not responsible for a lost, damaged or delayed item.' },
           { h: 'Senvia responsibility',
             p: 'Senvia provides a platform for connecting users. Senvia is not a party to the agreement between the sender and the traveller, but an intermediary that lets them find each other and agree terms.' },
           { h: 'Payment and fees',
@@ -113,18 +142,18 @@ class Component extends DCLogic {
       },
       de: {
         title: 'Nutzungsbedingungen | Senvia',
-        desc: 'Nutzungsbedingungen der Senvia Plattform für den Paketversand mit einem Reisenden, der ohnehin unterwegs ist.',
+        desc: 'Nutzungsbedingungen der Senvia Plattform für den Versand von Sachen mit einem Reisenden, der ohnehin unterwegs ist.',
         crumb: 'Nutzungsbedingungen',
         h1: 'Nutzungsbedingungen',
         updated: 'Zuletzt aktualisiert: August 2026',
-        lead: 'Senvia verbindet Menschen, transportiert aber keine Pakete. Hier steht, was das in der Praxis bedeutet, wer wofür haftet und zu welchen Bedingungen du die Plattform nutzt.',
+        lead: 'Senvia verbindet Menschen, transportiert aber keine Sachen. Hier steht, was das in der Praxis bedeutet, wer wofür haftet und zu welchen Bedingungen du die Plattform nutzt.',
         contactTitle: 'Fragen zu den Bedingungen',
         contactText: 'Bei Fragen zu diesen Bedingungen, zu deinem Konto oder zur Funktionsweise der Plattform schreib uns.',
-        contactMail: 'info@senviaapp.com',
+        contactMail: 'contact@senviaapp.com',
         sections: [
           { h: 'Über den Dienst',
-            p: 'Senvia ist eine Plattform, die Absender von Paketen mit Reisenden in derselben Richtung verbindet. Senvia ist kein Frachtführer und kein Zustelldienst und übernimmt keine Haftung für Pakete.',
-            rows: [['Betreiber', 'Riddo Digital d.o.o.'], ['E-Mail', 'info@senviaapp.com']] },
+            p: 'Senvia ist eine Plattform, die Absender von Sachen mit Reisenden in derselben Richtung verbindet. Senvia ist kein Frachtführer und kein Zustelldienst und übernimmt keine Haftung für Sachen.',
+            rows: [['Betreiber', 'Riddo Digital'], ['Adresse', 'Rapska 35, 10000 Zagreb, Kroatien'], ['E-Mail', 'contact@senviaapp.com']] },
           { h: 'Nutzungsbedingungen der Plattform',
             p: 'Mit der Nutzung der Senvia App akzeptierst du die folgenden Bedingungen. Bist du damit nicht einverstanden, nutze die App nicht.' },
           { h: 'Alter der Nutzer',
@@ -141,7 +170,7 @@ class Component extends DCLogic {
             ],
             note: 'Wer verbotene Gegenstände versendet, trägt allein die rechtliche Verantwortung.' },
           { h: 'Haftung der Nutzer',
-            p: 'Der Absender haftet für den Inhalt des Pakets. Der Reisende haftet für Abholung und Zustellung. Senvia haftet nicht für ein verlorenes, beschädigtes oder verspätetes Paket.' },
+            p: 'Der Absender haftet für den Inhalt der Sachen. Der Reisende haftet für Abholung und Zustellung. Senvia haftet nicht für ein verlorenes, beschädigtes oder verspätetes Stvari.' },
           { h: 'Haftung von Senvia',
             p: 'Senvia stellt eine Plattform zur Verbindung von Nutzern bereit. Senvia ist nicht Vertragspartei zwischen Absender und Reisendem, sondern Vermittler, der beiden ermöglicht, sich zu finden und zu einigen.' },
           { h: 'Zahlung und Gebühren',

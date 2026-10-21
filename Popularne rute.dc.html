@@ -8,23 +8,24 @@
 <body>
 <x-dc>
 <helmet>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta charset="utf-8">
-  <title>Popularne rute: cijene i trajanje | Senvia</title>
-  <meta name="description" content="Cijene i trajanje slanja paketa iz Austrije, Njemačke i Švicarske u Hrvatsku te unutar Hrvatske. Okvirni iznosi po gradovima.">
+  <title>Popularne rute: naknade i trajanje | Senvia</title>
+  <meta name="description" content="Naknade i trajanje slanja stvari iz Austrije, Njemačke i Švicarske u Hrvatsku te unutar Hrvatske. Okvirni iznosi po gradovima.">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Senvia">
   <meta property="og:locale" content="hr_HR">
-  <meta property="og:title" content="Popularne rute: cijene i trajanje slanja paketa | Senvia">
-  <meta property="og:description" content="Okvirne cijene i trajanje po gradovima: Austrija, Njemačka, Švicarska i rute unutar Hrvatske.">
-  <link rel="canonical" href="https://www.senviaapp.com/popularne-rute">
+  <meta property="og:title" content="Popularne rute: naknade i trajanje slanja stvari | Senvia">
+  <meta property="og:description" content="Okvirne naknade i trajanje po gradovima: Austrija, Njemačka, Švicarska i rute unutar Hrvatske.">
+  <link rel="canonical" href="https://www.senviaapp.com/popularne-rute/">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-  <meta property="og:url" content="https://www.senviaapp.com/popularne-rute">
-  <meta property="og:image" content="https://www.senviaapp.com/uploads/1024x1024bb.png">
+  <meta property="og:url" content="https://www.senviaapp.com/popularne-rute/">
+  <meta property="og:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Popularne rute: cijene i trajanje slanja paketa | Senvia">
-  <meta name="twitter:description" content="Okvirne cijene i trajanje po gradovima: Austrija, Njemačka, Švicarska i rute unutar Hrvatske.">
-  <meta name="twitter:image" content="https://www.senviaapp.com/uploads/1024x1024bb.png">
+  <meta name="twitter:title" content="Popularne rute: naknade i trajanje slanja stvari | Senvia">
+  <meta name="twitter:description" content="Okvirne naknade i trajanje po gradovima: Austrija, Njemačka, Švicarska i rute unutar Hrvatske.">
+  <meta name="twitter:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
   <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
   <script>
     window.SENVIA_GA_ID = 'G-H8DBTNDF62';
@@ -46,22 +47,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
     img { max-width: 100%; }
   </style>
-  <template id="__bundler_thumbnail" data-bg-color="#f4faf6">
+  <template id="__bundler_thumbnail" data-bg-color="#f2f0ea">
     <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
-      <rect width="1200" height="800" fill="#f4faf6"></rect>
+      <rect width="1200" height="800" fill="#f2f0ea"></rect>
       <rect x="150" y="130" width="380" height="46" rx="23" fill="#2dbb54"></rect>
-      <rect x="150" y="230" width="900" height="120" rx="34" fill="#ffffff" stroke="#e4efe7" stroke-width="6"></rect>
+      <rect x="150" y="230" width="900" height="120" rx="34" fill="#ffffff" stroke="#e6e3da" stroke-width="6"></rect>
       <circle cx="250" cy="290" r="26" fill="#2dbb54"></circle>
       <path d="M300 290h430" stroke="#2dbb54" stroke-width="10" stroke-linecap="round" stroke-dasharray="18 26"></path>
       <path d="M700 262l40 28-40 28" stroke="#2dbb54" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
       <rect x="800" y="270" width="170" height="40" rx="20" fill="#e8f7ee"></rect>
-      <rect x="150" y="400" width="900" height="120" rx="34" fill="#ffffff" stroke="#e4efe7" stroke-width="6"></rect>
+      <rect x="150" y="400" width="900" height="120" rx="34" fill="#ffffff" stroke="#e6e3da" stroke-width="6"></rect>
       <circle cx="250" cy="460" r="26" fill="#2dbb54"></circle>
       <path d="M300 460h430" stroke="#2dbb54" stroke-width="10" stroke-linecap="round" stroke-dasharray="18 26"></path>
       <path d="M700 432l40 28-40 28" stroke="#2dbb54" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>
@@ -94,9 +95,9 @@
         </button>
       </sc-if>
       <sc-if value="{{ tab.isOff }}" hint-placeholder-val="{{ true }}">
-        <button onClick="{{ tab.select }}" style="display: inline-flex; align-items: center; gap: 9px; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 11px 17px; border-radius: 999px; border: 1px solid #e4efe7; background: #ffffff; color: #3c5346" style-hover="border-color: #2dbb54; color: #12261a">
+        <button onClick="{{ tab.select }}" style="display: inline-flex; align-items: center; gap: 9px; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 11px 17px; border-radius: 999px; border: 1px solid #e6e3da; background: #ffffff; color: #3c5346" style-hover="border-color: #2dbb54; color: #12261a">
           {{ tab.label }}
-          <span style="font-size: 12.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #f4faf6; color: #6b8272">{{ tab.count }}</span>
+          <span style="font-size: 12.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #f2f0ea; color: #6b8272">{{ tab.count }}</span>
         </button>
       </sc-if>
     </sc-for>
@@ -109,7 +110,7 @@
 
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 12px">
     <sc-for list="{{ rows }}" as="r" hint-placeholder-count="12">
-      <a href="{{ r.href }}" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; border: 1px solid #e4efe7; border-radius: 16px; padding: 18px 20px; color: #12261a; background: #ffffff" style-hover="border-color: #2dbb54; background: #f7fbf8">
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; border: 1px solid #e6e3da; border-radius: 16px; padding: 18px 20px; color: #12261a; background: #ffffff">
         <span style="display: flex; align-items: center; gap: 9px; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; min-width: 0">
           <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{ r.a }}</span>
           <svg width="20" height="9" viewBox="0 0 26 10" fill="none" stroke="#2dbb54" stroke-width="1.8" stroke-linecap="round" style="flex: 0 0 auto"><path d="M1 5h20" stroke-dasharray="2.5 3.5"></path><path d="M17 1l5 4-5 4"></path></svg>
@@ -119,20 +120,32 @@
           <span style="font-size: 14.5px; font-weight: 600; color: #167a38; white-space: nowrap">{{ r.time }}</span>
           <span style="font-size: 14.5px; color: #6b8272; white-space: nowrap">{{ r.price }}</span>
         </span>
-      </a>
+      </div>
     </sc-for>
   </div>
 
   <p style="margin: 18px 0 0; font-size: 14.5px; line-height: 1.6; color: #6b8272; max-width: 76ch; text-wrap: pretty">{{ t.bothWays }}</p>
 </section>
 
-<section style="background: #f4faf6; border-top: 1px solid #eaf2ec; border-bottom: 1px solid #eaf2ec">
+<section style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
+  <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 clamp(22px, 3.4vw, 34px); text-wrap: balance">{{ t.faqTitle }}</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 16px">
+    <sc-for list="{{ faq }}" as="q" hint-placeholder-count="4">
+      <div style="border: 1px solid #e6e3da; border-radius: 20px; padding: 24px 26px; background: #ffffff">
+        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance">{{ q.q }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ q.a }}</p>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
   <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
     <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.priceTitle }}</h2>
     <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 64ch; text-wrap: pretty">{{ t.priceSub }}</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 16px">
       <sc-for list="{{ factors }}" as="f" hint-placeholder-count="4">
-        <div style="background: #ffffff; border: 1px solid #e4efe7; border-radius: 20px; padding: 24px 24px">
+        <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 24px 24px">
           <div style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; margin-bottom: 8px">{{ f.title }}</div>
           <div style="font-size: 15px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ f.desc }}</div>
         </div>
@@ -142,7 +155,7 @@
 </section>
 
 <section style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
-  <div style="display: flex; gap: 18px; flex-wrap: wrap; align-items: center; justify-content: space-between; border: 1px solid #e4efe7; border-radius: 24px; padding: clamp(24px, 3.4vw, 34px) clamp(24px, 3.4vw, 36px); background: #f7fbf8">
+  <div style="display: flex; gap: 18px; flex-wrap: wrap; align-items: center; justify-content: space-between; border: 1px solid #e6e3da; border-radius: 24px; padding: clamp(24px, 3.4vw, 34px) clamp(24px, 3.4vw, 36px); background: #f7f6f2">
     <div style="flex: 1 1 420px; min-width: 0">
       <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.4vw, 26px); font-weight: 700; letter-spacing: -0.01em; margin: 0 0 8px; text-wrap: balance">{{ t.whoTitle }}</h2>
       <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3c5346; max-width: 62ch; text-wrap: pretty">{{ t.whoSub }}</p>
@@ -161,8 +174,8 @@
       <p style="margin: 0; font-size: 18px; line-height: 1.55; max-width: 42ch; color: rgba(255,255,255,0.92); text-wrap: pretty">{{ t.ctaSub }}</p>
     </div>
     <div style="display: flex; gap: 14px; flex-wrap: wrap; flex: 0 0 auto">
-      <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="uploads/Download_on_the_App_Store_Badge.svg.webp" alt="Preuzmi Senvia aplikaciju u App Storeu" height="52" style="display: block; border-radius: 10px"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Preuzmi Senvia aplikaciju na Google Playu" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
     </div>
   </div>
 </section>
@@ -175,6 +188,14 @@
 class Component extends DCLogic {
   state = { lang: 'hr', tab: 'at' };
 
+  // preporučeno = FIKS + km × STOPA; min = ×0,70; max = ×1,30
+  SIZES = { S: [5, 0.027], M: [8, 0.040], L: [22, 0.062], XL: [36, 0.089], XXL: [55, 0.150] };
+  price(km, size) {
+    const [fix, rate] = this.SIZES[size] || this.SIZES.M;
+    const rec = fix + km * rate;
+    return { rec: Math.round(rec), min: Math.round(rec * 0.7), max: Math.round(rec * 1.3) };
+  }
+
   C = {
     bec: { hr: 'Beč', en: 'Vienna', de: 'Wien' }, graz: { hr: 'Graz' }, linz: { hr: 'Linz' },
     salzburg: { hr: 'Salzburg' }, innsbruck: { hr: 'Innsbruck' }, klagenfurt: { hr: 'Klagenfurt' },
@@ -186,127 +207,168 @@ class Component extends DCLogic {
     zeneva: { hr: 'Ženeva', en: 'Geneva', de: 'Genf' },
     zagreb: { hr: 'Zagreb' }, split: { hr: 'Split' }, rijeka: { hr: 'Rijeka' }, osijek: { hr: 'Osijek' },
     zadar: { hr: 'Zadar' }, dubrovnik: { hr: 'Dubrovnik' }, pula: { hr: 'Pula' }, varazdin: { hr: 'Varaždin' },
-    vukovar: { hr: 'Vukovar' }, sibenik: { hr: 'Šibenik' }, makarska: { hr: 'Makarska' }, slavonskibrod: { hr: 'Slavonski Brod' }
+    vukovar: { hr: 'Vukovar' }, sibenik: { hr: 'Šibenik' }, makarska: { hr: 'Makarska' }, slavonskibrod: { hr: 'Slavonski Brod' },
+    koln: { hr: 'Köln', en: 'Cologne', de: 'Köln' }, augsburg: { hr: 'Augsburg' }, winterthur: { hr: 'Winterthur' },
+    karlovac: { hr: 'Karlovac' }, cakovec: { hr: 'Čakovec' }, rovinj: { hr: 'Rovinj' }
   };
 
   ROUTES = {
     at: [
-      ['bec', 'zagreb', [4, 5], [10, 20], 'bec-zagreb'],
-      ['graz', 'zagreb', [2, 3], [8, 15], 'graz-zagreb'],
-      ['graz', 'varazdin', [3, 4], [8, 18], 'graz-varazdin'],
-      ['klagenfurt', 'zagreb', [3, 4], [10, 20]],
-      ['bec', 'varazdin', [3, 4], [10, 20]],
-      ['bec', 'rijeka', [5, 6], [12, 25], 'bec-rijeka'],
-      ['bec', 'osijek', [5, 6], [12, 25], 'bec-osijek'],
-      ['linz', 'varazdin', [5, 6], [12, 25]],
-      ['salzburg', 'zagreb', [5, 6], [15, 28]],
-      ['bec', 'zadar', [7, 8], [18, 32]],
-      ['innsbruck', 'rijeka', [7, 8], [18, 32]],
-      ['linz', 'split', [8, 9], [15, 30], 'linz-split'],
-      ['bec', 'split', [8, 9], [20, 35]]
+      ['bec', 'zagreb', [4, 5], 370, 'bec-zagreb'],
+      ['graz', 'zagreb', [2, 3], 190, 'graz-zagreb'],
+      ['graz', 'varazdin', [3, 4], 250, 'graz-varazdin'],
+      ['klagenfurt', 'zagreb', [3, 4], 230],
+      ['bec', 'varazdin', [3, 4], 310],
+      ['bec', 'rijeka', [5, 6], 520, 'bec-rijeka'],
+      ['bec', 'osijek', [5, 6], 480, 'bec-osijek'],
+      ['linz', 'varazdin', [5, 6], 420],
+      ['salzburg', 'zagreb', [5, 6], 480],
+      ['bec', 'zadar', [7, 8], 650],
+      ['innsbruck', 'rijeka', [7, 8], 560],
+      ['linz', 'split', [8, 9], 800, 'linz-split'],
+      ['bec', 'split', [8, 9], 780],
+      ['graz', 'rijeka', [3, 4], 300],
+      ['klagenfurt', 'rijeka', [3, 4], 250],
+      ['linz', 'zagreb', [5, 6], 470],
+      ['bec', 'pula', [6, 7], 600],
+      ['graz', 'split', [6, 7], 590],
+      ['innsbruck', 'zagreb', [6, 7], 560],
+      ['salzburg', 'split', [8, 9], 850],
+      ['bec', 'dubrovnik', [10, 11], 1000]
     ],
     de: [
-      ['munchen', 'zagreb', [6, 7], [18, 32]],
-      ['nurnberg', 'varazdin', [7, 8], [20, 35]],
-      ['munchen', 'rijeka', [7, 8], [20, 35]],
-      ['stuttgart', 'zagreb', [8, 9], [20, 35]],
-      ['munchen', 'split', [9, 10], [20, 35], 'munchen-split'],
-      ['mannheim', 'rijeka', [9, 10], [25, 40]],
-      ['frankfurt', 'zagreb', [9, 10], [25, 40]],
-      ['munchen', 'osijek', [8, 9], [22, 38]],
-      ['dusseldorf', 'osijek', [11, 12], [30, 50]],
-      ['berlin', 'split', [11, 12], [30, 50]],
-      ['stuttgart', 'split', [12, 13], [28, 45]],
-      ['hamburg', 'rijeka', [13, 14], [35, 55]],
-      ['frankfurt', 'slavonskibrod', [11, 12], [30, 50]]
+      ['munchen', 'zagreb', [6, 7], 570],
+      ['nurnberg', 'varazdin', [7, 8], 690],
+      ['munchen', 'rijeka', [7, 8], 530],
+      ['stuttgart', 'zagreb', [8, 9], 780],
+      ['munchen', 'split', [9, 10], 880, 'munchen-split'],
+      ['mannheim', 'rijeka', [9, 10], 900],
+      ['frankfurt', 'zagreb', [9, 10], 960],
+      ['munchen', 'osijek', [8, 9], 850],
+      ['dusseldorf', 'osijek', [11, 12], 1350],
+      ['berlin', 'split', [11, 12], 1450],
+      ['stuttgart', 'split', [12, 13], 1170],
+      ['hamburg', 'rijeka', [13, 14], 1350],
+      ['frankfurt', 'slavonskibrod', [11, 12], 1150],
+      ['munchen', 'pula', [6, 7], 600],
+      ['augsburg', 'rijeka', [7, 8], 600],
+      ['nurnberg', 'zagreb', [7, 8], 730],
+      ['munchen', 'zadar', [8, 9], 780],
+      ['berlin', 'zagreb', [10, 11], 1050],
+      ['stuttgart', 'zadar', [11, 12], 1000],
+      ['koln', 'zagreb', [12, 13], 1150],
+      ['frankfurt', 'split', [13, 14], 1330]
     ],
     ch: [
-      ['stgallen', 'zagreb', [7, 8], [22, 38]],
-      ['zurich', 'zagreb', [8, 9], [25, 40]],
-      ['luzern', 'rijeka', [9, 10], [28, 45]],
-      ['basel', 'zagreb', [9, 10], [28, 45]],
-      ['bern', 'split', [10, 11], [30, 50]],
-      ['zeneva', 'zadar', [11, 12], [35, 55]],
-      ['zurich', 'rijeka', [9, 10], [28, 45]],
-      ['zurich', 'split', [12, 13], [30, 50]],
-      ['basel', 'osijek', [11, 12], [32, 52]],
-      ['zurich', 'zadar', [11, 12], [30, 50]]
+      ['stgallen', 'zagreb', [7, 8], 720],
+      ['zurich', 'zagreb', [8, 9], 800],
+      ['luzern', 'rijeka', [9, 10], 840],
+      ['basel', 'zagreb', [9, 10], 870],
+      ['bern', 'split', [10, 11], 1180],
+      ['zeneva', 'zadar', [11, 12], 1300],
+      ['zurich', 'rijeka', [9, 10], 750],
+      ['zurich', 'split', [12, 13], 1010],
+      ['basel', 'osijek', [11, 12], 1150],
+      ['zurich', 'zadar', [11, 12], 1060],
+      ['winterthur', 'zagreb', [8, 9], 780],
+      ['bern', 'zagreb', [9, 10], 900],
+      ['basel', 'rijeka', [10, 11], 830],
+      ['zeneva', 'zagreb', [11, 12], 1050],
+      ['luzern', 'split', [12, 13], 1170]
     ],
     hr: [
-      ['zagreb', 'varazdin', [1, 2], [5, 12]],
-      ['zagreb', 'rijeka', [2, 3], [6, 14]],
-      ['zagreb', 'osijek', [3, 4], [8, 16]],
-      ['zagreb', 'zadar', [3, 4], [8, 16]],
-      ['zagreb', 'pula', [3, 4], [8, 18]],
-      ['zagreb', 'vukovar', [3, 4], [10, 20]],
-      ['zagreb', 'sibenik', [4, 5], [8, 16]],
-      ['zagreb', 'split', [4, 5], [8, 18]],
-      ['split', 'dubrovnik', [3, 4], [8, 16]],
-      ['split', 'rijeka', [4, 5], [10, 20]],
-      ['rijeka', 'zadar', [2, 3], [7, 15]],
-      ['osijek', 'split', [5, 6], [12, 24]],
-      ['varazdin', 'split', [5, 6], [12, 24]],
-      ['zadar', 'dubrovnik', [4, 5], [10, 20]],
-      ['pula', 'rijeka', [1, 2], [6, 12]],
-      ['zagreb', 'makarska', [5, 6], [12, 22]],
-      ['zagreb', 'dubrovnik', [6, 7], [15, 30]]
+      ['zagreb', 'varazdin', [1, 2], 80],
+      ['zagreb', 'rijeka', [2, 3], 160],
+      ['zagreb', 'osijek', [3, 4], 280],
+      ['zagreb', 'zadar', [3, 4], 285],
+      ['zagreb', 'pula', [3, 4], 265],
+      ['zagreb', 'vukovar', [3, 4], 300],
+      ['zagreb', 'sibenik', [4, 5], 340],
+      ['zagreb', 'split', [4, 5], 410],
+      ['split', 'dubrovnik', [3, 4], 230],
+      ['split', 'rijeka', [4, 5], 400],
+      ['rijeka', 'zadar', [2, 3], 230],
+      ['osijek', 'split', [5, 6], 500],
+      ['varazdin', 'split', [5, 6], 480],
+      ['zadar', 'dubrovnik', [4, 5], 350],
+      ['pula', 'rijeka', [1, 2], 100],
+      ['zagreb', 'makarska', [5, 6], 470],
+      ['zagreb', 'dubrovnik', [6, 7], 600],
+      ['zagreb', 'karlovac', [1, 2], 55],
+      ['zagreb', 'cakovec', [1, 2], 95],
+      ['split', 'makarska', [1, 2], 65],
+      ['zadar', 'sibenik', [1, 2], 85],
+      ['zagreb', 'slavonskibrod', [2, 3], 190],
+      ['split', 'zadar', [2, 3], 160],
+      ['zagreb', 'rovinj', [3, 4], 255],
+      ['varazdin', 'rijeka', [3, 4], 230],
+      ['osijek', 'rijeka', [5, 6], 430]
     ]
   };
 
   STR = {
     hr: {
       crumb: 'Popularne rute', kicker: 'Popularne rute',
-      h1: 'Cijene i trajanje po rutama',
-      lead: 'Najtraženiji smjerovi u Senvia aplikaciji vode iz gradova s velikom hrvatskom zajednicom u Austriji, Njemačkoj i Švicarskoj prema Hrvatskoj, te između hrvatskih gradova, od Osijeka i Varaždina do Rijeke, Zadra i Splita. Iznosi su okvirni, jer cijenu dogovaraš s putnikom.',
+      h1: 'Naknade i trajanje po rutama',
+      lead: 'Najtraženiji smjerovi u Senvia aplikaciji vode iz gradova s velikom hrvatskom zajednicom u Austriji, Njemačkoj i Švicarskoj prema Hrvatskoj, te između hrvatskih gradova, od Osijeka i Varaždina do Rijeke, Zadra i Splita. Raspon naknade računa se prema udaljenosti i veličini pošiljke, a konačan iznos dogovaraš s putnikom.',
       tabAt: 'Austrija → Hrvatska', tabDe: 'Njemačka → Hrvatska', tabCh: 'Švicarska → Hrvatska', tabHr: 'Unutar Hrvatske',
-      colsNote: 'Trajanje vožnje · okvirna cijena',
+      colsNote: 'Udaljenost · trajanje · naknada od S do XXL',
       bothWays: 'Sve rute rade i u suprotnom smjeru, putnici se vraćaju istim putem. Ako tvoj grad nije na popisu, objavi zahtjev i javljaju se putnici koji prolaze blizu.',
-      priceTitle: 'Od čega ovisi cijena',
-      priceSub: 'Nema cjenika po kilogramu ni fiksne tarife. Iznos je dogovor između tebe i putnika, a najviše na njega utječu ove četiri stvari.',
+      priceTitle: 'Od čega ovisi naknada',
+      priceSub: 'Nema tablice naknada po kilogramu. Naknadu određuju samo dvije stvari: udaljenost i veličina pošiljke. Iz njih Senvia računa preporučeni iznos i raspon unutar kojeg se dogovaraš s putnikom.',
       whoTitle: 'Kome najviše koriste ove rute',
       whoSub: 'Isti smjerovi ponavljaju se cijele godine, samo se mijenja tko šalje.',
       whoLink: 'Pročitaj na blogu',
       ctaTitle: 'Provjeri svoju rutu u aplikaciji', ctaSub: 'Objavi zahtjev i vidi koliko putnika ide tvojim smjerom ovaj tjedan.',
-      f1t: 'Udaljenost', f1d: 'Duža ruta znači više goriva i cestarine, pa je i dogovor viši.',
-      f2t: 'Veličina paketa', f2d: 'Koverta i kofer nisu isto, kofer zauzima mjesto koje putnik mora osloboditi.',
-      f3t: 'Hitnost', f3d: 'Ako paket mora krenuti danas, izbor putnika je manji, a cijena obično viša.',
-      f4t: 'Sezona', f4d: 'Ljeto, Božić i produženi vikendi, više putnika, ali i više zahtjeva.',
+      faqTitle: 'Česta pitanja o rutama',
+      q1: 'Koje su najprometnije rute?', a1: 'Iz Austrije Beč–Zagreb i Graz–Zagreb, iz Njemačke München–Zagreb i München–Split, a unutar Hrvatske Zagreb–Split i Zagreb–Rijeka. Na tim smjerovima putnici voze gotovo svaki dan.',
+      q2: 'Koliko traje slanje na nekoj ruti?', a2: 'Koliko i sama vožnja, jer stvari putuju s putnikom. Graz–Zagreb traje dva do tri sata, Beč–Zagreb četiri do pet, München–Split devet do deset, pa stvari najčešće stižu isti dan.',
+      q3: 'Što ako mog grada nema na popisu?', a3: 'Objavi zahtjev s polazištem i odredištem. Javljaju se putnici koji prolaze tvojim gradom ili blizu njega, pa se primopredaja dogovori usput, na benzinskoj ili uz glavnu cestu.',
+      q4: 'Jesu li naknade u tablici fiksne?', a4: 'Nisu. Senvia računa preporučenu naknadu iz udaljenosti i veličine pošiljke, a raspon ide od 30 % ispod do 30 % iznad nje. Pošiljatelj predlaže iznos unutar tog raspona, a konačan dogovor je na tebi i putniku.',
+      f1t: 'Udaljenost', f1d: 'Svaki kilometar ima svoju stopu, pa je dulja ruta skuplja. Beč–Zagreb je zato skuplji od Graz–Zagreb.',
+      f2t: 'Veličina stvari', f2d: 'Pet razreda, od S do XXL. Koverta je najjeftinija, a namještaj zauzima najviše mjesta pa ima i najvišu naknadu po kilometru.',
     },
     en: {
       crumb: 'Popular routes', kicker: 'Popular routes',
-      h1: 'Prices and times by route',
-      lead: 'The busiest directions on Senvia run from cities with large Croatian communities in Austria, Germany and Switzerland towards Croatia, and between Croatian cities, from Zagreb down to the coast. The amounts are indicative; the price is agreed with the traveller.',
+      h1: 'Fees and times by route',
+      lead: 'The busiest directions on Senvia run from cities with large Croatian communities in Austria, Germany and Switzerland towards Croatia, and between Croatian cities, from Zagreb down to the coast. The fee range is calculated from distance and item size, and the final amount is agreed with the traveller.',
       tabAt: 'Austria → Croatia', tabDe: 'Germany → Croatia', tabCh: 'Switzerland → Croatia', tabHr: 'Within Croatia',
-      colsNote: 'Drive time · indicative price',
+      colsNote: 'Distance · drive time · fee from S to XXL',
       bothWays: 'Every route works in the opposite direction too, travellers come back the same way. If your city is not listed, post a request and travellers passing nearby will reply.',
-      priceTitle: 'What the price depends on',
-      priceSub: 'There is no per-kilo price list and no fixed tariff. The amount is agreed between you and the traveller, and these four things matter most.',
+      priceTitle: 'What the fee depends on',
+      priceSub: 'There is no per-kilo fee list. Only two things set the price: distance and item size. From them Senvia calculates a recommended amount and the range you agree within with the traveller.',
       whoTitle: 'Who uses these routes most',
       whoSub: 'The same directions repeat all year, only the sender changes.',
       whoLink: 'Read it on the blog',
       ctaTitle: 'Check your route in the app', ctaSub: 'Post a request and see how many travellers are heading your way this week.',
-      f1t: 'Distance', f1d: 'A longer route means more fuel and tolls, so the agreed price is higher.',
-      f2t: 'Package size', f2d: 'An envelope and a suitcase are not the same, a suitcase takes space the traveller has to free up.',
-      f3t: 'Urgency', f3d: 'If it has to leave today, there are fewer travellers to choose from and the price is usually higher.',
-      f4t: 'Season', f4d: 'Summer, Christmas and long weekends, more travellers, but more requests too.',
+      faqTitle: 'Route FAQ',
+      q1: 'Which routes are the busiest?', a1: 'From Austria, Vienna–Zagreb and Graz–Zagreb; from Germany, Munich–Zagreb and Munich–Split; within Croatia, Zagreb–Split and Zagreb–Rijeka. Travellers drive these almost every day.',
+      q2: 'How long does sending take on a route?', a2: 'As long as the drive itself, because your items travel with the traveller. Graz–Zagreb takes two to three hours, Vienna–Zagreb four to five, Munich–Split nine to ten, so items usually arrive the same day.',
+      q3: 'What if my city is not listed?', a3: 'Post a request with your pick-up and destination. Travellers passing through or near your city will reply, and you agree a hand-over on the way, at a petrol station or by a main road.',
+      q4: 'Are the fees in the table fixed?', a4: 'No. Senvia calculates a recommended fee from distance and item size, and the range runs from 30% below to 30% above it. The sender proposes an amount within that range, and the final deal is between you and the traveller.',
+      f1t: 'Distance', f1d: 'Every kilometre has its own rate, so a longer route costs more. That is why Vienna–Zagreb costs more than Graz–Zagreb.',
+      f2t: 'Item size', f2d: 'Five classes, from S to XXL. An envelope is cheapest, while furniture takes the most space and has the highest rate per kilometre.',
     },
     de: {
       crumb: 'Beliebte Routen', kicker: 'Beliebte Routen',
-      h1: 'Preise und Dauer je Route',
-      lead: 'Die meistgenutzten Strecken auf Senvia führen aus Städten mit großer kroatischer Gemeinschaft in Österreich, Deutschland und der Schweiz nach Kroatien, und zwischen kroatischen Städten, von Zagreb bis an die Küste. Die Beträge sind Richtwerte; den Preis vereinbarst du mit dem Reisenden.',
+      h1: 'Kostenbeiträge und Dauer je Route',
+      lead: 'Die meistgenutzten Strecken auf Senvia führen aus Städten mit großer kroatischer Gemeinschaft in Österreich, Deutschland und der Schweiz nach Kroatien, und zwischen kroatischen Städten, von Zagreb bis an die Küste. Die Spanne des Kostenbeitrags ergibt sich aus Entfernung und Größe der Sendung, den endgültigen Betrag vereinbarst du mit dem Reisenden.',
       tabAt: 'Österreich → Kroatien', tabDe: 'Deutschland → Kroatien', tabCh: 'Schweiz → Kroatien', tabHr: 'Innerhalb Kroatiens',
-      colsNote: 'Fahrtzeit · Richtpreis',
+      colsNote: 'Entfernung · Fahrtzeit · Kostenbeitrag von S bis XXL',
       bothWays: 'Jede Route funktioniert auch in der Gegenrichtung, Reisende fahren denselben Weg zurück. Fehlt deine Stadt, stelle eine Anfrage: Reisende, die in der Nähe vorbeikommen, melden sich.',
-      priceTitle: 'Wovon der Preis abhängt',
-      priceSub: 'Es gibt keine Preisliste pro Kilo und keinen festen Tarif. Der Betrag wird zwischen dir und dem Reisenden vereinbart, diese vier Dinge zählen am meisten.',
+      priceTitle: 'Wovon der Kostenbeitrag abhängt',
+      priceSub: 'Es gibt keine Tabelle pro Kilo. Nur zwei Dinge bestimmen den Kostenbeitrag: Entfernung und Größe der Sendung. Daraus berechnet Senvia einen empfohlenen Betrag und die Spanne, in der du dich mit dem Reisenden einigst.',
       whoTitle: 'Wer diese Routen am meisten nutzt',
       whoSub: 'Die Richtungen wiederholen sich das ganze Jahr, nur der Absender wechselt.',
       whoLink: 'Auf dem Blog lesen',
       ctaTitle: 'Prüfe deine Route in der App', ctaSub: 'Stelle eine Anfrage und sieh, wie viele Reisende diese Woche in deine Richtung fahren.',
-      f1t: 'Entfernung', f1d: 'Eine längere Strecke bedeutet mehr Sprit und Maut, entsprechend höher der Preis.',
-      f2t: 'Paketgröße', f2d: 'Umschlag und Koffer sind nicht dasselbe, ein Koffer braucht Platz, den der Reisende frei machen muss.',
-      f3t: 'Dringlichkeit', f3d: 'Muss es heute los, ist die Auswahl kleiner und der Preis meist höher.',
-      f4t: 'Saison', f4d: 'Sommer, Weihnachten und lange Wochenenden, mehr Reisende, aber auch mehr Anfragen.',
+      faqTitle: 'Häufige Fragen zu den Routen',
+      q1: 'Welche Routen sind am stärksten genutzt?', a1: 'Aus Österreich Wien–Zagreb und Graz–Zagreb, aus Deutschland München–Zagreb und München–Split, innerhalb Kroatiens Zagreb–Split und Zagreb–Rijeka. Dort fahren Reisende fast täglich.',
+      q2: 'Wie lange dauert der Versand auf einer Route?', a2: 'So lange wie die Fahrt selbst, denn deine Sachen reisen mit dem Reisenden. Graz–Zagreb dauert zwei bis drei Stunden, Wien–Zagreb vier bis fünf, München–Split neun bis zehn, die Sachen kommen also meist am selben Tag an.',
+      q3: 'Was, wenn meine Stadt nicht auf der Liste steht?', a3: 'Stelle eine Anfrage mit Abholort und Ziel. Reisende, die durch deine Stadt oder in der Nähe vorbeifahren, melden sich, und ihr vereinbart die Übergabe unterwegs, an einer Tankstelle oder an einer Hauptstraße.',
+      q4: 'Sind die Kostenbeiträge in der Tabelle fest?', a4: 'Nein. Senvia berechnet einen empfohlenen Kostenbeitrag aus Entfernung und Größe der Sendung, die Spanne reicht von 30 % darunter bis 30 % darüber. Der Absender schlägt einen Betrag innerhalb dieser Spanne vor, den Rest vereinbarst du mit dem Reisenden.',
+      f1t: 'Entfernung', f1d: 'Jeder Kilometer hat seinen Satz, eine längere Strecke kostet also mehr. Deshalb ist Wien–Zagreb teurer als Graz–Zagreb.',
+      f2t: 'Größe der Sachen', f2d: 'Fünf Klassen, von S bis XXL. Ein Umschlag ist am günstigsten, Möbel brauchen den meisten Platz und haben den höchsten Satz pro Kilometer.',
     }
   };
 
@@ -317,7 +379,7 @@ componentDidMount() {
       '@context': 'https://schema.org', '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: "Početna", item: "https://www.senviaapp.com/" },
-        { '@type': 'ListItem', position: 2, name: "Popularne rute", item: "https://www.senviaapp.com/popularne-rute" }
+        { '@type': 'ListItem', position: 2, name: "Popularne rute", item: "https://www.senviaapp.com/popularne-rute/" }
       ]
     });
     import('./i18n.js').then(m => {
@@ -344,19 +406,23 @@ componentDidMount() {
       select: () => this.setState({ tab: id })
     }));
 
-    const rows = this.ROUTES[tab].map(([a, b, h, p, slug]) => ({
+    const rows = this.ROUTES[tab].map(([a, b, h, km]) => ({
       a: this.city(a, lang), b: this.city(b, lang),
-      time: h[0] + '–' + h[1] + ' ' + hourWord,
-      price: p[0] + '–' + p[1] + ' ' + fromWord,
-      href: slug ? 'Ruta%20-%20' + slug + '.dc.html' : 'Slanje%20paketa.dc.html'
+      time: km + ' km · ' + h[0] + '–' + h[1] + ' ' + hourWord,
+      price: this.price(km, 'S').rec + '–' + this.price(km, 'XXL').rec + ' ' + fromWord
     }));
+    const faq = [1, 2, 3, 4].map(i => ({ q: t['q' + i], a: t['a' + i] }));
+    if (typeof document !== 'undefined') {
+      let fl = document.getElementById('senvia-routes-faq-ld');
+      if (!fl) { fl = document.createElement('script'); fl.type = 'application/ld+json'; fl.id = 'senvia-routes-faq-ld'; document.head.appendChild(fl); }
+      fl.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faq.map(x => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) });
+    }
 
     return {
-      t, tabs, rows,
+      t, tabs, rows, faq,
       groupTitle: (tabDefs.find(d => d[0] === tab) || [])[1],
       factors: [
-        { title: t.f1t, desc: t.f1d }, { title: t.f2t, desc: t.f2d },
-        { title: t.f3t, desc: t.f3d }, { title: t.f4t, desc: t.f4d }
+        { title: t.f1t, desc: t.f1d }, { title: t.f2t, desc: t.f2d }
       ],
     };
   }

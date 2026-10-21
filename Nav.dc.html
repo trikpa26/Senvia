@@ -8,6 +8,7 @@
 <body>
 <x-dc>
 <helmet>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <style>
     @media (max-width: 980px) {
       [data-nav-desk] { display: none !important; }
@@ -16,58 +17,31 @@
   </style>
 </helmet>
 
-<header data-senvia-nav="1" style="position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.94); backdrop-filter: blur(14px); border-bottom: 1px solid #eaf2ec; font-family: 'Instrument Sans', sans-serif">
-  <div style="max-width: 1280px; margin: 0 auto; padding: 11px clamp(16px, 4vw, 32px); display: flex; align-items: center; gap: 10px">
-    <a href="Senvia%20Landing%20v2.dc.html" style="display: flex; align-items: center; gap: 10px; color: #12261a; flex: 0 0 auto">
-      <img src="uploads/1024x1024bb.png" alt="Senvia logo" width="42" height="42" style="width: clamp(36px, 9vw, 42px); height: auto; border-radius: 11px; display: block; box-shadow: 0 2px 8px rgba(18,38,26,0.14)">
+<header data-senvia-nav="1" style="position: sticky; top: 0; z-index: 100; background: rgba(250,249,246,0.9); backdrop-filter: blur(14px); border-bottom: 1px solid #e9e6dd; font-family: 'Instrument Sans', sans-serif">
+  <div style="max-width: 1280px; margin: 0 auto; padding: 11px clamp(16px, 4vw, 32px); display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 10px">
+    <a href="Senvia%20Landing%20v2.dc.html" style="display: flex; align-items: center; gap: 10px; color: #12261a; justify-self: start; grid-column: 1">
+      <img src="assets/senvia-logo.png" alt="Senvia logo" width="42" height="42" style="width: clamp(36px, 9vw, 42px); height: auto; border-radius: 11px; display: block; box-shadow: 0 2px 8px rgba(18,38,26,0.14)">
       <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(18px, 4.6vw, 22px); letter-spacing: 0.02em">Senvia</span>
     </a>
 
-    <nav data-nav-desk style="display: flex; align-items: center; gap: 2px; margin-left: 16px">
+    <nav data-nav-desk style="display: flex; align-items: center; gap: 32px; grid-column: 2">
       <sc-for list="{{ mainLinks }}" as="l" hint-placeholder-count="3">
         <sc-if value="{{ l.isActive }}" hint-placeholder-val="{{ false }}">
-          <a href="{{ l.href }}" style="padding: 9px 13px; border-radius: 11px; font-size: 15px; font-weight: 600; color: #12261a; background: #f4faf6">{{ l.label }}</a>
+          <a href="{{ l.href }}" style="position: relative; padding: 10px 0; font-size: 15.5px; font-weight: 600; color: #1a9e44">{{ l.label }}<span style="position: absolute; left: 50%; bottom: 2px; width: 5px; height: 5px; margin-left: -2.5px; border-radius: 999px; background: #2dbb54"></span></a>
         </sc-if>
         <sc-if value="{{ l.isOther }}" hint-placeholder-val="{{ true }}">
-          <a href="{{ l.href }}" style="padding: 9px 13px; border-radius: 11px; font-size: 15px; font-weight: 500; color: #3c5346" style-hover="background: #f4faf6; color: #12261a">{{ l.label }}</a>
+          <a href="{{ l.href }}" style="padding: 10px 0; font-size: 15.5px; font-weight: 500; color: #12261a" style-hover="color: #1a9e44">{{ l.label }}</a>
         </sc-if>
       </sc-for>
-
-      <div style="position: relative">
-        <sc-if value="{{ moreOpen }}" hint-placeholder-val="{{ false }}">
-          <button onClick="{{ toggleMore }}" style="display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 500; color: #12261a; background: #f4faf6; padding: 9px 13px; border-radius: 11px">
-            {{ moreLabel }}
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(180deg)"><path d="M6 9l6 6 6-6"></path></svg>
-          </button>
-          <div style="position: absolute; top: calc(100% + 10px); left: 0; min-width: 272px; background: #ffffff; border: 1px solid #e4efe7; border-radius: 18px; padding: 8px; box-shadow: 0 18px 44px rgba(18,38,26,0.14); z-index: 120">
-            <sc-for list="{{ moreLinks }}" as="l" hint-placeholder-count="4">
-              <a href="{{ l.href }}" style="display: block; padding: 11px 14px; border-radius: 12px; color: #12261a" style-hover="background: #f4faf6">
-                <span style="display: block; font-size: 14.5px; font-weight: 600">{{ l.label }}</span>
-                <span style="display: block; font-size: 13px; color: #6b8272; margin-top: 2px">{{ l.desc }}</span>
-              </a>
-            </sc-for>
-          </div>
-        </sc-if>
-        <sc-if value="{{ moreShut }}" hint-placeholder-val="{{ true }}">
-          <button onClick="{{ toggleMore }}" style="display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 500; color: #3c5346; background: transparent; padding: 9px 13px; border-radius: 11px" style-hover="background: #f4faf6; color: #12261a">
-            {{ moreLabel }}
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
-          </button>
-        </sc-if>
-      </div>
-
-    </nav>
-
-    <div style="margin-left: auto; display: flex; align-items: center; gap: 8px; flex: 0 0 auto">
-      <div data-nav-desk style="position: relative">
+      <div style="position: relative; display: flex; align-items: center">
         <sc-if value="{{ bizOpen }}" hint-placeholder-val="{{ false }}">
-          <button onClick="{{ toggleBiz }}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; border: 1px solid #2dbb54; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; color: #12261a; background: #e8f7ee; padding: 8px 13px; border-radius: 11px">
+          <button onClick="{{ toggleBiz }}" style="display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15.5px; font-weight: 500; color: #1a9e44; background: transparent; padding: 10px 0">
             {{ bizLabel }}
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(180deg)"><path d="M6 9l6 6 6-6"></path></svg>
           </button>
-          <div style="position: absolute; top: calc(100% + 10px); right: 0; min-width: 284px; background: #ffffff; border: 1px solid #e4efe7; border-radius: 18px; padding: 8px; box-shadow: 0 18px 44px rgba(18,38,26,0.14); z-index: 120">
+          <div style="position: absolute; top: calc(100% + 10px); left: 50%; transform: translateX(-50%); min-width: 284px; background: #ffffff; border: 1px solid #e6e3da; border-radius: 18px; padding: 8px; box-shadow: 0 18px 44px rgba(18,38,26,0.14); z-index: 120">
             <sc-for list="{{ bizLinks }}" as="l" hint-placeholder-count="3">
-              <a href="{{ l.href }}" style="display: block; padding: 11px 14px; border-radius: 12px; color: #12261a" style-hover="background: #f4faf6">
+              <a href="{{ l.href }}" style="display: block; padding: 11px 14px; border-radius: 12px; color: #12261a" style-hover="background: #f2f0ea">
                 <span style="display: block; font-size: 14.5px; font-weight: 600">{{ l.label }}</span>
                 <span style="display: block; font-size: 13px; color: #6b8272; margin-top: 2px">{{ l.desc }}</span>
               </a>
@@ -75,42 +49,44 @@
           </div>
         </sc-if>
         <sc-if value="{{ bizShut }}" hint-placeholder-val="{{ true }}">
-          <button onClick="{{ toggleBiz }}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; border: 1px solid #b9d9c4; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; color: #167a38; background: #f4faf6; padding: 8px 13px; border-radius: 11px" style-hover="border-color: #2dbb54; background: #e8f7ee; color: #12261a">
+          <button onClick="{{ toggleBiz }}" style="display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15.5px; font-weight: 500; color: #12261a; background: transparent; padding: 10px 0" style-hover="color: #1a9e44">
             {{ bizLabel }}
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
           </button>
         </sc-if>
       </div>
+    </nav>
 
-      <span data-nav-desk aria-hidden="true" style="display: block; width: 1px; height: 26px; background: #e4efe7; margin: 0 2px; flex: 0 0 auto"></span>
+    <div style="display: flex; align-items: center; gap: 14px; justify-self: end; grid-column: 3">
+
 
       <div style="position: relative">
         <sc-if value="{{ langOpen }}" hint-placeholder-val="{{ false }}">
-          <button onClick="{{ toggleLang }}" style="display: inline-flex; align-items: center; gap: 5px; min-height: 44px; border: 1px solid #2dbb54; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14px; font-weight: 600; color: #12261a; background: #e8f7ee; padding: 9px 11px; border-radius: 11px">
-            {{ langShort }}
+          <button onClick="{{ toggleLang }}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14.5px; font-weight: 600; color: #1a9e44; background: transparent; padding: 0 4px">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18"></path><path d="M12 3a14 14 0 0 0 0 18"></path></svg>{{ langShort }}
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(180deg)"><path d="M6 9l6 6 6-6"></path></svg>
           </button>
-          <div style="position: absolute; top: calc(100% + 10px); right: 0; min-width: 168px; background: #ffffff; border: 1px solid #e4efe7; border-radius: 18px; padding: 8px; box-shadow: 0 18px 44px rgba(18,38,26,0.14); z-index: 120; display: grid; gap: 2px">
+          <div style="position: absolute; top: calc(100% + 10px); right: 0; min-width: 168px; background: #ffffff; border: 1px solid #e6e3da; border-radius: 18px; padding: 8px; box-shadow: 0 18px 44px rgba(18,38,26,0.14); z-index: 120; display: grid; gap: 2px">
             <sc-for list="{{ langs }}" as="l" hint-placeholder-count="3">
               <sc-if value="{{ l.isCurrent }}" hint-placeholder-val="{{ false }}">
-                <button onClick="{{ l.pick }}" style="display: block; width: 100%; text-align: left; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14.5px; font-weight: 600; color: #12261a; background: #f4faf6; padding: 11px 14px; border-radius: 11px">{{ l.label }}</button>
+                <button onClick="{{ l.pick }}" style="display: block; width: 100%; text-align: left; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14.5px; font-weight: 600; color: #12261a; background: #f2f0ea; padding: 11px 14px; border-radius: 11px">{{ l.label }}</button>
               </sc-if>
               <sc-if value="{{ l.isOther }}" hint-placeholder-val="{{ true }}">
-                <button onClick="{{ l.pick }}" style="display: block; width: 100%; text-align: left; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14.5px; font-weight: 500; color: #3c5346; background: transparent; padding: 11px 14px; border-radius: 11px" style-hover="background: #f4faf6">{{ l.label }}</button>
+                <button onClick="{{ l.pick }}" style="display: block; width: 100%; text-align: left; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14.5px; font-weight: 500; color: #3c5346; background: transparent; padding: 11px 14px; border-radius: 11px" style-hover="background: #f2f0ea">{{ l.label }}</button>
               </sc-if>
             </sc-for>
           </div>
         </sc-if>
         <sc-if value="{{ langShut }}" hint-placeholder-val="{{ true }}">
-          <button onClick="{{ toggleLang }}" style="display: inline-flex; align-items: center; gap: 5px; min-height: 44px; border: 1px solid #e4efe7; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14px; font-weight: 600; color: #3c5346; background: #f7fbf8; padding: 9px 11px; border-radius: 11px" style-hover="border-color: #2dbb54; color: #12261a">
-            {{ langShort }}
+          <button onClick="{{ toggleLang }}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14.5px; font-weight: 600; color: #3c5346; background: transparent; padding: 0 4px" style-hover="color: #1a9e44">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18"></path><path d="M12 3a14 14 0 0 0 0 18"></path></svg>{{ langShort }}
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
           </button>
         </sc-if>
       </div>
 
 
-      <button data-nav-burger onClick="{{ toggleMenu }}" aria-label="Menu" style="display: none; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e4efe7; background: #f7fbf8; border-radius: 12px; cursor: pointer; padding: 0">
+      <button data-nav-burger onClick="{{ toggleMenu }}" aria-label="Menu" style="display: none; align-items: center; justify-content: center; width: 44px; height: 44px; border: 1px solid #e6e3da; background: #f7f6f2; border-radius: 12px; cursor: pointer; padding: 0">
         <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12261a" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
         </sc-if>
@@ -122,11 +98,11 @@
   </div>
 
   <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
-    <div style="border-top: 1px solid #eaf2ec; background: #ffffff">
+    <div style="border-top: 1px solid #e9e6dd; background: #ffffff">
       <div style="max-width: 1280px; margin: 0 auto; padding: 8px clamp(16px, 4vw, 32px) 18px; display: grid; gap: 2px">
         <sc-for list="{{ allLinks }}" as="l" hint-placeholder-count="7">
           <sc-if value="{{ l.isActive }}" hint-placeholder-val="{{ false }}">
-            <a href="{{ l.href }}" style="display: block; padding: 14px 12px; border-radius: 12px; font-size: 16px; font-weight: 600; color: #12261a; background: #f4faf6">{{ l.label }}</a>
+            <a href="{{ l.href }}" style="display: block; padding: 14px 12px; border-radius: 12px; font-size: 16px; font-weight: 600; color: #12261a; background: #f2f0ea">{{ l.label }}</a>
           </sc-if>
           <sc-if value="{{ l.isOther }}" hint-placeholder-val="{{ true }}">
             <a href="{{ l.href }}" style="display: block; padding: 14px 12px; border-radius: 12px; font-size: 16px; font-weight: 500; color: #3c5346">{{ l.label }}</a>
@@ -139,11 +115,11 @@
 </header>
 
 <sc-if value="{{ consentOpen }}" hint-placeholder-val="{{ false }}">
-  <div role="dialog" aria-label="{{ consentAria }}" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 300; background: #ffffff; border-top: 1px solid #e4efe7; box-shadow: 0 -12px 34px rgba(18,38,26,0.12); font-family: 'Instrument Sans', sans-serif">
+  <div role="dialog" aria-label="{{ consentAria }}" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 300; background: #ffffff; border-top: 1px solid #e6e3da; box-shadow: 0 -12px 34px rgba(18,38,26,0.12); font-family: 'Instrument Sans', sans-serif">
     <div style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px); display: flex; gap: 16px; flex-wrap: wrap; align-items: center; justify-content: space-between">
       <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #3c5346; max-width: 70ch; text-wrap: pretty">{{ consentText }} <a href="Politika%20kolacica.dc.html" style="font-weight: 600">{{ consentCookieLink }}</a> {{ consentAnd }} <a href="Politika%20privatnosti.dc.html" style="font-weight: 600">{{ consentPrivacyLink }}</a>.</p>
       <div style="display: flex; gap: 10px; flex-wrap: wrap">
-        <button onClick="{{ consentDeny }}" style="border: 1px solid #d7e7dc; background: #ffffff; color: #3c5346; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 12px 18px; border-radius: 12px; cursor: pointer; min-height: 44px" style-hover="background: #f4faf6">{{ consentNo }}</button>
+        <button onClick="{{ consentDeny }}" style="border: 1px solid #dcd8cc; background: #ffffff; color: #3c5346; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 12px 18px; border-radius: 12px; cursor: pointer; min-height: 44px" style-hover="background: #f2f0ea">{{ consentNo }}</button>
         <button onClick="{{ consentAccept }}" style="border: none; background: #2dbb54; color: #ffffff; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 12px 20px; border-radius: 12px; cursor: pointer; min-height: 44px" style-hover="background: #26a449">{{ consentYes }}</button>
       </div>
     </div>
@@ -156,23 +132,23 @@ class Component extends DCLogic {
   lastToggle = 0;
 
   T = {
-    how:   { hr: 'Kako radi', en: 'How it works', de: 'So funktioniert es' },
-    send:  { hr: 'Slanje paketa', en: 'Sending packages', de: 'Pakete senden' },
+    how:   { hr: 'Kako radi?', en: 'How does it work?', de: 'Wie funktioniert es?' },
+    send:  { hr: 'Slanje stvari', en: 'Sending items', de: 'Sachen senden' },
     trust: { hr: 'Sigurnost', en: 'Trust & safety', de: 'Sicherheit' },
     more:  { hr: 'Više', en: 'More', de: 'Mehr' },
     faq:   { hr: 'Česta pitanja', en: 'FAQ', de: 'Häufige Fragen' },
-    faqD:  { hr: 'Cijene, rute, verifikacija', en: 'Prices, routes, verification', de: 'Preise, Routen, Verifizierung' },
+    faqD:  { hr: 'Naknade, rute, verifikacija', en: 'Fees, routes, verification', de: 'Kostenbeiträge, Routen, Verifizierung' },
     blog:  { hr: 'Blog', en: 'Blog', de: 'Blog' },
-    blogD: { hr: 'Vodiči i usporedbe cijena', en: 'Guides and price comparisons', de: 'Ratgeber und Preisvergleiche' },
+    blogD: { hr: 'Vodiči i usporedbe naknada', en: 'Guides and fee comparisons', de: 'Ratgeber und Kostenvergleiche' },
     corr:  { hr: 'Usporedba s klasičnom dostavom', en: 'Compared to classic delivery', de: 'Vergleich mit klassischer Zustellungen' },
-    corrD: { hr: 'Cijena, brzina i fleksibilnost', en: 'Price, speed and flexibility', de: 'Preis, Geschwindigkeit, Flexibilität' },
+    corrD: { hr: 'Naknada, brzina i fleksibilnost', en: 'Fee, speed and flexibility', de: 'Kostenbeitrag, Geschwindigkeit, Flexibilität' },
     routes:{ hr: 'Popularne rute', en: 'Popular routes', de: 'Beliebte Routen' },
-    routesD:{ hr: 'Cijene i trajanje po gradovima', en: 'Prices and times by city', de: 'Preise und Dauer pro Stadt' },
+    routesD:{ hr: 'Naknade i trajanje po gradovima', en: 'Fees and times by city', de: 'Kostenbeiträge und Dauer pro Stadt' },
     biz:   { hr: 'Za poslovne korisnike', en: 'For business', de: 'Für Geschäftskunden' },
     bizApply: { hr: 'Prijavi svoj obrt', en: 'Register your business', de: 'Betrieb anmelden' },
     bizApplyD: { hr: 'Kratka prijava, javljamo se u par dana', en: 'Short form, we reply in a few days', de: 'Kurzes Formular, Antwort in wenigen Tagen' },
-    bizHow: { hr: 'Kako radi za tvrtke', en: 'How it works for business', de: 'So funktioniert es für Firmen' },
-    bizHowD: { hr: 'Trgovine, cvjećarnice, servisi i obrti', en: 'Shops, florists, garages and trades', de: 'Geschäfte, Floristen, Werkstätten' },
+    bizHow: { hr: 'Kako radi i prijava obrta', en: 'How it works and sign-up', de: 'So funktioniert es und Anmeldung' },
+    bizHowD: { hr: 'Za trgovine, cvjećarnice, servise i obrte', en: 'For shops, florists, garages and trades', de: 'Für Geschäfte, Floristen, Werkstätten' },
     bizPartners: { hr: 'Naši partneri', en: 'Our partners', de: 'Unsere Partner' },
     bizPartnersD: { hr: 'S kime trenutno radimo', en: 'Who we work with right now', de: 'Mit wem wir aktuell arbeiten' },
     cta:   { hr: 'Preuzmi aplikaciju', en: 'Get the app', de: 'App herunterladen' },
@@ -223,13 +199,11 @@ class Component extends DCLogic {
 
     const mainLinks = [
       link('how', 'Kako%20radi.dc.html', 'how'),
-      link('send', 'Slanje%20paketa.dc.html', 'send'),
       link('trust', 'Sigurnost.dc.html', 'trust')
     ];
     const bizLinks = [
       { ...link('bizPartners', 'Partneri.dc.html', 'partners'), desc: this.t('bizPartnersD', lang) },
-      { ...link('bizHow', 'Za%20tvrtke.dc.html', 'business'), desc: this.t('bizHowD', lang) },
-      { ...link('bizApply', 'Za%20tvrtke.dc.html#prijava', 'apply'), desc: this.t('bizApplyD', lang) }
+      { ...link('bizHow', 'Za%20tvrtke.dc.html', 'business'), desc: this.t('bizHowD', lang) }
     ];
     const moreLinks = [
       { ...link('faq', 'FAQ.dc.html', 'faq'), desc: this.t('faqD', lang) },
@@ -247,8 +221,6 @@ class Component extends DCLogic {
       try { localStorage.setItem('senvia-consent', v); } catch (e) {}
       if (v === 'yes' && typeof window.senviaLoadAnalytics === 'function') window.senviaLoadAnalytics();
       this.setState({ consent: v });
-      // nakon odabira korisnik ide na naslovnicu
-      window.location.href = 'Senvia%20Landing%20v2.dc.html';
     };
 
     return {
@@ -258,10 +230,12 @@ class Component extends DCLogic {
       consentYes: this.t('cYes', lang), consentNo: this.t('cNo', lang),
       consentAccept: setConsent('yes'), consentDeny: setConsent('no'),
       mainLinks, moreLinks, bizLinks,
-      allLinks: mainLinks.concat(moreLinks).concat(bizLinks),
+      allLinks: mainLinks.concat(bizLinks),
       bizLabel: this.t('biz', lang),
       moreLabel: this.t('more', lang),
       langShort: lang.toUpperCase(),
+      dlLabel: { hr: 'Preuzmi', en: 'Download', de: 'Laden' }[lang] || 'Preuzmi',
+      dlHref: (typeof navigator !== 'undefined' && /android/i.test(navigator.userAgent)) ? 'https://play.google.com/store/apps/details?id=com.senviaapp.senvia&hl=hr' : 'https://apps.apple.com/hr/app/senvia/id6759839112?l=hr',
       langs: ['hr', 'en', 'de'].map(l => ({
         label: { hr: 'Hrvatski', en: 'English', de: 'Deutsch' }[l],
         pick: setLang(l),

@@ -8,12 +8,13 @@
 <body>
 <x-dc>
 <helmet>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta charset="utf-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #ffffff; -webkit-font-smoothing: antialiased; }
+    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -43,12 +44,12 @@
       <p style="margin: 0; font-size: 17px; line-height: 1.72; color: #29402f; text-wrap: pretty">{{ b.text }}</p>
     </div>
   </sc-for>
-  <div style="background: #f4faf6; border: 1px solid #e4efe7; border-radius: 22px; padding: 28px clamp(16px, 4.0vw, 32px); margin-top: 36px">
+  <div style="background: #f2f0ea; border: 1px solid #e6e3da; border-radius: 22px; padding: 28px clamp(16px, 4.0vw, 32px); margin-top: 36px">
     <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; margin: 0 0 10px">{{ a.ctaTitle }}</h2>
     <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #3c5346">{{ a.ctaText }}</p>
     <div style="display: flex; gap: 12px">
-      <a href="https://apps.apple.com/us/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="uploads/Download_on_the_App_Store_Badge.svg.webp" alt="Preuzmi Senvia aplikaciju u App Storeu" height="46" style="display: block; border-radius: 9px"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Preuzmi Senvia aplikaciju na Google Playu" height="46" style="display: block; border-radius: 9px"></a>
+      <a href="https://apps.apple.com/us/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="46" style="display: block; border-radius: 9px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="46" style="display: block; border-radius: 9px"></a>
     </div>
   </div>
   <div style="margin-top: 34px; display: flex; gap: 20px; font-size: 15px">
@@ -78,8 +79,8 @@ class Component extends DCLogic {
     const a = this.props.article;
     if (!a) return;
     const head = document.head;
-    const url = a.senviaUrl || 'https://www.senviaapp.com/blog';
-    const img = 'https://www.senviaapp.com/uploads/1024x1024bb.png';
+    const url = a.senviaUrl || 'https://www.senviaapp.com/blog/';
+    const img = 'https://www.senviaapp.com/assets/senvia-logo.png';
     document.title = a.title;
 
     const setMeta = (name, val) => {
@@ -151,7 +152,7 @@ class Component extends DCLogic {
       '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: 'Početna', item: 'https://www.senviaapp.com/' },
-        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.senviaapp.com/blog' },
+        { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://www.senviaapp.com/blog/' },
         { '@type': 'ListItem', position: 3, name: a.h1 || a.title, item: url }
       ]
     });

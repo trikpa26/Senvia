@@ -3,23 +3,20 @@ branch: main
 path: (root)
 
 ## Last sync
-date: 2026-08-24T00:00:00Z
-note: Repozitorij `trikpa26/Senvia@main` je trenutno prazan (bez commitova) — ništa nije uvezeno iz njega. Sav sadržaj projekta nastao je ovdje i tek treba biti pushan u repozitorij.
+date: 2026-11-10
+note: Paket pripremljen u `design_handoff_senvia_web/` (sadržaj mape ide u root repozitorija). Upload radi korisnik ručno preko GitHub web uploada. Ništa se ne briše, postojeće datoteke se prepisuju, nove dodaju.
 
 ### Updated in this project
-- Navigacija: "Za poslovne korisnike" premješten u desnu grupu, odvojen separatorom
-- Padajući izbornik za tvrtke: Naši partneri → Kako radi za tvrtke → Prijavi svoj obrt
-- 50 javnih stranica (HR/EN/DE) s kompletnim SEO-om, sitemapom i GDPR trakom
-- Handoff paket za developera u `design_handoff_senvia_web/`
+- Nova naslovnica (`Senvia Landing v3`), ujedno `index.html` i `Senvia Landing v2.dc.html`
+- Blok "Upravo na Senviji": vožnje prve, novi izgled kartica, "Prikaži sve"
+- Pet novih blogova po skupinama korisnika, blog "Kome koriste rute" razdijeljen s poveznicama
+- Stranice gradova i kategorija, pet novih ruta (Frankfurt, Berlin, Nürnberg, Köln, Ženeva)
+- Automatski jezik: HR za HR, BiH, SRB, SLO, CG; DE za DE i AT; ostalo EN
+- EN/DE naslovi i opisi na 9 stranica, 27 naslova skraćeno, gramatika i prijevodi
+- Usporedba premještena u blog, podnožje "Rute i blog"
+- routes-data.js: pet ruta vraćeno u ROUTES, /api/live vraća sve aktivne objave
 
-## Screen map
-| Screen / group | Project files | Repo files |
-| --- | --- | --- |
-| Naslovnica | `Senvia Landing v2.dc.html` | — (novo, za push) |
-| Navigacija + podnožje | `Nav.dc.html`, `Podnozje.dc.html` | — (novo, za push) |
-| Informativne stranice | `Kako radi`, `Slanje paketa`, `Sigurnost`, `FAQ`, `Popularne rute`, `Austrija-Hrvatska`, `Usporedba`, `Za tvrtke`, `Partneri` | — (novo, za push) |
-| Blog | `Blog.dc.html`, `Clanak.dc.html`, `Blog - *.dc.html` (8) | — (novo, za push) |
-| Rutne stranice | `Ruta.dc.html`, `Rute - generator.dc.html`, `Ruta - *.dc.html` (25) | — (novo, za push) |
-| Pravno | `Politika privatnosti`, `Politika kolacica`, `Uvjeti koristenja`, `Pravni dokument` | — (novo, za push) |
-| Ostalo | `Senvia Account Deletion.dc.html`, `404.dc.html` | — (novo, za push) |
-| Handoff za developera | `design_handoff_senvia_web/` | — (novo, za push) |
+## Sync history
+- 2026-08-24: prvi push, 82 datoteke, ručni web upload.
+- 2026-10-21: drugi push, ručni web upload.
+- 2026-11-10: treći push, 64 nove i 38 izmijenjenih datoteka, ručni web upload.

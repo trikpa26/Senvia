@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    a { color: #1a9e44; text-decoration: none; }
+    a:hover { color: #0e7c31; }
+    ::selection { background: #c9efd6; }
+    img { max-width: 100%; }
+  </style>
+</helmet>
+
+<div style="overflow-x: clip">
+
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" active="" hint-size="100%,66px"></dc-import>
+
+<nav aria-label="breadcrumb" style="max-width: 1360px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+  <a href="Senvia%20Landing%20v3.dc.html" style="color: #6b8272">Senvia</a>
+  <span>/</span>
+  <a href="Popularne%20rute.dc.html" style="color: #6b8272">{{ crumbRoutes }}</a>
+  <span>/</span>
+  <span style="color: #12261a; font-weight: 600">{{ cityName }}</span>
+</nav>
+
+<section style="max-width: 1360px; margin: 0 auto; padding: 32px clamp(16px, 4.0vw, 32px) clamp(29px, 4.9vw, 56px)">
+  <div style="max-width: 860px">
+    <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(32px, 9.0vw, 56px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 22px; text-wrap: balance">{{ h1 }}</h1>
+    <p style="font-size: 20px; line-height: 1.6; color: #3c5346; margin: 0 0 18px; max-width: 60ch; text-wrap: pretty">{{ intro }}</p>
+    <p style="font-size: 17px; line-height: 1.65; color: #3c5346; margin: 0 0 32px; max-width: 62ch; text-wrap: pretty">{{ spot }}</p>
+    <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap">
+      <a href="https://apps.apple.com/app/id6759839112" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform .2s ease" style-hover="transform: translateY(-2px)"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform .2s ease" style-hover="transform: translateY(-2px)"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
+    </div>
+  </div>
+</section>
+
+<section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
+  <div style="max-width: 1360px; margin: 0 auto; padding: clamp(34px, 5vw, 60px) clamp(16px, 4.0vw, 32px)">
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 4.6vw, 30px); font-weight: 700; letter-spacing: -0.01em; margin: 0 0 8px">{{ routesTitle }}</h2>
+    <p style="margin: 0 0 24px; font-size: 15.5px; color: #3c5346; max-width: 70ch; text-wrap: pretty">{{ routesNote }}</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 12px">
+      <sc-for list="{{ routes }}" as="r" hint-placeholder-count="9">
+        <a href="{{ r.href }}" style="display: flex; flex-direction: column; gap: 6px; background: #ffffff; border: 1px solid #e6e3da; border-radius: 18px; padding: 18px 20px; color: #12261a" style-hover="border-color: #2dbb54">
+          <span style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 18px">{{ r.title }}</span>
+          <span style="font-size: 14.5px; color: #3c5346">{{ r.time }}</span>
+          <span style="font-size: 14.5px; color: #167a38; font-weight: 600">{{ r.price }}</span>
+        </a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6vw, 76px) clamp(16px, 4.0vw, 32px) 0">
+  <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 4.6vw, 30px); font-weight: 700; letter-spacing: -0.01em; margin: 0 0 22px">{{ faqTitle }}</h2>
+  <div style="display: grid; gap: 12px; max-width: 900px">
+    <sc-for list="{{ faq }}" as="f" hint-placeholder-count="3">
+      <div style="border: 1px solid #e6e3da; border-radius: 18px; padding: 22px 24px; background: #ffffff">
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 600; margin: 0 0 8px">{{ f.q }}</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ f.a }}</p>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4.0vw, 32px)">
+  <div style="background: #2dbb54; border-radius: 28px; padding: clamp(29px, 4.9vw, 64px) clamp(24px, 6.0vw, 48px); text-align: center; color: #ffffff">
+    <img src="assets/senvia-logo.png" alt="Senvia logo" width="60" height="60" style="border-radius: 15px; box-shadow: 0 10px 26px rgba(10,60,26,0.3); margin-bottom: 24px">
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(21px, 5.8vw, 36px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 14px; text-wrap: balance">{{ ctaTitle }}</h2>
+    <p style="margin: 0 auto 32px; font-size: 18px; line-height: 1.55; max-width: 48ch; color: #ffffff; text-wrap: pretty">{{ ctaSub }}</p>
+    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap">
+      <a href="https://apps.apple.com/app/id6759839112" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="54" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="54" style="display: block; border-radius: 10px"></a>
+    </div>
+  </div>
+</section>
+
+<section style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4.0vw, 32px) clamp(38px, 6.5vw, 84px)">
+  <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(20px, 4.2vw, 26px); font-weight: 700; margin: 0 0 18px">{{ otherTitle }}</h2>
+  <div style="display: flex; gap: 10px; flex-wrap: wrap">
+    <sc-for list="{{ others }}" as="o" hint-placeholder-count="7">
+      <a href="{{ o.href }}" style="display: inline-flex; border: 1px solid #e6e3da; border-radius: 999px; padding: 10px 18px; font-weight: 600; font-size: 15px; color: #12261a; background: #ffffff" style-hover="border-color: #2dbb54; color: #167a38">{{ o.name }}</a>
+    </sc-for>
+  </div>
+</section>
+
+<dc-import name="Podnozje" hint-size="100%,300px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;slug&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;bec&quot;,&quot;graz&quot;,&quot;munchen&quot;,&quot;stuttgart&quot;,&quot;zurich&quot;,&quot;zagreb&quot;,&quot;split&quot;,&quot;rijeka&quot;], &quot;default&quot;: &quot;bec&quot;, &quot;tsType&quot;: &quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { lang: 'hr' };
+
+  // preporučeno = FIKS + km × STOPA; min = ×0,70; max = ×1,30
+  SIZES = { S: [5, 0.027], M: [8, 0.040], L: [22, 0.062], XL: [36, 0.089], XXL: [55, 0.150] };
+  price(km, size) {
+    const [fix, rate] = this.SIZES[size] || this.SIZES.M;
+    const rec = fix + km * rate;
+    return { rec: Math.round(rec), min: Math.round(rec * 0.7), max: Math.round(rec * 1.3) };
+  }
+
+  C = {
+    bec: { hr: 'Beč', en: 'Vienna', de: 'Wien' }, graz: { hr: 'Graz' }, linz: { hr: 'Linz' },
+    salzburg: { hr: 'Salzburg' }, innsbruck: { hr: 'Innsbruck' }, klagenfurt: { hr: 'Klagenfurt' },
+    munchen: { hr: 'München', en: 'Munich', de: 'München' }, stuttgart: { hr: 'Stuttgart' },
+    frankfurt: { hr: 'Frankfurt' }, berlin: { hr: 'Berlin' }, hamburg: { hr: 'Hamburg' },
+    dusseldorf: { hr: 'Düsseldorf' }, nurnberg: { hr: 'Nürnberg', en: 'Nuremberg', de: 'Nürnberg' },
+    mannheim: { hr: 'Mannheim' }, zurich: { hr: 'Zürich' }, basel: { hr: 'Basel' }, bern: { hr: 'Bern' },
+    luzern: { hr: 'Luzern', en: 'Lucerne', de: 'Luzern' }, stgallen: { hr: 'St. Gallen' },
+    zeneva: { hr: 'Ženeva', en: 'Geneva', de: 'Genf' },
+    zagreb: { hr: 'Zagreb' }, split: { hr: 'Split' }, rijeka: { hr: 'Rijeka' }, osijek: { hr: 'Osijek' },
+    zadar: { hr: 'Zadar' }, dubrovnik: { hr: 'Dubrovnik' }, pula: { hr: 'Pula' }, varazdin: { hr: 'Varaždin' },
+    vukovar: { hr: 'Vukovar' }, sibenik: { hr: 'Šibenik' }, makarska: { hr: 'Makarska' }, slavonskibrod: { hr: 'Slavonski Brod' },
+    koln: { hr: 'Köln', en: 'Cologne', de: 'Köln' }, augsburg: { hr: 'Augsburg' }, winterthur: { hr: 'Winterthur' },
+    karlovac: { hr: 'Karlovac' }, cakovec: { hr: 'Čakovec' }, rovinj: { hr: 'Rovinj' },
+    stpolten: { hr: 'St. Pölten' }, villach: { hr: 'Villach' }, wels: { hr: 'Wels' }, bregenz: { hr: 'Bregenz' }, dornbirn: { hr: 'Dornbirn' }, wienerneustadt: { hr: 'Wiener Neustadt' },
+    ingolstadt: { hr: 'Ingolstadt' }, regensburg: { hr: 'Regensburg' }, rosenheim: { hr: 'Rosenheim' }, ulm: { hr: 'Ulm' }, heilbronn: { hr: 'Heilbronn' }, karlsruhe: { hr: 'Karlsruhe' },
+    wiesbaden: { hr: 'Wiesbaden' }, darmstadt: { hr: 'Darmstadt' }, dortmund: { hr: 'Dortmund' }, essen: { hr: 'Essen' }, hannover: { hr: 'Hannover', en: 'Hanover', de: 'Hannover' }, leipzig: { hr: 'Leipzig' }, dresden: { hr: 'Dresden' },
+    lugano: { hr: 'Lugano' }, aarau: { hr: 'Aarau' }, schaffhausen: { hr: 'Schaffhausen' }, zug: { hr: 'Zug' }, baden: { hr: 'Baden' },
+    sisak: { hr: 'Sisak' }, bjelovar: { hr: 'Bjelovar' }, koprivnica: { hr: 'Koprivnica' }, vinkovci: { hr: 'Vinkovci' }, pozega: { hr: 'Požega' }, djakovo: { hr: 'Đakovo' },
+    virovitica: { hr: 'Virovitica' }, knin: { hr: 'Knin' }, trogir: { hr: 'Trogir' }, opatija: { hr: 'Opatija' }, porec: { hr: 'Poreč' }, umag: { hr: 'Umag' }, krk: { hr: 'Krk' },
+    gospic: { hr: 'Gospić' }, ploce: { hr: 'Ploče' }, metkovic: { hr: 'Metković' }, biograd: { hr: 'Biograd na Moru' }, senj: { hr: 'Senj' }
+  };
+
+  ROUTES = {
+    at: [
+      ['bec', 'zagreb', [4, 5], 370, 'bec-zagreb'],
+      ['graz', 'zagreb', [2, 3], 190, 'graz-zagreb'],
+      ['graz', 'varazdin', [3, 4], 250, 'graz-varazdin'],
+      ['klagenfurt', 'zagreb', [3, 4], 230],
+      ['bec', 'varazdin', [3, 4], 310],
+      ['bec', 'rijeka', [5, 6], 520, 'bec-rijeka'],
+      ['bec', 'osijek', [5, 6], 480, 'bec-osijek'],
+      ['linz', 'varazdin', [5, 6], 420],
+      ['salzburg', 'zagreb', [5, 6], 480],
+      ['bec', 'zadar', [7, 8], 650],
+      ['innsbruck', 'rijeka', [7, 8], 560],
+      ['linz', 'split', [8, 9], 800, 'linz-split'],
+      ['bec', 'split', [8, 9], 780],
+      ['graz', 'rijeka', [3, 4], 300],
+      ['klagenfurt', 'rijeka', [3, 4], 250],
+      ['linz', 'zagreb', [5, 6], 470],
+      ['bec', 'pula', [6, 7], 600],
+      ['graz', 'split', [6, 7], 590],
+      ['innsbruck', 'zagreb', [6, 7], 560],
+      ['salzburg', 'split', [8, 9], 850],
+      ['bec', 'dubrovnik', [10, 11], 1000],
+      ['stpolten', 'zagreb', [4, 5], 420], ['wienerneustadt', 'zagreb', [3, 4], 320], ['villach', 'zagreb', [2, 3], 210], ['villach', 'rijeka', [2, 3], 200],
+      ['graz', 'osijek', [4, 5], 330], ['graz', 'zadar', [5, 6], 470], ['graz', 'pula', [4, 5], 350], ['bec', 'cakovec', [3, 4], 290],
+      ['bec', 'vukovar', [5, 6], 520], ['bec', 'slavonskibrod', [5, 6], 470], ['bec', 'rovinj', [6, 7], 580], ['bec', 'sibenik', [8, 9], 720],
+      ['bec', 'makarska', [9, 10], 860], ['linz', 'rijeka', [5, 6], 470], ['salzburg', 'rijeka', [5, 6], 420], ['klagenfurt', 'split', [6, 7], 560],
+      ['wels', 'split', [8, 9], 820], ['bregenz', 'zagreb', [8, 9], 740], ['dornbirn', 'split', [11, 12], 1050]
+    ],
+    de: [
+      ['munchen', 'zagreb', [6, 7], 570],
+      ['nurnberg', 'varazdin', [7, 8], 690],
+      ['munchen', 'rijeka', [7, 8], 530],
+      ['stuttgart', 'zagreb', [8, 9], 780],
+      ['munchen', 'split', [9, 10], 880, 'munchen-split'],
+      ['mannheim', 'rijeka', [9, 10], 900],
+      ['frankfurt', 'zagreb', [9, 10], 960],
+      ['munchen', 'osijek', [8, 9], 850],
+      ['dusseldorf', 'osijek', [11, 12], 1350],
+      ['berlin', 'split', [11, 12], 1450],
+      ['stuttgart', 'split', [12, 13], 1170],
+      ['hamburg', 'rijeka', [13, 14], 1350],
+      ['frankfurt', 'slavonskibrod', [11, 12], 1150],
+      ['munchen', 'pula', [6, 7], 600],
+      ['augsburg', 'rijeka', [7, 8], 600],
+      ['nurnberg', 'zagreb', [7, 8], 730],
+      ['munchen', 'zadar', [8, 9], 780],
+      ['berlin', 'zagreb', [10, 11], 1050],
+      ['stuttgart', 'zadar', [11, 12], 1000],
+      ['koln', 'zagreb', [12, 13], 1150],
+      ['frankfurt', 'split', [13, 14], 1330],
+      ['munchen', 'varazdin', [6, 7], 560], ['munchen', 'slavonskibrod', [8, 9], 760], ['munchen', 'sibenik', [9, 10], 830], ['munchen', 'makarska', [10, 11], 950],
+      ['munchen', 'dubrovnik', [12, 13], 1100], ['rosenheim', 'zagreb', [5, 6], 500], ['augsburg', 'zagreb', [6, 7], 630], ['ingolstadt', 'zagreb', [7, 8], 650],
+      ['regensburg', 'zagreb', [7, 8], 700], ['ulm', 'zagreb', [7, 8], 700], ['nurnberg', 'split', [10, 11], 1030], ['stuttgart', 'rijeka', [8, 9], 750],
+      ['stuttgart', 'osijek', [10, 11], 1060], ['karlsruhe', 'zagreb', [9, 10], 870], ['heilbronn', 'split', [12, 13], 1180], ['darmstadt', 'zagreb', [9, 10], 930],
+      ['wiesbaden', 'split', [13, 14], 1350], ['leipzig', 'zagreb', [9, 10], 900], ['dresden', 'zagreb', [9, 10], 870], ['hannover', 'zagreb', [11, 12], 1150],
+      ['dortmund', 'zagreb', [12, 13], 1230], ['essen', 'split', [15, 16], 1560]
+    ],
+    ch: [
+      ['stgallen', 'zagreb', [7, 8], 720],
+      ['zurich', 'zagreb', [8, 9], 800],
+      ['luzern', 'rijeka', [9, 10], 840],
+      ['basel', 'zagreb', [9, 10], 870],
+      ['bern', 'split', [10, 11], 1180],
+      ['zeneva', 'zadar', [11, 12], 1300],
+      ['zurich', 'rijeka', [9, 10], 750],
+      ['zurich', 'split', [12, 13], 1010],
+      ['basel', 'osijek', [11, 12], 1150],
+      ['zurich', 'zadar', [11, 12], 1060],
+      ['winterthur', 'zagreb', [8, 9], 780],
+      ['bern', 'zagreb', [9, 10], 900],
+      ['basel', 'rijeka', [10, 11], 830],
+      ['zeneva', 'zagreb', [11, 12], 1050],
+      ['luzern', 'split', [12, 13], 1170],
+      ['zurich', 'osijek', [10, 11], 1090], ['zurich', 'pula', [8, 9], 760], ['zurich', 'varazdin', [8, 9], 830], ['stgallen', 'split', [10, 11], 940],
+      ['basel', 'split', [12, 13], 1080], ['bern', 'rijeka', [10, 11], 900], ['winterthur', 'split', [11, 12], 990], ['lugano', 'zagreb', [7, 8], 690],
+      ['lugano', 'split', [10, 11], 1000], ['aarau', 'zagreb', [9, 10], 850], ['schaffhausen', 'zagreb', [8, 9], 820], ['zug', 'split', [11, 12], 1050],
+      ['baden', 'rijeka', [9, 10], 790]
+    ],
+    hr: [
+      ['zagreb', 'varazdin', [1, 2], 80],
+      ['zagreb', 'rijeka', [2, 3], 160],
+      ['zagreb', 'osijek', [3, 4], 280],
+      ['zagreb', 'zadar', [3, 4], 285],
+      ['zagreb', 'pula', [3, 4], 265],
+      ['zagreb', 'vukovar', [3, 4], 300],
+      ['zagreb', 'sibenik', [4, 5], 340],
+      ['zagreb', 'split', [4, 5], 410],
+      ['split', 'dubrovnik', [3, 4], 230],
+      ['split', 'rijeka', [4, 5], 400],
+      ['rijeka', 'zadar', [2, 3], 230],
+      ['osijek', 'split', [5, 6], 500],
+      ['varazdin', 'split', [5, 6], 480],
+      ['zadar', 'dubrovnik', [4, 5], 350],
+      ['pula', 'rijeka', [1, 2], 100],
+      ['zagreb', 'makarska', [5, 6], 470],
+      ['zagreb', 'dubrovnik', [6, 7], 600],
+      ['zagreb', 'karlovac', [1, 2], 55],
+      ['zagreb', 'cakovec', [1, 2], 95],
+      ['split', 'makarska', [1, 2], 65],
+      ['zadar', 'sibenik', [1, 2], 85],
+      ['zagreb', 'slavonskibrod', [2, 3], 190],
+      ['split', 'zadar', [2, 3], 160],
+      ['zagreb', 'rovinj', [3, 4], 255],
+      ['varazdin', 'rijeka', [3, 4], 230],
+      ['osijek', 'rijeka', [5, 6], 430],
+      ['zagreb', 'sisak', [1, 2], 60], ['zagreb', 'bjelovar', [1, 2], 85], ['zagreb', 'koprivnica', [1, 2], 100], ['zagreb', 'virovitica', [2, 3], 150],
+      ['zagreb', 'pozega', [2, 3], 175], ['zagreb', 'vinkovci', [3, 4], 270], ['zagreb', 'gospic', [2, 3], 200], ['zagreb', 'senj', [2, 3], 180],
+      ['zagreb', 'opatija', [2, 3], 175], ['zagreb', 'porec', [3, 4], 250], ['zagreb', 'umag', [3, 4], 250], ['zagreb', 'knin', [3, 4], 300],
+      ['zagreb', 'trogir', [4, 5], 400], ['zagreb', 'ploce', [5, 6], 500], ['osijek', 'djakovo', [1, 2], 40], ['osijek', 'vukovar', [1, 2], 35],
+      ['varazdin', 'osijek', [3, 4], 220], ['osijek', 'zadar', [6, 7], 560], ['rijeka', 'krk', [1, 2], 50], ['split', 'trogir', [1, 2], 28],
+      ['split', 'metkovic', [2, 3], 150], ['zadar', 'biograd', [1, 2], 30], ['split', 'pula', [5, 6], 500], ['rijeka', 'dubrovnik', [6, 7], 620]
+    ]
+  };
+
+  SLUGS = ['basel-rijeka','bec-osijek','bec-rijeka','bec-varazdin','bec-zagreb','graz-varazdin','graz-zagreb','klagenfurt-zagreb','linz-split','munchen-pula','munchen-split','munchen-zagreb','osijek-graz','osijek-split','rijeka-zadar','salzburg-zagreb','split-dubrovnik','stuttgart-zadar','stuttgart-zagreb','varazdin-split','zagreb-osijek','zagreb-rijeka','zagreb-split','zurich-split','frankfurt-zagreb','berlin-zagreb','nurnberg-zagreb','koln-zagreb','zeneva-zagreb'];
+
+  CITIES = {
+    bec: {
+      hr: { h1: 'Slanje stvari iz Beča u Hrvatsku', from: 'iz Beča', intro: 'Beč ima najveću hrvatsku zajednicu u Austriji i najviše vožnji prema Zagrebu, Varaždinu, Osijeku i obali. Stvari se predaju ujutro i često stignu isti dan.', spot: 'Primopredaja se najčešće dogovara kod glavnog kolodvora (Hauptbahnhof) ili uz autocestu A2 prema Grazu, tamo gdje putnik ionako prolazi.' },
+      en: { h1: 'Sending items from Vienna to Croatia', from: 'from Vienna', intro: 'Vienna has the largest Croatian community in Austria and the most rides to Zagreb, Varaždin, Osijek and the coast. Items are handed over in the morning and often arrive the same day.', spot: 'Hand-overs are usually arranged at the main station (Hauptbahnhof) or along the A2 motorway towards Graz, where the traveller passes anyway.' },
+      de: { h1: 'Sachen von Wien nach Kroatien senden', from: 'aus Wien', intro: 'Wien hat die größte kroatische Gemeinschaft Österreichs und die meisten Fahrten nach Zagreb, Varaždin, Osijek und an die Küste. Übergabe am Morgen, Ankunft oft am selben Tag.', spot: 'Übergaben finden meist am Hauptbahnhof oder entlang der A2 Richtung Graz statt, wo der Reisende ohnehin vorbeikommt.' }
+    },
+    graz: {
+      hr: { h1: 'Slanje stvari iz Graza u Hrvatsku', from: 'iz Graza', intro: 'Graz je od Zagreba udaljen manje od 200 km, pa je ovo najkraća ruta iz Austrije. Putnici voze svaki dan, posebno studenti i ljudi koji rade u Štajerskoj.', spot: 'Stvari se najčešće predaju kod glavnog kolodvora ili uz autocestu A9 prema Spielfeldu i granici.' },
+      en: { h1: 'Sending items from Graz to Croatia', from: 'from Graz', intro: 'Graz is less than 200 km from Zagreb, the shortest route from Austria. Travellers drive it every day, especially students and people working in Styria.', spot: 'Items are usually handed over at the main station or along the A9 towards Spielfeld and the border.' },
+      de: { h1: 'Sachen von Graz nach Kroatien senden', from: 'aus Graz', intro: 'Graz liegt weniger als 200 km von Zagreb entfernt, die kürzeste Strecke aus Österreich. Reisende fahren sie täglich, besonders Studierende und Pendler aus der Steiermark.', spot: 'Übergabe meist am Hauptbahnhof oder entlang der A9 Richtung Spielfeld und Grenze.' }
+    },
+    munchen: {
+      hr: { h1: 'Slanje stvari iz Münchena u Hrvatsku', from: 'iz Münchena', intro: 'München je najveće polazište za Hrvatsku iz Njemačke. Vožnje idu preko Salzburga i Slovenije prema Zagrebu, Rijeci, Istri i Dalmaciji.', spot: 'Primopredaja se najčešće dogovara kod glavnog kolodvora ili uz autocestu A8 prema Salzburgu.' },
+      en: { h1: 'Sending items from Munich to Croatia', from: 'from Munich', intro: 'Munich is the biggest starting point for Croatia in Germany. Rides go via Salzburg and Slovenia to Zagreb, Rijeka, Istria and Dalmatia.', spot: 'Hand-overs are usually arranged at the main station or along the A8 towards Salzburg.' },
+      de: { h1: 'Sachen von München nach Kroatien senden', from: 'aus München', intro: 'München ist der wichtigste Startpunkt nach Kroatien in Deutschland. Die Fahrten gehen über Salzburg und Slowenien nach Zagreb, Rijeka, Istrien und Dalmatien.', spot: 'Übergabe meist am Hauptbahnhof oder entlang der A8 Richtung Salzburg.' }
+    },
+    stuttgart: {
+      hr: { h1: 'Slanje stvari iz Stuttgarta u Hrvatsku', from: 'iz Stuttgarta', intro: 'Stuttgart i okolica imaju veliku hrvatsku zajednicu, a vožnje prema Zagrebu i Dalmaciji idu preko Münchena. Na dugim rutama stvari se predaju večer prije ili rano ujutro.', spot: 'Stvari se najčešće predaju kod glavnog kolodvora ili uz autocestu A8 prema Ulmu.' },
+      en: { h1: 'Sending items from Stuttgart to Croatia', from: 'from Stuttgart', intro: 'Stuttgart and the surrounding area have a large Croatian community, and rides to Zagreb and Dalmatia go via Munich. On long routes items are handed over the evening before or early in the morning.', spot: 'Items are usually handed over at the main station or along the A8 towards Ulm.' },
+      de: { h1: 'Sachen von Stuttgart nach Kroatien senden', from: 'aus Stuttgart', intro: 'Stuttgart und Umgebung haben eine große kroatische Gemeinschaft, die Fahrten nach Zagreb und Dalmatien führen über München. Auf langen Strecken erfolgt die Übergabe am Vorabend oder früh morgens.', spot: 'Übergabe meist am Hauptbahnhof oder entlang der A8 Richtung Ulm.' }
+    },
+    zurich: {
+      hr: { h1: 'Slanje stvari iz Züricha u Hrvatsku', from: 'iz Züricha', intro: 'Zürich je glavno polazište iz Švicarske. Švicarska nije u EU, pa za nove stvari vrijede carinska pravila, a osobne i rabljene stvari najčešće prolaze bez problema.', spot: 'Primopredaja se najčešće dogovara kod glavnog kolodvora ili uz autocestu A1 prema St. Gallenu.' },
+      en: { h1: 'Sending items from Zurich to Croatia', from: 'from Zurich', intro: 'Zurich is the main starting point in Switzerland. Switzerland is outside the EU, so customs rules apply to new goods, while personal and used items usually pass without issue.', spot: 'Hand-overs are usually arranged at the main station or along the A1 towards St. Gallen.' },
+      de: { h1: 'Sachen von Zürich nach Kroatien senden', from: 'aus Zürich', intro: 'Zürich ist der wichtigste Startpunkt in der Schweiz. Die Schweiz ist nicht in der EU, für neue Waren gelten Zollregeln, persönliche und gebrauchte Sachen sind meist unproblematisch.', spot: 'Übergabe meist am Hauptbahnhof oder entlang der A1 Richtung St. Gallen.' }
+    },
+    zagreb: {
+      hr: { h1: 'Slanje stvari iz Zagreba i u Zagreb', from: 'iz Zagreba', intro: 'Zagreb je čvorište gotovo svih ruta: prema obali, Slavoniji, Austriji i Njemačkoj. Unutar Hrvatske stvari stižu isti dan, često za dva do četiri sata.', spot: 'Primopredaja se najčešće dogovara kod autobusnog kolodvora, na Jankomiru, kod naplatne postaje Lučko prema A1 ili na Ivanjoj Reki prema istoku.' },
+      en: { h1: 'Sending items from and to Zagreb', from: 'from Zagreb', intro: 'Zagreb is the hub of almost every route: to the coast, Slavonia, Austria and Germany. Within Croatia items arrive the same day, often within two to four hours.', spot: 'Hand-overs are usually arranged at the bus station, in Jankomir, at the Lučko toll plaza towards the A1 or at Ivanja Reka heading east.' },
+      de: { h1: 'Sachen von und nach Zagreb senden', from: 'aus Zagreb', intro: 'Zagreb ist der Knotenpunkt fast aller Strecken: zur Küste, nach Slawonien, Österreich und Deutschland. Innerhalb Kroatiens kommen Sachen am selben Tag an, oft in zwei bis vier Stunden.', spot: 'Übergabe meist am Busbahnhof, in Jankomir, an der Mautstelle Lučko Richtung A1 oder in Ivanja Reka Richtung Osten.' }
+    },
+    split: {
+      hr: { h1: 'Slanje stvari iz Splita i u Split', from: 'iz Splita', intro: 'Iz Splita stvari putuju prema Zagrebu, Dubrovniku, Zadru i u dijasporu. Ljeti je vožnji najviše, a rute prema Austriji i Njemačkoj traju jedan dan.', spot: 'Primopredaja se najčešće dogovara kod trajektne luke, na Duilovu ili na izlazu Dugopolje prema A1.' },
+      en: { h1: 'Sending items from and to Split', from: 'from Split', intro: 'From Split items travel to Zagreb, Dubrovnik, Zadar and the diaspora. Summer brings the most rides, and routes to Austria and Germany take one day.', spot: 'Hand-overs are usually arranged at the ferry port, in Duilovo or at the Dugopolje exit towards the A1.' },
+      de: { h1: 'Sachen von und nach Split senden', from: 'aus Split', intro: 'Von Split reisen Sachen nach Zagreb, Dubrovnik, Zadar und zur Diaspora. Im Sommer gibt es die meisten Fahrten, Strecken nach Österreich und Deutschland dauern einen Tag.', spot: 'Übergabe meist am Fährhafen, in Duilovo oder an der Ausfahrt Dugopolje Richtung A1.' }
+    },
+    rijeka: {
+      hr: { h1: 'Slanje stvari iz Rijeke i u Rijeku', from: 'iz Rijeke', intro: 'Rijeka spaja Zagreb, Istru, Kvarner i otoke te rute prema Austriji i Njemačkoj preko Slovenije. Vožnja do Zagreba traje oko dva sata.', spot: 'Primopredaja se najčešće dogovara kod autobusnog kolodvora na Žabici ili uz čvor Orehovica prema A6.' },
+      en: { h1: 'Sending items from and to Rijeka', from: 'from Rijeka', intro: 'Rijeka links Zagreb, Istria, Kvarner and the islands, plus routes to Austria and Germany via Slovenia. The drive to Zagreb takes about two hours.', spot: 'Hand-overs are usually arranged at the Žabica bus station or near the Orehovica junction towards the A6.' },
+      de: { h1: 'Sachen von und nach Rijeka senden', from: 'aus Rijeka', intro: 'Rijeka verbindet Zagreb, Istrien, die Kvarner Bucht und die Inseln sowie Strecken nach Österreich und Deutschland über Slowenien. Bis Zagreb sind es etwa zwei Stunden.', spot: 'Übergabe meist am Busbahnhof Žabica oder am Knoten Orehovica Richtung A6.' }
+    }
+  };
+
+  STR = {
+    hr: { crumbRoutes: 'Popularne rute', routesTitle: 'Rute i okvirne naknade', routesNote: 'Udaljenost, trajanje vožnje i preporučena naknada od male kutije (S) do najvećeg komada (XXL). Sve rute rade i u suprotnom smjeru.', faqTitle: 'Česta pitanja', otherTitle: 'Ostali gradovi', ctaTitle: 'Pošalji stvari {from}', ctaSub: 'Preuzmi Senvia aplikaciju besplatno i javi se putniku koji već ide tvojim smjerom.', h: 'h', titleTpl: 'Slanje stvari {from}: rute i cijene | Senvia', descTpl: '{h1}. Rute, udaljenosti, trajanje vožnje i okvirne naknade uz putnika koji već putuje. Preuzmi Senvia aplikaciju besplatno.',
+      q1: 'Koliko košta slanje stvari {from}?', a1: 'Naknada ovisi o udaljenosti i veličini. Na ruti {route} preporučeno je oko {s} € za malu kutiju (S) i oko {xl} € za veći komad (XL). Konačni iznos dogovaraš s putnikom.',
+      q2: 'Koliko dugo putuju stvari {from}?', a2: 'Stvari putuju s putnikom i stižu kad i on. Na ruti {route} vožnja traje {h1h} do {h2h} sati, bez skladišta i pretovara.',
+      q3: 'Što ako moje mjesto nije na popisu?', a3: 'Objavi zahtjev u aplikaciji. Putnici koji prolaze blizu javljaju se sami, a sve rute vrijede i u suprotnom smjeru.', locale: 'hr_HR' },
+    en: { crumbRoutes: 'Popular routes', routesTitle: 'Routes and indicative fees', routesNote: 'Distance, drive time and recommended fee from a small box (S) to the largest item (XXL). Every route works in the opposite direction too.', faqTitle: 'FAQ', otherTitle: 'Other cities', ctaTitle: 'Send items {from}', ctaSub: 'Download Senvia for free and reach a traveller already heading your way.', h: 'h', titleTpl: 'Sending items {from}: routes and prices | Senvia', descTpl: '{h1}. Routes, distances, drive times and indicative fees with a traveller already on the road. Download Senvia for free.',
+      q1: 'How much does it cost to send items {from}?', a1: 'The fee depends on distance and size. On {route} the recommended fee is about €{s} for a small box (S) and about €{xl} for a larger item (XL). You agree the final amount with the traveller.',
+      q2: 'How long does it take {from}?', a2: 'Items travel with the traveller and arrive when they do. On {route} the drive takes {h1h} to {h2h} hours, with no warehouse or transfers.',
+      q3: 'What if my town is not listed?', a3: 'Post a request in the app. Travellers passing nearby get in touch, and every route also works in the opposite direction.', locale: 'en_GB' },
+    de: { crumbRoutes: 'Beliebte Routen', routesTitle: 'Strecken und Richtwerte', routesNote: 'Entfernung, Fahrtzeit und empfohlener Kostenbeitrag vom kleinen Karton (S) bis zum größten Stück (XXL). Jede Strecke funktioniert auch in der Gegenrichtung.', faqTitle: 'Häufige Fragen', otherTitle: 'Weitere Städte', ctaTitle: 'Sachen {from} senden', ctaSub: 'Lade die Senvia App kostenlos und melde dich bei einem Reisenden auf deiner Strecke.', h: 'Std.', titleTpl: 'Sachen {from} senden: Strecken und Preise | Senvia', descTpl: '{h1}. Strecken, Entfernungen, Fahrtzeiten und Richtwerte mit Reisenden, die ohnehin unterwegs sind. Senvia App kostenlos laden.',
+      q1: 'Was kostet es, Sachen {from} zu senden?', a1: 'Der Beitrag hängt von Entfernung und Größe ab. Auf {route} liegt die Empfehlung bei etwa {s} € für einen kleinen Karton (S) und etwa {xl} € für ein größeres Stück (XL). Den Betrag vereinbarst du mit dem Reisenden.',
+      q2: 'Wie lange dauert es {from}?', a2: 'Die Sachen reisen mit dem Reisenden und kommen mit ihm an. Auf {route} dauert die Fahrt {h1h} bis {h2h} Stunden, ohne Lager und Umladen.',
+      q3: 'Was, wenn mein Ort fehlt?', a3: 'Stelle eine Anfrage in der App. Reisende, die in der Nähe vorbeikommen, melden sich, und jede Strecke funktioniert auch in der Gegenrichtung.', locale: 'de_DE' }
+  };
+
+  city(key, lang) { const c = this.C[key] || {}; return c[lang] || c.hr || key; }
+  fill(s, v) { return String(s).replace(/\{(\w+)\}/g, (_, k) => v[k] != null ? v[k] : ''); }
+  key() { return this.CITIES[this.props.slug] ? this.props.slug : 'bec'; }
+  data() {
+    const lang = this.state.lang, key = this.key();
+    const t = { ...this.STR.hr, ...(this.STR[lang] || {}) };
+    const c = this.CITIES[key][lang] || this.CITIES[key].hr;
+    const all = [].concat(this.ROUTES.at, this.ROUTES.de, this.ROUTES.ch, this.ROUTES.hr);
+    const seen = {};
+    const list = all.filter(r => r[0] === key || r[1] === key).map(([a, b, h, km]) => {
+      const other = a === key ? b : a;
+      return { other, h, km };
+    }).filter(r => { if (seen[r.other]) return false; seen[r.other] = true; return true; }).slice(0, 24);
+    const slugFor = (o) => [key + '-' + o, o + '-' + key].find(x => this.SLUGS.indexOf(x) > -1);
+    const name = this.city(key, lang);
+    const routes = list.map(r => {
+      const sl = slugFor(r.other);
+      return { title: name + ' \u2013 ' + this.city(r.other, lang), time: r.km + ' km \u00b7 ' + r.h[0] + '\u2013' + r.h[1] + ' ' + t.h,
+        price: 'S\u2013XXL: ' + this.price(r.km, 'S').rec + '\u2013' + this.price(r.km, 'XXL').rec + ' \u20ac', href: sl ? 'Ruta%20-%20' + sl + '.dc.html' : 'Popularne%20rute.dc.html' };
+    });
+    const top = list[0];
+    const v = { from: c.from, route: name + '\u2013' + this.city(top.other, lang), s: this.price(top.km, 'S').rec, xl: this.price(top.km, 'XL').rec, h1h: top.h[0], h2h: top.h[1] };
+    const faq = [1, 2, 3].map(i => ({ q: this.fill(t['q' + i], v), a: this.fill(t['a' + i], v) }));
+    return { t, c, name, routes, faq, v, key, lang };
+  }
+
+  componentDidMount() {
+    import('./i18n.js').then(m => {
+      this.setState({ lang: m.getLang() });
+      this.off = m.onLang(l => this.setState({ lang: l }));
+    });
+    this.applyMeta();
+  }
+  componentDidUpdate() { this.applyMeta(); }
+  componentWillUnmount() { if (this.off) this.off(); }
+
+  applyMeta() {
+    const d = this.data();
+    const head = document.head;
+    const url = 'https://www.senviaapp.com/gradovi/' + d.key + '/' + (d.lang !== 'hr' ? '?lang=' + d.lang : '');
+    const title = this.fill(d.t.titleTpl, { from: d.c.from });
+    const desc = this.fill(d.t.descTpl, { h1: d.c.h1 });
+    document.documentElement.setAttribute('lang', d.lang);
+    document.title = title;
+    setTimeout(() => { if (document.title !== title) document.title = title; }, 80);
+    const meta = (attr, n, val) => { let el = head.querySelector('meta[' + attr + '="' + n + '"]'); if (!el) { el = document.createElement('meta'); el.setAttribute(attr, n); head.appendChild(el); } el.setAttribute('content', val); };
+    meta('name', 'description', desc); meta('name', 'robots', 'index, follow');
+    meta('property', 'og:title', title); meta('property', 'og:description', desc); meta('property', 'og:url', url); meta('property', 'og:locale', d.t.locale);
+    let cn = head.querySelector('link[rel="canonical"]'); if (!cn) { cn = document.createElement('link'); cn.setAttribute('rel', 'canonical'); head.appendChild(cn); } cn.setAttribute('href', url);
+    const ld = (id, data) => { let el = document.getElementById(id); if (!el) { el = document.createElement('script'); el.type = 'application/ld+json'; el.id = id; head.appendChild(el); } el.textContent = JSON.stringify(data); };
+    ld('senvia-breadcrumb-ld', { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Senvia', item: 'https://www.senviaapp.com/' },
+      { '@type': 'ListItem', position: 2, name: d.t.crumbRoutes, item: 'https://www.senviaapp.com/popularne-rute/' },
+      { '@type': 'ListItem', position: 3, name: d.name, item: url } ] });
+    ld('senvia-city-faq-ld', { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: d.faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
+  }
+
+  renderVals() {
+    const d = this.data();
+    return {
+      crumbRoutes: d.t.crumbRoutes, cityName: d.name, h1: d.c.h1, intro: d.c.intro, spot: d.c.spot,
+      routesTitle: d.t.routesTitle, routesNote: d.t.routesNote, routes: d.routes,
+      faqTitle: d.t.faqTitle, faq: d.faq,
+      ctaTitle: this.fill(d.t.ctaTitle, { from: d.c.from }), ctaSub: d.t.ctaSub,
+      otherTitle: d.t.otherTitle,
+      others: Object.keys(this.CITIES).filter(k => k !== d.key).map(k => ({ name: this.city(k, d.lang), href: 'Grad%20-%20' + k + '.dc.html' }))
+    };
+  }
+}
+</script>
+</body>
+</html>

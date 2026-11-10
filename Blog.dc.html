@@ -45,9 +45,10 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -59,23 +60,22 @@
 
 <div style="overflow-x: clip">
 
-<dc-import name="Nav" active="blog" hint-size="100%,66px"></dc-import>
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" active="blog" hint-size="100%,66px"></dc-import>
 
-<nav aria-label="breadcrumb" style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
-  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">Blog</span>
+<nav aria-label="breadcrumb" style="max-width: 1360px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
+  <a href="Senvia%20Landing%20v3.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">Blog</span>
 </nav>
 
-<section style="max-width: 1060px; margin: 0 auto; padding: 40px clamp(16px, 4.0vw, 32px) 40px">
-  <div style="color: #1a9e44; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px">Blog</div>
-  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(30px, 8.4vw, 52px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; text-wrap: balance">{{ t.h1 }}</h1>
+<section style="max-width: 1360px; margin: 0 auto; padding: 40px clamp(16px, 4.0vw, 32px) 40px">
+  <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(30px, 8.4vw, 52px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; text-wrap: balance">{{ t.h1 }}</h1>
   <p style="font-size: 19px; line-height: 1.6; color: #3c5346; margin: 0; max-width: 62ch; text-wrap: pretty">{{ t.lead }}</p>
 </section>
 
-<section style="max-width: 1060px; margin: 0 auto; padding: 0 clamp(16px, 4.0vw, 32px) clamp(38px, 6.5vw, 84px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 22px">
+<section style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4.0vw, 32px) clamp(38px, 6.5vw, 84px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 22px">
   <sc-for list="{{ posts }}" as="p" hint-placeholder-count="11">
     <a href="{{ p.href }}" hrefLang="{{ p.lang }}" style="display: block; border: 1px solid #e6e3da; border-radius: 24px; padding: 32px clamp(17px, 4.3vw, 34px); color: #12261a" style-hover="border-color: #2dbb54; background: #f7f6f2">
       <span style="display: inline-block; background: #e8f7ee; color: #167a38; font-weight: 700; font-size: 12.5px; padding: 5px 12px; border-radius: 999px; margin-bottom: 16px">{{ p.tag }}</span>
-      <span style="display: block; font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.0vw, 25px); font-weight: 700; line-height: 1.2; margin-bottom: 10px; text-wrap: balance">{{ p.title }}</span>
+      <span style="display: block; font-family: 'Outfit', sans-serif; font-size: clamp(20px, 4.0vw, 25px); font-weight: 700; line-height: 1.2; margin-bottom: 10px; text-wrap: balance">{{ p.title }}</span>
       <span style="display: block; font-size: 15.5px; line-height: 1.6; color: #3c5346">{{ p.desc }}</span>
     </a>
   </sc-for>
@@ -108,19 +108,99 @@ class Component extends DCLogic {
       h1: 'Ratgeber zum Versand von Sachen und Strecken',
       lead: 'Kurze Texte zu Kostenbeiträgen, Verpackung und Strecken, innerhalb Kroatiens von Zagreb, Varazdin und Osijek nach Rijeka, Zadar und Split, sowie zur Diaspora in Deutschland, Österreich, der Schweiz und Irland. Geschrieben aus echten Sendungen unserer Nutzer.',
       title: 'Blog über den Versand von Sachen und Zustellung | Senvia',
-      desc: 'Ratgeber zum Versand von Sachen, Kostenbeiträgen und Strecken. Wie Sachen schneller und günstiger mit einem Reisenden ankommt. Senvia App kostenlos laden.',
+      desc: 'Ratgeber zum Versand von Sachen, Kostenbeiträgen und Strecken. Wie Sachen schneller und günstiger mit einem Reisenden ankommen. Senvia App kostenlos laden.',
       locale: 'de_DE', crumb: 'Blog'
     }
   };
 
   POSTS = [
+    { href: 'Usporedba.dc.html', lang: 'hr',
+      tag: { hr: 'Usporedba', en: 'Comparison', de: 'Vergleich' },
+      title: { hr: 'Senvia ili klasična dostava: što je jeftinije i brže?', en: 'Senvia or classic delivery: which is cheaper and faster?', de: 'Senvia oder klassische Zustellung: was ist günstiger und schneller?' },
+      desc: { hr: 'Naknada, brzina, primopredaja i primjeri po rutama. Kad se više isplati klasična dostava, a kad putnik koji već ide tim smjerom.', en: 'Fees, speed, hand-over and examples by route. When classic delivery makes more sense and when a traveller already heading that way does.', de: 'Kostenbeitrag, Geschwindigkeit, Übergabe und Beispiele je Strecke. Wann sich klassische Zustellung lohnt und wann ein Reisender, der ohnehin dorthin fährt.' } },
+    { href: 'Blog%20-%20Slanje%20iz%20Njemacke.dc.html', lang: 'hr',
+      tag: { hr: 'Njemačka', en: 'Germany', de: 'Deutschland' },
+      title: { hr: 'Slanje stvari iz Njemačke u Hrvatsku', en: 'Sending items from Germany to Croatia', de: 'Sachen aus Deutschland nach Kroatien schicken' },
+      desc: { hr: 'München, Stuttgart, Nürnberg, Frankfurt, Berlin i Köln prema Zagrebu, Splitu i Zadru. Koliko košta i koliko traje slanje stvari iz Njemačke uz putnika.', en: 'Munich, Stuttgart, Nuremberg, Frankfurt, Berlin and Cologne to Zagreb, Split and Zadar. What sending items from Germany with a traveller costs and how long it takes.', de: 'München, Stuttgart, Nürnberg, Frankfurt, Berlin und Köln nach Zagreb, Split und Zadar. Was der Versand aus Deutschland mit einem Reisenden kostet und wie lange er dauert.' } },
+    { href: 'Blog%20-%20Paket%20od%20kuce%20za%20studente.dc.html', lang: 'hr',
+      tag: { hr: 'Studenti', en: 'Students', de: 'Studierende' },
+      title: { hr: 'Paket od kuće: kako studentu stigne hrana, rublje i skripte', en: 'A parcel from home: how food, laundry and notes reach a student', de: 'Paket von zu Hause: wie Essen, Wäsche und Skripten ankommen' },
+      desc: { hr: 'Kako poslati paket studentu u Zagreb, Rijeku, Split, Osijek, Beč ili Graz uz putnika koji ide tim smjerom, i koliko to košta tijekom semestra.', en: 'How to send a parcel to a student in Zagreb, Rijeka, Split, Osijek, Vienna or Graz with a traveller heading that way, and what it costs during term.', de: 'So schickst du ein Paket an Studierende in Zagreb, Rijeka, Split, Osijek, Wien oder Graz mit einem Reisenden auf derselben Strecke, und was es im Semester kostet.' } },
+    { href: 'Blog%20-%20Sezonski%20radnici.dc.html', lang: 'hr',
+      tag: { hr: 'Sezonci', en: 'Seasonal work', de: 'Saisonarbeit' },
+      title: { hr: 'Stvari za sezonu: kako stižu sezoncima na obalu', en: 'Items for the season: how they reach seasonal workers on the coast', de: 'Sachen für die Saison: so kommen sie zu Saisonkräften an die Küste' },
+      desc: { hr: 'Radna odjeća, alat, dokumenti i osobne stvari za sezonu od Istre do Dubrovnika. Kako ih poslati uz putnika koji vozi prema obali i koliko to košta.', en: 'Work clothes, tools, documents and personal things for the season from Istria to Dubrovnik. How to send them with a traveller driving to the coast and what it costs.', de: 'Arbeitskleidung, Werkzeug, Dokumente und persönliche Sachen für die Saison von Istrien bis Dubrovnik. So reisen sie mit einem Reisenden an die Küste, und das kostet es.' } },
+    { href: 'Blog%20-%20Rad%20u%20drugom%20gradu.dc.html', lang: 'hr',
+      tag: { hr: 'Posao', en: 'Work', de: 'Arbeit' },
+      title: { hr: 'Radiš u drugom gradu, a stvari su ti ostale doma', en: 'You work in another city and your things are still at home', de: 'Du arbeitest in einer anderen Stadt, deine Sachen sind noch zu Hause' },
+      desc: { hr: 'Nedjeljom odlazak, petkom povratak. Kako poslati stvari između grada u kojem radiš i grada u kojem živiš, bez dodatne vožnje i bez čekanja pošte.', en: 'Leave on Sunday, come back on Friday. How to send items between the city where you work and the city where you live, with no extra drive and no waiting for the post.', de: 'Sonntags hin, freitags zurück. So schickst du Sachen zwischen Arbeitsort und Wohnort, ohne zusätzliche Fahrt und ohne auf die Post zu warten.' } },
+    { href: 'Blog%20-%20Zaboravljene%20stvari.dc.html', lang: 'hr',
+      tag: { hr: 'Obitelj', en: 'Family', de: 'Familie' },
+      title: { hr: 'Zaboravio si putovnicu, ključeve ili lijekove? Evo kako stižu još danas', en: 'Forgot your passport, keys or medicine? Here is how they arrive today', de: 'Reisepass, Schlüssel oder Medikamente vergessen? So kommen sie noch heute an' },
+      desc: { hr: 'Što napraviti kad netko zaboravi putovnicu, ključeve, dokumente ili lijekove u drugom gradu. Slanje sitnih stvari uz putnika, često za nekoliko sati.', en: 'What to do when someone leaves a passport, keys, documents or medicine in another city. Sending small items with a traveller, often within a few hours.', de: 'Was tun, wenn jemand Reisepass, Schlüssel, Dokumente oder Medikamente in einer anderen Stadt vergisst. Kleine Sachen mit einem Reisenden schicken, oft in wenigen Stunden.' } },
+    { href: 'Blog%20-%20Slanje%20domacih%20proizvoda%20s%20OPG-a.dc.html', lang: 'hr',
+      tag: {"hr":"OPG","en":"Family farms","de":"Hofladen"},
+      title: {"hr":"Slanje domaćih proizvoda s OPG-a kupcima","en":"Sending local produce from a family farm to customers","de":"Hofprodukte vom Familienbetrieb an Kunden senden"},
+      desc: {"hr":"Kako OPG može slati med, sir, ulje, vino i zimnicu kupcima u Hrvatskoj i dijaspori uz putnika koji već ide tim smjerom. Pakiranje, naknade i savjeti.","en":"How a family farm can send honey, cheese, olive oil, wine and preserves to customers in Croatia and abroad with a traveller already heading that way.","de":"Wie ein Familienbetrieb Honig, Käse, Olivenöl, Wein und Eingemachtes mit Reisenden an Kunden in Kroatien und im Ausland schickt."} },
+    { href: 'Blog%20-%20Slanje%20poklona%20za%20Bozic.dc.html', lang: 'hr',
+      tag: {"hr":"Božić","en":"Christmas","de":"Weihnachten"},
+      title: {"hr":"Slanje poklona za Božić, u oba smjera","en":"Sending Christmas gifts, in both directions","de":"Weihnachtsgeschenke senden, in beide Richtungen"},
+      desc: {"hr":"Kako na vrijeme poslati božićne poklone, kolače i domaću hranu između Hrvatske, Austrije, Njemačke i Švicarske uz putnika koji ide kući za blagdane.","en":"How to send Christmas gifts, cakes and homemade food on time between Croatia, Austria, Germany and Switzerland with a traveller going home for the holidays.","de":"So kommen Weihnachtsgeschenke, Kuchen und Hausgemachtes rechtzeitig zwischen Kroatien, Österreich, Deutschland und der Schweiz an, mit Reisenden auf dem Heimweg."} },
+    { href: 'Blog%20-%20Slanje%20stvari%20ljeti.dc.html', lang: 'hr',
+      tag: {"hr":"Ljeto","en":"Summer","de":"Sommer"},
+      title: {"hr":"Slanje stvari ljeti: sezona, more i vikendice","en":"Sending items in summer: the season, the coast and holiday homes","de":"Sachen im Sommer senden: Saison, Meer und Ferienhaus"},
+      desc: {"hr":"Kako ljeti poslati stvari sezoncima, vratiti zaboravljeno s mora ili opremiti vikendicu uz putnika koji vozi prema obali ili s obale.","en":"How to send items to seasonal workers, get forgotten things back from the coast or kit out a holiday home with a traveller driving to or from the sea.","de":"So schickst du im Sommer Sachen an Saisonkräfte, holst Vergessenes von der Küste zurück oder stattest das Ferienhaus aus, mit Reisenden zur Küste und zurück."} },
+    { href: 'Blog%20-%20Slanje%20stvari%20za%20Uskrs.dc.html', lang: 'hr',
+      tag: {"hr":"Uskrs","en":"Easter","de":"Ostern"},
+      title: {"hr":"Slanje stvari za Uskrs: šunka, pinca i pisanice","en":"Sending items for Easter: ham, sweet bread and painted eggs","de":"Sachen zu Ostern senden: Schinken, Pinca und Ostereier"},
+      desc: {"hr":"Kako za Uskrs poslati šunku, pincu, sir i pisanice obitelji u Hrvatskoj ili dijaspori uz putnika koji putuje za blagdane.","en":"How to send ham, Easter sweet bread, cheese and painted eggs to family in Croatia or abroad with a traveller going home for the holidays.","de":"So schickst du zu Ostern Schinken, Pinca, Käse und Ostereier an die Familie in Kroatien oder im Ausland, mit Reisenden auf dem Heimweg."} },
+    { href: 'Blog%20-%20Prijevoz%20kuhinje.dc.html', lang: 'hr',
+      tag: { hr: 'Vodič', en: 'Guide', de: 'Ratgeber' },
+      title: { hr: 'Prijevoz kuhinje i bijele tehnike uz putnika s kombijem', en: 'Moving a kitchen and large appliances with a traveller', de: 'Küche und Haushaltsgeräte mit einem Reisenden transportieren' },
+      desc: { hr: 'Kako prevesti kuhinju, perilicu rublja, hladnjak ili štednjak uz putnika s kombijem: priprema uređaja, pakiranje elemenata i okvirne naknade po rutama.', en: 'How to move a kitchen, washing machine, fridge or cooker with a traveller who has a van: preparing appliances, packing units and indicative fees by route.', de: 'So transportierst du Küche, Waschmaschine, Kühlschrank oder Herd mit einem Reisenden mit Transporter: Geräte vorbereiten, Elemente verpacken, Kostenbeiträge je Route.' } },
+    { href: 'Blog%20-%20Prijevoz%20skutera.dc.html', lang: 'hr',
+      tag: { hr: 'Vodič', en: 'Guide', de: 'Ratgeber' },
+      title: { hr: 'Prijevoz skutera i električnog romobila uz putnika', en: 'Moving a scooter or electric scooter with a traveller', de: 'Roller und E-Scooter mit einem Reisenden transportieren' },
+      desc: { hr: 'Kako prevesti skuter ili električni romobil uz putnika s kombijem ili prikolicom: koliko košta, kako ga pripremiti i na što paziti pri utovaru.', en: 'How to move a scooter or electric scooter with a traveller who has a van or trailer: what it costs, how to prepare it and what to watch when loading.', de: 'So transportierst du einen Motorroller oder E-Scooter mit einem Reisenden mit Transporter oder Anhänger: Kosten, Vorbereitung und worauf du beim Verladen achtest.' } },
+    { href: 'Blog%20-%20Prijevoz%20motora.dc.html', lang: 'hr',
+      tag: { hr: 'Vodič', en: 'Guide', de: 'Ratgeber' },
+      title: { hr: 'Prijevoz motora: kako prevesti motocikl bez šlep službe', en: 'Moving a motorbike without a tow service', de: 'Motorrad transportieren ohne Abschleppdienst' },
+      desc: { hr: 'Kako prevesti motor ili motocikl uz putnika s prikolicom ili kombijem, koliko košta na rutama po Hrvatskoj i iz Austrije te kako ga sigurno vezati.', en: 'How to move a motorbike with a traveller who has a trailer or van, what it costs on routes in Croatia and from Austria, and how to strap it down safely.', de: 'So transportierst du ein Motorrad mit einem Reisenden mit Anhänger oder Transporter, was es auf Strecken in Kroatien und aus Österreich kostet und wie du es sicherst.' } },
+    { href: 'Blog%20-%20Prijevoz%20alata.dc.html', lang: 'hr',
+      tag: { hr: 'Vodič', en: 'Guide', de: 'Ratgeber' },
+      title: { hr: 'Prijevoz alata i strojeva: od kutije alata do mješalice', en: 'Moving tools and machinery: from a toolbox to a cement mixer', de: 'Werkzeug und Maschinen transportieren: vom Koffer bis zum Mischer' },
+      desc: { hr: 'Kutija alata, kompresor, mješalica ili agregat: kako prevesti alat i strojeve uz putnika koji ide tvojim smjerom, koliko košta i kako ih zapakirati.', en: 'A toolbox, compressor, cement mixer or generator: how to move tools and machinery with a traveller heading your way, what it costs and how to pack them.', de: 'Werkzeugkoffer, Kompressor, Betonmischer oder Stromaggregat: so transportierst du Werkzeug und Maschinen mit einem Reisenden, was es kostet und wie du verpackst.' } },
+    { href: 'Blog%20-%20Najjeftinije%20slanje%20paketa.dc.html', lang: 'hr',
+      tag: { hr: 'Naknade', en: 'Fees', de: 'Kostenbeiträge' },
+      title: { hr: 'Najjeftiniji način slanja paketa u Hrvatskoj', en: 'The cheapest way to send a parcel in Croatia', de: 'Der günstigste Weg, ein Paket in Kroatien zu verschicken' },
+      desc: { hr: 'Koji je najjeftiniji način slanja paketa po Hrvatskoj i kada se isplati poslati paket uz putnika umjesto klasične dostave. Primjeri naknada po rutama.', en: 'The cheapest way to send a parcel within Croatia and when sending it with a traveller beats classic delivery. Example fees by route.', de: 'Der günstigste Weg, ein Paket innerhalb Kroatiens zu verschicken, und wann sich ein Reisender statt klassischer Zustellung lohnt. Beispielbeiträge je Strecke.' } },
+    { href: 'Blog%20-%20Slanje%20paketa%20isti%20dan.dc.html', lang: 'hr',
+      tag: { hr: 'Hitno', en: 'Urgent', de: 'Eilig' },
+      title: { hr: 'Slanje paketa isti dan: kad stvar mora stići danas', en: 'Same-day parcels: when it has to arrive today', de: 'Paket am selben Tag: wenn es heute ankommen muss' },
+      desc: { hr: 'Kako poslati paket isti dan iz Zagreba u Split, Rijeku ili Osijek: hitna dostava uz putnika koji već vozi, bez čekanja kurira i sortirnog centra.', en: 'How to send a parcel the same day from Zagreb to Split, Rijeka or Osijek: urgent delivery with a traveller already on the road, with no courier wait or sorting centre.', de: 'So kommt ein Paket noch am selben Tag von Zagreb nach Split, Rijeka oder Osijek: Eilzustellung mit einem Reisenden, ohne Warten auf Kurier und Sortierzentrum.' } },
+    { href: 'Blog%20-%20Prijevoz%20bicikla.dc.html', lang: 'hr',
+      tag: { hr: 'Vodič', en: 'Guide', de: 'Ratgeber' },
+      title: { hr: 'Prijevoz bicikla: od cestovnog do električnog', en: 'Bike transport: from road bikes to e-bikes', de: 'Fahrrad transportieren: vom Rennrad bis zum E-Bike' },
+      desc: { hr: 'Kako poslati bicikl ili električni bicikl uz putnika, koliko košta prijevoz bicikla po Hrvatskoj i iz Austrije i kako ga pripremiti da stigne neoštećen.', en: 'How to send a bicycle or e-bike with a traveller, what bike transport costs in Croatia and from Austria, and how to prepare it so it arrives undamaged.', de: 'So schickst du ein Fahrrad oder E-Bike mit einem Reisenden, was der Fahrradtransport in Kroatien und aus Österreich kostet und wie es unbeschädigt ankommt.' } },
+    { href: 'Blog%20-%20Prijevoz%20guma.dc.html', lang: 'hr',
+      tag: { hr: 'Vodič', en: 'Guide', de: 'Ratgeber' },
+      title: { hr: 'Prijevoz guma i felgi uz putnika', en: 'Moving tyres and wheels with a traveller', de: 'Reifen und Felgen mit einem Reisenden transportieren' },
+      desc: { hr: 'Kako poslati gume ili kompletne kotače uz putnika, koliko košta prijevoz guma po Hrvatskoj i iz Njemačke te kako ih zapakirati da ne zaprljaju prtljažnik.', en: 'How to send tyres or complete wheels with a traveller, what tyre transport costs in Croatia and from Germany, and how to pack them so the boot stays clean.', de: 'So schickst du Reifen oder Kompletträder mit einem Reisenden, was der Reifentransport in Kroatien und aus Deutschland kostet und wie der Kofferraum sauber bleibt.' } },
+    { href: 'Blog%20-%20Studentska%20selidba.dc.html', lang: 'hr',
+      tag: { hr: 'Studenti', en: 'Students', de: 'Studierende' },
+      title: { hr: 'Studentska selidba bez kombija i bez gužve', en: 'A student move without a van or the hassle', de: 'Studentenumzug ohne Transporter und ohne Stress' },
+      desc: { hr: 'Kako jeftino prevesti stvari za studentski dom ili stan: kutije, kofere, bicikl i mali namještaj uz putnika koji ide iz tvog grada prema fakultetu.', en: 'How to move your things cheaply to student halls or a flat: boxes, suitcases, a bike and small furniture with a traveller going from your town to your university.', de: 'So bringst du deine Sachen günstig ins Wohnheim oder in die WG: Kartons, Koffer, Fahrrad und kleine Möbel mit einem Reisenden aus deiner Stadt zur Uni.' } },
+    { href: 'Blog%20-%20Prijevoz%20stvari%20s%20oglasa.dc.html', lang: 'hr',
+      tag: { hr: 'Vodič', en: 'Guide', de: 'Ratgeber' },
+      title: { hr: 'Kupio si nešto preko oglasa u drugom gradu? Evo kako do tebe', en: 'Bought something from a listing in another city? Here is how it gets to you', de: 'Etwas aus einer Anzeige in einer anderen Stadt gekauft? So kommt es zu dir' },
+      desc: { hr: 'Kako prevesti stvari kupljene preko Njuškala, OLX-a ili Facebook Marketplacea iz drugog grada: kauč, komodu, bicikl ili perilicu uz putnika koji ide tim smjerom.', en: 'How to move items bought on Njuškalo, OLX or Facebook Marketplace from another city: a sofa, drawers, a bike or a washing machine with a traveller heading your way.', de: 'So transportierst du Sachen aus Kleinanzeigen, Willhaben, OLX oder Facebook Marketplace aus einer anderen Stadt: Sofa, Kommode, Fahrrad oder Waschmaschine mit einem Reisenden.' } },
     { href: 'Blog%20-%20Zasto%20postoji%20Senvia.dc.html', lang: 'hr',
       tag: { hr: 'Senvia', en: 'Senvia', de: 'Senvia' },
       title: { hr: 'Zašto postoji Senvia: prazan prostor u autu koji ionako putuje', en: 'Why Senvia exists: the empty space in a car that travels anyway', de: 'Warum es Senvia gibt: der freie Platz im Auto, der ohnehin mitfährt' },
       desc: { hr: 'Auti i kombiji svaki dan voze poluprazni. Kako vozači dijele troškove puta, a stvari putuju odmah.', en: 'Cars and vans drive half empty every day. How drivers share trip costs and items travel right away.', de: 'Autos und Transporter fahren jeden Tag halb leer. Wie Fahrer Fahrtkosten teilen und Sachen sofort reisen.' } },
     { href: 'Blog%20-%20Slanje%20namjestaja.dc.html', lang: 'hr',
       tag: { hr: 'Vodič', en: 'Guide', de: 'Ratgeber' },
-      title: { hr: 'Kako poslati namještaj i velike stvari', en: 'How to send furniture and large items', de: 'Möbel und große Sachen verschicken' },
+      title: { hr: 'Kako poslati namještaj: kauč, garnituru, komodu i lampu', en: 'How to send furniture: sofa, corner sofa, drawers and lamps', de: 'Möbel verschicken: Sofa, Ecksofa, Kommode und Lampe' },
       desc: { hr: 'Namještaj, bijela tehnika i stvari za selidbu ne moraju čekati prijevoznika ni kamion.', en: 'Furniture, appliances and moving boxes do not have to wait for a removal company.', de: 'Möbel, Haushaltsgeräte und Umzugskartons müssen nicht auf eine Spedition warten.' } },
     { href: 'Blog%20-%20Podijeli%20troskove%20voznje.dc.html', lang: 'hr',
       tag: { hr: 'Putnici', en: 'Travellers', de: 'Reisende' },
@@ -141,7 +221,7 @@ class Component extends DCLogic {
     { href: 'Blog%20-%20Kako%20poslati%20stvari%20u%20Austriju.dc.html', lang: 'hr',
       tag: { hr: 'Vodič', en: 'Guide', de: 'Ratgeber' },
       title: { hr: 'Kako poslati stvari u Austriju? Vodič za 2026.', en: 'How to send items to Austria? A 2026 guide', de: 'Wie schickt man Sachen nach Österreich? Ratgeber 2026' },
-      desc: { hr: 'Tri načina slanja, okvirne naknade, trajanje i savjeti da stvari brže nađu putnika.', en: 'Three ways to send, indicative fees, timings and tips so items find a traveller faster.', de: 'Drei Versandwege, Richtwerte, Dauer und Tipps, damit Sachen schneller einen Reisenden findet.' } },
+      desc: { hr: 'Tri načina slanja, okvirne naknade, trajanje i savjeti da stvari brže nađu putnika.', en: 'Three ways to send, indicative fees, timings and tips so items find a traveller faster.', de: 'Drei Versandwege, Richtwerte, Dauer und Tipps, damit Sachen schneller einen Reisenden finden.' } },
     { href: 'Blog%20-%20Sachen%20nach%20Kroatien%20schicken.dc.html', lang: 'de',
       tag: { hr: 'Deutsch', en: 'Deutsch', de: 'Deutsch' },
       title: { hr: 'Sachen nach Kroatien schicken, Ratgeber 2026', en: 'Sachen nach Kroatien schicken, Ratgeber 2026', de: 'Sachen nach Kroatien schicken, Ratgeber 2026' },
@@ -149,14 +229,14 @@ class Component extends DCLogic {
     { href: 'Blog%20-%20Kome%20koriste%20rute.dc.html', lang: 'hr',
       tag: { hr: 'Korisnici', en: 'Users', de: 'Nutzer' },
       title: { hr: 'Kome najviše koriste rute za slanje stvari', en: 'Who benefits most from these routes', de: 'Wem die Strecken am meisten nützen' },
-      desc: { hr: 'Dijaspora, studenti, sezonski radnici i ljudi koji rade izvan svojega grada.', en: 'The diaspora, students, seasonal workers and people working away from home.', de: 'Diaspora, Studierende, Saisonarbeiter und Menschen, die auswärts arbeiten.' } },
+      desc: { hr: 'Dijaspora, studenti, sezonski radnici i ljudi koji rade izvan svog grada.', en: 'The diaspora, students, seasonal workers and people working away from home.', de: 'Diaspora, Studierende, Saisonarbeiter und Menschen, die auswärts arbeiten.' } },
     { href: 'Blog%20-%20Sto%20Hrvati%20u%20Becu%20salju%20doma.dc.html', lang: 'hr',
       tag: { hr: 'Iskustva', en: 'Stories', de: 'Erfahrungen' },
       title: { hr: 'Što dijaspora u Austriji šalje kući u Hrvatsku', en: 'What the diaspora in Austria sends home to Croatia', de: 'Was die Diaspora in Österreich nach Kroatien schickt' },
       desc: { hr: 'Beč, Graz, Linz i Salzburg prema Hrvatskoj, što ide u obratnom smjeru i kako to zapakirati.', en: 'Vienna, Graz, Linz and Salzburg towards Croatia, what goes the other way and how to pack it.', de: 'Wien, Graz, Linz und Salzburg Richtung Kroatien, was zurückreist und wie man es verpackt.' } },
     { href: 'Blog%20-%20Koliko%20kosta%20slanje%20stvari.dc.html', lang: 'hr',
       tag: { hr: 'Naknade', en: 'Fees', de: 'Kostenbeiträge' },
-      title: { hr: 'Koliko stvarno košta poslati stvari iz Austrije u Hrvatsku', en: 'What it really costs to send items from Austria to Croatia', de: 'Was Sachen von Österreich nach Kroatien wirklich kostet' },
+      title: { hr: 'Koliko stvarno košta poslati stvari iz Austrije u Hrvatsku', en: 'What it really costs to send items from Austria to Croatia', de: 'Was der Versand von Österreich nach Kroatien wirklich kostet' },
       desc: { hr: 'Usporedba tarife klasične dostave i dogovora s putnikom, na primjeru rute Beč–Zagreb.', en: 'Classic delivery tariffs compared with a traveller agreement, on the Vienna to Zagreb route.', de: 'Tarife der klassischen Zustellung im Vergleich zur Absprache mit einem Reisenden, Strecke Wien nach Zagreb.' } }
   ];
 

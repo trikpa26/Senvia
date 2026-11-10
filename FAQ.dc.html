@@ -45,9 +45,10 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -58,26 +59,25 @@
 
 <div style="overflow-x: clip">
 
-<dc-import name="Nav" active="faq" hint-size="100%,66px"></dc-import>
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" active="faq" hint-size="100%,66px"></dc-import>
 
-<nav aria-label="breadcrumb" style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
-  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">FAQ</span>
+<nav aria-label="breadcrumb" style="max-width: 1360px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
+  <a href="Senvia%20Landing%20v3.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">FAQ</span>
 </nav>
 
 <section style="max-width: 900px; margin: 0 auto; padding: 40px clamp(16px, 4.0vw, 32px) 24px">
-  <div style="color: #1a9e44; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px">FAQ</div>
-  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(30px, 8.4vw, 52px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; text-wrap: balance">{{ t.h1 }}</h1>
+  <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(30px, 8.4vw, 52px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; text-wrap: balance">{{ t.h1 }}</h1>
   <p style="font-size: 19px; line-height: 1.6; color: #3c5346; margin: 0; max-width: 62ch; text-wrap: pretty">{{ t.lead }} <a href="mailto:contact@senviaapp.com">contact@senviaapp.com</a>.</p>
 </section>
 
 <section style="max-width: 900px; margin: 0 auto; padding: 24px clamp(16px, 4.0vw, 32px) 40px">
   <sc-for list="{{ groups }}" as="g" hint-placeholder-count="6">
     <div style="margin-bottom: 40px">
-      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.5vw, 28px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 18px">{{ g.title }}</h2>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(20px, 4.5vw, 28px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 18px">{{ g.title }}</h2>
       <div style="display: grid; gap: 14px">
         <sc-for list="{{ g.items }}" as="f" hint-placeholder-count="4">
           <div style="background: #f7f6f2; border: 1px solid #e6e3da; border-radius: 18px; padding: 24px clamp(14px, 3.3vw, 26px)">
-            <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; margin: 0 0 10px">{{ f.q }}</h3>
+            <h3 style="font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 600; margin: 0 0 10px">{{ f.q }}</h3>
             <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ f.a }}</p>
           </div>
         </sc-for>
@@ -86,13 +86,13 @@
   </sc-for>
 </section>
 
-<section id="preuzmi" style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 4.0vw, 32px) clamp(38px, 6.5vw, 84px)">
+<section id="preuzmi" style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4.0vw, 32px) clamp(38px, 6.5vw, 84px)">
   <div style="background: #2dbb54; border-radius: 28px; padding: clamp(27px, 4.6vw, 60px) clamp(24px, 6.0vw, 48px); text-align: center; color: #ffffff">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 5.5vw, 34px); font-weight: 700; margin: 0 0 14px; text-wrap: balance">{{ t.ctaTitle }}</h2>
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(20px, 5.5vw, 34px); font-weight: 700; margin: 0 0 14px; text-wrap: balance">{{ t.ctaTitle }}</h2>
     <p style="margin: 0 auto 30px; font-size: 18px; line-height: 1.55; max-width: 46ch; color: rgba(255,255,255,0.92)">{{ t.ctaText }}</p>
     <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap">
-      <a href="https://apps.apple.com/us/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="54" style="display: block; border-radius: 10px"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="54" style="display: block; border-radius: 10px"></a>
+      <a href="https://apps.apple.com/app/id6759839112" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="54" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="54" style="display: block; border-radius: 10px"></a>
     </div>
   </div>
 </section>
@@ -142,7 +142,7 @@ class Component extends DCLogic {
         { q: 'Je li Senvia besplatna?', a: 'Da, aplikacija je besplatna za preuzimanje i korištenje, bez pretplate i mjesečne naknade. Trošak rezervacije prijevoza plaća se tek kada pronađeš putnika i potvrdiš rezervaciju stvari.' },
         { q: 'Gdje Senvia trenutno radi?', a: 'Trenutno su najaktivnije rute u Hrvatskoj i Austriji, uz redovite vožnje prema Njemačkoj i Bosni i Hercegovini. Nisi ograničen na određene gradove: zahtjev možeš objaviti gdje god se nalaziš, a stranica rute postoji dok na njoj ima aktivnih putnika.' },
         { q: 'Na kojim platformama je dostupna aplikacija?', a: 'Senvia je dostupna za iPhone u App Storeu i za Android na Google Playu. Prije registracije aplikaciju možeš razgledati kao gost.' },
-        { q: 'Kome je Senvia namijenjena?', a: 'Svima koji šalju stvari, a najviše je koriste dijaspora u Austriji, Njemačkoj i Švicarskoj, studenti koji studiraju izvan svojega grada, sezonski radnici na obali i ljudi koji rade izvan mjesta u kojem žive.' },
+        { q: 'Kome je Senvia namijenjena?', a: 'Svima koji šalju stvari, a najviše je koriste dijaspora u Austriji, Njemačkoj i Švicarskoj, studenti koji studiraju izvan svog grada, sezonski radnici na obali i ljudi koji rade izvan mjesta u kojem žive.' },
         { q: 'Je li Senvia dostavna služba?', a: 'Nije. Senvia ne prevozi stvari, nema vozni park ni skladišta. Aplikacija povezuje pošiljatelja i putnika koji već putuje tim smjerom, a prijevoz je dogovor između njih dvoje.' },
         { q: 'Na kojim je jezicima aplikacija?', a: 'Aplikacija je dostupna na hrvatskom i engleskom jeziku, a web stranica na hrvatskom, engleskom i njemačkom.' },
         { q: 'Moram li se registrirati da bih razgledao ponudu?', a: 'Ne. Objavljene vožnje i zahtjeve možeš pregledavati kao gost. Registracija je potrebna tek kada želiš objaviti zahtjev, objaviti vožnju ili poslati poruku.' }
@@ -159,7 +159,7 @@ class Component extends DCLogic {
         { q: 'Mogu li poslati stvari u Njemačku ili Švicarsku?', a: 'Da. Rute prema Njemačkoj i Švicarskoj sve su aktivnije, najviše prema Münchenu, Stuttgartu, Zürichu i Baselu. Ako trenutno nema objavljene vožnje, ostavi zahtjev aktivan i putnici se javljaju kada planiraju put.' },
         { q: 'Što ne smijem poslati?', a: 'Oružje, opojna sredstva, zapaljive i otrovne materijale, žive životinje, ljudske ostatke i biološke uzorke, krivotvorenu robu te sve čiji prijevoz predstavlja kazneno djelo ili prekršaj. Cijeli popis nalazi se na stranici Slanje stvari.' },
         { q: 'Moram li zapakirati stvari?', a: 'Da, u kutiju ili čvrstu torbu. Sadržaj ne smije zvečati, elektroniku umotaj, a staklo obloži odjećom ili folijom. Putnik ima pravo odbiti stvari koje nisu spremne za vožnju.' },
-        { q: 'Moram li fotografirati stvari?', a: 'Fotografija ide u zahtjev i putniku pokazuje što prevozi. Ako stvari nisu poslikan, putnik prijevoz ne mora prihvatiti. Uz opis i fotografiju napiši i ako nešto treba pažnju, na primjer lomljivo, kvarljivo ili vrijedno.' },
+        { q: 'Moram li fotografirati stvari?', a: 'Fotografija ide u zahtjev i putniku pokazuje što prevozi. Ako stvari nisu poslikane, putnik prijevoz ne mora prihvatiti. Uz opis i fotografiju napiši i ako nešto treba pažnju, na primjer lomljivo, kvarljivo ili vrijedno.' },
         { q: 'Mogu li poslati domaću hranu?', a: 'Da, ako ne mora u hladnjak tijekom vožnje. Ajvar, zimnica, pršut, sir, med i kolači redovito putuju prema dijaspori. Kvarljivo najavi u chatu prije dogovora.' }
       ] },
       { title: 'Za putnike i vozače', items: [
@@ -188,7 +188,7 @@ class Component extends DCLogic {
         { q: 'Kako funkcionira verifikacija korisnika?', a: 'Svaki novi račun odobrava se prije prve pošiljke. Uz to profil prikazuje prosječnu ocjenu, recenzije drugih korisnika i broj dosad odrađenih vožnji, pa možeš procijeniti s kim ulaziš u dogovor.' },
         { q: 'Što se dogodi ako nešto pođe po zlu?', a: 'Javi nam se na contact@senviaapp.com i pomoći ćemo u komunikaciji između pošiljatelja i putnika. Ocjene i recenzije ostaju javno vidljive, pa se ponašanje korisnika vidi i drugima.' },
         { q: 'Moram li prihvatiti svaki zahtjev ili ponudu?', a: 'Ne. Ništa nije obavezno. Ako ti profil, sadržaj pošiljke, naknada ili termin ne odgovaraju, dogovor jednostavno ne potvrdiš. Bez objašnjenja, bez kazne i bez utjecaja na ocjenu.' },
-        { q: 'Što ako stvari nisu poslikan?', a: 'Prijevoz ne moraš prihvatiti. Fotografija je način da putnik zna što prevozi, a pošiljatelj da postoji zapis o stanju stvari prije puta.' },
+        { q: 'Što ako stvari nisu poslikane?', a: 'Prijevoz ne moraš prihvatiti. Fotografija je način da putnik zna što prevozi, a pošiljatelj da postoji zapis o stanju stvari prije puta.' },
         { q: 'Mogu li prijaviti korisnika?', a: 'Možeš, kroz aplikaciju ili na contact@senviaapp.com. Podrška je dostupna svaki dan, a ocjene i recenzije ostaju javne, pa se ponašanje korisnika vidi prije svakog novog dogovora.' },
         { q: 'Kako su zaštićeni moji osobni podaci?', a: 'Broj telefona i e-mail adresu ne dijeliš s drugom stranom, sav dogovor ide kroz chat u aplikaciji. Račun i sve povezane podatke možeš u svakom trenutku trajno izbrisati u aplikaciji.' }
       ] }
@@ -207,7 +207,7 @@ class Component extends DCLogic {
       { title: 'Sending items', items: [
         { q: 'What can I send?', a: 'Anything legal to transport, from an envelope to furniture: documents, clothes, electronics, sports gear, suitcases, bikes, appliances and furniture. For large items, travellers with a van or trailer reply. You agree dimensions, weight and the hand-over with the traveller before the transport is accepted.' },
         { q: 'What does sending items cost?', a: 'The sender sets the fee when posting a request, within the minimum and maximum range Senvia suggests. For smaller items on shorter routes it is usually between 5 and 20 euros, and the amount shown in the app is the one that applies.' },
-        { q: 'What does sending items to Austria cost?', a: 'On routes between Croatia and Austria it is usually between 10 and 25 euros, depending on the size of the items and the length of the route. That is well below international tariffs of classic delivery, where the same items usually costs 20 to 45 euros.' },
+        { q: 'What does sending items to Austria cost?', a: 'On routes between Croatia and Austria it is usually between 10 and 25 euros, depending on the size of the items and the length of the route. That is well below international tariffs of classic delivery, where the same items usually cost 20 to 45 euros.' },
         { q: 'How do I track where my items are?', a: 'Through the chat with the traveller, which stays open for the whole journey. The traveller reports departure and arrival, so you always know which stage the delivery is at.' },
         { q: 'What if the items are late or go missing?', a: 'Message the traveller in the chat first, as most delays are sorted out in a few messages. If the problem persists, write to contact@senviaapp.com and we will help with communication between the two sides. This is why photographing the items at hand-over and describing the contents upfront matters.' },
         { q: 'Can I send several items at once?', a: 'Yes, if the traveller has enough room. Describe all items in the request and give the total dimensions, so the traveller can judge whether everything fits in the vehicle.' },
@@ -256,7 +256,7 @@ class Component extends DCLogic {
         { q: 'Ist Senvia kostenlos?', a: 'Ja, die App ist kostenlos zum Herunterladen und Nutzen, ohne Abo und ohne Monatsgebühr. Bezahlt wird erst die Buchung, sobald du einen Reisenden gefunden und die Sachen bestätigt hast.' },
         { q: 'Wo funktioniert Senvia derzeit?', a: 'Am aktivsten sind die Strecken in Kroatien und Österreich, dazu regelmäßige Fahrten nach Deutschland sowie nach Bosnien und Herzegowina. Du bist nicht auf bestimmte Städte beschränkt: Eine Anfrage kannst du überall stellen, und eine Streckenseite existiert, solange es dort aktive Reisende gibt.' },
         { q: 'Auf welchen Plattformen gibt es die App?', a: 'Senvia gibt es für iPhone im App Store und für Android bei Google Play. Vor der Registrierung kannst du die App als Gast ansehen.' },
-        { q: 'Für wen ist Senvia gedacht?', a: 'Für alle, die Sachen senden. Am meisten genutzt wird sie von der kroatischen Diaspora in Österreich, Deutschland und der Schweiz, von Studierenden ausserhalb ihrer Heimatstadt, von Saisonarbeitern an der Küste und von Menschen, die ausserhalb ihres Wohnorts arbeiten.' },
+        { q: 'Für wen ist Senvia gedacht?', a: 'Für alle, die Sachen senden. Am meisten genutzt wird sie von der kroatischen Diaspora in Österreich, Deutschland und der Schweiz, von Studierenden außerhalb ihrer Heimatstadt, von Saisonarbeitern an der Küste und von Menschen, die außerhalb ihres Wohnorts arbeiten.' },
         { q: 'Ist Senvia ein Zustelldienst?', a: 'Nein. Senvia transportiert keine Sachen und hat weder Fuhrpark noch Lager. Die App verbindet Absender und Reisende, die ohnehin in diese Richtung fahren, der Transport ist eine Absprache zwischen den beiden.' },
         { q: 'In welchen Sprachen gibt es die App?', a: 'Die App gibt es auf Kroatisch und Englisch, die Website auf Kroatisch, Englisch und Deutsch.' },
         { q: 'Muss ich mich registrieren, um zu stöbern?', a: 'Nein. Veröffentlichte Fahrten und Anfragen kannst du als Gast ansehen. Eine Registrierung brauchst du erst, wenn du eine Anfrage oder Fahrt einstellen oder eine Nachricht schreiben willst.' }
@@ -264,8 +264,8 @@ class Component extends DCLogic {
       { title: 'Sachen senden', items: [
         { q: 'Was kann ich senden?', a: 'Alles, was legal zu transportieren ist, vom Umschlag bis zum Möbelstück: Dokumente, Kleidung, Elektronik, Sportausrüstung, Koffer, Fahrräder, Haushaltsgeräte und Möbel. Für große Sachen melden sich Reisende mit Transporter oder Anhänger. Maße, Gewicht und Übergabe vereinbarst du vor der Zusage direkt mit dem Reisenden.' },
         { q: 'Was kostet der Versand von Sachen?', a: 'Den Kostenbeitrag legt der Absender bei der Anfrage fest, innerhalb der Spanne, die Senvia vorschlägt. Für kleinere Sachen auf kürzeren Strecken liegt er meist zwischen 5 und 20 Euro, und es gilt der Betrag, der in der App steht.' },
-        { q: 'Was kostet der Versand von Sachen nach Österreich?', a: 'Auf Strecken zwischen Kroatien und Österreich liegt der Betrag meist zwischen 10 und 25 Euro, je nach Größe der Sachen und Streckenlänge. Das ist deutlich weniger als die internationalen Tarife der klassischen Zustellung, wo dieselben Sachen meist 20 bis 45 Euro kostet.' },
-        { q: 'Wie verfolge ich meine Sachen?', a: 'Über den Chat mit dem Reisenden, der während der gesamten Fahrt offen bleibt. Der Reisende meldet Abfahrt und Ankunft, du weisst also jederzeit, in welcher Phase die Zustellung ist.' },
+        { q: 'Was kostet der Versand von Sachen nach Österreich?', a: 'Auf Strecken zwischen Kroatien und Österreich liegt der Betrag meist zwischen 10 und 25 Euro, je nach Größe der Sachen und Streckenlänge. Das ist deutlich weniger als die internationalen Tarife der klassischen Zustellung, wo dieselben Sachen meist 20 bis 45 Euro kosten.' },
+        { q: 'Wie verfolge ich meine Sachen?', a: 'Über den Chat mit dem Reisenden, der während der gesamten Fahrt offen bleibt. Der Reisende meldet Abfahrt und Ankunft, du weißt also jederzeit, in welcher Phase die Zustellung ist.' },
         { q: 'Was, wenn die Sachen zu spät kommen oder verloren gehen?', a: 'Schreib zuerst dem Reisenden im Chat, die meisten Verzögerungen klären sich in wenigen Nachrichten. Bleibt das Problem, schreib an contact@senviaapp.com, wir helfen bei der Kommunikation zwischen beiden Seiten. Deshalb ist es wichtig, die Sachen bei der Übergabe zu fotografieren und den Inhalt vorab zu beschreiben.' },
         { q: 'Kann ich mehrere Sachen gleichzeitig senden?', a: 'Ja, wenn der Reisende genug Platz hat. Beschreibe alle Sachen in der Anfrage und gib die Gesamtmaße an, damit der Reisende einschätzen kann, ob alles ins Fahrzeug passt.' },
         { q: 'Wie lange dauert die Zustellung?', a: 'So lange wie die Fahrt selbst. Wien und Zagreb trennen vier bis fünf Stunden, Graz und Zagreb zwei bis drei, die Sachen kommen also in Stunden statt Tagen an. Die klassische Zustellung braucht auf denselben Strecken drei bis vier Werktage.' },
@@ -302,7 +302,7 @@ class Component extends DCLogic {
         { q: 'Wie funktioniert die Nutzerverifizierung?', a: 'Jedes neue Konto wird vor der ersten Sendung freigegeben. Zusätzlich zeigt das Profil die Durchschnittsbewertung, Rezensionen anderer Nutzer und die Zahl abgeschlossener Fahrten, du kannst also einschätzen, mit wem du dich einlässt.' },
         { q: 'Was passiert, wenn etwas schiefgeht?', a: 'Schreib an contact@senviaapp.com, wir helfen bei der Kommunikation zwischen Absender und Reisendem. Bewertungen und Rezensionen bleiben öffentlich sichtbar, das Verhalten eines Nutzers sehen also auch andere.' },
         { q: 'Muss ich jede Anfrage oder jedes Angebot annehmen?', a: 'Nein. Nichts ist verpflichtend. Passen Profil, Inhalt, Kostenbeitrag oder Termin nicht, bestätigst du einfach nicht. Ohne Begründung, ohne Strafe und ohne Auswirkung auf deine Bewertung.' },
-        { q: 'Was, wenn die Sachen nicht fotografiert sind?', a: 'Du musst den Transport nicht annehmen. Das Foto ist die Art, wie ein Reisender weiss, was er transportiert, und ein Absender einen Nachweis über den Zustand vor der Fahrt hat.' },
+        { q: 'Was, wenn die Sachen nicht fotografiert sind?', a: 'Du musst den Transport nicht annehmen. Das Foto ist die Art, wie ein Reisender weiß, was er transportiert, und ein Absender einen Nachweis über den Zustand vor der Fahrt hat.' },
         { q: 'Kann ich einen Nutzer melden?', a: 'Ja, über die App oder an contact@senviaapp.com. Der Support ist jeden Tag erreichbar, und Bewertungen bleiben öffentlich, das Verhalten ist also vor jeder neuen Absprache sichtbar.' },
         { q: 'Wie sind meine persönlichen Daten geschützt?', a: 'Telefonnummer und E-Mail-Adresse teilst du nicht mit der anderen Seite, alles läuft über den Chat in der App. Dein Konto und alle zugehörigen Daten kannst du jederzeit dauerhaft in der App löschen.' }
       ] }

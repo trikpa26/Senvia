@@ -45,9 +45,10 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -73,53 +74,64 @@
 
 <div style="overflow-x: clip">
 
-<dc-import name="Nav" active="routes" hint-size="100%,66px"></dc-import>
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" active="routes" hint-size="100%,66px"></dc-import>
 
-<nav aria-label="breadcrumb" style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
-  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.crumb }}</span>
+<nav aria-label="breadcrumb" style="max-width: 1360px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
+  <a href="Senvia%20Landing%20v3.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.crumb }}</span>
 </nav>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: 40px clamp(16px, 4vw, 32px) clamp(26px, 4vw, 44px)">
-  <div style="color: #1a9e44; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px">{{ t.kicker }}</div>
-  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 8vw, 54px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; max-width: 22ch; text-wrap: balance">{{ t.h1 }}</h1>
+<section style="max-width: 1360px; margin: 0 auto; padding: 40px clamp(16px, 4vw, 32px) clamp(26px, 4vw, 44px)">
+  <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(32px, 8vw, 54px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; max-width: 22ch; text-wrap: balance">{{ t.h1 }}</h1>
   <p style="font-size: 19px; line-height: 1.6; color: #3c5346; margin: 0; max-width: 62ch; text-wrap: pretty">{{ t.lead }}</p>
 </section>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
-  <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: clamp(20px, 3vw, 30px)">
-    <sc-for list="{{ tabs }}" as="tab" hint-placeholder-count="4">
-      <sc-if value="{{ tab.isOn }}" hint-placeholder-val="{{ false }}">
-        <button onClick="{{ tab.select }}" style="display: inline-flex; align-items: center; gap: 9px; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 11px 17px; border-radius: 999px; border: 1px solid #2dbb54; background: #2dbb54; color: #ffffff">
-          {{ tab.label }}
-          <span style="font-size: 12.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: rgba(255,255,255,0.22); color: #ffffff">{{ tab.count }}</span>
-        </button>
-      </sc-if>
-      <sc-if value="{{ tab.isOff }}" hint-placeholder-val="{{ true }}">
-        <button onClick="{{ tab.select }}" style="display: inline-flex; align-items: center; gap: 9px; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 11px 17px; border-radius: 999px; border: 1px solid #e6e3da; background: #ffffff; color: #3c5346" style-hover="border-color: #2dbb54; color: #12261a">
-          {{ tab.label }}
-          <span style="font-size: 12.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #f2f0ea; color: #6b8272">{{ tab.count }}</span>
-        </button>
-      </sc-if>
+<section style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
+  <nav aria-label="{{ t.jumpLabel }}" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: clamp(28px, 4vw, 44px)">
+    <sc-for list="{{ groups }}" as="g" hint-placeholder-count="4">
+      <a href="#{{ g.anchor }}" onClick="{{ g.jump }}" style="display: inline-flex; align-items: center; gap: 9px; font-size: 15px; font-weight: 600; padding: 11px 17px; border-radius: 999px; border: 1px solid #e6e3da; background: #ffffff; color: #3c5346" style-hover="border-color: #2dbb54; color: #12261a">
+        {{ g.label }}
+        <span style="font-size: 12.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; background: #e8f7ee; color: #167a38">{{ g.count }}</span>
+      </a>
     </sc-for>
-  </div>
+  </nav>
 
-  <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 16px">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.4vw, 28px); font-weight: 700; letter-spacing: -0.015em; margin: 0">{{ groupTitle }}</h2>
-    <span style="font-size: 14.5px; color: #6b8272">{{ t.colsNote }}</span>
-  </div>
-
-  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr)); gap: 12px">
-    <sc-for list="{{ rows }}" as="r" hint-placeholder-count="12">
-      <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; border: 1px solid #e6e3da; border-radius: 16px; padding: 18px 20px; color: #12261a; background: #ffffff">
-        <span style="display: flex; align-items: center; gap: 9px; font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -0.01em; min-width: 0">
-          <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{ r.a }}</span>
-          <svg width="20" height="9" viewBox="0 0 26 10" fill="none" stroke="#2dbb54" stroke-width="1.8" stroke-linecap="round" style="flex: 0 0 auto"><path d="M1 5h20" stroke-dasharray="2.5 3.5"></path><path d="M17 1l5 4-5 4"></path></svg>
-          <span style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis">{{ r.b }}</span>
-        </span>
-        <span style="display: flex; align-items: baseline; gap: 12px; flex: 0 0 auto">
-          <span style="font-size: 14.5px; font-weight: 600; color: #167a38; white-space: nowrap">{{ r.time }}</span>
-          <span style="font-size: 14.5px; color: #6b8272; white-space: nowrap">{{ r.price }}</span>
-        </span>
+  <div style="display: flex; flex-direction: column; gap: clamp(44px, 6vw, 72px)">
+    <sc-for list="{{ groups }}" as="g" hint-placeholder-count="1">
+      <div id="{{ g.anchor }}" style="scroll-margin-top: 90px">
+        <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 18px">
+          <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(24px, 4.4vw, 34px); font-weight: 700; letter-spacing: -0.02em; margin: 0">{{ g.label }}</h2>
+          <span style="font-size: 14.5px; color: #6b8272">{{ t.colsNote }}</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 16px">
+          <sc-for list="{{ g.rows }}" as="r" hint-placeholder-count="12">
+            <sc-if value="{{ r.hasPage }}" hint-placeholder-val="{{ false }}">
+            <a href="{{ r.href }}" style="display: flex; flex-direction: column; gap: 14px; border: 1px solid #e6e3da; border-radius: 20px; padding: 24px 26px; color: #12261a; background: #ffffff; transition: border-color .2s ease, transform .2s ease" style-hover="border-color: #2dbb54; color: #12261a; transform: translateY(-2px)">
+              <span style="display: flex; align-items: center; flex-wrap: wrap; column-gap: 12px; row-gap: 4px; font-family: 'Outfit', sans-serif; font-size: clamp(20px, 2.2vw, 24px); line-height: 1.2; font-weight: 700; letter-spacing: -0.015em">
+                <span>{{ r.a }}</span>
+                <svg width="26" height="10" viewBox="0 0 26 10" fill="none" stroke="#2dbb54" stroke-width="1.8" stroke-linecap="round" style="flex: 0 0 auto"><path d="M1 5h20" stroke-dasharray="2.5 3.5"></path><path d="M17 1l5 4-5 4"></path></svg>
+                <span>{{ r.b }}</span>
+              </span>
+              <span style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px 14px; padding-top: 14px; border-top: 1px solid #efece4">
+                <span style="font-size: 15px; font-weight: 600; color: #167a38; background: #e8f7ee; padding: 4px 11px; border-radius: 999px">{{ r.time }}</span>
+                <span style="font-size: 15px; color: #3c5346">{{ r.price }}</span>
+              </span>
+            </a>
+            </sc-if>
+            <sc-if value="{{ r.noPage }}" hint-placeholder-val="{{ true }}">
+            <div style="display: flex; flex-direction: column; gap: 14px; border: 1px solid #e6e3da; border-radius: 20px; padding: 24px 26px; color: #12261a; background: #ffffff; transition: border-color .2s ease, transform .2s ease">
+              <span style="display: flex; align-items: center; flex-wrap: wrap; column-gap: 12px; row-gap: 4px; font-family: 'Outfit', sans-serif; font-size: clamp(20px, 2.2vw, 24px); line-height: 1.2; font-weight: 700; letter-spacing: -0.015em">
+                <span>{{ r.a }}</span>
+                <svg width="26" height="10" viewBox="0 0 26 10" fill="none" stroke="#2dbb54" stroke-width="1.8" stroke-linecap="round" style="flex: 0 0 auto"><path d="M1 5h20" stroke-dasharray="2.5 3.5"></path><path d="M17 1l5 4-5 4"></path></svg>
+                <span>{{ r.b }}</span>
+              </span>
+              <span style="display: flex; align-items: center; flex-wrap: wrap; gap: 8px 14px; padding-top: 14px; border-top: 1px solid #efece4">
+                <span style="font-size: 15px; font-weight: 600; color: #167a38; background: #e8f7ee; padding: 4px 11px; border-radius: 999px">{{ r.time }}</span>
+                <span style="font-size: 15px; color: #3c5346">{{ r.price }}</span>
+              </span>
+            </div>
+            </sc-if>
+          </sc-for>
+        </div>
       </div>
     </sc-for>
   </div>
@@ -127,26 +139,58 @@
   <p style="margin: 18px 0 0; font-size: 14.5px; line-height: 1.6; color: #6b8272; max-width: 76ch; text-wrap: pretty">{{ t.bothWays }}</p>
 </section>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
-  <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 clamp(22px, 3.4vw, 34px); text-wrap: balance">{{ t.faqTitle }}</h2>
+<section style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
+  <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 clamp(22px, 3.4vw, 34px); text-wrap: balance">{{ t.faqTitle }}</h2>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 16px">
     <sc-for list="{{ faq }}" as="q" hint-placeholder-count="4">
       <div style="border: 1px solid #e6e3da; border-radius: 20px; padding: 24px 26px; background: #ffffff">
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance">{{ q.q }}</h3>
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance">{{ q.q }}</h3>
         <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ q.a }}</p>
       </div>
     </sc-for>
   </div>
 </section>
 
+<section style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
+  <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.citiesTitle }}</h2>
+  <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 64ch; text-wrap: pretty">{{ t.citiesSub }}</p>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px">
+    <sc-for list="{{ cityIndex }}" as="c" hint-placeholder-count="4">
+      <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 24px">
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 700; margin: 0 0 12px">{{ c.country }}</h3>
+        <p style="margin: 0; font-size: 15.5px; line-height: 1.8; color: #3c5346; text-wrap: pretty">{{ c.list }}</p>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: clamp(28px, 4vw, 48px)">
+  <div>
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(20px, 4.2vw, 26px); font-weight: 700; margin: 0 0 16px">{{ hubCities }}</h2>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap">
+      <sc-for list="{{ hubCityLinks }}" as="o" hint-placeholder-count="8">
+        <a href="{{ o.href }}" style="display: inline-flex; border: 1px solid #e6e3da; border-radius: 999px; padding: 10px 18px; font-weight: 600; font-size: 15px; color: #12261a; background: #ffffff" style-hover="border-color: #2dbb54; color: #167a38">{{ o.name }}</a>
+      </sc-for>
+    </div>
+  </div>
+  <div>
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(20px, 4.2vw, 26px); font-weight: 700; margin: 0 0 16px">{{ hubCats }}</h2>
+    <div style="display: flex; gap: 10px; flex-wrap: wrap">
+      <sc-for list="{{ hubCatLinks }}" as="o" hint-placeholder-count="5">
+        <a href="{{ o.href }}" style="display: inline-flex; border: 1px solid #e6e3da; border-radius: 999px; padding: 10px 18px; font-weight: 600; font-size: 15px; color: #12261a; background: #ffffff" style-hover="border-color: #2dbb54; color: #167a38">{{ o.name }}</a>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
 <section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
-  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.priceTitle }}</h2>
+  <div style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.priceTitle }}</h2>
     <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 64ch; text-wrap: pretty">{{ t.priceSub }}</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr)); gap: 16px">
       <sc-for list="{{ factors }}" as="f" hint-placeholder-count="4">
         <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 24px 24px">
-          <div style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; margin-bottom: 8px">{{ f.title }}</div>
+          <div style="font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 600; margin-bottom: 8px">{{ f.title }}</div>
           <div style="font-size: 15px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ f.desc }}</div>
         </div>
       </sc-for>
@@ -154,10 +198,10 @@
   </div>
 </section>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+<section style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
   <div style="display: flex; gap: 18px; flex-wrap: wrap; align-items: center; justify-content: space-between; border: 1px solid #e6e3da; border-radius: 24px; padding: clamp(24px, 3.4vw, 34px) clamp(24px, 3.4vw, 36px); background: #f7f6f2">
     <div style="flex: 1 1 420px; min-width: 0">
-      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.4vw, 26px); font-weight: 700; letter-spacing: -0.01em; margin: 0 0 8px; text-wrap: balance">{{ t.whoTitle }}</h2>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(20px, 4.4vw, 26px); font-weight: 700; letter-spacing: -0.01em; margin: 0 0 8px; text-wrap: balance">{{ t.whoTitle }}</h2>
       <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3c5346; max-width: 62ch; text-wrap: pretty">{{ t.whoSub }}</p>
     </div>
     <a href="Blog%20-%20Kome%20koriste%20rute.dc.html" style="display: inline-flex; align-items: center; gap: 9px; background: #2dbb54; color: #ffffff; font-weight: 600; font-size: 15.5px; padding: 13px 22px; border-radius: 13px; white-space: nowrap" style-hover="background: #26a449">
@@ -167,15 +211,15 @@
   </div>
 </section>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
+<section style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
   <div style="background: #2dbb54; border-radius: 28px; padding: clamp(30px, 5.3vw, 64px) clamp(24px, 6vw, 48px); color: #ffffff; display: flex; gap: clamp(20px, 3vw, 40px); flex-wrap: wrap; align-items: center; justify-content: space-between">
     <div style="flex: 1 1 380px; min-width: 0">
-      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6vw, 36px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance">{{ t.ctaTitle }}</h2>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6vw, 36px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance">{{ t.ctaTitle }}</h2>
       <p style="margin: 0; font-size: 18px; line-height: 1.55; max-width: 42ch; color: rgba(255,255,255,0.92); text-wrap: pretty">{{ t.ctaSub }}</p>
     </div>
     <div style="display: flex; gap: 14px; flex-wrap: wrap; flex: 0 0 auto">
-      <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://apps.apple.com/app/id6759839112" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
     </div>
   </div>
 </section>
@@ -209,7 +253,14 @@ class Component extends DCLogic {
     zadar: { hr: 'Zadar' }, dubrovnik: { hr: 'Dubrovnik' }, pula: { hr: 'Pula' }, varazdin: { hr: 'Varaždin' },
     vukovar: { hr: 'Vukovar' }, sibenik: { hr: 'Šibenik' }, makarska: { hr: 'Makarska' }, slavonskibrod: { hr: 'Slavonski Brod' },
     koln: { hr: 'Köln', en: 'Cologne', de: 'Köln' }, augsburg: { hr: 'Augsburg' }, winterthur: { hr: 'Winterthur' },
-    karlovac: { hr: 'Karlovac' }, cakovec: { hr: 'Čakovec' }, rovinj: { hr: 'Rovinj' }
+    karlovac: { hr: 'Karlovac' }, cakovec: { hr: 'Čakovec' }, rovinj: { hr: 'Rovinj' },
+    stpolten: { hr: 'St. Pölten' }, villach: { hr: 'Villach' }, wels: { hr: 'Wels' }, bregenz: { hr: 'Bregenz' }, dornbirn: { hr: 'Dornbirn' }, wienerneustadt: { hr: 'Wiener Neustadt' },
+    ingolstadt: { hr: 'Ingolstadt' }, regensburg: { hr: 'Regensburg' }, rosenheim: { hr: 'Rosenheim' }, ulm: { hr: 'Ulm' }, heilbronn: { hr: 'Heilbronn' }, karlsruhe: { hr: 'Karlsruhe' },
+    wiesbaden: { hr: 'Wiesbaden' }, darmstadt: { hr: 'Darmstadt' }, dortmund: { hr: 'Dortmund' }, essen: { hr: 'Essen' }, hannover: { hr: 'Hannover', en: 'Hanover', de: 'Hannover' }, leipzig: { hr: 'Leipzig' }, dresden: { hr: 'Dresden' },
+    lugano: { hr: 'Lugano' }, aarau: { hr: 'Aarau' }, schaffhausen: { hr: 'Schaffhausen' }, zug: { hr: 'Zug' }, baden: { hr: 'Baden' },
+    sisak: { hr: 'Sisak' }, bjelovar: { hr: 'Bjelovar' }, koprivnica: { hr: 'Koprivnica' }, vinkovci: { hr: 'Vinkovci' }, pozega: { hr: 'Požega' }, djakovo: { hr: 'Đakovo' },
+    virovitica: { hr: 'Virovitica' }, knin: { hr: 'Knin' }, trogir: { hr: 'Trogir' }, opatija: { hr: 'Opatija' }, porec: { hr: 'Poreč' }, umag: { hr: 'Umag' }, krk: { hr: 'Krk' },
+    gospic: { hr: 'Gospić' }, ploce: { hr: 'Ploče' }, metkovic: { hr: 'Metković' }, biograd: { hr: 'Biograd na Moru' }, senj: { hr: 'Senj' }
   };
 
   ROUTES = {
@@ -234,7 +285,12 @@ class Component extends DCLogic {
       ['graz', 'split', [6, 7], 590],
       ['innsbruck', 'zagreb', [6, 7], 560],
       ['salzburg', 'split', [8, 9], 850],
-      ['bec', 'dubrovnik', [10, 11], 1000]
+      ['bec', 'dubrovnik', [10, 11], 1000],
+      ['stpolten', 'zagreb', [4, 5], 420], ['wienerneustadt', 'zagreb', [3, 4], 320], ['villach', 'zagreb', [2, 3], 210], ['villach', 'rijeka', [2, 3], 200],
+      ['graz', 'osijek', [4, 5], 330], ['graz', 'zadar', [5, 6], 470], ['graz', 'pula', [4, 5], 350], ['bec', 'cakovec', [3, 4], 290],
+      ['bec', 'vukovar', [5, 6], 520], ['bec', 'slavonskibrod', [5, 6], 470], ['bec', 'rovinj', [6, 7], 580], ['bec', 'sibenik', [8, 9], 720],
+      ['bec', 'makarska', [9, 10], 860], ['linz', 'rijeka', [5, 6], 470], ['salzburg', 'rijeka', [5, 6], 420], ['klagenfurt', 'split', [6, 7], 560],
+      ['wels', 'split', [8, 9], 820], ['bregenz', 'zagreb', [8, 9], 740], ['dornbirn', 'split', [11, 12], 1050]
     ],
     de: [
       ['munchen', 'zagreb', [6, 7], 570],
@@ -257,7 +313,13 @@ class Component extends DCLogic {
       ['berlin', 'zagreb', [10, 11], 1050],
       ['stuttgart', 'zadar', [11, 12], 1000],
       ['koln', 'zagreb', [12, 13], 1150],
-      ['frankfurt', 'split', [13, 14], 1330]
+      ['frankfurt', 'split', [13, 14], 1330],
+      ['munchen', 'varazdin', [6, 7], 560], ['munchen', 'slavonskibrod', [8, 9], 760], ['munchen', 'sibenik', [9, 10], 830], ['munchen', 'makarska', [10, 11], 950],
+      ['munchen', 'dubrovnik', [12, 13], 1100], ['rosenheim', 'zagreb', [5, 6], 500], ['augsburg', 'zagreb', [6, 7], 630], ['ingolstadt', 'zagreb', [7, 8], 650],
+      ['regensburg', 'zagreb', [7, 8], 700], ['ulm', 'zagreb', [7, 8], 700], ['nurnberg', 'split', [10, 11], 1030], ['stuttgart', 'rijeka', [8, 9], 750],
+      ['stuttgart', 'osijek', [10, 11], 1060], ['karlsruhe', 'zagreb', [9, 10], 870], ['heilbronn', 'split', [12, 13], 1180], ['darmstadt', 'zagreb', [9, 10], 930],
+      ['wiesbaden', 'split', [13, 14], 1350], ['leipzig', 'zagreb', [9, 10], 900], ['dresden', 'zagreb', [9, 10], 870], ['hannover', 'zagreb', [11, 12], 1150],
+      ['dortmund', 'zagreb', [12, 13], 1230], ['essen', 'split', [15, 16], 1560]
     ],
     ch: [
       ['stgallen', 'zagreb', [7, 8], 720],
@@ -274,7 +336,11 @@ class Component extends DCLogic {
       ['bern', 'zagreb', [9, 10], 900],
       ['basel', 'rijeka', [10, 11], 830],
       ['zeneva', 'zagreb', [11, 12], 1050],
-      ['luzern', 'split', [12, 13], 1170]
+      ['luzern', 'split', [12, 13], 1170],
+      ['zurich', 'osijek', [10, 11], 1090], ['zurich', 'pula', [8, 9], 760], ['zurich', 'varazdin', [8, 9], 830], ['stgallen', 'split', [10, 11], 940],
+      ['basel', 'split', [12, 13], 1080], ['bern', 'rijeka', [10, 11], 900], ['winterthur', 'split', [11, 12], 990], ['lugano', 'zagreb', [7, 8], 690],
+      ['lugano', 'split', [10, 11], 1000], ['aarau', 'zagreb', [9, 10], 850], ['schaffhausen', 'zagreb', [8, 9], 820], ['zug', 'split', [11, 12], 1050],
+      ['baden', 'rijeka', [9, 10], 790]
     ],
     hr: [
       ['zagreb', 'varazdin', [1, 2], 80],
@@ -302,7 +368,13 @@ class Component extends DCLogic {
       ['split', 'zadar', [2, 3], 160],
       ['zagreb', 'rovinj', [3, 4], 255],
       ['varazdin', 'rijeka', [3, 4], 230],
-      ['osijek', 'rijeka', [5, 6], 430]
+      ['osijek', 'rijeka', [5, 6], 430],
+      ['zagreb', 'sisak', [1, 2], 60], ['zagreb', 'bjelovar', [1, 2], 85], ['zagreb', 'koprivnica', [1, 2], 100], ['zagreb', 'virovitica', [2, 3], 150],
+      ['zagreb', 'pozega', [2, 3], 175], ['zagreb', 'vinkovci', [3, 4], 270], ['zagreb', 'gospic', [2, 3], 200], ['zagreb', 'senj', [2, 3], 180],
+      ['zagreb', 'opatija', [2, 3], 175], ['zagreb', 'porec', [3, 4], 250], ['zagreb', 'umag', [3, 4], 250], ['zagreb', 'knin', [3, 4], 300],
+      ['zagreb', 'trogir', [4, 5], 400], ['zagreb', 'ploce', [5, 6], 500], ['osijek', 'djakovo', [1, 2], 40], ['osijek', 'vukovar', [1, 2], 35],
+      ['varazdin', 'osijek', [3, 4], 220], ['osijek', 'zadar', [6, 7], 560], ['rijeka', 'krk', [1, 2], 50], ['split', 'trogir', [1, 2], 28],
+      ['split', 'metkovic', [2, 3], 150], ['zadar', 'biograd', [1, 2], 30], ['split', 'pula', [5, 6], 500], ['rijeka', 'dubrovnik', [6, 7], 620]
     ]
   };
 
@@ -320,7 +392,9 @@ class Component extends DCLogic {
       whoSub: 'Isti smjerovi ponavljaju se cijele godine, samo se mijenja tko šalje.',
       whoLink: 'Pročitaj na blogu',
       ctaTitle: 'Provjeri svoju rutu u aplikaciji', ctaSub: 'Objavi zahtjev i vidi koliko putnika ide tvojim smjerom ovaj tjedan.',
-      faqTitle: 'Česta pitanja o rutama',
+      faqTitle: 'Česta pitanja o rutama', jumpLabel: 'Skoči na skupinu ruta',
+      citiesTitle: 'Svi gradovi na Senvia rutama', citiesSub: 'Gradovi iz kojih se najčešće šalje i u koje stvari stižu. Ako tvoj grad nije tu, objavi zahtjev, putnici prolaze i kroz manja mjesta uz glavne ceste.',
+      cAt: 'Austrija', cDe: 'Njemačka', cCh: 'Švicarska', cHr: 'Hrvatska',
       q1: 'Koje su najprometnije rute?', a1: 'Iz Austrije Beč–Zagreb i Graz–Zagreb, iz Njemačke München–Zagreb i München–Split, a unutar Hrvatske Zagreb–Split i Zagreb–Rijeka. Na tim smjerovima putnici voze gotovo svaki dan.',
       q2: 'Koliko traje slanje na nekoj ruti?', a2: 'Koliko i sama vožnja, jer stvari putuju s putnikom. Graz–Zagreb traje dva do tri sata, Beč–Zagreb četiri do pet, München–Split devet do deset, pa stvari najčešće stižu isti dan.',
       q3: 'Što ako mog grada nema na popisu?', a3: 'Objavi zahtjev s polazištem i odredištem. Javljaju se putnici koji prolaze tvojim gradom ili blizu njega, pa se primopredaja dogovori usput, na benzinskoj ili uz glavnu cestu.',
@@ -341,7 +415,9 @@ class Component extends DCLogic {
       whoSub: 'The same directions repeat all year, only the sender changes.',
       whoLink: 'Read it on the blog',
       ctaTitle: 'Check your route in the app', ctaSub: 'Post a request and see how many travellers are heading your way this week.',
-      faqTitle: 'Route FAQ',
+      faqTitle: 'Route FAQ', jumpLabel: 'Jump to route group',
+      citiesTitle: 'All cities on Senvia routes', citiesSub: 'Cities people send from most and where items arrive. If yours is not listed, post a request, travellers also pass smaller towns along the main roads.',
+      cAt: 'Austria', cDe: 'Germany', cCh: 'Switzerland', cHr: 'Croatia',
       q1: 'Which routes are the busiest?', a1: 'From Austria, Vienna–Zagreb and Graz–Zagreb; from Germany, Munich–Zagreb and Munich–Split; within Croatia, Zagreb–Split and Zagreb–Rijeka. Travellers drive these almost every day.',
       q2: 'How long does sending take on a route?', a2: 'As long as the drive itself, because your items travel with the traveller. Graz–Zagreb takes two to three hours, Vienna–Zagreb four to five, Munich–Split nine to ten, so items usually arrive the same day.',
       q3: 'What if my city is not listed?', a3: 'Post a request with your pick-up and destination. Travellers passing through or near your city will reply, and you agree a hand-over on the way, at a petrol station or by a main road.',
@@ -362,7 +438,9 @@ class Component extends DCLogic {
       whoSub: 'Die Richtungen wiederholen sich das ganze Jahr, nur der Absender wechselt.',
       whoLink: 'Auf dem Blog lesen',
       ctaTitle: 'Prüfe deine Route in der App', ctaSub: 'Stelle eine Anfrage und sieh, wie viele Reisende diese Woche in deine Richtung fahren.',
-      faqTitle: 'Häufige Fragen zu den Routen',
+      faqTitle: 'Häufige Fragen zu den Routen', jumpLabel: 'Zur Routengruppe springen',
+      citiesTitle: 'Alle Städte auf Senvia-Routen', citiesSub: 'Städte, aus denen am häufigsten verschickt wird und in die Sachen ankommen. Fehlt deine Stadt, stelle eine Anfrage, Reisende kommen auch durch kleinere Orte an den Hauptstraßen.',
+      cAt: 'Österreich', cDe: 'Deutschland', cCh: 'Schweiz', cHr: 'Kroatien',
       q1: 'Welche Routen sind am stärksten genutzt?', a1: 'Aus Österreich Wien–Zagreb und Graz–Zagreb, aus Deutschland München–Zagreb und München–Split, innerhalb Kroatiens Zagreb–Split und Zagreb–Rijeka. Dort fahren Reisende fast täglich.',
       q2: 'Wie lange dauert der Versand auf einer Route?', a2: 'So lange wie die Fahrt selbst, denn deine Sachen reisen mit dem Reisenden. Graz–Zagreb dauert zwei bis drei Stunden, Wien–Zagreb vier bis fünf, München–Split neun bis zehn, die Sachen kommen also meist am selben Tag an.',
       q3: 'Was, wenn meine Stadt nicht auf der Liste steht?', a3: 'Stelle eine Anfrage mit Abholort und Ziel. Reisende, die durch deine Stadt oder in der Nähe vorbeifahren, melden sich, und ihr vereinbart die Übergabe unterwegs, an einer Tankstelle oder an einer Hauptstraße.',
@@ -392,7 +470,24 @@ componentDidMount() {
 
   city(key, lang) { const c = this.C[key] || {}; return c[lang] || c.hr || key; }
 
+  __seoApply() {
+    const SEO = {"hr": ["Popularne rute: naknade i trajanje | Senvia", "Naknade i trajanje slanja stvari iz Austrije, Njemačke i Švicarske u Hrvatsku te unutar Hrvatske. Okvirni iznosi po gradovima."], "en": ["Popular routes: fees and drive times | Senvia", "Fees and drive times for sending items from Austria, Germany and Switzerland to Croatia and within Croatia. Indicative amounts by city."], "de": ["Beliebte Strecken: Kostenbeiträge und Fahrtdauer | Senvia", "Kostenbeiträge und Fahrtdauer für Sachen aus Österreich, Deutschland und der Schweiz nach Kroatien und innerhalb Kroatiens. Richtwerte je Stadt."]};
+    let lang = 'hr';
+    try { lang = (this.state && this.state.lang) || (this.getLang ? this.getLang() : 'hr'); } catch (e) {}
+    const v = SEO[lang] || SEO.hr;
+    const loc = { hr: 'hr_HR', en: 'en_GB', de: 'de_DE' }[lang] || 'hr_HR';
+    const put = () => {
+      document.title = v[0];
+      const set = (attr, name, val) => { let el = document.head.querySelector('meta[' + attr + '="' + name + '"]'); if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); } el.setAttribute('content', val); };
+      set('name', 'description', v[1]); set('property', 'og:title', v[0]); set('property', 'og:description', v[1]); set('property', 'og:locale', loc);
+      set('name', 'twitter:title', v[0]); set('name', 'twitter:description', v[1]);
+    };
+    put(); clearTimeout(this.__seoT1); clearTimeout(this.__seoT2);
+    this.__seoT1 = setTimeout(put, 80); this.__seoT2 = setTimeout(put, 500);
+  }
+
   renderVals() {
+    this.__seoApply();
     const lang = this.state.lang || 'hr';
     const t = { ...this.STR.hr, ...(this.STR[lang] || {}) };
     const tab = this.state.tab;
@@ -400,6 +495,25 @@ componentDidMount() {
     const fromWord = { hr: '€', en: '€', de: '€' }[lang];
 
     const tabDefs = [['at', t.tabAt], ['de', t.tabDe], ['ch', t.tabCh], ['hr', t.tabHr]];
+    const SLUGS = ['frankfurt-zagreb','berlin-zagreb','nurnberg-zagreb','koln-zagreb','zeneva-zagreb','basel-rijeka','bec-osijek','bec-rijeka','bec-varazdin','bec-zagreb','graz-varazdin','graz-zagreb','klagenfurt-zagreb','linz-split','munchen-pula','munchen-split','munchen-zagreb','osijek-graz','osijek-split','rijeka-zadar','rovinj-bec','salzburg-zagreb','split-dubrovnik','stuttgart-zadar','stuttgart-zagreb','varazdin-split','zagreb-osijek','zagreb-rijeka','zagreb-split','zurich-split'];
+    const slugFor = (a, b) => [a + '-' + b, b + '-' + a].find(x => SLUGS.indexOf(x) > -1);
+    const mkRows = (id) => this.ROUTES[id].map(([a, b, h, km]) => {
+      const sl = slugFor(a, b);
+      return { a: this.city(a, lang), b: this.city(b, lang), hasPage: !!sl, noPage: !sl, href: sl ? 'Ruta%20-%20' + sl + '.dc.html' : '',
+        time: km + ' km · ' + h[0] + '–' + h[1] + ' ' + hourWord,
+        price: this.price(km, 'S').rec + '–' + this.price(km, 'XXL').rec + ' ' + fromWord };
+    });
+    const groups = tabDefs.map(([id, label]) => ({ anchor: 'rute-' + id, label, count: this.ROUTES[id].length, rows: mkRows(id),
+      jump: (e) => { const el = document.getElementById('rute-' + id); if (el) { e.preventDefault(); window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' }); } } }));
+    const uniq = (arr) => arr.filter((x, i) => arr.indexOf(x) === i);
+    const hrKeys = uniq([].concat(...Object.values(this.ROUTES).map(g => g.map(r => r[1]))).concat(this.ROUTES.hr.map(r => r[0])));
+    const cityIndex = [['at', t.cAt], ['de', t.cDe], ['ch', t.cCh]].map(([id, country]) => ({ country, list: uniq(this.ROUTES[id].map(r => r[0])).map(k => this.city(k, lang)).join(', ') }))
+      .concat([{ country: t.cHr, list: hrKeys.map(k => this.city(k, lang)).sort((x, y) => x.localeCompare(y, 'hr')).join(', ') }]);
+    if (typeof document !== 'undefined') {
+      let il = document.getElementById('senvia-routes-list-ld');
+      if (!il) { il = document.createElement('script'); il.type = 'application/ld+json'; il.id = 'senvia-routes-list-ld'; document.head.appendChild(il); }
+      il.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'ItemList', name: t.h1, itemListElement: [].concat(...groups.map(g => g.rows)).map((r, i) => ({ '@type': 'ListItem', position: i + 1, name: r.a + ' – ' + r.b })) });
+    }
     const tabs = tabDefs.map(([id, label]) => ({
       label, count: this.ROUTES[id].length,
       isOn: tab === id, isOff: tab !== id,
@@ -419,7 +533,11 @@ componentDidMount() {
     }
 
     return {
-      t, tabs, rows, faq,
+      t, tabs, rows, faq, groups, cityIndex,
+      hubCities: { hr: 'Slanje stvari po gradovima', en: 'Sending items by city', de: 'Sachen senden nach Stadt' }[lang] || 'Slanje stvari po gradovima',
+      hubCats: { hr: 'Što se najčešće šalje', en: 'What people send most', de: 'Was am häufigsten gesendet wird' }[lang] || 'Što se najčešće šalje',
+      hubCityLinks: ['bec','graz','munchen','stuttgart','zurich','zagreb','split','rijeka'].map(k => ({ name: this.city(k, lang), href: 'Grad%20-%20' + k + '.dc.html' })),
+      hubCatLinks: [['namjestaj', { hr: 'Namještaj', en: 'Furniture', de: 'Möbel' }], ['elektronika', { hr: 'Elektronika', en: 'Electronics', de: 'Elektronik' }], ['bicikli', { hr: 'Bicikli i romobili', en: 'Bikes and scooters', de: 'Fahrräder und Scooter' }], ['domaca-hrana', { hr: 'Domaća hrana', en: 'Homemade food', de: 'Hausgemachtes' }], ['dokumenti', { hr: 'Dokumenti i ključevi', en: 'Documents and keys', de: 'Dokumente und Schlüssel' }]].map(([k, n]) => ({ name: n[lang] || n.hr, href: 'Kategorija%20-%20' + k + '.dc.html' })),
       groupTitle: (tabDefs.find(d => d[0] === tab) || [])[1],
       factors: [
         { title: t.f1t, desc: t.f1d }, { title: t.f2t, desc: t.f2d }

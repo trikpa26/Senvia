@@ -45,9 +45,10 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -59,19 +60,19 @@
 
 <div style="overflow-x: clip; min-height: 100vh; display: flex; flex-direction: column">
 
-<dc-import name="Nav" active="" hint-size="100%,66px"></dc-import>
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" active="" hint-size="100%,66px"></dc-import>
 
 <main style="flex: 1; display: flex; align-items: center; justify-content: center; padding: clamp(41px, 6.9vw, 90px) clamp(16px, 4.0vw, 32px)">
   <div style="max-width: 620px; text-align: center">
-    <div style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(44px, 12.3vw, 76px); font-weight: 700; letter-spacing: -0.03em; color: #cfe6d6; line-height: 1; margin-bottom: 18px">404</div>
-    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 6.8vw, 42px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 16px; text-wrap: balance">{{ t.h1 }}</h1>
+    <div style="font-family: 'Outfit', sans-serif; font-size: clamp(44px, 12.3vw, 76px); font-weight: 700; letter-spacing: -0.03em; color: #cfe6d6; line-height: 1; margin-bottom: 18px">404</div>
+    <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(24px, 6.8vw, 42px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 16px; text-wrap: balance">{{ t.h1 }}</h1>
     <p style="font-size: 18px; line-height: 1.6; color: #3c5346; margin: 0 0 32px; text-wrap: pretty">{{ t.lead }}</p>
     <div style="display: flex; gap: 14px; justify-content: center; margin-bottom: 34px">
-      <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://apps.apple.com/app/id6759839112" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
     </div>
     <div style="display: flex; gap: 10px; justify-content: center; flex-wrap: wrap">
-      <a href="Senvia%20Landing%20v2.dc.html" style="border: 1px solid #cdeeda; background: #ffffff; color: #167a38; font-weight: 600; font-size: 14.5px; padding: 9px 16px; border-radius: 999px" style-hover="background: #e8f7ee">{{ t.lHome }}</a>
+      <a href="Senvia%20Landing%20v3.dc.html" style="border: 1px solid #cdeeda; background: #ffffff; color: #167a38; font-weight: 600; font-size: 14.5px; padding: 9px 16px; border-radius: 999px" style-hover="background: #e8f7ee">{{ t.lHome }}</a>
       <a href="Slanje%20stvari.dc.html" style="border: 1px solid #cdeeda; background: #ffffff; color: #167a38; font-weight: 600; font-size: 14.5px; padding: 9px 16px; border-radius: 999px" style-hover="background: #e8f7ee">{{ t.lSend }}</a>
       <a href="Kako%20radi.dc.html" style="border: 1px solid #cdeeda; background: #ffffff; color: #167a38; font-weight: 600; font-size: 14.5px; padding: 9px 16px; border-radius: 999px" style-hover="background: #e8f7ee">{{ t.lHow }}</a>
       <a href="FAQ.dc.html" style="border: 1px solid #cdeeda; background: #ffffff; color: #167a38; font-weight: 600; font-size: 14.5px; padding: 9px 16px; border-radius: 999px" style-hover="background: #e8f7ee">FAQ</a>
@@ -117,7 +118,24 @@ class Component extends DCLogic {
   }
   componentWillUnmount() { if (this.off) this.off(); }
 
+  __seoApply() {
+    const SEO = {"hr": ["Stranica nije pronađena | Senvia", "Ova stranica ne postoji ili je uklonjena. Preuzmi Senviu i pošalji stvari uz putnika koji već putuje tvojim smjerom."], "en": ["Page not found | Senvia", "This page does not exist or has been removed. Download Senvia and send items with a traveller already heading your way."], "de": ["Seite nicht gefunden | Senvia", "Diese Seite gibt es nicht oder sie wurde entfernt. Lade Senvia und schick Sachen mit Reisenden, die ohnehin in deine Richtung fahren."]};
+    let lang = 'hr';
+    try { lang = (this.state && this.state.lang) || (this.getLang ? this.getLang() : 'hr'); } catch (e) {}
+    const v = SEO[lang] || SEO.hr;
+    const loc = { hr: 'hr_HR', en: 'en_GB', de: 'de_DE' }[lang] || 'hr_HR';
+    const put = () => {
+      document.title = v[0];
+      const set = (attr, name, val) => { let el = document.head.querySelector('meta[' + attr + '="' + name + '"]'); if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); } el.setAttribute('content', val); };
+      set('name', 'description', v[1]); set('property', 'og:title', v[0]); set('property', 'og:description', v[1]); set('property', 'og:locale', loc);
+      set('name', 'twitter:title', v[0]); set('name', 'twitter:description', v[1]);
+    };
+    put(); clearTimeout(this.__seoT1); clearTimeout(this.__seoT2);
+    this.__seoT1 = setTimeout(put, 80); this.__seoT2 = setTimeout(put, 500);
+  }
+
   renderVals() {
+    this.__seoApply();
     const t = { ...this.STR.hr, ...(this.STR[this.state.lang] || {}) };
     document.documentElement.setAttribute('lang', this.state.lang);
     if (this.titleTimer) clearTimeout(this.titleTimer);

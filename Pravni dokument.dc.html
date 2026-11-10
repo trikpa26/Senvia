@@ -30,9 +30,10 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -42,19 +43,19 @@
 
 <div style="overflow-x: clip">
 
-<dc-import name="Nav" hint-size="100%,66px"></dc-import>
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" hint-size="100%,66px"></dc-import>
 
 <nav aria-label="breadcrumb" style="max-width: 860px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
-  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ d.crumb }}</span>
+  <a href="Senvia%20Landing%20v3.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ d.crumb }}</span>
 </nav>
 
 <article style="max-width: 860px; margin: 0 auto; padding: 30px clamp(16px, 4.0vw, 32px) clamp(32px, 5.5vw, 72px)">
-  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(28px, 7.2vw, 44px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 12px; text-wrap: balance">{{ d.h1 }}</h1>
+  <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(28px, 7.2vw, 44px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 12px; text-wrap: balance">{{ d.h1 }}</h1>
   <p style="display: inline-block; margin: 0 0 14px; font-size: 14px; font-weight: 600; color: #167a38; background: #e8f7ee; border-radius: 999px; padding: 7px 15px">{{ d.updated }}</p>
   <p style="font-size: 18px; line-height: 1.65; color: #3c5346; margin: 0 0 clamp(26px, 4vw, 40px); max-width: 66ch; text-wrap: pretty">{{ d.lead }}</p>
 
   <nav aria-label="{{ d.tocLabel }}" style="background: #f7f6f2; border: 1px solid #e6e3da; border-radius: 20px; padding: 22px clamp(16px, 3vw, 26px); margin-bottom: clamp(28px, 4vw, 44px)">
-    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #1a9e44; margin-bottom: 14px">{{ d.tocLabel }}</div>
+    <div style="font-family: 'Outfit', sans-serif; font-size: 16px; font-weight: 600; color: #1a9e44; margin-bottom: 14px">{{ d.tocLabel }}</div>
     <ol style="margin: 0; padding-left: 0; list-style: none; display: grid; gap: 8px; font-size: 15.5px; line-height: 1.5; color: #3c5346">
       <sc-for list="{{ toc }}" as="s" hint-placeholder-count="6">
         <li><a href="{{ s.href }}">{{ s.h }}</a></li>
@@ -64,7 +65,7 @@
 
   <sc-for list="{{ sections }}" as="s" hint-placeholder-count="7">
     <section id="{{ s.id }}" style="margin-bottom: clamp(26px, 3.6vw, 40px); scroll-margin-top: 90px">
-      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.2vw, 27px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance">{{ s.h }}</h2>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(20px, 4.2vw, 27px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance">{{ s.h }}</h2>
       <sc-if value="{{ s.hasP }}" hint-placeholder-val="{{ true }}">
         <p style="margin: 0 0 14px; font-size: 16.5px; line-height: 1.72; color: #29402f; text-wrap: pretty">{{ s.p }}</p>
       </sc-if>
@@ -92,7 +93,7 @@
   </sc-for>
 
   <div style="background: #f2f0ea; border: 1px solid #e6e3da; border-radius: 22px; padding: 26px clamp(16px, 4.0vw, 30px); margin-top: 30px">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; margin: 0 0 10px">{{ d.contactTitle }}</h2>
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: 20px; font-weight: 700; margin: 0 0 10px">{{ d.contactTitle }}</h2>
     <p style="margin: 0 0 16px; font-size: 16px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ d.contactText }}</p>
     <a href="mailto:{{ d.contactMail }}" style="font-size: 16.5px; font-weight: 600">{{ d.contactMail }}</a>
   </div>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    a { color: #1a9e44; text-decoration: none; }
+    a:hover { color: #0e7c31; }
+    ::selection { background: #c9efd6; }
+    img { max-width: 100%; }
+  </style>
+</helmet>
+
+<div style="overflow-x: clip">
+
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" active="" hint-size="100%,66px"></dc-import>
+
+<nav aria-label="breadcrumb" style="max-width: 1360px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+  <a href="Senvia%20Landing%20v3.dc.html" style="color: #6b8272">Senvia</a>
+  <span>/</span>
+  <a href="Slanje%20stvari.dc.html" style="color: #6b8272">{{ crumbSend }}</a>
+  <span>/</span>
+  <span style="color: #12261a; font-weight: 600">{{ tag }}</span>
+</nav>
+
+<section style="max-width: 1360px; margin: 0 auto; padding: 32px clamp(16px, 4.0vw, 32px) clamp(29px, 4.9vw, 56px)">
+  <div style="max-width: 860px">
+    <span style="display: inline-block; background: #e8f7ee; color: #167a38; font-weight: 700; font-size: 12.5px; padding: 5px 12px; border-radius: 999px; margin-bottom: 18px">{{ sizeBadge }}</span>
+    <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(32px, 9.0vw, 56px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 22px; text-wrap: balance">{{ h1 }}</h1>
+    <p style="font-size: 20px; line-height: 1.6; color: #3c5346; margin: 0 0 26px; max-width: 60ch; text-wrap: pretty">{{ intro }}</p>
+    <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 32px">
+      <sc-for list="{{ examples }}" as="e" hint-placeholder-count="6">
+        <span style="border: 1px solid #e6e3da; background: #ffffff; border-radius: 999px; padding: 8px 14px; font-size: 14.5px; color: #29402f">{{ e }}</span>
+      </sc-for>
+    </div>
+    <div style="display: flex; gap: 14px; align-items: center; flex-wrap: wrap">
+      <a href="https://apps.apple.com/app/id6759839112" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform .2s ease" style-hover="transform: translateY(-2px)"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform .2s ease" style-hover="transform: translateY(-2px)"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
+    </div>
+  </div>
+</section>
+
+<section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
+  <div style="max-width: 1360px; margin: 0 auto; padding: clamp(34px, 5vw, 60px) clamp(16px, 4.0vw, 32px)">
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 4.6vw, 30px); font-weight: 700; letter-spacing: -0.01em; margin: 0 0 8px">{{ priceTitle }}</h2>
+    <p style="margin: 0 0 22px; font-size: 15.5px; color: #3c5346; max-width: 70ch; text-wrap: pretty">{{ priceNote }}</p>
+    <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; overflow: hidden; max-width: 900px">
+      <div style="display: grid; grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)); gap: 8px; padding: 14px 20px; background: #e8f7ee; font-weight: 700; font-size: 14px; color: #167a38">
+        <span>{{ colRoute }}</span>
+        <sc-for list="{{ sizeCols }}" as="s" hint-placeholder-count="3"><span style="text-align: right">{{ s }}</span></sc-for>
+      </div>
+      <sc-for list="{{ priceRows }}" as="r" hint-placeholder-count="4">
+        <div style="display: grid; grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)); gap: 8px; padding: 14px 20px; border-top: 1px solid #eeebe3; font-size: 15px; align-items: baseline">
+          <span><span style="display: block; font-weight: 600">{{ r.name }}</span><span style="display: block; font-size: 13.5px; color: #6b8272">{{ r.km }}</span></span>
+          <sc-for list="{{ r.vals }}" as="v" hint-placeholder-count="3"><span style="text-align: right; font-weight: 600">{{ v }}</span></sc-for>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6vw, 76px) clamp(16px, 4.0vw, 32px) 0">
+  <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 4.6vw, 30px); font-weight: 700; letter-spacing: -0.01em; margin: 0 0 22px">{{ tipsTitle }}</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px">
+    <sc-for list="{{ tips }}" as="p" hint-placeholder-count="3">
+      <div style="border: 1px solid #e6e3da; border-radius: 20px; padding: 24px; background: #ffffff">
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 700; margin: 0 0 10px">{{ p.h }}</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ p.t }}</p>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6vw, 76px) clamp(16px, 4.0vw, 32px) 0">
+  <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 4.6vw, 30px); font-weight: 700; letter-spacing: -0.01em; margin: 0 0 22px">{{ faqTitle }}</h2>
+  <div style="display: grid; gap: 12px; max-width: 900px">
+    <sc-for list="{{ faq }}" as="f" hint-placeholder-count="2">
+      <div style="border: 1px solid #e6e3da; border-radius: 18px; padding: 22px 24px; background: #ffffff">
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 600; margin: 0 0 8px">{{ f.q }}</h3>
+        <p style="margin: 0; font-size: 16px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ f.a }}</p>
+      </div>
+    </sc-for>
+  </div>
+  <p style="margin: 22px 0 0; font-size: 15.5px"><a href="{{ blogHref }}" style="font-weight: 600">{{ blogLabel }}</a></p>
+</section>
+
+<section style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4.0vw, 32px)">
+  <div style="background: #2dbb54; border-radius: 28px; padding: clamp(29px, 4.9vw, 64px) clamp(24px, 6.0vw, 48px); text-align: center; color: #ffffff">
+    <img src="assets/senvia-logo.png" alt="Senvia logo" width="60" height="60" style="border-radius: 15px; box-shadow: 0 10px 26px rgba(10,60,26,0.3); margin-bottom: 24px">
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(21px, 5.8vw, 36px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 14px; text-wrap: balance">{{ ctaTitle }}</h2>
+    <p style="margin: 0 auto 32px; font-size: 18px; line-height: 1.55; max-width: 48ch; color: #ffffff; text-wrap: pretty">{{ ctaSub }}</p>
+    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap">
+      <a href="https://apps.apple.com/app/id6759839112" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="54" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="54" style="display: block; border-radius: 10px"></a>
+    </div>
+  </div>
+</section>
+
+<section style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4.0vw, 32px) clamp(38px, 6.5vw, 84px)">
+  <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(20px, 4.2vw, 26px); font-weight: 700; margin: 0 0 18px">{{ otherTitle }}</h2>
+  <div style="display: flex; gap: 10px; flex-wrap: wrap">
+    <sc-for list="{{ others }}" as="o" hint-placeholder-count="4">
+      <a href="{{ o.href }}" style="display: inline-flex; border: 1px solid #e6e3da; border-radius: 999px; padding: 10px 18px; font-weight: 600; font-size: 15px; color: #12261a; background: #ffffff" style-hover="border-color: #2dbb54; color: #167a38">{{ o.name }}</a>
+    </sc-for>
+  </div>
+</section>
+
+<dc-import name="Podnozje" hint-size="100%,300px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;slug&quot;: {&quot;editor&quot;: &quot;enum&quot;, &quot;options&quot;: [&quot;namjestaj&quot;,&quot;elektronika&quot;,&quot;bicikli&quot;,&quot;domaca-hrana&quot;,&quot;dokumenti&quot;], &quot;default&quot;: &quot;namjestaj&quot;, &quot;tsType&quot;: &quot;string&quot;}}">
+class Component extends DCLogic {
+  state = { lang: 'hr' };
+
+  SIZES = { S: [5, 0.027], M: [8, 0.040], L: [22, 0.062], XL: [36, 0.089], XXL: [55, 0.150] };
+  price(km, size) { const [f, r] = this.SIZES[size]; return Math.round(f + km * r); }
+  PRICE_ROUTES = [
+    { hr: 'Zagreb – Rijeka', en: 'Zagreb – Rijeka', de: 'Zagreb – Rijeka', km: 160 },
+    { hr: 'Beč – Zagreb', en: 'Vienna – Zagreb', de: 'Wien – Zagreb', km: 370 },
+    { hr: 'München – Zagreb', en: 'Munich – Zagreb', de: 'München – Zagreb', km: 570 },
+    { hr: 'Zürich – Split', en: 'Zurich – Split', de: 'Zürich – Split', km: 1010 }
+  ];
+
+  CATS = {
+    namjestaj: { sizes: ['L', 'XL', 'XXL'], blog: 'Blog%20-%20Slanje%20namjestaja.dc.html',
+      hr: { tag: 'Namještaj', h1: 'Prijevoz namještaja uz putnika s kombijem', intro: 'Kauč s oglasa, komoda od bake ili stol za novi stan. Namještaj putuje uz putnika koji ima kombi ili prikolicu i ionako vozi tvojim smjerom, bez selidbene tvrtke i cijene po satu.', examples: ['Kauč i garnitura', 'Komoda i ormarić', 'Stol i stolice', 'Krevet i madrac', 'Fotelja', 'Police'],
+        tips: [{ h: 'Rastavi što se da', t: 'Noge, police i vrata ormara skini i zapakiraj zasebno. Vijke stavi u vrećicu i zalijepi je na najveći komad.' }, { h: 'Napiši dimenzije', t: 'Uz fotografiju upiši duljinu, širinu i visinu najvećeg komada. Putnik po tome zna stane li u kombi.' }, { h: 'Zaštiti rubove', t: 'Kutove omotaj kartonom ili dekom, a tapecirani namještaj folijom. Tako ga putnik može složiti uz druge stvari.' }],
+        faq: [{ q: 'Koliko košta prijevoz kauča?', a: 'Kauč ide kao razred XL ili XXL. Na ruti Zagreb–Rijeka preporučena naknada je oko 50 do 79 €, ovisno o veličini. Iznos dogovaraš s putnikom.' }, { q: 'Tko nosi namještaj?', a: 'Utovar i istovar dogovaraš s putnikom u chatu. Za teže komade računaj da trebaš pomoć na obje strane.' }], blogLabel: 'Vodič: kako poslati namještaj' },
+      en: { tag: 'Furniture', h1: 'Moving furniture with a traveller who has a van', intro: 'A sofa from a listing, a chest of drawers from grandma or a table for the new flat. Furniture travels with someone who has a van or trailer and is driving your way anyway, without a removal firm or hourly rates.', examples: ['Sofa', 'Chest of drawers', 'Table and chairs', 'Bed and mattress', 'Armchair', 'Shelves'],
+        tips: [{ h: 'Take it apart', t: 'Remove legs, shelves and doors and pack them separately. Put the screws in a bag taped to the largest piece.' }, { h: 'Give the dimensions', t: 'Add length, width and height of the biggest piece with the photo so the traveller knows if it fits.' }, { h: 'Protect the edges', t: 'Wrap corners in cardboard or a blanket and upholstery in plastic film so it can sit next to other items.' }],
+        faq: [{ q: 'How much does it cost to move a sofa?', a: 'A sofa is class XL or XXL. On Zagreb–Rijeka the recommended fee is about €50 to €79 depending on size. You agree the amount with the traveller.' }, { q: 'Who carries the furniture?', a: 'Agree loading and unloading with the traveller in the chat. For heavier pieces plan for help at both ends.' }], blogLabel: 'Guide: how to send furniture' },
+      de: { tag: 'Möbel', h1: 'Möbel mit Reisenden im Transporter transportieren', intro: 'Ein Sofa aus einer Anzeige, eine Kommode von der Oma oder ein Tisch für die neue Wohnung. Möbel reisen mit jemandem, der einen Transporter oder Anhänger hat und ohnehin in deine Richtung fährt, ohne Umzugsfirma und Stundensatz.', examples: ['Sofa', 'Kommode', 'Tisch und Stühle', 'Bett und Matratze', 'Sessel', 'Regale'],
+        tips: [{ h: 'Zerlegen', t: 'Beine, Böden und Türen abnehmen und separat verpacken. Schrauben in einen Beutel und am größten Teil festkleben.' }, { h: 'Maße angeben', t: 'Länge, Breite und Höhe des größten Teils zum Foto schreiben, dann weiß der Reisende, ob es passt.' }, { h: 'Kanten schützen', t: 'Ecken mit Karton oder Decke umwickeln, Polstermöbel mit Folie.' }],
+        faq: [{ q: 'Was kostet ein Sofatransport?', a: 'Ein Sofa ist Klasse XL oder XXL. Auf Zagreb–Rijeka liegt die Empfehlung je nach Größe bei etwa 50 bis 79 €. Den Betrag vereinbarst du mit dem Reisenden.' }, { q: 'Wer trägt die Möbel?', a: 'Be- und Entladen vereinbarst du im Chat. Für schwere Stücke an beiden Enden Hilfe einplanen.' }], blogLabel: 'Ratgeber: Möbel verschicken' } },
+    elektronika: { sizes: ['S', 'M', 'L'], blog: 'Blog%20-%20Slanje%20paketa%20isti%20dan.dc.html',
+      hr: { tag: 'Elektronika', h1: 'Slanje elektronike uz putnika, iz ruke u ruku', intro: 'Laptop koji treba stići na posao, mobitel kupljen u Austriji ili monitor s oglasa. Elektronika putuje u autu, a ne u sortirnom centru, pa nema bacanja ni pretovara.', examples: ['Laptop', 'Mobitel i tablet', 'Monitor i TV', 'Konzola', 'Fotoaparat', 'Punjači i kablovi'],
+        tips: [{ h: 'Originalna kutija', t: 'Najbolje je pakirati u originalnu kutiju. Ako je nemaš, omotaj uređaj folijom s mjehurićima i stavi ga u čvrstu kutiju.' }, { h: 'Fotografiraj i zapiši', t: 'Poslikaj uređaj sa svih strana i zapiši serijski broj prije predaje. Tako obje strane znaju u kakvom je stanju krenuo.' }, { h: 'Baterije i punjači', t: 'Uređaj isključi, a punjač i kablove zapakiraj zajedno s njim. Rezervne baterije stavi u zasebnu vrećicu.' }],
+        faq: [{ q: 'Je li sigurno poslati laptop uz putnika?', a: 'Putnici imaju javne ocjene drugih korisnika, a primopredaju dogovaraš osobno. Stvar je cijelo vrijeme kod jedne osobe, bez skladišta.' }, { q: 'Koliko košta slanje mobitela iz Beča?', a: 'Mobitel ide kao razred S. Na ruti Beč–Zagreb preporučena naknada je oko 15 €.' }], blogLabel: 'Kad stvar mora stići isti dan' },
+      en: { tag: 'Electronics', h1: 'Sending electronics with a traveller, hand to hand', intro: 'A laptop that has to reach work, a phone bought in Austria or a monitor from a listing. Electronics ride in a car, not a sorting centre, so nothing gets thrown or transferred.', examples: ['Laptop', 'Phone and tablet', 'Monitor and TV', 'Console', 'Camera', 'Chargers and cables'],
+        tips: [{ h: 'Original box', t: 'The original box is best. Otherwise wrap the device in bubble wrap and put it in a sturdy box.' }, { h: 'Photograph and note', t: 'Photograph the device from all sides and note the serial number before hand-over.' }, { h: 'Batteries and chargers', t: 'Switch the device off and pack the charger and cables with it. Spare batteries go in a separate bag.' }],
+        faq: [{ q: 'Is it safe to send a laptop with a traveller?', a: 'Travellers have public ratings from other users, and you arrange the hand-over in person. The item stays with one person the whole time.' }, { q: 'How much is it to send a phone from Vienna?', a: 'A phone is class S. On Vienna–Zagreb the recommended fee is about €15.' }], blogLabel: 'When it has to arrive today' },
+      de: { tag: 'Elektronik', h1: 'Elektronik mit Reisenden senden, von Hand zu Hand', intro: 'Ein Laptop, der zur Arbeit muss, ein Handy aus Österreich oder ein Monitor aus einer Anzeige. Elektronik reist im Auto, nicht im Sortierzentrum, also ohne Werfen und Umladen.', examples: ['Laptop', 'Handy und Tablet', 'Monitor und TV', 'Konsole', 'Kamera', 'Ladegeräte und Kabel'],
+        tips: [{ h: 'Originalverpackung', t: 'Am besten in der Originalverpackung. Sonst in Luftpolsterfolie und einen stabilen Karton.' }, { h: 'Fotos und Notizen', t: 'Gerät von allen Seiten fotografieren und Seriennummer notieren.' }, { h: 'Akkus und Ladegeräte', t: 'Gerät ausschalten, Ladegerät und Kabel mit einpacken. Ersatzakkus separat.' }],
+        faq: [{ q: 'Ist es sicher, einen Laptop mitzugeben?', a: 'Reisende haben öffentliche Bewertungen anderer Nutzer, die Übergabe vereinbarst du persönlich. Die Sache bleibt bei einer Person.' }, { q: 'Was kostet ein Handy aus Wien?', a: 'Ein Handy ist Klasse S. Auf Wien–Zagreb liegt die Empfehlung bei etwa 15 €.' }], blogLabel: 'Wenn es heute ankommen muss' } },
+    bicikli: { sizes: ['L', 'XL', 'XXL'], blog: 'Blog%20-%20Prijevoz%20bicikla.dc.html',
+      hr: { tag: 'Bicikli i romobili', h1: 'Prijevoz bicikla i romobila uz putnika', intro: 'Cestovni bicikl za utrku, dječji bicikl za unuke ili električni romobil kupljen u drugom gradu. Bicikl stane u karavan, kombi ili na nosač, a putnik ga vozi kad ionako ide tim smjerom.', examples: ['Cestovni bicikl', 'Brdski bicikl', 'Električni bicikl', 'Dječji bicikl', 'Električni romobil', 'Nosač za bicikl'],
+        tips: [{ h: 'Skini pedale i okreni volan', t: 'Bicikl je tada uži i lakše stane u prtljažnik. Prednji kotač skini ako putnik vozi manji auto.' }, { h: 'Zaštiti mjenjač', t: 'Stražnji mjenjač omotaj kartonom ili krpom. Lanac zaštiti da ne zaprlja ostale stvari.' }, { h: 'Baterija e-bicikla', t: 'Bateriju napuni do pola, skini je ako se da i zapakiraj zasebno. Napiši u zahtjevu da je bicikl električni.' }],
+        faq: [{ q: 'Koliko košta prijevoz bicikla?', a: 'Bicikl ide kao razred L ili XL. Na ruti Zagreb–Rijeka preporučena naknada je oko 32 do 50 €.' }, { q: 'Mogu li poslati električni romobil?', a: 'Da. Romobil se sklopi i stane u gepek, pa najčešće ide kao razred L.' }], blogLabel: 'Vodič: prijevoz bicikla' },
+      en: { tag: 'Bikes and scooters', h1: 'Moving a bike or scooter with a traveller', intro: 'A road bike for a race, a kids’ bike for the grandchildren or an e-scooter bought in another city. A bike fits in an estate, van or on a rack, and the traveller takes it when heading your way.', examples: ['Road bike', 'Mountain bike', 'E-bike', 'Kids’ bike', 'E-scooter', 'Bike rack'],
+        tips: [{ h: 'Remove pedals, turn the bars', t: 'The bike gets narrower and fits a boot more easily. Remove the front wheel for smaller cars.' }, { h: 'Protect the derailleur', t: 'Wrap the rear derailleur in cardboard or cloth and cover the chain.' }, { h: 'E-bike battery', t: 'Charge it to about half, remove it if possible and pack it separately. Mention in the request that the bike is electric.' }],
+        faq: [{ q: 'How much does bike transport cost?', a: 'A bike is class L or XL. On Zagreb–Rijeka the recommended fee is about €32 to €50.' }, { q: 'Can I send an e-scooter?', a: 'Yes. It folds and fits a boot, so it is usually class L.' }], blogLabel: 'Guide: bike transport' },
+      de: { tag: 'Fahrräder und Scooter', h1: 'Fahrrad und Scooter mit Reisenden transportieren', intro: 'Ein Rennrad fürs Rennen, ein Kinderrad für die Enkel oder ein E-Scooter aus einer anderen Stadt. Ein Fahrrad passt in Kombi, Transporter oder auf einen Träger.', examples: ['Rennrad', 'Mountainbike', 'E-Bike', 'Kinderrad', 'E-Scooter', 'Fahrradträger'],
+        tips: [{ h: 'Pedale ab, Lenker drehen', t: 'So wird das Rad schmaler. Bei kleineren Autos das Vorderrad abnehmen.' }, { h: 'Schaltwerk schützen', t: 'Schaltwerk mit Karton oder Tuch umwickeln, Kette abdecken.' }, { h: 'E-Bike-Akku', t: 'Etwa halb laden, wenn möglich abnehmen und separat verpacken. In der Anfrage angeben, dass es ein E-Bike ist.' }],
+        faq: [{ q: 'Was kostet ein Fahrradtransport?', a: 'Ein Fahrrad ist Klasse L oder XL. Auf Zagreb–Rijeka liegt die Empfehlung bei etwa 32 bis 50 €.' }, { q: 'Kann ich einen E-Scooter senden?', a: 'Ja. Er lässt sich falten und passt in den Kofferraum, meist Klasse L.' }], blogLabel: 'Ratgeber: Fahrradtransport' } },
+    'domaca-hrana': { sizes: ['S', 'M', 'L'], blog: 'Blog%20-%20Slanje%20domacih%20proizvoda%20s%20OPG-a.dc.html',
+      hr: { tag: 'Domaća hrana', h1: 'Slanje domaće hrane: zimnica, pršut, sir i med', intro: 'Ajvar od mame, pršut za Božić ili med s obiteljskog OPG-a. Stvari putuju nekoliko sati, a ne danima, pa domaća hrana stiže onakva kakva je krenula, i u Hrvatskoj i prema dijaspori.', examples: ['Ajvar i zimnica', 'Pršut i kobasice', 'Sir', 'Med', 'Maslinovo ulje', 'Kolači'],
+        tips: [{ h: 'Staklenke obloži', t: 'Svaku staklenku zamotaj u novine ili foliju i složi ih uspravno u kutiju, bez praznog prostora.' }, { h: 'Što ide u hladnjak', t: 'Svježi sir i meso pakiraj s ledenim ulošcima u termo torbu i najavi putniku u chatu. Na kraćim rutama to nije problem.' }, { h: 'Granica', t: 'Unutar EU hrana za osobnu upotrebu putuje slobodno. Za Švicarsku vrijede ograničenja količine mesa i mliječnih proizvoda.' }],
+        faq: [{ q: 'Smije li se poslati pršut u Njemačku?', a: 'Da, unutar EU hrana za osobnu upotrebu putuje bez carine. Pršut zapakiraj vakuumski ili u platnenu vrećicu.' }, { q: 'Koliko košta slanje zimnice?', a: 'Kutija staklenki ide kao razred M. Na ruti Beč–Zagreb preporučena naknada je oko 23 €.' }], blogLabel: 'Za OPG-ove: kako slati domaće proizvode' },
+      en: { tag: 'Homemade food', h1: 'Sending homemade food: prosciutto, cheese, honey', intro: 'Mum’s ajvar, prosciutto for Christmas or honey from a family farm. Items travel for hours, not days, so homemade food arrives as it left, within Croatia and to the diaspora.', examples: ['Ajvar and preserves', 'Prosciutto and sausages', 'Cheese', 'Honey', 'Olive oil', 'Cakes'],
+        tips: [{ h: 'Wrap the jars', t: 'Wrap each jar in newspaper or film and stand them upright in a box with no gaps.' }, { h: 'Chilled items', t: 'Pack fresh cheese and meat with ice packs in a cool bag and tell the traveller in the chat.' }, { h: 'Borders', t: 'Within the EU food for personal use travels freely. Switzerland limits the amount of meat and dairy.' }],
+        faq: [{ q: 'Can I send prosciutto to Germany?', a: 'Yes, within the EU food for personal use travels without customs. Vacuum-pack it or use a cloth bag.' }, { q: 'How much does sending preserves cost?', a: 'A box of jars is class M. On Vienna–Zagreb the recommended fee is about €23.' }], blogLabel: 'For family farms: sending local produce' },
+      de: { tag: 'Hausgemachtes', h1: 'Hausgemachtes senden: Pršut, Käse und Honig', intro: 'Ajvar von Mama, Pršut zu Weihnachten oder Honig vom Familienhof. Die Sachen reisen Stunden statt Tage und kommen so an, wie sie losgeschickt wurden, in Kroatien und zur Diaspora.', examples: ['Ajvar und Eingemachtes', 'Pršut und Würste', 'Käse', 'Honig', 'Olivenöl', 'Kuchen'],
+        tips: [{ h: 'Gläser einwickeln', t: 'Jedes Glas in Zeitung oder Folie wickeln und aufrecht ohne Lücken in einen Karton stellen.' }, { h: 'Gekühltes', t: 'Frischkäse und Fleisch mit Kühlakkus in eine Kühltasche und dem Reisenden im Chat Bescheid geben.' }, { h: 'Grenzen', t: 'Innerhalb der EU reisen Lebensmittel für den Eigenbedarf frei. Die Schweiz begrenzt Fleisch- und Milchprodukte.' }],
+        faq: [{ q: 'Darf ich Pršut nach Deutschland senden?', a: 'Ja, innerhalb der EU reisen Lebensmittel für den Eigenbedarf zollfrei. Vakuumieren oder in einen Stoffbeutel.' }, { q: 'Was kostet Eingemachtes?', a: 'Ein Karton Gläser ist Klasse M. Auf Wien–Zagreb liegt die Empfehlung bei etwa 23 €.' }], blogLabel: 'Für Familienbetriebe: Hofprodukte senden' } },
+    dokumenti: { sizes: ['S', 'M', 'L'], blog: 'Blog%20-%20Slanje%20paketa%20isti%20dan.dc.html',
+      hr: { tag: 'Dokumenti i ključevi', h1: 'Slanje dokumenata i ključeva isti dan', intro: 'Ugovor koji treba potpis sutra, diploma za nostrifikaciju ili ključevi stana koje je netko zaboravio. Mala stvar putuje uz putnika i stiže kad i on, često isti dan.', examples: ['Ugovori', 'Diplome i svjedodžbe', 'Putovnica i osobna', 'Ključevi', 'Kartice', 'Medicinska dokumentacija'],
+        tips: [{ h: 'Kuverta s natpisom', t: 'Dokumente stavi u čvrstu kuvertu ili plastičnu mapu. Na nju napiši ime primatelja i broj telefona.' }, { h: 'Kopija prije predaje', t: 'Fotografiraj ili skeniraj svaki dokument. Ako se nešto zagubi, imaš podatke za novi zahtjev.' }, { h: 'Primopredaja uživo', t: 'Važne dokumente predaj osobno i dogovori da ih primatelj preuzme izravno od putnika.' }],
+        faq: [{ q: 'Mogu li poslati putovnicu?', a: 'Možeš, ali preporučujemo da je preuzme osoba kojoj pripada ili netko tko ima njezinu punomoć. Opiši sadržaj iskreno u zahtjevu.' }, { q: 'Koliko košta slanje dokumenata?', a: 'Kuverta ide kao razred S. Na ruti Zagreb–Rijeka preporučena naknada je oko 9 €.' }], blogLabel: 'Kad stvar mora stići isti dan' },
+      en: { tag: 'Documents and keys', h1: 'Sending documents and keys the same day', intro: 'A contract that needs signing tomorrow, a diploma for recognition or flat keys someone forgot. A small item travels with the traveller and arrives when they do, often the same day.', examples: ['Contracts', 'Diplomas and certificates', 'Passport and ID', 'Keys', 'Cards', 'Medical records'],
+        tips: [{ h: 'Labelled envelope', t: 'Put documents in a sturdy envelope or plastic folder with the recipient’s name and phone number.' }, { h: 'Copy before hand-over', t: 'Photograph or scan each document first.' }, { h: 'Hand over in person', t: 'Hand important documents over in person and have the recipient collect them directly from the traveller.' }],
+        faq: [{ q: 'Can I send a passport?', a: 'You can, but we recommend the holder or someone with their authorisation collects it. Describe the contents honestly.' }, { q: 'How much does sending documents cost?', a: 'An envelope is class S. On Zagreb–Rijeka the recommended fee is about €9.' }], blogLabel: 'When it has to arrive today' },
+      de: { tag: 'Dokumente und Schlüssel', h1: 'Dokumente und Schlüssel am selben Tag senden', intro: 'Ein Vertrag, der morgen unterschrieben werden muss, ein Diplom zur Anerkennung oder vergessene Wohnungsschlüssel. Kleines reist mit dem Reisenden und kommt oft am selben Tag an.', examples: ['Verträge', 'Diplome und Zeugnisse', 'Pass und Ausweis', 'Schlüssel', 'Karten', 'Medizinische Unterlagen'],
+        tips: [{ h: 'Beschrifteter Umschlag', t: 'Dokumente in einen festen Umschlag oder eine Mappe mit Name und Telefonnummer des Empfängers.' }, { h: 'Vorher kopieren', t: 'Jedes Dokument vor der Übergabe fotografieren oder scannen.' }, { h: 'Persönlich übergeben', t: 'Wichtiges persönlich übergeben und direkt beim Reisenden abholen lassen.' }],
+        faq: [{ q: 'Kann ich einen Pass senden?', a: 'Ja, wir empfehlen aber, dass der Inhaber oder eine bevollmächtigte Person ihn abholt. Inhalt ehrlich angeben.' }, { q: 'Was kosten Dokumente?', a: 'Ein Umschlag ist Klasse S. Auf Zagreb–Rijeka liegt die Empfehlung bei etwa 9 €.' }], blogLabel: 'Wenn es heute ankommen muss' } }
+  };
+
+  STR = {
+    hr: { crumbSend: 'Slanje stvari', priceTitle: 'Okvirne naknade po rutama', priceNote: 'Preporučena naknada po razredu veličine. Konačni iznos dogovaraš s putnikom u aplikaciji.', colRoute: 'Ruta', tipsTitle: 'Kako pripremiti stvari', faqTitle: 'Česta pitanja', otherTitle: 'Što se još šalje', size: 'Razred', ctaSub: 'Preuzmi Senvia aplikaciju besplatno, objavi zahtjev s fotografijom i vidi tko ide tvojim smjerom.', locale: 'hr_HR', send: 'Pošalji uz putnika' },
+    en: { crumbSend: 'Sending items', priceTitle: 'Indicative fees by route', priceNote: 'Recommended fee per size class. You agree the final amount with the traveller in the app.', colRoute: 'Route', tipsTitle: 'How to prepare', faqTitle: 'FAQ', otherTitle: 'What else people send', size: 'Class', ctaSub: 'Download Senvia for free, post a request with a photo and see who is heading your way.', locale: 'en_GB', send: 'Send with a traveller' },
+    de: { crumbSend: 'Sachen senden', priceTitle: 'Richtwerte je Strecke', priceNote: 'Empfohlener Beitrag je Größenklasse. Den Betrag vereinbarst du in der App mit dem Reisenden.', colRoute: 'Strecke', tipsTitle: 'Vorbereitung', faqTitle: 'Häufige Fragen', otherTitle: 'Was sonst gesendet wird', size: 'Klasse', ctaSub: 'Lade Senvia kostenlos, stelle eine Anfrage mit Foto und sieh, wer in deine Richtung fährt.', locale: 'de_DE', send: 'Mit Reisenden senden' }
+  };
+
+  key() { return this.CATS[this.props.slug] ? this.props.slug : 'namjestaj'; }
+  data() {
+    const lang = this.state.lang, key = this.key(), cat = this.CATS[key];
+    return { lang, key, cat, c: cat[lang] || cat.hr, t: { ...this.STR.hr, ...(this.STR[lang] || {}) } };
+  }
+
+  componentDidMount() {
+    import('./i18n.js').then(m => {
+      this.setState({ lang: m.getLang() });
+      this.off = m.onLang(l => this.setState({ lang: l }));
+    });
+    this.applyMeta();
+  }
+  componentDidUpdate() { this.applyMeta(); }
+  componentWillUnmount() { if (this.off) this.off(); }
+
+  applyMeta() {
+    const d = this.data(), head = document.head;
+    const url = 'https://www.senviaapp.com/prijevoz/' + d.key + '/' + (d.lang !== 'hr' ? '?lang=' + d.lang : '');
+    const title = d.c.h1 + ' | Senvia';
+    const desc = d.c.intro.length > 158 ? d.c.intro.slice(0, 155).replace(/\s+\S*$/, '') + '…' : d.c.intro;
+    document.documentElement.setAttribute('lang', d.lang);
+    document.title = title;
+    setTimeout(() => { if (document.title !== title) document.title = title; }, 80);
+    const meta = (attr, n, val) => { let el = head.querySelector('meta[' + attr + '="' + n + '"]'); if (!el) { el = document.createElement('meta'); el.setAttribute(attr, n); head.appendChild(el); } el.setAttribute('content', val); };
+    meta('name', 'description', desc); meta('name', 'robots', 'index, follow');
+    meta('property', 'og:title', title); meta('property', 'og:description', desc); meta('property', 'og:url', url); meta('property', 'og:locale', d.t.locale);
+    let cn = head.querySelector('link[rel="canonical"]'); if (!cn) { cn = document.createElement('link'); cn.setAttribute('rel', 'canonical'); head.appendChild(cn); } cn.setAttribute('href', url);
+    const ld = (id, data) => { let el = document.getElementById(id); if (!el) { el = document.createElement('script'); el.type = 'application/ld+json'; el.id = id; head.appendChild(el); } el.textContent = JSON.stringify(data); };
+    ld('senvia-breadcrumb-ld', { '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Senvia', item: 'https://www.senviaapp.com/' },
+      { '@type': 'ListItem', position: 2, name: d.t.crumbSend, item: 'https://www.senviaapp.com/slanje-stvari/' },
+      { '@type': 'ListItem', position: 3, name: d.c.tag, item: url } ] });
+    ld('senvia-cat-faq-ld', { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: d.c.faq.map(f => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) });
+  }
+
+  renderVals() {
+    const d = this.data();
+    return {
+      crumbSend: d.t.crumbSend, tag: d.c.tag, h1: d.c.h1, intro: d.c.intro, examples: d.c.examples,
+      sizeBadge: d.c.tag + ' \u00b7 ' + d.t.size + ' ' + d.cat.sizes[0] + '\u2013' + d.cat.sizes[d.cat.sizes.length - 1],
+      priceTitle: d.t.priceTitle, priceNote: d.t.priceNote, colRoute: d.t.colRoute, sizeCols: d.cat.sizes,
+      priceRows: this.PRICE_ROUTES.map(r => ({ name: r[d.lang] || r.hr, km: r.km + ' km', vals: d.cat.sizes.map(s => '\u2248 ' + this.price(r.km, s) + ' \u20ac') })),
+      tipsTitle: d.t.tipsTitle, tips: d.c.tips, faqTitle: d.t.faqTitle, faq: d.c.faq,
+      blogHref: d.cat.blog, blogLabel: d.c.blogLabel + ' \u2192',
+      ctaTitle: d.t.send + ': ' + (d.lang === 'de' ? d.c.tag : d.c.tag.toLowerCase()), ctaSub: d.t.ctaSub,
+      otherTitle: d.t.otherTitle,
+      others: Object.keys(this.CATS).filter(k => k !== d.key).map(k => ({ name: (this.CATS[k][d.lang] || this.CATS[k].hr).tag, href: 'Kategorija%20-%20' + k + '.dc.html' }))
+    };
+  }
+}
+</script>
+</body>
+</html>

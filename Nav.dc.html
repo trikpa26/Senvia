@@ -17,11 +17,11 @@
   </style>
 </helmet>
 
-<header data-senvia-nav="1" style="position: sticky; top: 0; z-index: 100; background: rgba(250,249,246,0.9); backdrop-filter: blur(14px); border-bottom: 1px solid #e9e6dd; font-family: 'Instrument Sans', sans-serif">
-  <div style="max-width: 1280px; margin: 0 auto; padding: 11px clamp(16px, 4vw, 32px); display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 10px">
-    <a href="Senvia%20Landing%20v2.dc.html" style="display: flex; align-items: center; gap: 10px; color: #12261a; justify-self: start; grid-column: 1">
+<header data-senvia-nav="1" style="position: sticky; top: 0; z-index: 100; background: rgba(250,249,246,0.9); backdrop-filter: blur(14px); border-bottom: 1px solid #e9e6dd; font-family: 'Outfit', sans-serif">
+  <div style="max-width: 1360px; margin: 0 auto; padding: 11px clamp(16px, 4vw, 32px); display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 10px">
+    <a href="Senvia%20Landing%20v3.dc.html" style="display: flex; align-items: center; gap: 10px; color: #12261a; justify-self: start; grid-column: 1">
       <img src="assets/senvia-logo.png" alt="Senvia logo" width="42" height="42" style="width: clamp(36px, 9vw, 42px); height: auto; border-radius: 11px; display: block; box-shadow: 0 2px 8px rgba(18,38,26,0.14)">
-      <span style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(18px, 4.6vw, 22px); letter-spacing: 0.02em">Senvia</span>
+      <span style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(18px, 4.6vw, 22px); letter-spacing: 0.02em">Senvia</span>
     </a>
 
     <nav data-nav-desk style="display: flex; align-items: center; gap: 32px; grid-column: 2">
@@ -35,7 +35,7 @@
       </sc-for>
       <div style="position: relative; display: flex; align-items: center">
         <sc-if value="{{ bizOpen }}" hint-placeholder-val="{{ false }}">
-          <button onClick="{{ toggleBiz }}" style="display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15.5px; font-weight: 500; color: #1a9e44; background: transparent; padding: 10px 0">
+          <button onClick="{{ toggleBiz }}" style="display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; font-family: 'Outfit', sans-serif; font-size: 15.5px; font-weight: 500; color: #1a9e44; background: transparent; padding: 10px 0">
             {{ bizLabel }}
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(180deg)"><path d="M6 9l6 6 6-6"></path></svg>
           </button>
@@ -49,7 +49,7 @@
           </div>
         </sc-if>
         <sc-if value="{{ bizShut }}" hint-placeholder-val="{{ true }}">
-          <button onClick="{{ toggleBiz }}" style="display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 15.5px; font-weight: 500; color: #12261a; background: transparent; padding: 10px 0" style-hover="color: #1a9e44">
+          <button onClick="{{ toggleBiz }}" style="display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer; font-family: 'Outfit', sans-serif; font-size: 15.5px; font-weight: 500; color: #12261a; background: transparent; padding: 10px 0" style-hover="color: #1a9e44">
             {{ bizLabel }}
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
           </button>
@@ -62,23 +62,23 @@
 
       <div style="position: relative">
         <sc-if value="{{ langOpen }}" hint-placeholder-val="{{ false }}">
-          <button onClick="{{ toggleLang }}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14.5px; font-weight: 600; color: #1a9e44; background: transparent; padding: 0 4px">
+          <button onClick="{{ toggleLang }}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; border: none; cursor: pointer; font-family: 'Outfit', sans-serif; font-size: 14.5px; font-weight: 600; color: #1a9e44; background: transparent; padding: 0 4px">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18"></path><path d="M12 3a14 14 0 0 0 0 18"></path></svg>{{ langShort }}
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate(180deg)"><path d="M6 9l6 6 6-6"></path></svg>
           </button>
           <div style="position: absolute; top: calc(100% + 10px); right: 0; min-width: 168px; background: #ffffff; border: 1px solid #e6e3da; border-radius: 18px; padding: 8px; box-shadow: 0 18px 44px rgba(18,38,26,0.14); z-index: 120; display: grid; gap: 2px">
             <sc-for list="{{ langs }}" as="l" hint-placeholder-count="3">
               <sc-if value="{{ l.isCurrent }}" hint-placeholder-val="{{ false }}">
-                <button onClick="{{ l.pick }}" style="display: block; width: 100%; text-align: left; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14.5px; font-weight: 600; color: #12261a; background: #f2f0ea; padding: 11px 14px; border-radius: 11px">{{ l.label }}</button>
+                <button onClick="{{ l.pick }}" style="display: block; width: 100%; text-align: left; border: none; cursor: pointer; font-family: 'Outfit', sans-serif; font-size: 14.5px; font-weight: 600; color: #12261a; background: #f2f0ea; padding: 11px 14px; border-radius: 11px">{{ l.label }}</button>
               </sc-if>
               <sc-if value="{{ l.isOther }}" hint-placeholder-val="{{ true }}">
-                <button onClick="{{ l.pick }}" style="display: block; width: 100%; text-align: left; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14.5px; font-weight: 500; color: #3c5346; background: transparent; padding: 11px 14px; border-radius: 11px" style-hover="background: #f2f0ea">{{ l.label }}</button>
+                <button onClick="{{ l.pick }}" style="display: block; width: 100%; text-align: left; border: none; cursor: pointer; font-family: 'Outfit', sans-serif; font-size: 14.5px; font-weight: 500; color: #3c5346; background: transparent; padding: 11px 14px; border-radius: 11px" style-hover="background: #f2f0ea">{{ l.label }}</button>
               </sc-if>
             </sc-for>
           </div>
         </sc-if>
         <sc-if value="{{ langShut }}" hint-placeholder-val="{{ true }}">
-          <button onClick="{{ toggleLang }}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; border: none; cursor: pointer; font-family: 'Instrument Sans', sans-serif; font-size: 14.5px; font-weight: 600; color: #3c5346; background: transparent; padding: 0 4px" style-hover="color: #1a9e44">
+          <button onClick="{{ toggleLang }}" style="display: inline-flex; align-items: center; gap: 6px; min-height: 44px; border: none; cursor: pointer; font-family: 'Outfit', sans-serif; font-size: 14.5px; font-weight: 600; color: #3c5346; background: transparent; padding: 0 4px" style-hover="color: #1a9e44">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18"></path><path d="M12 3a14 14 0 0 0 0 18"></path></svg>{{ langShort }}
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"></path></svg>
           </button>
@@ -99,7 +99,7 @@
 
   <sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
     <div style="border-top: 1px solid #e9e6dd; background: #ffffff">
-      <div style="max-width: 1280px; margin: 0 auto; padding: 8px clamp(16px, 4vw, 32px) 18px; display: grid; gap: 2px">
+      <div style="max-width: 1360px; margin: 0 auto; padding: 8px clamp(16px, 4vw, 32px) 18px; display: grid; gap: 2px">
         <sc-for list="{{ allLinks }}" as="l" hint-placeholder-count="7">
           <sc-if value="{{ l.isActive }}" hint-placeholder-val="{{ false }}">
             <a href="{{ l.href }}" style="display: block; padding: 14px 12px; border-radius: 12px; font-size: 16px; font-weight: 600; color: #12261a; background: #f2f0ea">{{ l.label }}</a>
@@ -108,19 +108,74 @@
             <a href="{{ l.href }}" style="display: block; padding: 14px 12px; border-radius: 12px; font-size: 16px; font-weight: 500; color: #3c5346">{{ l.label }}</a>
           </sc-if>
         </sc-for>
-        <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer" style="margin-top: 10px; background: #2dbb54; color: #ffffff; font-weight: 600; font-size: 15.5px; padding: 14px 18px; border-radius: 14px; text-align: center">{{ ctaLabel }}</a>
       </div>
     </div>
   </sc-if>
 </header>
 
-<sc-if value="{{ consentOpen }}" hint-placeholder-val="{{ false }}">
-  <div role="dialog" aria-label="{{ consentAria }}" style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 300; background: #ffffff; border-top: 1px solid #e6e3da; box-shadow: 0 -12px 34px rgba(18,38,26,0.12); font-family: 'Instrument Sans', sans-serif">
-    <div style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px); display: flex; gap: 16px; flex-wrap: wrap; align-items: center; justify-content: space-between">
-      <p style="margin: 0; font-size: 14.5px; line-height: 1.6; color: #3c5346; max-width: 70ch; text-wrap: pretty">{{ consentText }} <a href="Politika%20kolacica.dc.html" style="font-weight: 600">{{ consentCookieLink }}</a> {{ consentAnd }} <a href="Politika%20privatnosti.dc.html" style="font-weight: 600">{{ consentPrivacyLink }}</a>.</p>
-      <div style="display: flex; gap: 10px; flex-wrap: wrap">
-        <button onClick="{{ consentDeny }}" style="border: 1px solid #dcd8cc; background: #ffffff; color: #3c5346; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 12px 18px; border-radius: 12px; cursor: pointer; min-height: 44px" style-hover="background: #f2f0ea">{{ consentNo }}</button>
-        <button onClick="{{ consentAccept }}" style="border: none; background: #2dbb54; color: #ffffff; font-family: 'Instrument Sans', sans-serif; font-size: 15px; font-weight: 600; padding: 12px 20px; border-radius: 12px; cursor: pointer; min-height: 44px" style-hover="background: #26a449">{{ consentYes }}</button>
+<sc-if value="{{ consentBanner }}" hint-placeholder-val="{{ false }}">
+  <div role="dialog" aria-modal="false" aria-labelledby="senvia-cb-title" style="position: fixed; left: 50%; transform: translateX(-50%); bottom: clamp(10px, 2vw, 22px); width: min(920px, calc(100vw - 20px)); box-sizing: border-box; z-index: 300; background: #ffffff; border: 1px solid #e6e3da; border-radius: 22px; box-shadow: 0 22px 60px rgba(18,38,26,0.22); font-family: 'Outfit', sans-serif; padding: clamp(18px, 3vw, 28px); display: flex; flex-direction: column; gap: 14px; max-height: calc(100vh - 20px); overflow-y: auto">
+    <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; flex-wrap: wrap-reverse">
+      <span id="senvia-cb-title" style="font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 700; color: #12261a">{{ cbTitle }}</span>
+      <button onClick="{{ consentDeny }}" style="margin-left: auto; border: none; background: transparent; padding: 4px 0; font-family: 'Outfit', sans-serif; font-size: 13.5px; color: #3c5346; text-decoration: underline; cursor: pointer" style-hover="color: #12261a">{{ cbSkip }}</button>
+    </div>
+    <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #29402f; text-wrap: pretty">{{ cbText }} <a href="Politika%20kolacica.dc.html" style="font-weight: 600; color: #12261a; text-decoration: underline">{{ cbPolicy }}</a>.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center">
+      <button onClick="{{ consentOpenSettings }}" style="flex: 1 1 200px; border: 1px solid #cfcabc; background: #ffffff; color: #12261a; font-family: 'Outfit', sans-serif; font-size: 15.5px; font-weight: 600; padding: 13px 20px; border-radius: 14px; cursor: pointer; min-height: 48px" style-hover="background: #f2f0ea">{{ cbSettings }}</button>
+      <button onClick="{{ consentDeny }}" style="flex: 1 1 170px; border: none; background: #167a38; color: #ffffff; font-family: 'Outfit', sans-serif; font-size: 15.5px; font-weight: 600; padding: 13px 20px; border-radius: 14px; cursor: pointer; min-height: 48px" style-hover="background: #0e6a2e">{{ cbReject }}</button>
+      <button onClick="{{ consentAccept }}" style="flex: 1 1 170px; border: none; background: #167a38; color: #ffffff; font-family: 'Outfit', sans-serif; font-size: 15.5px; font-weight: 600; padding: 13px 20px; border-radius: 14px; cursor: pointer; min-height: 48px" style-hover="background: #0e6a2e">{{ cbAccept }}</button>
+    </div>
+  </div>
+</sc-if>
+
+<sc-if value="{{ consentModal }}" hint-placeholder-val="{{ false }}">
+  <div style="position: fixed; inset: 0; z-index: 310; background: rgba(18,38,26,0.45); display: flex; align-items: center; justify-content: center; padding: 10px; box-sizing: border-box; font-family: 'Outfit', sans-serif">
+    <div role="dialog" aria-modal="true" aria-labelledby="senvia-cm-title" style="width: min(640px, 100%); max-height: calc(100vh - 20px); background: #ffffff; border-radius: 22px; box-shadow: 0 30px 80px rgba(18,38,26,0.3); display: flex; flex-direction: column; overflow: hidden">
+      <div style="flex-shrink: 0; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px clamp(16px, 3vw, 26px); border-bottom: 1px solid #eeebe3">
+        <div style="display: flex; align-items: center; gap: 10px">
+          <img src="assets/senvia-logo.png" alt="Senvia logo" width="36" height="36" style="border-radius: 10px; display: block">
+          <span style="font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 19px; color: #12261a">Senvia</span>
+        </div>
+        <button onClick="{{ consentBack }}" aria-label="{{ cmClose }}" style="width: 44px; height: 44px; border: none; background: transparent; border-radius: 12px; cursor: pointer; display: inline-flex; align-items: center; justify-content: center" style-hover="background: #f2f0ea">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#12261a" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12"></path><path d="M18 6L6 18"></path></svg>
+        </button>
+      </div>
+      <div style="padding: clamp(18px, 3vw, 26px); overflow-y: auto; flex: 1 1 auto; min-height: 0; display: grid; grid-auto-rows: max-content; gap: 18px; align-content: start">
+        <h2 id="senvia-cm-title" style="margin: 0; font-family: 'Outfit', sans-serif; font-size: 21px; font-weight: 700; color: #12261a">{{ cmTitle }}</h2>
+        <p style="margin: 0; font-size: 15px; line-height: 1.6; color: #29402f; text-wrap: pretty">{{ cmText }} <a href="Politika%20kolacica.dc.html" style="font-weight: 600; color: #12261a; text-decoration: underline">{{ cmPolicy }}</a></p>
+        <div>
+          <button onClick="{{ consentAccept }}" style="border: none; background: #167a38; color: #ffffff; font-family: 'Outfit', sans-serif; font-size: 15.5px; font-weight: 600; padding: 13px 26px; border-radius: 14px; cursor: pointer; min-height: 48px; white-space: nowrap" style-hover="background: #0e6a2e">{{ cbAccept }}</button>
+        </div>
+        <h3 style="margin: 6px 0 0; font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 700; color: #12261a">{{ cmPrefs }}</h3>
+        <div style="border: 1px solid #e6e3da; border-radius: 14px; min-height: max-content">
+          <div style="display: flex; align-items: center; gap: 10px; padding: 6px 8px 6px 16px; min-height: 56px">
+            <button onClick="{{ toggleNecRow }}" aria-expanded="{{ necAria }}" style="flex: 1; min-width: 0; text-align: left; border: none; background: transparent; padding: 10px 0; font-family: 'Outfit', sans-serif; font-size: 15.5px; font-weight: 600; color: #12261a; cursor: pointer">{{ cmNec }}</button>
+            <span style="font-size: 14px; font-weight: 700; color: #167a38">{{ cmAlways }}</span>
+            <button onClick="{{ toggleNecRow }}" aria-label="{{ cmNec }}" style="width: 40px; height: 40px; border: none; background: transparent; cursor: pointer; display: inline-flex; align-items: center; justify-content: center">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3c5346" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate({{ necRot }}); transition: transform .2s ease"><path d="M9 6l6 6-6 6"></path></svg>
+            </button>
+          </div>
+          <sc-if value="{{ necRowOpen }}" hint-placeholder-val="{{ false }}">
+            <p style="margin: 0; padding: 0 16px 16px; font-size: 14.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ cmNecD }}</p>
+          </sc-if>
+          <div style="display: flex; align-items: center; gap: 10px; padding: 6px 8px 6px 16px; min-height: 56px; border-top: 1px solid #e6e3da">
+            <button onClick="{{ toggleAnaRow }}" aria-expanded="{{ anaRowAria }}" style="flex: 1; min-width: 0; text-align: left; border: none; background: transparent; padding: 10px 0; font-family: 'Outfit', sans-serif; font-size: 15.5px; font-weight: 600; color: #12261a; cursor: pointer">{{ cmAna }}</button>
+            <button onClick="{{ consentToggleAna }}" role="switch" aria-checked="{{ consentAnaAria }}" aria-label="{{ cmAna }}" style="flex: none; width: 52px; height: 44px; border: none; background: transparent; padding: 0; cursor: pointer; display: inline-flex; align-items: center; justify-content: center">
+              <span style="display: block; width: 48px; height: 28px; border-radius: 999px; background: {{ consentTrack }}; position: relative; transition: background .2s ease"><span style="position: absolute; top: 4px; left: {{ consentKnob }}; width: 20px; height: 20px; border-radius: 50%; background: #ffffff; box-shadow: 0 1px 3px rgba(0,0,0,0.25); transition: left .2s ease"></span></span>
+            </button>
+            <button onClick="{{ toggleAnaRow }}" aria-label="{{ cmAna }}" style="width: 40px; height: 40px; border: none; background: transparent; cursor: pointer; display: inline-flex; align-items: center; justify-content: center">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3c5346" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="transform: rotate({{ anaRot }}); transition: transform .2s ease"><path d="M9 6l6 6-6 6"></path></svg>
+            </button>
+          </div>
+          <sc-if value="{{ anaRowOpen }}" hint-placeholder-val="{{ false }}">
+            <p style="margin: 0; padding: 0 16px 16px; font-size: 14.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ cmAnaD }}</p>
+          </sc-if>
+        </div>
+        <p style="margin: 0; font-size: 14px; line-height: 1.55; color: #3c5346; text-wrap: pretty">{{ cmNoAds }}</p>
+      </div>
+      <div style="flex-shrink: 0; display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; padding: 14px clamp(16px, 3vw, 26px); border-top: 1px solid #eeebe3">
+        <button onClick="{{ consentDeny }}" style="flex: 1 1 160px; border: none; background: #167a38; color: #ffffff; font-family: 'Outfit', sans-serif; font-size: 15.5px; font-weight: 600; padding: 13px 20px; border-radius: 14px; cursor: pointer; min-height: 48px" style-hover="background: #0e6a2e">{{ cbReject }}</button>
+        <button onClick="{{ consentSave }}" style="flex: 1 1 200px; border: none; background: #167a38; color: #ffffff; font-family: 'Outfit', sans-serif; font-size: 15.5px; font-weight: 600; padding: 13px 20px; border-radius: 14px; cursor: pointer; min-height: 48px" style-hover="background: #0e6a2e">{{ cmConfirm }}</button>
       </div>
     </div>
   </div>
@@ -136,11 +191,11 @@ class Component extends DCLogic {
     send:  { hr: 'Slanje stvari', en: 'Sending items', de: 'Sachen senden' },
     trust: { hr: 'Sigurnost', en: 'Trust & safety', de: 'Sicherheit' },
     more:  { hr: 'Više', en: 'More', de: 'Mehr' },
-    faq:   { hr: 'Česta pitanja', en: 'FAQ', de: 'Häufige Fragen' },
+    faq:   { hr: 'FAQ', en: 'FAQ', de: 'FAQ' },
     faqD:  { hr: 'Naknade, rute, verifikacija', en: 'Fees, routes, verification', de: 'Kostenbeiträge, Routen, Verifizierung' },
     blog:  { hr: 'Blog', en: 'Blog', de: 'Blog' },
     blogD: { hr: 'Vodiči i usporedbe naknada', en: 'Guides and fee comparisons', de: 'Ratgeber und Kostenvergleiche' },
-    corr:  { hr: 'Usporedba s klasičnom dostavom', en: 'Compared to classic delivery', de: 'Vergleich mit klassischer Zustellungen' },
+    corr:  { hr: 'Usporedba s klasičnom dostavom', en: 'Compared to classic delivery', de: 'Vergleich mit klassischer Zustellung' },
     corrD: { hr: 'Naknada, brzina i fleksibilnost', en: 'Fee, speed and flexibility', de: 'Kostenbeitrag, Geschwindigkeit, Flexibilität' },
     routes:{ hr: 'Popularne rute', en: 'Popular routes', de: 'Beliebte Routen' },
     routesD:{ hr: 'Naknade i trajanje po gradovima', en: 'Fees and times by city', de: 'Kostenbeiträge und Dauer pro Stadt' },
@@ -153,20 +208,49 @@ class Component extends DCLogic {
     bizPartnersD: { hr: 'S kime trenutno radimo', en: 'Who we work with right now', de: 'Mit wem wir aktuell arbeiten' },
     cta:   { hr: 'Preuzmi aplikaciju', en: 'Get the app', de: 'App herunterladen' },
     getMsg: { hr: 'Besplatno za iPhone i Android, bez pretplate.', en: 'Free for iPhone and Android, no subscription.', de: 'Kostenlos für iPhone und Android, ohne Abo.' },
-    cAria: { hr: 'Pristanak na mjerenje posjeta', en: 'Analytics consent', de: 'Zustimmung zur Messung' },
-    cText: { hr: 'Koristimo kolačiće za analizu prometa. Prihvaćanjem analitičkih kolačića pomažeš nam poboljšati uslugu. Više u dokumentima', en: 'We use cookies to analyze traffic. By accepting analytics cookies you help us improve our service. Learn more in our', de: 'Wir verwenden Cookies zur Analyse des Datenverkehrs. Durch die Annahme von Analyse-Cookies hilfst du uns, unseren Service zu verbessern. Mehr in unserer' },
-    cCookie: { hr: 'Politika kolačića', en: 'Cookie Policy', de: 'Cookie-Richtlinie' },
-    cPrivacy: { hr: 'Politika privatnosti', en: 'Privacy Policy', de: 'Datenschutzerklärung' },
-    cAnd: { hr: 'i', en: 'and', de: 'und' },
-    cYes: { hr: 'Prihvaćam sve', en: 'Accept all', de: 'Alle akzeptieren' },
-    cNo: { hr: 'Samo neophodno', en: 'Only essential', de: 'Nur notwendige' }
+    cbTitle: { hr: 'Prvo, kolačići', en: 'First, cookies', de: 'Zuerst: Cookies' },
+    cbText: { hr: 'Nužne kolačiće koristimo da bi stranica radila. Uz tvoj pristanak koristili bismo i analitičke kolačiće (Google Analytics) kako bismo vidjeli koje se stranice čitaju i poboljšali ih. Bez pristanka ih ne postavljamo. Kolačiće za oglašavanje ne koristimo. Više o tome:', en: 'We use essential cookies to make the site work. With your consent we would also use analytics cookies (Google Analytics) to see which pages are read and improve them. Without consent we do not set them. We do not use advertising cookies. Learn more:', de: 'Wir verwenden notwendige Cookies, damit die Seite funktioniert. Mit deiner Einwilligung würden wir auch Analyse-Cookies (Google Analytics) nutzen, um zu sehen, welche Seiten gelesen werden, und sie zu verbessern. Ohne Einwilligung setzen wir sie nicht. Werbe-Cookies verwenden wir nicht. Mehr dazu:' },
+    cbPolicy: { hr: 'Politika kolačića', en: 'Cookie policy', de: 'Cookie-Richtlinie' },
+    cbSkip: { hr: 'Nastavi bez prihvaćanja', en: 'Continue without accepting', de: 'Weiter ohne Zustimmung' },
+    cbSettings: { hr: 'Postavke kolačića', en: 'Cookie settings', de: 'Cookie-Einstellungen' },
+    cbReject: { hr: 'Odbij sve', en: 'Reject all', de: 'Alle ablehnen' },
+    cbAccept: { hr: 'Prihvati sve', en: 'Accept all', de: 'Alle akzeptieren' },
+    cmTitle: { hr: 'Upravljanje kolačićima', en: 'Manage cookies', de: 'Cookies verwalten' },
+    cmText: { hr: 'Kolačići i slične tehnologije spremaju male podatke u tvoj preglednik. Nužni su potrebni za rad stranice i ne mogu se isključiti. Analitičke uključujemo samo ako to odobriš, a odluku možeš promijeniti bilo kad preko poveznice Postavke kolačića u podnožju stranice.', en: 'Cookies and similar technologies store small pieces of data in your browser. Essential ones are needed for the site to work and cannot be switched off. We switch on analytics only if you allow it, and you can change your decision at any time via Cookie settings in the footer.', de: 'Cookies und ähnliche Technologien speichern kleine Daten in deinem Browser. Notwendige sind für den Betrieb der Seite erforderlich und lassen sich nicht abschalten. Analyse aktivieren wir nur, wenn du zustimmst, und du kannst deine Entscheidung jederzeit über Cookie-Einstellungen in der Fußzeile ändern.' },
+    cmPolicy: { hr: 'Pročitaj cijelu Politiku kolačića', en: 'Read the full cookie policy', de: 'Vollständige Cookie-Richtlinie lesen' },
+    cmPrefs: { hr: 'Upravljanje privolama', en: 'Manage consent preferences', de: 'Einwilligungen verwalten' },
+    cmNec: { hr: 'Nužni kolačići', en: 'Strictly necessary cookies', de: 'Notwendige Cookies' },
+    cmNecD: { hr: 'Pamte tvoj odabir jezika i odluku o kolačićima (senvia-lang, senvia-consent). Bez njih stranica ne može raditi ispravno, zato su uvijek uključeni. Ne koriste se za praćenje.', en: 'They remember your language and your cookie decision (senvia-lang, senvia-consent). The site cannot work properly without them, so they are always on. They are not used for tracking.', de: 'Sie speichern deine Sprache und deine Cookie-Entscheidung (senvia-lang, senvia-consent). Ohne sie funktioniert die Seite nicht richtig, daher sind sie immer aktiv. Sie dienen nicht dem Tracking.' },
+    cmAlways: { hr: 'Uvijek aktivni', en: 'Always active', de: 'Immer aktiv' },
+    cmAna: { hr: 'Analitički kolačići', en: 'Analytics cookies', de: 'Analyse-Cookies' },
+    cmAnaD: { hr: 'Google Analytics 4 (kolačići _ga i _ga_H8DBTNDF62, trajanje do 2 godine) mjeri posjete, na primjer koje se stranice otvaraju i koliko dugo. Podaci se koriste samo za poboljšanje stranice. Pružatelj je Google Ireland Limited.', en: 'Google Analytics 4 (cookies _ga and _ga_H8DBTNDF62, up to 2 years) measures visits, for example which pages are opened and for how long. The data is used only to improve the site. The provider is Google Ireland Limited.', de: 'Google Analytics 4 (Cookies _ga und _ga_H8DBTNDF62, bis zu 2 Jahre) misst Besuche, etwa welche Seiten wie lange geöffnet werden. Die Daten dienen nur der Verbesserung der Seite. Anbieter ist Google Ireland Limited.' },
+    cmNoAds: { hr: 'Ne koristimo funkcionalne ni marketinške kolačiće treće strane, pa ih nema ni na popisu.', en: 'We do not use third-party functional or marketing cookies, so they are not listed.', de: 'Wir verwenden keine funktionalen oder Marketing-Cookies von Drittanbietern, daher stehen sie nicht in der Liste.' },
+    cmConfirm: { hr: 'Potvrdi odabir', en: 'Confirm my choices', de: 'Auswahl bestätigen' },
+    cmClose: { hr: 'Zatvori', en: 'Close', de: 'Schließen' }
   };
+
+  CONSENT_DAYS = 365;
+  clearGa() {
+    try {
+      window['ga-disable-' + (window.SENVIA_GA_ID || 'G-H8DBTNDF62')] = true;
+      const host = location.hostname, parts = host.split('.');
+      const domains = ['', host, '.' + host];
+      if (parts.length > 2) domains.push('.' + parts.slice(-2).join('.'));
+      document.cookie.split(';').map(c => c.split('=')[0].trim()).filter(n => /^_ga/.test(n)).forEach(n => {
+        domains.forEach(d => { document.cookie = n + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + (d ? '; domain=' + d : ''); });
+      });
+    } catch (e) {}
+  }
 
   componentDidMount() {
     let saved = 'yes';
-    try { saved = localStorage.getItem('senvia-consent') || ''; } catch (e) { saved = 'yes'; }
-    this.setState({ consent: saved });
-    this.onConsentOpen = () => this.setState({ consent: 'ask' });
+    try {
+      saved = localStorage.getItem('senvia-consent') || '';
+      const at = parseInt(localStorage.getItem('senvia-consent-at') || '0', 10);
+      if (saved && (!at || Date.now() - at > this.CONSENT_DAYS * 864e5)) saved = '';
+    } catch (e) { saved = 'yes'; }
+    this.setState({ consent: saved, anaOn: saved === 'yes' });
+    this.onConsentOpen = () => this.setState(s => ({ consent: 'ask', consentView: 'modal', anaOn: s.consent === 'yes' }));
     window.addEventListener('senvia-consent-open', this.onConsentOpen);
     import('./i18n.js').then(m => {
       this.i18n = m;
@@ -180,8 +264,19 @@ class Component extends DCLogic {
       this.setState({ more: false, biz: false, get: false, langOpen: false });
     };
     document.addEventListener('click', this.onDoc);
+    this.lastY = window.scrollY || 0;
+    this.onScroll = () => {
+      const y = window.scrollY || 0, d = y - this.lastY;
+      if (Math.abs(d) < 6) return;
+      const open = this.state.menu || this.state.more || this.state.biz || this.state.get || this.state.langOpen;
+      const hide = !open && d > 0 && y > 120;
+      if (hide !== !!this.state.navHidden) this.setState({ navHidden: hide });
+      this.lastY = y;
+    };
+
   }
   componentWillUnmount() {
+    if (this.onScroll) window.removeEventListener('scroll', this.onScroll);
     if (this.off) this.off();
     document.removeEventListener('click', this.onDoc);
     if (this.onConsentOpen) window.removeEventListener('senvia-consent-open', this.onConsentOpen);
@@ -191,10 +286,11 @@ class Component extends DCLogic {
 
   renderVals() {
     const lang = this.state.lang;
+    const navY = this.state.navHidden ? '-100%' : '0';
     const active = this.props.active || '';
     const link = (key, href, id) => {
       const on = active === id;
-      return { href, label: this.t(key, lang), isActive: on, isOther: !on };
+      return { navY, href, label: this.t(key, lang), isActive: on, isOther: !on };
     };
 
     const mainLinks = [
@@ -218,24 +314,47 @@ class Component extends DCLogic {
     };
 
     const setConsent = (v) => () => {
-      try { localStorage.setItem('senvia-consent', v); } catch (e) {}
-      if (v === 'yes' && typeof window.senviaLoadAnalytics === 'function') window.senviaLoadAnalytics();
-      this.setState({ consent: v });
+      const prev = this.state.consent;
+      try { localStorage.setItem('senvia-consent', v); localStorage.setItem('senvia-consent-at', String(Date.now())); } catch (e) {}
+      if (v === 'yes') {
+        window['ga-disable-' + (window.SENVIA_GA_ID || 'G-H8DBTNDF62')] = false;
+        if (typeof window.senviaLoadAnalytics === 'function') window.senviaLoadAnalytics();
+      } else {
+        this.clearGa();
+      }
+      this.setState({ consent: v, consentView: 'banner', anaOn: v === 'yes', openRow: '' });
+      if (v === 'no' && window.senviaGaLoaded && prev === 'yes') setTimeout(() => location.reload(), 50);
     };
+    const anaOn = this.state.anaOn === true;
+    const decided = this.state.consent === 'yes' || this.state.consent === 'no';
+    const modal = !decided && this.state.consentView === 'modal';
+    const row = this.state.openRow || '';
+    const tg = (k) => () => this.setState(s => ({ openRow: s.openRow === k ? '' : k }));
 
     return {
-      consentOpen: this.state.consent !== 'yes' && this.state.consent !== 'no',
-      consentAria: this.t('cAria', lang), consentText: this.t('cText', lang),
-      consentCookieLink: this.t('cCookie', lang), consentPrivacyLink: this.t('cPrivacy', lang), consentAnd: this.t('cAnd', lang),
-      consentYes: this.t('cYes', lang), consentNo: this.t('cNo', lang),
-      consentAccept: setConsent('yes'), consentDeny: setConsent('no'),
+      consentBanner: !decided && !modal, consentModal: modal,
+      cbTitle: this.t('cbTitle', lang), cbText: this.t('cbText', lang), cbPolicy: this.t('cbPolicy', lang), cbSkip: this.t('cbSkip', lang),
+      cbSettings: this.t('cbSettings', lang), cbReject: this.t('cbReject', lang), cbAccept: this.t('cbAccept', lang),
+      cmTitle: this.t('cmTitle', lang), cmText: this.t('cmText', lang), cmPolicy: this.t('cmPolicy', lang), cmPrefs: this.t('cmPrefs', lang),
+      cmNec: this.t('cmNec', lang), cmNecD: this.t('cmNecD', lang), cmAlways: this.t('cmAlways', lang),
+      cmAna: this.t('cmAna', lang), cmAnaD: this.t('cmAnaD', lang), cmNoAds: this.t('cmNoAds', lang),
+      cmConfirm: this.t('cmConfirm', lang), cmClose: this.t('cmClose', lang),
+      consentAccept: setConsent('yes'), consentDeny: setConsent('no'), consentSave: setConsent(anaOn ? 'yes' : 'no'),
+      consentOpenSettings: () => this.setState({ consentView: 'modal' }),
+      consentBack: () => this.setState({ consentView: 'banner', openRow: '' }),
+      toggleNecRow: tg('nec'), toggleAnaRow: tg('ana'),
+      necRowOpen: row === 'nec', anaRowOpen: row === 'ana',
+      necAria: row === 'nec' ? 'true' : 'false', anaRowAria: row === 'ana' ? 'true' : 'false',
+      necRot: row === 'nec' ? '90deg' : '0deg', anaRot: row === 'ana' ? '90deg' : '0deg',
+      consentToggleAna: () => this.setState({ anaOn: !anaOn }),
+      consentAnaAria: anaOn ? 'true' : 'false', consentTrack: anaOn ? '#167a38' : '#bdb8aa', consentKnob: anaOn ? '24px' : '4px',
       mainLinks, moreLinks, bizLinks,
       allLinks: mainLinks.concat(bizLinks),
       bizLabel: this.t('biz', lang),
       moreLabel: this.t('more', lang),
       langShort: lang.toUpperCase(),
       dlLabel: { hr: 'Preuzmi', en: 'Download', de: 'Laden' }[lang] || 'Preuzmi',
-      dlHref: (typeof navigator !== 'undefined' && /android/i.test(navigator.userAgent)) ? 'https://play.google.com/store/apps/details?id=com.senviaapp.senvia&hl=hr' : 'https://apps.apple.com/hr/app/senvia/id6759839112?l=hr',
+      dlHref: (typeof navigator !== 'undefined' && /android/i.test(navigator.userAgent)) ? 'https://play.google.com/store/apps/details?id=com.senviaapp.senvia' : 'https://apps.apple.com/app/id6759839112',
       langs: ['hr', 'en', 'de'].map(l => ({
         label: { hr: 'Hrvatski', en: 'English', de: 'Deutsch' }[l],
         pick: setLang(l),

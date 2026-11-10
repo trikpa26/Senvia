@@ -45,9 +45,10 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -57,15 +58,14 @@
 
 <div style="overflow-x: clip">
 
-<dc-import name="Nav" active="business" hint-size="100%,66px"></dc-import>
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" active="business" hint-size="100%,66px"></dc-import>
 
-<nav aria-label="breadcrumb" style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
-  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><a href="Za%20tvrtke.dc.html" style="color: #6b8272">{{ t.crumbParent }}</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.crumb }}</span>
+<nav aria-label="breadcrumb" style="max-width: 1360px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
+  <a href="Senvia%20Landing%20v3.dc.html" style="color: #6b8272">Senvia</a><span>/</span><a href="Za%20tvrtke.dc.html" style="color: #6b8272">{{ t.crumbParent }}</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.crumb }}</span>
 </nav>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: 40px clamp(16px, 4vw, 32px) clamp(30px, 5vw, 60px)">
-  <div style="color: #1a9e44; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px">{{ t.kicker }}</div>
-  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 8vw, 54px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; max-width: 20ch; text-wrap: balance">{{ t.h1 }}</h1>
+<section style="max-width: 1360px; margin: 0 auto; padding: 40px clamp(16px, 4vw, 32px) clamp(30px, 5vw, 60px)">
+  <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(32px, 8vw, 54px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; max-width: 20ch; text-wrap: balance">{{ t.h1 }}</h1>
   <p style="font-size: 19px; line-height: 1.6; color: #3c5346; margin: 0 0 30px; max-width: 62ch; text-wrap: pretty">{{ t.lead }}</p>
   <a href="Za%20tvrtke.dc.html#prijava" style="display: inline-flex; align-items: center; gap: 10px; background: #2dbb54; color: #ffffff; font-weight: 600; font-size: 16.5px; padding: 15px 26px; border-radius: 14px" style-hover="background: #26a449">
     {{ t.cta }}
@@ -74,9 +74,9 @@
 </section>
 
 <section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
-  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+  <div style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
     <div style="display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: clamp(20px, 3vw, 30px)">
-      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0; text-wrap: balance">{{ t.listTitle }}</h2>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0; text-wrap: balance">{{ t.listTitle }}</h2>
     </div>
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 14px">
       <sc-for list="{{ partners }}" as="p" hint-placeholder-count="0">
@@ -91,7 +91,7 @@
         </a>
       </sc-for>
       <a href="Za%20tvrtke.dc.html#prijava" style="border: 1px dashed #2dbb54; border-radius: 22px; padding: 30px 26px; display: flex; flex-direction: column; justify-content: center; gap: 8px; background: #ffffff; color: #12261a; min-height: 160px" style-hover="background: #f7f6f2">
-        <span style="font-family: 'Space Grotesk', sans-serif; font-size: 17.5px; font-weight: 600; letter-spacing: -0.01em">{{ t.slotTitle }}</span>
+        <span style="font-family: 'Outfit', sans-serif; font-size: 17.5px; font-weight: 600; letter-spacing: -0.01em">{{ t.slotTitle }}</span>
         <span style="font-size: 14.5px; line-height: 1.55; color: #3c5346">{{ t.slotDesc }}</span>
       </a>
     </div>
@@ -99,22 +99,22 @@
   </div>
 </section>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
-  <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.whyTitle }}</h2>
+<section style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+  <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.whyTitle }}</h2>
   <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 68ch; text-wrap: pretty">{{ t.whySub }}</p>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px">
     <sc-for list="{{ perks }}" as="p" hint-placeholder-count="3">
       <div style="border: 1px solid #e6e3da; border-radius: 20px; padding: 28px 26px">
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance">{{ p.title }}</h3>
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 10px; text-wrap: balance">{{ p.title }}</h3>
         <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ p.desc }}</p>
       </div>
     </sc-for>
   </div>
 </section>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
+<section style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
   <div style="background: #2dbb54; border-radius: 28px; padding: clamp(30px, 5.3vw, 64px) clamp(24px, 6vw, 48px); color: #ffffff; display: grid; gap: 18px; justify-items: start">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 36px); font-weight: 700; letter-spacing: -0.015em; margin: 0; max-width: 24ch; text-wrap: balance">{{ t.ctaTitle }}</h2>
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 36px); font-weight: 700; letter-spacing: -0.015em; margin: 0; max-width: 24ch; text-wrap: balance">{{ t.ctaTitle }}</h2>
     <p style="margin: 0; font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.9); max-width: 58ch; text-wrap: pretty">{{ t.ctaText }}</p>
     <a href="Za%20tvrtke.dc.html#prijava" style="display: inline-flex; align-items: center; gap: 10px; background: #ffffff; color: #12261a; font-weight: 600; font-size: 16.5px; padding: 15px 26px; border-radius: 14px" style-hover="background: #f2f0ea">
       {{ t.cta }}
@@ -239,9 +239,25 @@ class Component extends DCLogic {
     setTimeout(() => { if (document.title !== t.title) document.title = t.title; }, 400);
   }
 
+  __seoApply() {
+    const SEO = {"hr": ["Naši partneri, tvrtke koje šalju uz Senviu | Senvia", "Popis obrta i tvrtki koje narudžbe šalju uz putnika koji već ide tim smjerom. Pogledaj tko je s nama i prijavi svoj obrt."], "en": ["Our partners, businesses sending with Senvia | Senvia", "Shops and trades that send customer orders with a traveller already heading that way. See who works with us and register your business."], "de": ["Unsere Partner, Betriebe, die mit Senvia senden | Senvia", "Geschäfte und Betriebe, die Kundenbestellungen mit Reisenden schicken, die ohnehin dorthin fahren. Sieh, wer dabei ist, und melde deinen Betrieb an."]};
+    let lang = 'hr';
+    try { lang = (this.state && this.state.lang) || (this.getLang ? this.getLang() : 'hr'); } catch (e) {}
+    const v = SEO[lang] || SEO.hr;
+    const loc = { hr: 'hr_HR', en: 'en_GB', de: 'de_DE' }[lang] || 'hr_HR';
+    const put = () => {
+      document.title = v[0];
+      const set = (attr, name, val) => { let el = document.head.querySelector('meta[' + attr + '="' + name + '"]'); if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); } el.setAttribute('content', val); };
+      set('name', 'description', v[1]); set('property', 'og:title', v[0]); set('property', 'og:description', v[1]); set('property', 'og:locale', loc);
+      set('name', 'twitter:title', v[0]); set('name', 'twitter:description', v[1]);
+    };
+    put(); clearTimeout(this.__seoT1); clearTimeout(this.__seoT2);
+    this.__seoT1 = setTimeout(put, 80); this.__seoT2 = setTimeout(put, 500);
+  }
+
   renderVals() {
+    this.__seoApply();
     const t = { ...this.STR.hr, ...(this.STR[this.state.lang] || {}) };
-    this.syncSeo(t);
     return {
       t,
       // Logotip se gradi ovdje, a ne u predlošku, jer bi slika s praznom adresom
@@ -256,7 +272,7 @@ class Component extends DCLogic {
             onError: e => { e.currentTarget.style.display = 'none'; if (e.currentTarget.nextSibling) e.currentTarget.nextSibling.style.display = 'block'; },
             style: { maxHeight: 84, maxWidth: '100%', objectFit: 'contain', objectPosition: 'left center', display: 'block' }
           }),
-          React.createElement('span', { style: { display: 'none', fontFamily: "'Space Grotesk', sans-serif", fontSize: 28, fontWeight: 700, color: '#12261a', letterSpacing: '-0.01em' } }, p.name)
+          React.createElement('span', { style: { display: 'none', fontFamily: "'Outfit', sans-serif", fontSize: 28, fontWeight: 700, color: '#12261a', letterSpacing: '-0.01em' } }, p.name)
         )
       })),
       perks: [1, 2, 3].map(n => ({ title: t['p' + n + 't'], desc: t['p' + n + 'd'] }))

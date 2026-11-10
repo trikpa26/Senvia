@@ -23,25 +23,26 @@
   <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
   </style>
 </helmet>
-<dc-import name="Nav" hint-size="100%,66px"></dc-import>
-<main style="max-width: 1120px; margin: 0 auto; padding: clamp(32px, 6vw, 80px) clamp(16px, 4vw, 32px) clamp(44px, 7vw, 96px)">
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" hint-size="100%,66px"></dc-import>
+<main style="max-width: 1360px; margin: 0 auto; padding: clamp(32px, 6vw, 80px) clamp(16px, 4vw, 32px) clamp(44px, 7vw, 96px)">
 
   <header style="max-width: 760px; margin-bottom: clamp(36px, 6vw, 64px)">
     <span style="display: inline-block; width: 44px; height: 4px; border-radius: 999px; background: #2dbb54; margin-bottom: 22px"></span>
-    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(34px, 6vw, 60px); line-height: 1.04; letter-spacing: -0.03em; font-weight: 700; margin: 0 0 20px; text-wrap: balance">{{ t.h1 }}</h1>
+    <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(34px, 6vw, 60px); line-height: 1.04; letter-spacing: -0.03em; font-weight: 700; margin: 0 0 20px; text-wrap: balance">{{ t.h1 }}</h1>
     <p style="font-size: clamp(18px, 1.6vw, 21px); line-height: 1.6; color: #3c5346; margin: 0; text-wrap: pretty">{{ t.lead }}</p>
   </header>
 
   <section style="max-width: 760px; margin-bottom: clamp(36px, 6vw, 64px)">
     <div>
-      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 3vw, 32px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 16px">{{ t.storyT }}</h2>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(24px, 3vw, 32px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 16px">{{ t.storyT }}</h2>
       <sc-for list="{{ t.story }}" as="p" hint-placeholder-count="3">
         <p style="margin: 0 0 14px; font-size: 16.5px; line-height: 1.7; color: #3c5346; text-wrap: pretty">{{ p }}</p>
       </sc-for>
@@ -49,11 +50,11 @@
   </section>
 
   <section style="margin-bottom: clamp(36px, 6vw, 64px)">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 3vw, 32px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px">{{ t.workT }}</h2>
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(24px, 3vw, 32px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px">{{ t.workT }}</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 14px">
       <sc-for list="{{ t.work }}" as="w" hint-placeholder-count="4">
         <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 22px; padding: 24px">
-          <p style="font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; margin: 0 0 8px; color: #12261a">{{ w.t }}</p>
+          <p style="font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 700; margin: 0 0 8px; color: #12261a">{{ w.t }}</p>
           <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ w.d }}</p>
         </div>
       </sc-for>
@@ -61,13 +62,13 @@
   </section>
 
   <section style="margin-bottom: clamp(36px, 6vw, 64px)">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 3vw, 32px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px">{{ t.valT }}</h2>
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(24px, 3vw, 32px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 20px">{{ t.valT }}</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px">
       <sc-for list="{{ t.values }}" as="v" hint-placeholder-count="3">
         <div style="display: flex; gap: 14px; align-items: flex-start; background: #eef9f1; border: 1px solid #bfe8cb; border-radius: 22px; padding: 22px">
           <span style="width: 10px; height: 10px; border-radius: 999px; background: #2dbb54; margin-top: 8px; flex: 0 0 auto"></span>
           <span>
-            <span style="display: block; font-family: 'Space Grotesk', sans-serif; font-size: 17.5px; font-weight: 700; color: #12261a; margin-bottom: 4px">{{ v.t }}</span>
+            <span style="display: block; font-family: 'Outfit', sans-serif; font-size: 17.5px; font-weight: 700; color: #12261a; margin-bottom: 4px">{{ v.t }}</span>
             <span style="display: block; font-size: 15.5px; line-height: 1.6; color: #3c5346">{{ v.d }}</span>
           </span>
         </div>
@@ -76,18 +77,18 @@
   </section>
 
   <section style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 28px; padding: clamp(24px, 4vw, 40px); margin-bottom: 14px">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 2.6vw, 28px); font-weight: 700; margin: 0 0 18px">{{ t.compT }}</h2>
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 2.6vw, 28px); font-weight: 700; margin: 0 0 18px">{{ t.compT }}</h2>
     <dl style="margin: 0; display: grid; grid-template-columns: minmax(110px, 180px) minmax(0, 1fr)">
       <sc-for list="{{ rows }}" as="r" hint-placeholder-count="4">
         <dt style="padding: 14px 0; border-top: 1px solid #e9e6dd; font-size: 15px; font-weight: 600; color: #5b6f62">{{ r.k }}</dt>
-        <dd style="margin: 0; padding: 14px 0; border-top: 1px solid #e9e6dd; font-size: 15.5px; color: #12261a">{{ r.v }}</dd>
+        <dd style="margin: 0; padding: 14px 0; border-top: 1px solid #e9e6dd; font-size: 15.5px; color: #12261a; min-width: 0; overflow-wrap: anywhere">{{ r.v }}</dd>
       </sc-for>
     </dl>
   </section>
 
   <section style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 28px; padding: clamp(24px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap">
     <div style="min-width: 0">
-      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 2.6vw, 28px); font-weight: 700; margin: 0 0 6px">{{ t.contactT }}</h2>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 2.6vw, 28px); font-weight: 700; margin: 0 0 6px">{{ t.contactT }}</h2>
       <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #3c5346">{{ t.contactD }}</p>
     </div>
     <div style="display: flex; gap: 10px; flex-wrap: wrap">
@@ -191,7 +192,24 @@ class Component extends DCLogic {
     document.head.appendChild(el);
   }
   componentWillUnmount() { if (this.off) this.off(); }
+  __seoApply() {
+    const SEO = {"hr": ["O nama | Senvia", "Tko stoji iza Senvie: tim koji svakodnevno razvija aplikaciju za slanje stvari uz putnike koji već putuju istim smjerom."], "en": ["About us | Senvia", "Who is behind Senvia: the team building the app for sending items with travellers who are already heading the same way."], "de": ["Über uns | Senvia", "Wer hinter Senvia steht: das Team, das die App für den Versand mit Reisenden entwickelt, die ohnehin in dieselbe Richtung fahren."]};
+    let lang = 'hr';
+    try { lang = (this.state && this.state.lang) || (this.getLang ? this.getLang() : 'hr'); } catch (e) {}
+    const v = SEO[lang] || SEO.hr;
+    const loc = { hr: 'hr_HR', en: 'en_GB', de: 'de_DE' }[lang] || 'hr_HR';
+    const put = () => {
+      document.title = v[0];
+      const set = (attr, name, val) => { let el = document.head.querySelector('meta[' + attr + '="' + name + '"]'); if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); } el.setAttribute('content', val); };
+      set('name', 'description', v[1]); set('property', 'og:title', v[0]); set('property', 'og:description', v[1]); set('property', 'og:locale', loc);
+      set('name', 'twitter:title', v[0]); set('name', 'twitter:description', v[1]);
+    };
+    put(); clearTimeout(this.__seoT1); clearTimeout(this.__seoT2);
+    this.__seoT1 = setTimeout(put, 80); this.__seoT2 = setTimeout(put, 500);
+  }
+
   renderVals() {
+    this.__seoApply();
     const c = this.COMPANY;
     const t = this.STR[this.state.lang] || this.STR.hr;
     return { t, rows: [{ k: t.kName, v: c.legalName }, { k: t.kAddr, v: c.street + ', ' + c.postal + ' ' + c.city }, { k: t.kMail, v: c.email }, { k: t.kPhone, v: c.phoneShow }], email: c.email, mailHref: 'mailto:' + c.email, phone: c.phoneShow, telHref: 'tel:' + c.phone };

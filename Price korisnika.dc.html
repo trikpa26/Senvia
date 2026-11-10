@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta charset="utf-8">
+  <title>Priče korisnika | Senvia</title>
+  <meta name="description" content="Iskustva ljudi koji šalju stvari i vozača koji dijele troškove puta preko Senvije, na rutama između Hrvatske, Austrije i Njemačke.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.senviaapp.com/price-korisnika/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Senvia">
+  <meta property="og:title" content="Priče korisnika | Senvia">
+  <meta property="og:description" content="Iskustva ljudi koji šalju stvari i vozača koji dijele troškove puta preko Senvije.">
+  <meta property="og:url" content="https://www.senviaapp.com/price-korisnika/">
+  <meta property="og:image" content="https://www.senviaapp.com/assets/senvia-logo.png">
+  <meta name="google-site-verification" content="PLc_Zs2J4suxgYMasUThqMUF4ZyiGByIoRp1NjluTL8">
+  <script>
+    window.SENVIA_GA_ID = 'G-H8DBTNDF62';
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-H8DBTNDF62');
+    window.senviaLoadAnalytics = function () {
+      if (window.senviaGaLoaded || location.hostname.indexOf('senviaapp.com') === -1) return;
+      window.senviaGaLoaded = true;
+      var el = document.createElement('script');
+      el.setAttribute('async', '');
+      el.setAttribute('src', 'https://www.googletagmanager.com/gtag/js?id=' + window.SENVIA_GA_ID);
+      document.head.appendChild(el);
+    };
+    try { if (localStorage.getItem('senvia-consent') === 'yes') window.senviaLoadAnalytics(); } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    a { color: #1a9e44; text-decoration: none; }
+    a:hover { color: #0e7c31; }
+    ::selection { background: #c9efd6; }
+    img { max-width: 100%; }
+  </style>
+</helmet>
+
+<div style="overflow-x: clip">
+
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" active="" hint-size="100%,66px"></dc-import>
+
+<nav aria-label="breadcrumb" style="max-width: 1360px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
+  <a href="Senvia%20Landing%20v3.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.crumb }}</span>
+</nav>
+
+<section style="max-width: 1360px; margin: 0 auto; padding: 32px clamp(16px, 4.0vw, 32px) clamp(24px, 3.4vw, 40px)">
+  <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(32px, 8.4vw, 56px); line-height: 1.05; letter-spacing: -0.025em; font-weight: 700; margin: 0 0 18px; text-wrap: balance">{{ t.h1 }}</h1>
+  <p style="font-size: 19px; line-height: 1.6; color: #3c5346; margin: 0; max-width: 60ch; text-wrap: pretty">{{ t.lead }}</p>
+</section>
+
+<section style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4.0vw, 32px) clamp(38px, 6vw, 72px); display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; align-items: start">
+  <sc-for list="{{ stories }}" as="p" hint-placeholder-count="6">
+    <figure style="margin: 0; background: #ffffff; border: 1px solid #e6e3da; border-radius: 22px; padding: 24px; display: flex; flex-direction: column; gap: 16px">
+      <div style="display: flex; align-items: center; gap: 12px">
+        <span style="width: 46px; height: 46px; border-radius: 999px; background: #e3f6e8; color: #167a38; display: inline-flex; align-items: center; justify-content: center; font-family: 'Outfit', sans-serif; font-size: 18px; font-weight: 700; flex: 0 0 auto">{{ p.initial }}</span>
+        <span style="min-width: 0">
+          <span style="display: block; font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 700">{{ p.name }}</span>
+          <span style="display: block; font-size: 14px; color: #5b6f62">{{ p.route }}</span>
+        </span>
+      </div>
+      <blockquote style="margin: 0; font-size: 16px; line-height: 1.65; color: #29402f; text-wrap: pretty">{{ p.quote }}</blockquote>
+      <figcaption style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 13.5px; color: #5b6f62; border-top: 1px solid #eeebe3; padding-top: 14px">
+        <span style="font-weight: 600; color: #167a38; background: #e8f7ee; padding: 3px 10px; border-radius: 999px">{{ p.role }}</span>
+        <span>{{ p.what }}</span>
+      </figcaption>
+    </figure>
+  </sc-for>
+</section>
+
+<section style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4.0vw, 32px) clamp(38px, 6.5vw, 84px)">
+  <div style="background: #2dbb54; border-radius: 28px; padding: clamp(29px, 4.9vw, 64px) clamp(24px, 6.0vw, 48px); text-align: center; color: #ffffff">
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(21px, 5.8vw, 36px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 14px; text-wrap: balance">{{ t.ctaTitle }}</h2>
+    <p style="margin: 0 auto 28px; font-size: 18px; line-height: 1.55; max-width: 48ch; color: #ffffff; text-wrap: pretty">{{ t.ctaSub }}</p>
+    <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap">
+      <a href="https://apps.apple.com/app/id6759839112" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="54" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="54" style="display: block; border-radius: 10px"></a>
+    </div>
+  </div>
+</section>
+
+<dc-import name="Podnozje" hint-size="100%,300px"></dc-import>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { lang: 'hr', tab: 'all' };
+
+  STR = {
+    hr: { crumb: 'Priče korisnika', h1: 'Priče korisnika', lead: 'Ljudi koji šalju stvari i vozači koji dijele troškove puta, na rutama između Hrvatske, Austrije i Njemačke. Njihovim riječima.', all: 'Sve', senders: 'Pošiljatelji', drivers: 'Vozači', ctaTitle: 'Tvoja priča može biti sljedeća', ctaSub: 'Preuzmi Senviu besplatno i pošalji stvari ili ponudi slobodno mjesto na svojoj ruti.', sf: 'Slala', s: 'Slao', df: 'Vozila', d: 'Vozio', title: 'Priče korisnika | Senvia', desc: 'Iskustva ljudi koji šalju stvari i vozača koji dijele troškove puta preko Senvije, na rutama između Hrvatske, Austrije i Njemačke.', locale: 'hr_HR' },
+    en: { crumb: 'User stories', h1: 'User stories', lead: 'People sending items and drivers sharing the cost of the trip, on routes between Croatia, Austria and Germany. In their own words.', all: 'All', senders: 'Senders', drivers: 'Drivers', ctaTitle: 'Your story could be next', ctaSub: 'Download Senvia for free and send items or offer free space on your route.', sf: 'Sent', s: 'Sent', df: 'Drove', d: 'Drove', title: 'User stories | Senvia', desc: 'Experiences of people sending items and drivers sharing trip costs with Senvia, on routes between Croatia, Austria and Germany.', locale: 'en_GB' },
+    de: { crumb: 'Nutzergeschichten', h1: 'Geschichten unserer Nutzer', lead: 'Menschen, die Sachen verschicken, und Fahrer, die Fahrtkosten teilen, auf Strecken zwischen Kroatien, Österreich und Deutschland. In ihren eigenen Worten.', all: 'Alle', senders: 'Absender', drivers: 'Fahrer', ctaTitle: 'Deine Geschichte könnte die nächste sein', ctaSub: 'Lade Senvia kostenlos und sende Sachen oder biete freien Platz auf deiner Strecke an.', sf: 'Verschickt', s: 'Verschickt', df: 'Gefahren', d: 'Gefahren', title: 'Nutzergeschichten | Senvia', desc: 'Erfahrungen von Menschen, die mit Senvia Sachen senden, und Fahrern, die Fahrtkosten teilen, zwischen Kroatien, Österreich und Deutschland.', locale: 'de_DE' }
+  };
+
+  STORIES = [
+    { n: 'Ana', r: { hr: 'Zagreb – München', en: 'Zagreb – Munich' }, role: 'sf',
+      what: { hr: 'Odjeću i osobne stvari', en: 'Clothes and personal items', de: 'Kleidung und persönliche Sachen' },
+      q: { hr: 'Trebala sam poslati nekoliko stvari obitelji u Njemačku, a nisam htjela plaćati skupu dostavu. Preko Senvije pronašla sam putnika koji je već išao u München. Od tada prvo provjerim Senviu kad god nešto trebam poslati.', en: 'I needed to send a few things to family in Germany and did not want to pay for expensive delivery. Through Senvia I found a traveller who was already going to Munich. Since then I check Senvia first whenever I need to send something.', de: 'Ich musste der Familie in Deutschland ein paar Sachen schicken und wollte keinen teuren Versand bezahlen. Über Senvia fand ich jemanden, der ohnehin nach München fuhr. Seitdem schaue ich zuerst bei Senvia, wenn ich etwas senden muss.' } },
+    { n: 'Marko', r: { hr: 'Beč – Zagreb', en: 'Vienna – Zagreb', de: 'Wien – Zagreb' }, role: 'd',
+      what: { hr: 'Osobne stvari', en: 'Personal items', de: 'Persönliche Sachen' },
+      q: { hr: 'Ionako sam putovao prema Zagrebu pa sam odlučio ponuditi slobodan prostor u automobilu. Preko Senvije sam pronašao osobu kojoj je trebao prijevoz, podijelio troškove puta i imao odlično iskustvo. Sada redovito provjeravam nove zahtjeve na svojoj ruti.', en: 'I was driving to Zagreb anyway, so I decided to offer the free space in my car. Through Senvia I found someone who needed a ride for their things, shared the trip costs and had a great experience. Now I regularly check new requests on my route.', de: 'Ich fuhr ohnehin nach Zagreb und bot den freien Platz im Auto an. Über Senvia fand ich jemanden, der einen Transport brauchte, teilte die Fahrtkosten und hatte eine tolle Erfahrung. Jetzt schaue ich regelmäßig nach neuen Anfragen auf meiner Strecke.' } },
+    { n: 'Martina', r: { hr: 'Split – Zagreb' }, role: 'df',
+      what: { hr: 'Poklon za rođendan', en: 'A birthday present', de: 'Ein Geburtstagsgeschenk' },
+      q: { hr: 'Svaki drugi vikend vozim iz Splita u Zagreb pa sam odlučila ponuditi slobodno mjesto u autu. Prvi put sam prevezla poklon za nečiji rođendan, sve smo dogovorili u nekoliko poruka. Troškovi puta su mi sada manji, a i drago mi je kad nekome pomognem usput.', en: 'I drive from Split to Zagreb every other weekend, so I decided to offer the free space in my car. The first time I carried a birthday present, and we sorted everything out in a few messages. My trip costs are lower now, and I like helping someone along the way.', de: 'Jedes zweite Wochenende fahre ich von Split nach Zagreb und biete den freien Platz im Auto an. Beim ersten Mal habe ich ein Geburtstagsgeschenk mitgenommen, alles war in wenigen Nachrichten geklärt. Meine Fahrtkosten sind jetzt geringer, und ich helfe gern unterwegs.' } },
+    { n: 'Ivan', r: { hr: 'Rijeka – Graz' }, role: 'd',
+      what: { hr: 'Manje kućanske predmete', en: 'Small household items', de: 'Kleine Haushaltsgegenstände' },
+      q: { hr: 'Na putu prema Grazu imao sam dovoljno prostora u automobilu pa sam preko Senvije dogovorio prijevoz nekoliko predmeta. Sve je prošlo prema dogovoru, a sljedeći put kada budem putovao istom rutom, ponovno ću ponuditi slobodan prostor.', en: 'On the way to Graz I had enough room in the car, so I arranged to carry a few items through Senvia. Everything went as agreed, and next time I drive the same route I will offer the space again.', de: 'Auf dem Weg nach Graz hatte ich genug Platz im Auto und habe über Senvia den Transport einiger Sachen vereinbart. Alles lief wie abgesprochen, und beim nächsten Mal auf derselben Strecke biete ich den Platz wieder an.' } },
+    { n: 'Petra', r: { hr: 'Osijek – Beč', en: 'Osijek – Vienna', de: 'Osijek – Wien' }, role: 'df',
+      what: { hr: 'Odjeću i obuću', en: 'Clothes and shoes', de: 'Kleidung und Schuhe' },
+      q: { hr: 'Radim u Beču i redovito se vozim kući u Osijek. Prtljažnik mi je često napola prazan pa sam preko Senvije ponudila prostor. Dogovor je bio jednostavan, a podijeljeni troškovi puta stvarno se osjete na kraju mjeseca.', en: 'I work in Vienna and drive home to Osijek regularly. My boot is often half empty, so I offered the space through Senvia. Arranging it was simple, and the shared trip costs really show at the end of the month.', de: 'Ich arbeite in Wien und fahre regelmäßig nach Hause nach Osijek. Mein Kofferraum ist oft halb leer, also habe ich den Platz über Senvia angeboten. Die Absprache war einfach, und die geteilten Fahrtkosten merkt man am Monatsende.' } },
+    { n: 'Luka', r: { hr: 'Zagreb – Split' }, role: 's',
+      what: { hr: 'Sportsku opremu', en: 'Sports equipment', de: 'Sportausrüstung' },
+      q: { hr: 'Trebao sam poslati opremu za ronjenje bratu u Split, a nisam htio čekati klasičnu dostavu. Preko Senvije sam pronašao putnika koji je isti dan išao tim smjerom. Oprema je stigla za nekoliko sati, bez ikakvih komplikacija.', en: 'I needed to send diving gear to my brother in Split and did not want to wait for classic delivery. Through Senvia I found a traveller going that way the same day. The gear arrived within a few hours, with no complications.', de: 'Ich musste meinem Bruder in Split Tauchausrüstung schicken und wollte nicht auf klassische Zustellung warten. Über Senvia fand ich jemanden, der am selben Tag in diese Richtung fuhr. Die Ausrüstung kam in wenigen Stunden an, ohne Komplikationen.' } },
+    { n: 'Ivana', r: { hr: 'München – Vinkovci', en: 'Munich – Vinkovci' }, role: 'sf',
+      what: { hr: 'Stvari obitelji', en: 'Things for family', de: 'Sachen für die Familie' },
+      q: { hr: 'Kada živiš u inozemstvu, često trebaš poslati nešto svojima kod kuće. Senvia mi olakšava pronalazak putnika koji već putuje prema mom odredištu. Posebno mi se sviđa što mogu pronaći rješenje prilagođeno svojoj ruti.', en: 'When you live abroad, you often need to send something to your family at home. Senvia makes it easier to find a traveller already heading to my destination. I especially like that I can find a solution that fits my route.', de: 'Wenn man im Ausland lebt, muss man oft etwas an die Familie zu Hause schicken. Senvia macht es leichter, jemanden zu finden, der ohnehin zu meinem Ziel fährt. Besonders gefällt mir, dass ich eine Lösung für meine Strecke finde.' } },
+    { n: 'Filip', r: { hr: 'Graz – Zagreb' }, role: 's',
+      what: { hr: 'Torbe i osobne stvari', en: 'Bags and personal items', de: 'Taschen und persönliche Sachen' },
+      q: { hr: 'Studiram u Grazu i trebao sam poslati nekoliko torbi stvari doma u Zagreb. Pronašao sam putnika koji je već išao tim smjerom i sve smo dogovorili u chatu. Puno jednostavnije nego što sam mislio, sljedeći put opet idem preko Senvije.', en: 'I study in Graz and needed to send a few bags of things home to Zagreb. I found a traveller already going that way, and we arranged everything in the chat. Much simpler than I expected, so next time I will use Senvia again.', de: 'Ich studiere in Graz und musste ein paar Taschen nach Hause nach Zagreb schicken. Ich fand jemanden, der ohnehin dorthin fuhr, und wir haben alles im Chat geklärt. Viel einfacher als gedacht, nächstes Mal wieder über Senvia.' } },
+    { n: 'Ema', r: { hr: 'Zadar – Zagreb' }, role: 'sf',
+      what: { hr: 'Manji komad namještaja', en: 'A small piece of furniture', de: 'Ein kleines Möbelstück' },
+      q: { hr: 'Trebala sam prevesti manji komad namještaja i tražila sam praktično rješenje. Na Senviji sam mogla potražiti putnika koji već ide u istom smjeru. Dobro je imati aplikaciju kojoj se mogu vratiti i za buduće potrebe.', en: 'I needed to move a small piece of furniture and was looking for a practical solution. On Senvia I could look for a traveller already going the same way. It is good to have an app I can come back to next time.', de: 'Ich musste ein kleines Möbelstück transportieren und suchte eine praktische Lösung. Bei Senvia konnte ich nach jemandem suchen, der ohnehin in dieselbe Richtung fährt. Gut, eine App zu haben, auf die ich wieder zurückgreifen kann.' } },
+    { n: 'Marija', r: { hr: 'Beč – Osijek', en: 'Vienna – Osijek', de: 'Wien – Osijek' }, role: 'df',
+      what: { hr: 'Vrećice i osobne stvari', en: 'Bags and personal items', de: 'Tüten und persönliche Sachen' },
+      q: { hr: 'Redovito putujem kući i često imam mjesta za dodatne stvari. Preko Senvije mogu povezati svoje putovanje s nekim kome je potreban prijevoz, a pritom podijeliti troškove. Aplikaciju ponovno otvorim kad god planiram sljedeći put.', en: 'I travel home regularly and often have room for extra things. Through Senvia I can link my trip with someone who needs their things carried and share the costs. I open the app again whenever I plan my next trip.', de: 'Ich fahre regelmäßig nach Hause und habe oft Platz für zusätzliche Sachen. Über Senvia verbinde ich meine Fahrt mit jemandem, der einen Transport braucht, und teile die Kosten. Die App öffne ich jedes Mal, wenn ich die nächste Fahrt plane.' } }
+  ];
+
+  componentDidMount() {
+    import('./i18n.js').then(m => { this.setState({ lang: m.getLang() }); this.off = m.onLang(l => this.setState({ lang: l })); });
+    this.applyMeta();
+  }
+  componentDidUpdate() { this.applyMeta(); }
+  componentWillUnmount() { if (this.off) this.off(); }
+
+  applyMeta() {
+    const lang = this.state.lang, t = { ...this.STR.hr, ...(this.STR[lang] || {}) }, head = document.head;
+    const url = 'https://www.senviaapp.com/price-korisnika/' + (lang !== 'hr' ? '?lang=' + lang : '');
+    document.documentElement.setAttribute('lang', lang);
+    document.title = t.title;
+    setTimeout(() => { if (document.title !== t.title) document.title = t.title; }, 80);
+    const meta = (attr, n, v) => { let el = head.querySelector('meta[' + attr + '="' + n + '"]'); if (!el) { el = document.createElement('meta'); el.setAttribute(attr, n); head.appendChild(el); } el.setAttribute('content', v); };
+    meta('name', 'description', t.desc); meta('property', 'og:title', t.title); meta('property', 'og:description', t.desc); meta('property', 'og:url', url); meta('property', 'og:locale', t.locale);
+    let cn = head.querySelector('link[rel="canonical"]'); if (cn) cn.setAttribute('href', url);
+    let bc = document.getElementById('senvia-breadcrumb-ld');
+    if (!bc) { bc = document.createElement('script'); bc.type = 'application/ld+json'; bc.id = 'senvia-breadcrumb-ld'; head.appendChild(bc); }
+    bc.textContent = JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Senvia', item: 'https://www.senviaapp.com/' },
+      { '@type': 'ListItem', position: 2, name: t.crumb, item: url } ] });
+  }
+
+  renderVals() {
+    const lang = this.state.lang, t = { ...this.STR.hr, ...(this.STR[lang] || {}) }, tab = this.state.tab;
+    const pick = (o) => o[lang] || o.hr;
+    const isDriver = (r) => r === 'd' || r === 'df';
+    const list = this.STORIES;
+    return {
+      t,
+      tabs: [['all', t.all], ['senders', t.senders], ['drivers', t.drivers]].map(([k, label]) => ({
+        label, aria: tab === k ? 'true' : 'false', pick: () => this.setState({ tab: k }),
+        bg: tab === k ? '#12261a' : '#ffffff', fg: tab === k ? '#ffffff' : '#12261a', border: tab === k ? '#12261a' : '#e6e3da'
+      })),
+      stories: list.map(x => ({ name: x.n, initial: x.n[0], route: pick(x.r), quote: (lang === 'en' ? '“' : '„') + pick(x.q) + (lang === 'en' ? '”' : '“'), role: t[x.role], what: pick(x.what) }))
+    };
+  }
+}
+</script>
+</body>
+</html>

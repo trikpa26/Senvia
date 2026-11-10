@@ -12,9 +12,10 @@
   <meta charset="utf-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -26,30 +27,33 @@
 
 <div style="overflow-x: clip">
 
-<dc-import name="Nav" active="blog" hint-size="100%,66px"></dc-import>
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" active="blog" hint-size="100%,66px"></dc-import>
 
 <nav aria-label="breadcrumb" style="max-width: 820px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
-  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><a href="Blog.dc.html" style="color: #6b8272">Blog</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ a.tag }}</span>
+  <a href="Senvia%20Landing%20v3.dc.html" style="color: #6b8272">Senvia</a><span>/</span><a href="Blog.dc.html" style="color: #6b8272">Blog</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ a.tag }}</span>
 </nav>
 
 <article style="max-width: 820px; margin: 0 auto; padding: 32px clamp(16px, 4.0vw, 32px) clamp(32px, 5.5vw, 72px)">
   <span style="display: inline-block; background: #e8f7ee; color: #167a38; font-weight: 700; font-size: 12.5px; padding: 5px 12px; border-radius: 999px; margin-bottom: 18px">{{ a.tag }}</span>
-  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(27px, 7.4vw, 46px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 16px; text-wrap: balance">{{ a.h1 }}</h1>
+  <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(27px, 7.4vw, 46px); line-height: 1.08; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 16px; text-wrap: balance">{{ a.h1 }}</h1>
   <p style="font-size: 20px; line-height: 1.6; color: #3c5346; margin: 0 0 32px; text-wrap: pretty">{{ a.lead }}</p>
   <sc-for list="{{ blocks }}" as="b" hint-placeholder-count="5">
     <div style="margin-bottom: 26px">
       <sc-if value="{{ b.heading }}" hint-placeholder-val="{{ true }}">
-        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.2vw, 26px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance">{{ b.heading }}</h2>
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(20px, 4.2vw, 26px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance">{{ b.heading }}</h2>
       </sc-if>
       <p style="margin: 0; font-size: 17px; line-height: 1.72; color: #29402f; text-wrap: pretty">{{ b.text }}</p>
+      <sc-if value="{{ b.href }}">
+        <a href="{{ b.href }}" style="display: inline-block; margin-top: 10px; font-size: 16px; font-weight: 600">{{ b.linkLabel }} →</a>
+      </sc-if>
     </div>
   </sc-for>
   <div style="background: #f2f0ea; border: 1px solid #e6e3da; border-radius: 22px; padding: 28px clamp(16px, 4.0vw, 32px); margin-top: 36px">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; margin: 0 0 10px">{{ a.ctaTitle }}</h2>
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: 22px; font-weight: 700; margin: 0 0 10px">{{ a.ctaTitle }}</h2>
     <p style="margin: 0 0 20px; font-size: 16px; line-height: 1.6; color: #3c5346">{{ a.ctaText }}</p>
     <div style="display: flex; gap: 12px">
-      <a href="https://apps.apple.com/us/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="46" style="display: block; border-radius: 9px"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="46" style="display: block; border-radius: 9px"></a>
+      <a href="https://apps.apple.com/app/id6759839112" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="46" style="display: block; border-radius: 9px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="46" style="display: block; border-radius: 9px"></a>
     </div>
   </div>
   <div style="margin-top: 34px; display: flex; gap: 20px; font-size: 15px">
@@ -79,7 +83,10 @@ class Component extends DCLogic {
     const a = this.props.article;
     if (!a) return;
     const head = document.head;
-    const url = a.senviaUrl || 'https://www.senviaapp.com/blog/';
+    const base = a.senviaUrl || 'https://www.senviaapp.com/blog/';
+    const native = a.nativeLang || 'hr';
+    const withLang = (x) => x === native ? base : base + '?lang=' + x;
+    const url = withLang(a.lang || 'hr');
     const img = 'https://www.senviaapp.com/assets/senvia-logo.png';
     document.title = a.title;
 
@@ -106,8 +113,7 @@ class Component extends DCLogic {
 
     // hreflang skup, uključujući samoreferencu, jer helmet zadržava samo jednu takvu vezu
     const lang = a.lang || 'hr';
-    const alts = Object.assign({}, a.alternates || {});
-    alts[lang] = url;
+    const alts = { hr: withLang('hr'), en: withLang('en'), de: withLang('de'), 'x-default': base };
     document.documentElement.setAttribute('lang', lang);
     head.querySelectorAll('link[rel="alternate"][hreflang]').forEach(el => el.remove());
     Object.keys(alts).forEach(code => {

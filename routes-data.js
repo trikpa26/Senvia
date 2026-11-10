@@ -237,6 +237,54 @@ export const ROUTES = [
     durationHours: [8, 9],
     priceMin: 27, priceMax: 51,
     routeFaqs: []
+  },
+  {
+    slug: "frankfurt-zagreb",
+    from: "Frankfurt", to: "Zagreb",
+    activeDrivers: 1, // PROVJERITI: zamijeniti stvarnim brojem iz backenda
+    distanceKm: 960,
+    durationHours: [9, 10],
+    priceMin: 32, priceMax: 60,
+    routeFaqs: []
+  },
+  {
+    slug: "berlin-zagreb",
+    from: "Berlin", to: "Zagreb",
+    activeDrivers: 1, // PROVJERITI: zamijeniti stvarnim brojem iz backenda
+    distanceKm: 1050,
+    durationHours: [10, 11],
+    priceMin: 35, priceMax: 65,
+    routeFaqs: []
+  },
+  {
+    slug: "nurnberg-zagreb",
+    from: "Nürnberg", to: "Zagreb",
+    fromEn: "Nuremberg", toEn: "Zagreb",
+    activeDrivers: 1, // PROVJERITI: zamijeniti stvarnim brojem iz backenda
+    distanceKm: 730,
+    durationHours: [7, 8],
+    priceMin: 26, priceMax: 48,
+    routeFaqs: []
+  },
+  {
+    slug: "koln-zagreb",
+    from: "Köln", to: "Zagreb",
+    fromEn: "Cologne", toEn: "Zagreb",
+    activeDrivers: 1, // PROVJERITI: zamijeniti stvarnim brojem iz backenda
+    distanceKm: 1150,
+    durationHours: [12, 13],
+    priceMin: 38, priceMax: 70,
+    routeFaqs: []
+  },
+  {
+    slug: "zeneva-zagreb",
+    from: "Ženeva", to: "Zagreb",
+    fromEn: "Geneva", toEn: "Zagreb",
+    activeDrivers: 1, // PROVJERITI: zamijeniti stvarnim brojem iz backenda
+    distanceKm: 1050,
+    durationHours: [11, 12],
+    priceMin: 35, priceMax: 65,
+    routeFaqs: []
   }
 ];
 
@@ -299,3 +347,25 @@ export const totalReviews = () =>
 
 export const storeReviews = (store) =>
   store ? STORE_REVIEWS.filter((r) => r.store === store) : STORE_REVIEWS;
+
+/**
+ * Upravo na Senviji — javni prikaz aktivnih objava na naslovnici.
+ * BACKEND: zamijeniti ovu funkciju pozivom GET /api/live koji vraća isti oblik:
+ *   { rides:    [{ from, to, date: 'YYYY-MM-DD', time: 'HH:MM' (polazak), arrive: 'HH:MM' (dolazak), maxSize: 'S'|'M'|'L'|'XL'|'XXL', priceFrom: broj (€) }],
+ *     requests: [{ from, to, size: 'S'|'M'|'L'|'XL'|'XXL', dateFrom: 'YYYY-MM-DD', dateTo: 'YYYY-MM-DD', price: broj (€, ponuđena naknada) }],
+ *     ridesCount, requestsCount }
+ * Bez imena, slika, adresa i kontakata. Samo buduće vožnje i zahtjevi kojima rok nije istekao,
+ * najnovije prve, SVE aktivne objave (naslovnica prvo pokazuje 10, ostale nakon klika na Prikaži sve). Gradovi na hrvatskom (Beč, München...).
+ */
+const LIVE_SIZES = { S: [5, 0.027], M: [8, 0.040], L: [22, 0.062], XL: [36, 0.089], XXL: [55, 0.150] };
+const livePrice = (km, s) => Math.round(LIVE_SIZES[s][0] + km * LIVE_SIZES[s][1]);
+const LIVE_SAMPLE = {
+  rides: [['Beč', 'Zagreb', 370, 0, 'L', '23:30', '04:00'], ['Graz', 'Varaždin', 250, 1, 'M', '07:00', '10:30'], ['München', 'Split', 880, 1, 'XXL', '05:30', '15:00'], ['Zagreb', 'Rijeka', 160, 2, 'XL', '16:00', '18:30'], ['Stuttgart', 'Zagreb', 780, 3, 'L', '06:00', '14:30', '23:00'], ['Osijek', 'Split', 500, 3, 'M', '08:15', '13:45'], ['Zürich', 'Split', 1010, 4, 'XL', '04:45', '16:00'], ['Linz', 'Split', 800, 5, 'L', '14:30', '23:00'], ['Zagreb', 'Split', 410, 0, 'M', '17:00', '21:30'], ['Graz', 'Zagreb', 190, 0, 'L', '18:15', '20:45'], ['Beč', 'Osijek', 480, 1, 'XL', '06:30', '12:00'], ['Klagenfurt', 'Zagreb', 230, 1, 'M', '09:00', '12:15'], ['Zagreb', 'Osijek', 280, 2, 'L', '15:30', '19:00'], ['Salzburg', 'Zagreb', 480, 2, 'S', '07:45', '13:15'], ['Rijeka', 'Zadar', 230, 3, 'XL', '10:00', '12:45'], ['Basel', 'Rijeka', 830, 4, 'L', '05:00', '14:00'], ['Beč', 'Varaždin', 310, 5, 'M', '13:00', '16:30'], ['Split', 'Dubrovnik', 230, 6, 'XXL', '08:00', '11:30']],
+  requests: [['Zagreb', 'Beč', 370, 'M', 0, 3], ['Split', 'Rijeka', 400, 'S', 1, 2], ['München', 'Zagreb', 570, 'XL', 2, 9], ['Zagreb', 'Osijek', 280, 'L', 1, 4], ['Graz', 'Zagreb', 190, 'S', 0, 1], ['Rijeka', 'Zadar', 230, 'M', 3, 7], ['Basel', 'Rijeka', 830, 'L', 4, 12], ['Varaždin', 'Split', 480, 'XXL', 2, 6], ['Zagreb', 'Split', 410, 'M', 0, 4], ['Beč', 'Rijeka', 520, 'L', 1, 5], ['Osijek', 'Zagreb', 280, 'S', 0, 2], ['Stuttgart', 'Zagreb', 780, 'XL', 3, 10], ['Zagreb', 'Graz', 190, 'M', 1, 3], ['Split', 'Zagreb', 410, 'L', 2, 6], ['Linz', 'Split', 800, 'M', 4, 9]]
+};
+const isoIn = (d, now) => { const x = new Date(now + d * 864e5); return x.getFullYear() + '-' + String(x.getMonth() + 1).padStart(2, '0') + '-' + String(x.getDate()).padStart(2, '0'); };
+export const liveBoard = (now = Date.now()) => ({
+  rides: LIVE_SAMPLE.rides.map(([from, to, km, d, maxSize, time, arrive]) => ({ from, to, date: isoIn(d, now), time, arrive, maxSize, priceFrom: livePrice(km, 'S') })),
+  requests: LIVE_SAMPLE.requests.map(([from, to, km, size, a, b]) => ({ from, to, size, dateFrom: isoIn(a, now), dateTo: isoIn(b, now), price: livePrice(km, size) })),
+  ridesCount: LIVE_SAMPLE.rides.length, requestsCount: LIVE_SAMPLE.requests.length
+});

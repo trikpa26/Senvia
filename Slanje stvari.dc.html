@@ -45,9 +45,10 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -57,21 +58,20 @@
 
 <div style="overflow-x: clip">
 
-<dc-import name="Nav" active="send" hint-size="100%,66px"></dc-import>
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" active="send" hint-size="100%,66px"></dc-import>
 
-<nav aria-label="breadcrumb" style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
-  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.crumb }}</span>
+<nav aria-label="breadcrumb" style="max-width: 1360px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
+  <a href="Senvia%20Landing%20v3.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.crumb }}</span>
 </nav>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: 40px clamp(16px, 4vw, 32px) clamp(30px, 5vw, 60px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(24px, 4vw, 56px); align-items: center">
+<section style="max-width: 1360px; margin: 0 auto; padding: 40px clamp(16px, 4vw, 32px) clamp(30px, 5vw, 60px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(24px, 4vw, 56px); align-items: center">
   <div>
-    <div style="color: #1a9e44; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px">{{ t.kicker }}</div>
-    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 8vw, 54px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; text-wrap: balance">{{ t.h1 }}</h1>
+    <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(32px, 8vw, 54px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; text-wrap: balance">{{ t.h1 }}</h1>
     <p style="font-size: 19px; line-height: 1.6; color: #3c5346; margin: 0 0 14px; max-width: 56ch; text-wrap: pretty">{{ t.lead1 }}</p>
     <p style="font-size: 17px; line-height: 1.65; color: #3c5346; margin: 0; max-width: 56ch; text-wrap: pretty">{{ t.lead3 }}</p>
   </div>
   <div style="background: #f2f0ea; border: 1px solid #e6e3da; border-radius: 24px; padding: clamp(22px, 3.4vw, 34px)">
-    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 600; margin-bottom: 16px">{{ t.quickTitle }}</div>
+    <div style="font-family: 'Outfit', sans-serif; font-size: 17px; font-weight: 600; margin-bottom: 16px">{{ t.quickTitle }}</div>
     <div style="display: grid; gap: 12px">
       <sc-for list="{{ quick }}" as="q" hint-placeholder-count="4">
         <div style="display: flex; gap: 12px; align-items: flex-start; font-size: 15.5px; line-height: 1.55; color: #29402f">
@@ -84,54 +84,54 @@
 </section>
 
 <section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
-  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.catTitle }}</h2>
+  <div style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.catTitle }}</h2>
     <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 64ch; text-wrap: pretty">{{ t.catSub }}</p>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 16px">
       <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
         <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="M9 13h6"></path><path d="M9 17h4"></path></svg></span>
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c1t }}</h3>
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c1t }}</h3>
         <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c1d }}</p>
       </div>
       <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
         <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3l3 2 3-2 5 3-2 4h-2v11H8V10H6L4 6z"></path></svg></span>
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c2t }}</h3>
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c2t }}</h3>
         <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c2d }}</p>
       </div>
       <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
         <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16a8 8 0 0 1-8 8 8 8 0 0 1-8-8z"></path><path d="M3 20h18"></path><path d="M9 8c0-1.5 1-2 1-3.5"></path><path d="M13 8c0-1.5 1-2 1-3.5"></path></svg></span>
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c3t }}</h3>
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c3t }}</h3>
         <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c3d }}</p>
       </div>
       <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
         <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="13" rx="2"></rect><path d="M3 12h18"></path><path d="M12 8v13"></path><path d="M12 8S9.5 3 7.5 4.5 9 8 12 8z"></path><path d="M12 8s2.5-5 4.5-3.5S15 8 12 8z"></path></svg></span>
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c4t }}</h3>
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c4t }}</h3>
         <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c4d }}</p>
       </div>
       <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
         <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M2 20h20"></path></svg></span>
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c5t }}</h3>
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c5t }}</h3>
         <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c5d }}</p>
       </div>
       <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
         <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 1-5 5L5 16v3h3l4.7-4.7a4 4 0 0 0 5-5z"></path></svg></span>
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c6t }}</h3>
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c6t }}</h3>
         <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c6d }}</p>
       </div>
       <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
         <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="8" r="4"></circle><path d="M11 11l9 9"></path><path d="M17 17l2-2"></path></svg></span>
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c7t }}</h3>
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c7t }}</h3>
         <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c7d }}</p>
       </div>
       <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
         <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"></path><path d="M8 3v18"></path></svg></span>
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c8t }}</h3>
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c8t }}</h3>
         <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c8d }}</p>
       </div>
       <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 26px 24px">
         <span style="display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 12px; background: #e8f7ee; margin-bottom: 16px"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1a9e44" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="18" height="13" rx="2"></rect><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></span>
-        <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c9t }}</h3>
+        <h3 style="font-family: 'Outfit', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0 0 8px">{{ t.c9t }}</h3>
         <p style="margin: 0; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.c9d }}</p>
       </div>
     </div>
@@ -144,15 +144,15 @@
 </section>
 
 
-<section style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
-  <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.sizeTitle }}</h2>
+<section style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+  <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.sizeTitle }}</h2>
   <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 64ch; text-wrap: pretty">{{ t.sizeSub }}</p>
   <div style="display: grid; gap: 12px">
     <sc-for list="{{ sizes }}" as="s" hint-placeholder-count="4">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: clamp(14px, 2.6vw, 36px); align-items: center; background: #f7f6f2; border: 1px solid #e6e3da; border-radius: 18px; padding: clamp(20px, 2.4vw, 26px) clamp(20px, 2.8vw, 30px)">
         <div>
           <div style="display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin-bottom: 14px">
-            <span style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">{{ s.title }}</span>
+            <span style="font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em">{{ s.title }}</span>
             <span style="font-size: 13.5px; font-weight: 700; color: #167a38; background: #e8f7ee; border-radius: 999px; padding: 4px 12px">{{ s.size }}</span>
           </div>
           <div style="height: 10px; border-radius: 999px; background: #e6e3da; overflow: hidden">
@@ -166,13 +166,13 @@
 </section>
 
 <section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
-  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.dirTitle }}</h2>
+  <div style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.dirTitle }}</h2>
     <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 70ch; text-wrap: pretty">{{ t.dirSub }}</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px">
       <sc-for list="{{ dirs }}" as="d" hint-placeholder-count="2">
         <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 28px 26px">
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 12px; text-wrap: balance">{{ d.title }}</h3>
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 600; letter-spacing: -0.01em; margin: 0 0 12px; text-wrap: balance">{{ d.title }}</h3>
           <p style="margin: 0 0 18px; font-size: 15.5px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ d.desc }}</p>
           <div style="display: flex; flex-wrap: wrap; gap: 8px">
             <sc-for list="{{ d.items }}" as="i" hint-placeholder-count="6">
@@ -185,8 +185,8 @@
   </div>
 </section>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
-  <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.payTitle }}</h2>
+<section style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+  <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.payTitle }}</h2>
   <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 70ch; text-wrap: pretty">{{ t.paySub }}</p>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px">
     <div style="background: #12261a; color: #ffffff; border-radius: 22px; padding: 30px 28px">
@@ -204,23 +204,23 @@
           {{ t.payCard }}
         </span>
       </div>
-      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em">{{ t.pay1t }}</h3>
+      <h3 style="font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em">{{ t.pay1t }}</h3>
       <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: rgba(255,255,255,0.78); text-wrap: pretty">{{ t.pay1d }}</p>
     </div>
     <div style="background: #f7f6f2; border: 1px solid #e6e3da; border-radius: 22px; padding: 30px 28px">
-      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em">{{ t.pay2t }}</h3>
+      <h3 style="font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em">{{ t.pay2t }}</h3>
       <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ t.pay2d }}</p>
     </div>
     <div style="background: #f7f6f2; border: 1px solid #e6e3da; border-radius: 22px; padding: 30px 28px">
-      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em">{{ t.pay3t }}</h3>
+      <h3 style="font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em">{{ t.pay3t }}</h3>
       <p style="margin: 0; font-size: 15.5px; line-height: 1.65; color: #3c5346; text-wrap: pretty">{{ t.pay3d }}</p>
     </div>
   </div>
 </section>
 
 <section style="background: #12261a; color: #ffffff">
-  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.noTitle }}</h2>
+  <div style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.noTitle }}</h2>
     <p style="font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.72); margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 78ch; text-wrap: pretty">{{ t.noSub }}</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 12px">
       <sc-for list="{{ forbidden }}" as="f" hint-placeholder-count="9">
@@ -231,20 +231,20 @@
       </sc-for>
     </div>
     <div style="margin-top: 18px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.16); border-radius: 20px; padding: 26px 26px">
-      <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.01em">{{ t.disTitle }}</h3>
+      <h3 style="font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 12px; letter-spacing: -0.01em">{{ t.disTitle }}</h3>
       <p style="margin: 0 0 12px; font-size: 15.5px; line-height: 1.7; color: rgba(255,255,255,0.78); max-width: 84ch; text-wrap: pretty">{{ t.dis1 }}</p>
       <p style="margin: 0; font-size: 15.5px; line-height: 1.7; color: rgba(255,255,255,0.78); max-width: 84ch; text-wrap: pretty">{{ t.dis2 }}</p>
     </div>
   </div>
 </section>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
+<section style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
   <div style="background: #2dbb54; border-radius: 28px; padding: clamp(30px, 5.3vw, 64px) clamp(24px, 6vw, 48px); text-align: center; color: #ffffff">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 14px; text-wrap: balance">{{ t.ctaTitle }}</h2>
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 14px; text-wrap: balance">{{ t.ctaTitle }}</h2>
     <p style="margin: 0 auto 30px; font-size: 18px; line-height: 1.55; max-width: 48ch; color: rgba(255,255,255,0.92); text-wrap: pretty">{{ t.ctaSub }}</p>
     <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap">
-      <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://apps.apple.com/app/id6759839112" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
     </div>
   </div>
 </section>
@@ -269,10 +269,10 @@ class Component extends DCLogic {
       c1t: 'Dokumenti i papiri', c1d: 'Ugovori, računi, potvrde s fakulteta, diploma, poslovna dokumentacija i papiri koji trebaju potpis već sutra.',
       c2t: 'Odjeća i obuća', c2d: 'Zaboravljena jakna s vikenda, sezonska garderoba, radna odjeća, dres, cipele, čak i vjenčanica u navlaci.',
       c3t: 'Domaća hrana', c3d: 'Ajvar, zimnica, pršut, sir, med, rakija i kolači. Kako stvari putuju nekoliko sati, a ne danima, stižu svježe i onda kada je vani vruće.',
-      c4t: 'Pokloni i prigodni stvari', c4d: 'Rođendanski poklon koji ne može čekati tjedan dana, božićni stvari, igračke, cvijeće u kutiji.',
+      c4t: 'Pokloni i prigodne stvari', c4d: 'Rođendanski poklon koji ne može čekati tjedan dana, božićni pokloni, igračke, cvijeće u kutiji.',
       c5t: 'Elektronika', c5d: 'Mobitel, laptop, tablet, punjač, konzola, fotoaparat, vanjski disk, najbolje u originalnoj kutiji.',
       c6t: 'Alat i auto-dijelovi', c6d: 'Ručni alat, bušilica, retrovizor, filteri, sitniji dijelovi koje je skupo slati klasičnom dostavom.',
-      c7t: 'Ključevi i sitnice', c7d: 'Ključevi od stana ili auta, naočale, sat, nakit, novčanik, male stvari koje inače koštaju kao veliki stvari.',
+      c7t: 'Ključevi i sitnice', c7d: 'Ključevi od stana ili auta, naočale, sat, nakit, novčanik, sitnice koje klasična dostava naplaćuje kao veliku pošiljku.',
       c8t: 'Knjige i studentske stvari', c8d: 'Skripte, knjige, laptop, posteljina i oprema koja putuje između rodnoga grada i studentskog stana na početku i na kraju semestra.',
       c9t: 'Kofer i putna prtljaga', c9d: 'Cijeli kofer koji nisi stigao ponijeti, ruksak, dječja kolica, sportska torba ili oprema za skijanje.',
       bigNote: 'Šalju se i velike stvari: namještaj, bijela tehnika, bicikli, stvari za selidbu. Putnici voze osobne automobile, kombije i vozila s prikolicom. U zahtjevu navedi dimenzije i dodaj fotografiju, pa se javljaju putnici koji imaju dovoljno mjesta.',
@@ -291,7 +291,7 @@ class Component extends DCLogic {
       pay2d: 'Naknadu predlažeš pri objavi zahtjeva, unutar raspona koji nudi aplikacija. Ono što piše u aplikaciji je iznos koji vrijedi.',
       pay3t: 'Ostatak dogovora ide u chatu',
       pay3d: 'Vrijeme i mjesto primopredaje dogovarate u chatu. Sve ostalo, od potvrde do recenzije, ostaje zabilježeno u aplikaciji.',
-      noTitle: 'Što ne ide u stvari',
+      noTitle: 'Što se ne šalje',
       noSub: 'Korištenjem Senvia aplikacije korisnici se obvezuju da ni u kojem slučaju neće slati, prevoziti, omogućavati slanje ili prijevoz, niti pristajati na prijevoz zabranjenog, sumnjivog, nepoznatog, opasnog ili ilegalnog sadržaja. Točka 4.4 Uvjeta korištenja navodi, uključujući ali ne ograničavajući se na:',
       disTitle: 'Odgovornost je na korisnicima',
       dis1: 'Senvia je isključivo tehnička platforma koja povezuje pošiljatelja i putnika. Senvia ne prevozi stvari, ne provjerava njihov sadržaj i ne odgovara za sadržaj, stanje, vrijednost, kašnjenje, oštećenje ili gubitak pošiljke, kao ni za dogovor između korisnika. Prijevoz je ugovor između dvije osobe i odgovornost je na njima.',
@@ -325,7 +325,7 @@ class Component extends DCLogic {
       sizeSub: 'There are no official size classes and no upper limit like in classic delivery. These are the ranges people send most, and the final call is always between the two of you.',
       dirTitle: 'What people send to Croatia and from Croatia',
       dirSub: 'Sending items works both ways. Out of Croatia travel the things you cannot buy abroad, and towards Croatia the things that are cheaper or simply not sold at home.',
-      d1t: 'From Croatia to Austria, Germany and Switzerland', d1d: 'Mostly sent by parents and relatives to the diaspora in Vienna, Graz, Linz, Salzburg, Munich, Stuttgart, Zurich and Basel, and by students heading back to university.', d1i: 'Homemade food and preserves|Prosciutto, cheese and cured meat|Rakija and wine|University paperwork|Personal and childrens things|Birthday gifts|Keys and small items',
+      d1t: 'From Croatia to Austria, Germany and Switzerland', d1d: 'Mostly sent by parents and relatives to the diaspora in Vienna, Graz, Linz, Salzburg, Munich, Stuttgart, Zurich and Basel, and by students heading back to university.', d1i: 'Homemade food and preserves|Prosciutto, cheese and cured meat|Rakija and wine|University paperwork|Personal and children’s things|Birthday gifts|Keys and small items',
       d2t: 'Towards Croatia from Austria, Germany and Switzerland', d2d: 'This direction carries what is cheaper or easier to find in the DACH region, plus the things people send home before returning themselves.', d2i: 'Electronics and phones|Tools and machines|Car parts|Clothes and shoes|Prams and baby gear|Cosmetics and supplements|Gifts for relatives',
       payCard: 'Card',
       payTitle: 'Payment goes through the app',
@@ -384,7 +384,7 @@ class Component extends DCLogic {
       noTitle: 'Was nie ins Stvari gehört',
       noSub: 'Mit der Nutzung der Senvia App verpflichten sich Nutzer, niemals verbotene, verdächtige, unbekannte, gefährliche oder illegale Inhalte zu senden, zu transportieren, deren Versand zu ermöglichen oder deren Transport zuzusagen. Punkt 4.4 der Nutzungsbedingungen nennt, einschließlich aber nicht beschränkt auf:',
       disTitle: 'Die Verantwortung liegt bei den Nutzern',
-      dis1: 'Senvia ist ausschliesslich eine technische Plattform, die Absender und Reisende verbindet. Senvia transportiert keine Sachen, prüft keinen Inhalt und haftet nicht für Inhalt, Zustand, Wert, Verspätung, Beschädigung oder Verlust einer Sendung und auch nicht für die Absprache zwischen Nutzern. Der Transport ist ein Vertrag zwischen zwei Personen, die Verantwortung liegt bei ihnen.',
+      dis1: 'Senvia ist ausschließlich eine technische Plattform, die Absender und Reisende verbindet. Senvia transportiert keine Sachen, prüft keinen Inhalt und haftet nicht für Inhalt, Zustand, Wert, Verspätung, Beschädigung oder Verlust einer Sendung und auch nicht für die Absprache zwischen Nutzern. Der Transport ist ein Vertrag zwischen zwei Personen, die Verantwortung liegt bei ihnen.',
       dis2: 'Alles ist freiwillig. Niemand ist verpflichtet, eine Fahrt anzunehmen, eine Anfrage zu akzeptieren oder Sachen zu transportieren. Passen Inhalt, Beschreibung, Foto, Kostenbeitrag oder Termin nicht, wird der Transport einfach nicht angenommen, ohne Begründung und ohne Folgen für das Profil. Der Absender haftet für das, was er verschickt, der Reisende entscheidet, was er mitnimmt.',
       prepTitle: 'So bereitest du die Sachen vor',
       ctaTitle: 'Stelle eine Anfrage und sieh, wer unterwegs ist',
@@ -449,7 +449,24 @@ componentDidMount() {
   }
   componentWillUnmount() { if (this.off) this.off(); }
 
+  __seoApply() {
+    const SEO = {"hr": ["Slanje stvari u Austriju, Njemačku i po Hrvatskoj | Senvia", "Pošalji stvari od koverte do namještaja uz putnika koji već ide tvojim smjerom, u Austriju, Njemačku, Švicarsku i po Hrvatskoj. Najčešće isti dan."], "en": ["Sending items to Austria, Germany and within Croatia | Senvia", "Send anything from an envelope to furniture with a traveller already heading your way, to Austria, Germany, Switzerland and within Croatia. Usually the same day."], "de": ["Sachen nach Österreich, Deutschland und Kroatien senden | Senvia", "Schick alles vom Umschlag bis zum Möbelstück mit einem Reisenden in deine Richtung, nach Österreich, Deutschland, in die Schweiz und in Kroatien. Meist am selben Tag."]};
+    let lang = 'hr';
+    try { lang = (this.state && this.state.lang) || (this.getLang ? this.getLang() : 'hr'); } catch (e) {}
+    const v = SEO[lang] || SEO.hr;
+    const loc = { hr: 'hr_HR', en: 'en_GB', de: 'de_DE' }[lang] || 'hr_HR';
+    const put = () => {
+      document.title = v[0];
+      const set = (attr, name, val) => { let el = document.head.querySelector('meta[' + attr + '="' + name + '"]'); if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); } el.setAttribute('content', val); };
+      set('name', 'description', v[1]); set('property', 'og:title', v[0]); set('property', 'og:description', v[1]); set('property', 'og:locale', loc);
+      set('name', 'twitter:title', v[0]); set('name', 'twitter:description', v[1]);
+    };
+    put(); clearTimeout(this.__seoT1); clearTimeout(this.__seoT2);
+    this.__seoT1 = setTimeout(put, 80); this.__seoT2 = setTimeout(put, 500);
+  }
+
   renderVals() {
+    this.__seoApply();
     const lang = this.state.lang || 'hr';
     const t = { ...this.STR.hr, ...(this.STR[lang] || {}) };
     const d = (k) => this.DATA[k][lang] || this.DATA[k].hr;

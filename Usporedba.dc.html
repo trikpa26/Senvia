@@ -11,7 +11,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png"><link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta charset="utf-8">
   <title>Senvia ili klasična dostava: što je jeftinije? | Senvia</title>
-  <meta name="description" content="Usporedba slanja stvari uz putnika i klasične dostave: naknada, brzina, fleksibilnost i primjeri po rutama. Kad je bolji klasična dostava, a kad Senvia.">
+  <meta name="description" content="Usporedba slanja stvari uz putnika i klasične dostave: naknada, brzina, fleksibilnost i primjeri po rutama. Kad je bolja klasična dostava, a kad Senvia.">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Senvia">
@@ -45,9 +45,10 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -57,30 +58,29 @@
 
 <div style="overflow-x: clip">
 
-<dc-import name="Nav" active="corr" hint-size="100%,66px"></dc-import>
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" active="blog" hint-size="100%,66px"></dc-import>
 
-<nav aria-label="breadcrumb" style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
-  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.crumb }}</span>
+<nav aria-label="breadcrumb" style="max-width: 1360px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
+  <a href="Senvia%20Landing%20v3.dc.html" style="color: #6b8272">Senvia</a><span>/</span><a href="Blog.dc.html" style="color: #6b8272">Blog</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.crumb }}</span>
 </nav>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: 40px clamp(16px, 4vw, 32px) clamp(30px, 5vw, 56px)">
-  <div style="color: #1a9e44; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px">{{ t.kicker }}</div>
-  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 8vw, 54px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; max-width: 24ch; text-wrap: balance">{{ t.h1 }}</h1>
+<section style="max-width: 1360px; margin: 0 auto; padding: 40px clamp(16px, 4vw, 32px) clamp(30px, 5vw, 56px)">
+  <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(32px, 8vw, 54px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; max-width: 24ch; text-wrap: balance">{{ t.h1 }}</h1>
   <p style="font-size: 19px; line-height: 1.6; color: #3c5346; margin: 0 0 14px; max-width: 62ch; text-wrap: pretty">{{ t.lead1 }}</p>
   <p style="font-size: 17px; line-height: 1.65; color: #3c5346; margin: 0; max-width: 62ch; text-wrap: pretty">{{ t.lead2 }}</p>
 </section>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
-  <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 clamp(20px, 3vw, 28px); text-wrap: balance">{{ t.tableTitle }}</h2>
+<section style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
+  <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 clamp(20px, 3vw, 28px); text-wrap: balance">{{ t.tableTitle }}</h2>
   <div style="border: 1px solid #e6e3da; border-radius: 24px; overflow: hidden">
     <div style="display: grid; grid-template-columns: 1.15fr 1fr 1fr; background: #f2f0ea; border-bottom: 1px solid #e6e3da">
-      <div style="padding: 16px clamp(12px, 2vw, 24px); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b8272">{{ t.thWhat }}</div>
-      <div style="padding: 16px clamp(12px, 2vw, 24px); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #6b8272; border-left: 1px solid #e6e3da">{{ t.thCourier }}</div>
-      <div style="padding: 16px clamp(12px, 2vw, 24px); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #167a38; border-left: 1px solid #e6e3da; background: #e8f7ee">Senvia</div>
+      <div style="padding: 16px clamp(12px, 2vw, 24px); font-size: 14.5px; font-weight: 600; color: #6b8272">{{ t.thWhat }}</div>
+      <div style="padding: 16px clamp(12px, 2vw, 24px); font-size: 14.5px; font-weight: 600; color: #6b8272; border-left: 1px solid #e6e3da">{{ t.thCourier }}</div>
+      <div style="padding: 16px clamp(12px, 2vw, 24px); font-size: 14.5px; font-weight: 600; color: #167a38; border-left: 1px solid #e6e3da; background: #e8f7ee">Senvia</div>
     </div>
     <sc-for list="{{ rows }}" as="r" hint-placeholder-count="7">
       <div style="{{ r.rowStyle }}">
-        <div style="padding: clamp(14px, 2vw, 20px) clamp(12px, 2vw, 24px); font-family: 'Space Grotesk', sans-serif; font-size: 15.5px; font-weight: 600">{{ r.label }}</div>
+        <div style="padding: clamp(14px, 2vw, 20px) clamp(12px, 2vw, 24px); font-family: 'Outfit', sans-serif; font-size: 15.5px; font-weight: 600">{{ r.label }}</div>
         <div style="padding: clamp(14px, 2vw, 20px) clamp(12px, 2vw, 24px); font-size: 15px; line-height: 1.5; color: #3c5346; border-left: 1px solid #e9e6dd">{{ r.courier }}</div>
         <div style="padding: clamp(14px, 2vw, 20px) clamp(12px, 2vw, 24px); font-size: 15px; line-height: 1.5; color: #12261a; font-weight: 500; border-left: 1px solid #e9e6dd; background: #f7f6f2">{{ r.senvia }}</div>
       </div>
@@ -90,13 +90,13 @@
 </section>
 
 <section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
-  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.priceTitle }}</h2>
+  <div style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.priceTitle }}</h2>
     <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(20px, 3vw, 30px); max-width: 64ch; text-wrap: pretty">{{ t.priceSub }}</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 14px">
       <sc-for list="{{ examples }}" as="e" hint-placeholder-count="4">
         <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 24px 24px">
-          <div style="display: flex; align-items: center; gap: 9px; font-family: 'Space Grotesk', sans-serif; font-size: 17.5px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 16px">
+          <div style="display: flex; align-items: center; gap: 9px; font-family: 'Outfit', sans-serif; font-size: 17.5px; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 16px">
             <span>{{ e.a }}</span>
             <svg width="20" height="9" viewBox="0 0 26 10" fill="none" stroke="#2dbb54" stroke-width="1.8" stroke-linecap="round" style="flex: 0 0 auto"><path d="M1 5h20" stroke-dasharray="2.5 3.5"></path><path d="M17 1l5 4-5 4"></path></svg>
             <span>{{ e.b }}</span>
@@ -116,8 +116,8 @@
   </div>
 </section>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
-  <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.pickSenvia }}</h2>
+<section style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+  <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 10px; text-wrap: balance">{{ t.pickSenvia }}</h2>
   <p style="font-size: 17px; line-height: 1.6; color: #3c5346; margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 66ch; text-wrap: pretty">{{ t.pickSub }}</p>
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 12px">
     <sc-for list="{{ whenSenvia }}" as="w" hint-placeholder-count="6">
@@ -129,15 +129,15 @@
   </div>
 </section>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
+<section style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
   <div style="background: #2dbb54; border-radius: 28px; padding: clamp(30px, 5.3vw, 64px) clamp(24px, 6vw, 48px); color: #ffffff; display: flex; gap: clamp(20px, 3vw, 40px); flex-wrap: wrap; align-items: center; justify-content: space-between">
     <div style="flex: 1 1 380px; min-width: 0">
-      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6vw, 36px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance">{{ t.ctaTitle }}</h2>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6vw, 36px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance">{{ t.ctaTitle }}</h2>
       <p style="margin: 0; font-size: 18px; line-height: 1.55; max-width: 44ch; color: rgba(255,255,255,0.92); text-wrap: pretty">{{ t.ctaSub }}</p>
     </div>
     <div style="display: flex; gap: 14px; flex-wrap: wrap; flex: 0 0 auto">
-      <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://apps.apple.com/app/id6759839112" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
     </div>
   </div>
 </section>
@@ -154,7 +154,7 @@ class Component extends DCLogic {
     hr: {
       crumb: 'Usporedba s klasičnom dostavom', kicker: 'Usporedba',
       h1: 'Senvia ili klasična dostava',
-      lead1: 'Klasične dostavne službe rade ono za što su građene: velike količine, standardne kutije i mrežu skladišta. Senvia rješava drugu situaciju, kad stvari moraju krenuti danas, kad je premali da bi se plaćala tarifa ili kad se ne uklapa u nijedan razred.',
+      lead1: 'Klasične dostavne službe rade ono za što su građene: velike količine, standardne kutije i mrežu skladišta. Senvia rješava drugu situaciju, kad stvari moraju krenuti danas, kad je stvar premala da bi se plaćala tarifa ili kad se ne uklapa ni u jedan razred.',
       lead2: 'Zato ovo nije popis razloga zašto je klasična dostava loš. Ovo je usporedba dviju logika prijevoza i pošten odgovor na pitanje kad se koja isplati.',
       tableTitle: 'Sedam razlika koje se odmah osjete',
       thWhat: 'Što uspoređujemo', thCourier: 'Klasična dostava',
@@ -162,7 +162,7 @@ class Component extends DCLogic {
       priceTitle: 'Primjeri po rutama',
       priceSub: 'Ista pošiljka, dvije logike prijevoza. Iznosi za klasičnu dostavu javne su tarife za male stvari, a iznos u Senvia aplikaciji prosjek je dogovora na toj ruti. Najveća razlika nije u naknadi nego u vremenu.',
       pickSenvia: 'Kad se Senvia najviše isplati', pickSub: 'Senvia i klasična dostava rješavaju različite situacije. Ovo su slučajevi u kojima korisnici najčešće odabiru putnika.',
-      ctaTitle: 'Provjeri koliko bi koštalo tvoju rutu', ctaSub: 'Objavi zahtjev bez obveze i vidi koje ponude dobiješ od putnika.',
+      ctaTitle: 'Provjeri koliko bi koštala tvoja ruta', ctaSub: 'Objavi zahtjev bez obveze i vidi koje ponude dobiješ od putnika.',
       r1: 'Naknada', r1c: '20–45 € za male stvari na međunarodnoj ruti', r1s: '8–35 €, dogovor s putnikom, bez naknada po kilogramu',
       r2: 'Brzina', r2c: 'Tri do četiri radna dana za Austriju i Njemačku', r2s: 'Nekoliko sati, koliko traje vožnja',
       r3: 'Primopredaja', r3c: 'Poslovnica ili paketomat, u radno vrijeme', r3s: 'Mjesto i vrijeme dogovarate međusobno',
@@ -171,16 +171,16 @@ class Component extends DCLogic {
       r6: 'Hitni dokumenti', r6c: 'Express usluga, uz znatno višu naknadu', r6s: 'Putnik koji kreće danas, bez dodatne tarife',
       r7: 'Dokaz o dostavi', r7c: 'Potpis primatelja i službena potvrda', r7s: 'Fotografija, chat i ocjena nakon dostave',
       e1n: 'Putnici ovu rutu prijeđu u jednoj vožnji, umjesto tri do četiri radna dana.',
-      e2n: 'Dvije i pol sata vožnje, a klasična dostava naplaćuje malen stvari po punoj tarifi.',
+      e2n: 'Dvije i pol sata vožnje, a klasična dostava naplaćuje male stvari po punoj tarifi.',
       e3n: 'Dulja ruta znači veći dogovor, ali stvari idu istoga dana kad i vozač.',
       e4n: 'Unutar Hrvatske stvari stižu isti dan, bez čekanja u poslovnici.',
       ws1: 'Stvari moraju krenuti danas ili sutra.', ws2: 'Šalješ dokumente, ključeve ili nešto sitno što klasična dostava naplaćuje kao punu tarifu.', ws3: 'Šalješ domaću hranu ili poklon koji ne bi preživio pet dana u skladištu.', ws4: 'Pošiljka je glomazna ili nepravilna, kofer, kolica, alat, sportska oprema.', ws5: 'Nemaš vremena za poslovnicu i radno vrijeme.', ws6: 'Želiš znati tko nosi tvoje stvari i moći ga pitati gdje su.'
     },
     en: {
       crumb: 'Compared to classic delivery', kicker: 'Comparison',
-      h1: 'Senvia or a classic delivery',
-      lead1: 'Classic deliverys do what they were built for: volume, standard boxes and a network of depots. Senvia solves a different situation, when the items have to leave today, when they are too small to justify a tariff, or when they fit no size class at all.',
-      lead2: 'So this is not a list of reasons why classic delivery are bad. It is a comparison of two logics of transport, and an honest answer to when each one pays off.',
+      h1: 'Senvia or classic delivery',
+      lead1: 'Classic delivery services do what they were built for: volume, standard boxes and a network of depots. Senvia solves a different situation, when the items have to leave today, when they are too small to justify a tariff, or when they fit no size class at all.',
+      lead2: 'So this is not a list of reasons why classic delivery is bad. It is a comparison of two logics of transport, and an honest answer to when each one pays off.',
       tableTitle: 'Seven differences you notice immediately',
       thWhat: 'What we compare', thCourier: 'Classic delivery',
       tableNote: 'Courier figures are public tariffs for small items on international routes and vary with weight, dimensions and add-on services. On Senvia the fee is agreed with the traveller.',
@@ -190,7 +190,7 @@ class Component extends DCLogic {
       ctaTitle: 'See what your route would cost', ctaSub: 'Post a request with no obligation and see what offers travellers send you.',
       r1: 'Fee', r1c: '€20–45 for a small item on an international route', r1s: '€8–35, agreed with the traveller, no per-kilo fees',
       r2: 'Speed', r2c: 'Three to four working days for Austria and Germany', r2s: 'Within hours, as long as the drive takes',
-      r3: 'Hand-off', r3c: 'A branch or a item locker, during opening hours', r3s: 'Place and time agreed between the two of you',
+      r3: 'Hand-off', r3c: 'A branch or a parcel locker, during opening hours', r3s: 'Place and time agreed between the two of you',
       r4: 'Tracking', r4c: 'A tracking number and system statuses', r4s: 'A chat with the person carrying your items',
       r5: 'Unusual shipments', r5c: 'Limits by dimensions and size classes', r5s: 'From a suitcase to furniture, no upper limit',
       r6: 'Urgent documents', r6c: 'An express service, at a much higher fee', r6s: 'A traveller leaving today, with no extra tariff',
@@ -202,12 +202,12 @@ class Component extends DCLogic {
       ws1: 'The items have to leave today or tomorrow.', ws2: 'You are sending documents, keys or something small that a courier charges at full tariff.', ws3: 'You are sending homemade food or a gift that would not survive five days in a depot.', ws4: 'The shipment is bulky or irregular, a suitcase, a pram, tools, sports gear.', ws5: 'You have no time for a branch and its opening hours.', ws6: 'You want to know who is carrying your items and be able to ask where they are.'
     },
     de: {
-      crumb: 'Vergleich mit klassischer Zustellungen', kicker: 'Vergleich',
-      h1: 'Senvia oder klassischer Zustellung',
-      lead1: 'klassischer Zustellunge tun genau das, wofür sie gebaut wurden: große Mengen, Standardkartons und ein Netz aus Depots. Senvia löst eine andere Situation, wenn die Sachen heute losmüssen, wenn sie zu klein für einen Tarif sind oder in keine Größenklasse passen.',
+      crumb: 'Vergleich mit klassischer Zustellung', kicker: 'Vergleich',
+      h1: 'Senvia oder klassische Zustellung',
+      lead1: 'Klassische Zustelldienste tun genau das, wofür sie gebaut wurden: große Mengen, Standardkartons und ein Netz aus Depots. Senvia löst eine andere Situation, wenn die Sachen heute losmüssen, wenn sie zu klein für einen Tarif sind oder in keine Größenklasse passen.',
       lead2: 'Das ist also keine Liste von Gründen, warum Kuriere schlecht sind. Es ist ein Vergleich zweier Transportlogiken und eine ehrliche Antwort darauf, wann sich welche lohnt.',
       tableTitle: 'Sieben Unterschiede, die man sofort merkt',
-      thWhat: 'Was wir vergleichen', thCourier: 'klassischer Zustellung',
+      thWhat: 'Was wir vergleichen', thCourier: 'Klassische Zustellung',
       tableNote: 'Die Kurierbeträge sind öffentliche Kostenbeiträge für kleine Sachen auf internationalen Strecken und variieren je nach Gewicht, Maßen und Zusatzleistungen. Bei Senvia wird der Kostenbeitrag mit dem Reisenden vereinbart.',
       priceTitle: 'Beispiele je Route',
       priceSub: 'Dieselbe Sendung, zwei Transportlogiken. Die Beträge sind Richtwerte zum Größenvergleich, kein Angebot.',
@@ -220,7 +220,7 @@ class Component extends DCLogic {
       r5: 'Ungewöhnliche Sendungen', r5c: 'Grenzen nach Maßen und Größenklassen', r5s: 'Vom Koffer bis zum Möbelstück, keine Obergrenze',
       r6: 'Eilige Dokumente', r6c: 'Express-Service, deutlich teurer', r6s: 'Ein Reisender, der heute losfährt, ohne Zusatztarif',
       r7: 'Zustellnachweis', r7c: 'Unterschrift des Empfängers und offizielle Bestätigung', r7s: 'Foto, Chat und Bewertung nach der Zustellung',
-      e1n: 'Ein Kurier braucht 2–5 Tage; Reisende fahren diese Strecke in einem Zug.',
+      e1n: 'Ein Kurier braucht 2–5 Tage; Reisende schaffen diese Strecke in einer Fahrt.',
       e2n: 'Der Unterschied ist bei kleinen Sachen am größten, die der Kurier voll tarifiert.',
       e3n: 'Längere Strecken bedeuten einen höheren Kostenbeitrag, aber immer noch unter Express-Tarif.',
       e4n: 'Innerhalb Kroatiens am selben Tag, ohne Warten in der Filiale.',
@@ -242,7 +242,8 @@ componentDidMount() {
       '@context': 'https://schema.org', '@type': 'BreadcrumbList',
       itemListElement: [
         { '@type': 'ListItem', position: 1, name: "Početna", item: "https://www.senviaapp.com/" },
-        { '@type': 'ListItem', position: 2, name: "Usporedba s klasičnom dostavom", item: "https://www.senviaapp.com/usporedba-s-klasicnom-dostavom/" }
+        { '@type': 'ListItem', position: 2, name: "Blog", item: "https://www.senviaapp.com/blog/" },
+        { '@type': 'ListItem', position: 3, name: "Usporedba s klasičnom dostavom", item: "https://www.senviaapp.com/usporedba-s-klasicnom-dostavom/" }
       ]
     });
     import('./i18n.js').then(m => {
@@ -253,11 +254,28 @@ componentDidMount() {
   }
   componentWillUnmount() { if (this.off) this.off(); }
 
+  __seoApply() {
+    const SEO = {"hr": ["Senvia ili klasična dostava: što je jeftinije? | Senvia", "Usporedba slanja stvari uz putnika i klasične dostave: naknada, brzina, fleksibilnost i primjeri po rutama. Kad je bolja klasična dostava, a kad Senvia."], "en": ["Senvia or classic delivery: which is cheaper? | Senvia", "Sending with a traveller compared with classic delivery: fees, speed, flexibility and examples by route. When classic delivery is better and when Senvia is."], "de": ["Senvia oder klassische Zustellung: was ist günstiger? | Senvia", "Versand mit Reisenden und klassische Zustellung im Vergleich: Kostenbeitrag, Tempo, Flexibilität und Beispiele je Strecke. Wann was besser passt."]};
+    let lang = 'hr';
+    try { lang = (this.state && this.state.lang) || (this.getLang ? this.getLang() : 'hr'); } catch (e) {}
+    const v = SEO[lang] || SEO.hr;
+    const loc = { hr: 'hr_HR', en: 'en_GB', de: 'de_DE' }[lang] || 'hr_HR';
+    const put = () => {
+      document.title = v[0];
+      const set = (attr, name, val) => { let el = document.head.querySelector('meta[' + attr + '="' + name + '"]'); if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); } el.setAttribute('content', val); };
+      set('name', 'description', v[1]); set('property', 'og:title', v[0]); set('property', 'og:description', v[1]); set('property', 'og:locale', loc);
+      set('name', 'twitter:title', v[0]); set('name', 'twitter:description', v[1]);
+    };
+    put(); clearTimeout(this.__seoT1); clearTimeout(this.__seoT2);
+    this.__seoT1 = setTimeout(put, 80); this.__seoT2 = setTimeout(put, 500);
+  }
+
   renderVals() {
+    this.__seoApply();
     const lang = this.state.lang || 'hr';
     const t = { ...this.STR.hr, ...(this.STR[lang] || {}) };
     const city = (o) => o[lang] || o.hr;
-    const courierLabel = { hr: 'Klasična dostava', en: 'Classic delivery', de: 'klassischer Zustellung' }[lang];
+    const courierLabel = { hr: 'Klasična dostava', en: 'Classic delivery', de: 'Klassische Zustellung' }[lang];
 
     const rows = [1, 2, 3, 4, 5, 6, 7].map(i => ({
       label: t['r' + i], courier: t['r' + i + 'c'], senvia: t['r' + i + 's'],

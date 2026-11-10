@@ -45,9 +45,10 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -57,28 +58,27 @@
 
 <div style="overflow-x: clip">
 
-<dc-import name="Nav" active="trust" hint-size="100%,66px"></dc-import>
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" active="trust" hint-size="100%,66px"></dc-import>
 
-<nav aria-label="breadcrumb" style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
-  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.crumb }}</span>
+<nav aria-label="breadcrumb" style="max-width: 1360px; margin: 0 auto; padding: 18px clamp(16px, 4vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
+  <a href="Senvia%20Landing%20v3.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.crumb }}</span>
 </nav>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: 40px clamp(16px, 4vw, 32px) clamp(30px, 5vw, 60px)">
-  <div style="color: #1a9e44; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px">{{ t.kicker }}</div>
-  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 8vw, 54px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; max-width: 24ch; text-wrap: balance">{{ t.h1 }}</h1>
+<section style="max-width: 1360px; margin: 0 auto; padding: 40px clamp(16px, 4vw, 32px) clamp(30px, 5vw, 60px)">
+  <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(32px, 8vw, 54px); line-height: 1.06; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; max-width: 24ch; text-wrap: balance">{{ t.h1 }}</h1>
   <p style="font-size: 19px; line-height: 1.6; color: #3c5346; margin: 0 0 16px; max-width: 62ch; text-wrap: pretty">{{ t.lead1 }}</p>
   <p style="font-size: 17px; line-height: 1.65; color: #3c5346; margin: 0; max-width: 62ch; text-wrap: pretty">{{ t.lead2 }}</p>
 </section>
 
 <section style="background: #12261a; color: #ffffff">
-  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
-    <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(45,187,84,0.18); color: #7ee6a2; font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; padding: 8px 14px; border-radius: 999px; margin-bottom: 18px">{{ t.freeKicker }}</div>
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 14px; max-width: 26ch; text-wrap: balance">{{ t.freeTitle }}</h2>
+  <div style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+    <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(45,187,84,0.18); color: #7ee6a2; font-weight: 600; font-size: 14.5px; padding: 8px 14px; border-radius: 999px; margin-bottom: 18px">{{ t.freeKicker }}</div>
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 14px; max-width: 26ch; text-wrap: balance">{{ t.freeTitle }}</h2>
     <p style="font-size: 17px; line-height: 1.6; color: rgba(255,255,255,0.74); margin: 0 0 clamp(22px, 3.4vw, 34px); max-width: 62ch; text-wrap: pretty">{{ t.freeSub }}</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 14px">
       <sc-for list="{{ freedoms }}" as="f" hint-placeholder-count="5">
         <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.13); border-radius: 20px; padding: 28px 26px">
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em">{{ f.title }}</h3>
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 19px; font-weight: 600; margin: 0 0 10px; letter-spacing: -0.01em">{{ f.title }}</h3>
           <div style="font-size: 15.5px; line-height: 1.6; color: rgba(255,255,255,0.74); text-wrap: pretty">{{ f.desc }}</div>
         </div>
       </sc-for>
@@ -88,10 +88,10 @@
 
 
 <section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
-  <div style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+  <div style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: clamp(24px, 4vw, 48px)">
       <div>
-        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.4vw, 26px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 18px; text-wrap: balance">{{ t.senderTitle }}</h2>
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(20px, 4.4vw, 26px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 18px; text-wrap: balance">{{ t.senderTitle }}</h2>
         <div style="display: grid; gap: 10px">
           <sc-for list="{{ senderTips }}" as="s" hint-placeholder-count="4">
             <div style="display: flex; gap: 12px; align-items: flex-start; background: #ffffff; border: 1px solid #e6e3da; border-radius: 16px; padding: 18px 20px; font-size: 15.5px; line-height: 1.6; color: #29402f">
@@ -102,7 +102,7 @@
         </div>
       </div>
       <div>
-        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.4vw, 26px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 18px; text-wrap: balance">{{ t.driverTitle }}</h2>
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(20px, 4.4vw, 26px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 18px; text-wrap: balance">{{ t.driverTitle }}</h2>
         <div style="display: grid; gap: 10px">
           <sc-for list="{{ driverTips }}" as="s" hint-placeholder-count="4">
             <div style="display: flex; gap: 12px; align-items: flex-start; background: #ffffff; border: 1px solid #e6e3da; border-radius: 16px; padding: 18px 20px; font-size: 15.5px; line-height: 1.6; color: #29402f">
@@ -116,13 +116,13 @@
   </div>
 </section>
 
-<section id="pravila" style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px) 0; scroll-margin-top: 90px">
+<section id="pravila" style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px) 0; scroll-margin-top: 90px">
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 18px; align-items: stretch">
     <div id="zabranjeno" style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 28px; padding: clamp(24px, 4vw, 40px); scroll-margin-top: 90px">
       <span style="display: inline-flex; width: 48px; height: 48px; border-radius: 14px; background: #fdecec; align-items: center; justify-content: center; margin-bottom: 18px">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#c2412d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M5.6 5.6l12.8 12.8"></path></svg>
       </span>
-      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 2.8vw, 30px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 10px">{{ t.banT }}</h2>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 2.8vw, 30px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 10px">{{ t.banT }}</h2>
       <p style="margin: 0 0 18px; font-size: 16px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.banD }}</p>
       <ul style="margin: 0; padding: 0; list-style: none; display: grid; gap: 10px">
         <sc-for list="{{ banList }}" as="b" hint-placeholder-count="8">
@@ -137,14 +137,14 @@
       <span style="display: inline-flex; width: 48px; height: 48px; border-radius: 14px; background: #2dbb54; align-items: center; justify-content: center; margin-bottom: 18px">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z"></path><path d="M12 8v5"></path><path d="M12 16.5v.01"></path></svg>
       </span>
-      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 2.8vw, 30px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 10px">{{ t.dmgT }}</h2>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 2.8vw, 30px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; margin: 0 0 10px">{{ t.dmgT }}</h2>
       <p style="margin: 0 0 18px; font-size: 16px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.dmgD }}</p>
       <ol style="margin: 0; padding: 0; list-style: none; display: grid; gap: 12px">
         <sc-for list="{{ dmgSteps }}" as="s" hint-placeholder-count="4">
           <li style="display: flex; gap: 14px; align-items: flex-start; background: #ffffff; border-radius: 16px; padding: 14px 16px">
-            <span style="width: 28px; height: 28px; border-radius: 999px; background: #2dbb54; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; flex: 0 0 auto">{{ s.n }}</span>
+            <span style="width: 28px; height: 28px; border-radius: 999px; background: #2dbb54; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 700; flex: 0 0 auto">{{ s.n }}</span>
             <span>
-              <span style="display: block; font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; color: #12261a">{{ s.t }}</span>
+              <span style="display: block; font-family: 'Outfit', sans-serif; font-size: 16px; font-weight: 700; color: #12261a">{{ s.t }}</span>
               <span style="display: block; font-size: 14.5px; line-height: 1.55; color: #3c5346; margin-top: 2px">{{ s.d }}</span>
             </span>
           </li>
@@ -155,13 +155,13 @@
   </div>
 </section>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
-  <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 clamp(20px, 3vw, 28px); max-width: 26ch; text-wrap: balance">{{ t.faqTitle }}</h2>
+<section style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4vw, 32px)">
+  <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6.1vw, 38px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 clamp(20px, 3vw, 28px); max-width: 26ch; text-wrap: balance">{{ t.faqTitle }}</h2>
   <div style="max-width: 900px">
     <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="6">
       <div style="border-bottom: 1px solid #e9e6dd">
         <div onClick="{{ f.toggle }}" style="display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 22px 4px; cursor: pointer">
-          <h3 style="font-family: 'Space Grotesk', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0; text-wrap: pretty">{{ f.q }}</h3>
+          <h3 style="font-family: 'Outfit', sans-serif; font-size: 18.5px; font-weight: 600; margin: 0; text-wrap: pretty">{{ f.q }}</h3>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6b8272" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="{{ f.chevStyle }}"><path d="M6 9l6 6 6-6"></path></svg>
         </div>
         <div style="{{ f.answerStyle }}">
@@ -173,15 +173,15 @@
   <p style="margin: 22px 0 0; font-size: 15.5px; color: #6b8272">{{ t.faqMore }} <a href="FAQ.dc.html" style="font-weight: 600">{{ t.faqLink }}</a></p>
 </section>
 
-<section style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
+<section style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 32px) clamp(38px, 6.5vw, 84px)">
   <div style="background: #2dbb54; border-radius: 28px; padding: clamp(30px, 5.3vw, 64px) clamp(24px, 6vw, 48px); color: #ffffff; display: flex; gap: clamp(20px, 3vw, 40px); flex-wrap: wrap; align-items: center; justify-content: space-between">
     <div style="flex: 1 1 380px; min-width: 0">
-      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(22px, 6vw, 36px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance">{{ t.ctaTitle }}</h2>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(22px, 6vw, 36px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 12px; text-wrap: balance">{{ t.ctaTitle }}</h2>
       <p style="margin: 0; font-size: 18px; line-height: 1.55; max-width: 44ch; color: rgba(255,255,255,0.92); text-wrap: pretty">{{ t.ctaSub }}</p>
     </div>
     <div style="display: flex; gap: 14px; flex-wrap: wrap; flex: 0 0 auto">
-      <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://apps.apple.com/app/id6759839112" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
     </div>
   </div>
 </section>
@@ -212,7 +212,7 @@ class Component extends DCLogic {
       photoSub: 'Fotografija je jedina stvar koja i pošiljatelja i vozača štiti od nesporazuma, zato je dio svakog zahtjeva.',
       p1t: 'Uz zahtjev ide fotografija', p1d: 'Pošiljatelj fotografira stvari prije objave. Vozač točno zna što preuzima i koliko mjesta treba u autu.',
       p2t: 'Fotografija ostaje u chatu', p2d: 'Snimka i opis vezani su za dogovor. Oboje imate isti zapis o tome kako su stvari izgledale na predaji.',
-      p3t: 'Bez fotografije nema preuzimanja', p3d: 'Ako stvari nisu poslikane ili izgledaju drugačije od fotografije, vozač ih ima pravo odbiti na licu mjesta.',
+      p3t: 'Bez fotografije nema preuzimanja', p3d: 'Ako stvari nisu poslikanee ili izgledaju drugačije od fotografije, vozač ih ima pravo odbiti na licu mjesta.',
       builtTitle: 'Što je ugrađeno u svaku pošiljku',
       b1t: 'Verifikacija prije prve pošiljke', b1d: 'Svaki novi račun odobrava se prije prve pošiljke ili prve objavljene vožnje. Neverificirani profil ne može preuzeti stvari.',
       b2t: 'Ocjene i recenzije', b2d: 'Nakon svake dostave obje strane ostavljaju ocjenu. Broj dovršenih vožnji i recenzije javno su vidljivi na profilu.',
@@ -293,7 +293,7 @@ class Component extends DCLogic {
   FAQ = {
     hr: [
       { q: 'Moram li prihvatiti prijevoz ako mi se javi pošiljatelj?', a: 'Ne. Prihvaćanje zahtjeva je uvijek tvoja odluka. Ako ti sadržaj pošiljke, ruta, termin ili ponuđena naknada ne odgovaraju, zahtjev jednostavno ne prihvatiš. Nema kazne, nema obveznog broja vožnji i nema utjecaja na ocjenu tvog profila.' },
-      { q: 'Što ako stvari nisu poslikan?', a: 'Fotografija je dio svakog zahtjeva. Ako je nema ili stvari na primopredaji izgleda drugačije od fotografije, prijevoz ne moraš prihvatiti. Isto vrijedi ako pošiljatelj odbije pokazati sadržaj, tada stvari ne preuzimaš.' },
+      { q: 'Što ako stvari nisu poslikane?', a: 'Fotografija je dio svakog zahtjeva. Ako je nema ili stvari na primopredaji izgleda drugačije od fotografije, prijevoz ne moraš prihvatiti. Isto vrijedi ako pošiljatelj odbije pokazati sadržaj, tada stvari ne preuzimaš.' },
       { q: 'Mogu li vidjeti što je u stvarima prije preuzimanja?', a: 'Da. Vozač ima pravo zamoliti da se stvari otvore i sadržaj pokaže prije preuzimanja. To je normalan dio dogovora, posebno kod prelaska granice, i pošiljatelji su na to naviknuti.' },
       { q: 'Kako funkcionira verifikacija korisnika?', a: 'Svaki novi račun odobrava se prije prve pošiljke ili prve objavljene vožnje. Dok verifikacija nije dovršena, korisnik ne može preuzeti stvari niti prihvatiti zahtjev za prijevoz.' },
       { q: 'Što se događa ako stvari kasne ili se izgubi?', a: 'Chat s putnikom ostaje aktivan tijekom cijelog putovanja, pa je prvi korak dogovor unutar aplikacije. Ako se problem ne riješi, prijavi pošiljku na contact@senviaapp.com, imamo povijest razgovora, fotografije i dogovora i pomažemo u rješavanju.' },
@@ -353,7 +353,24 @@ componentDidMount() {
   }
 
   PRAVILA = {"hr":{"banT":"Što se ne smije slati","banD":"Kroz Senviu se mogu slati samo stvari koje je legalno prevoziti. Ovo je zabranjeno uvijek, bez iznimke:","ban":["Droge, lijekovi na recept bez dokumentacije i opijati","Oružje, streljivo, eksplozivi i pirotehnika","Novac, vrijednosni papiri, zlato i nakit veće vrijednosti","Lako zapaljive, otrovne i opasne tvari (plin, kiseline, boje, gorivo)","Živa bića: životinje i biljke koje zahtijevaju dozvolu","Kvarljiva hrana bez odgovarajućeg pakiranja","Krivotvorena ili ukradena roba","Bilo što što ne bi mogao prijaviti na granici"],"banNote":"Vozač uvijek smije pogledati sadržaj i odbiti prijevoz. Kršenje pravila znači trajno blokiranje računa.","dmgT":"Što ako se nešto ošteti ili izgubi","dmgD":"Rijetko se dogodi, ali je dobro znati što učiniti. Najvažnije je da sve bude dokumentirano u aplikaciji.","steps":[["Prije predaje","Fotografiraj stvar i pakiranje, a u zahtjevu napiši što je unutra i koliko vrijedi."],["Odmah prijavi","Ako stvar stigne oštećena ili ne stigne, prijavi to kroz aplikaciju, po mogućnosti u roku od 24 sata."],["Dogovor u chatu","Razgovor s vozačem ostaje sačuvan. Najčešće se problem riješi dogovorom između vas dvoje."],["Podrška pomaže","Ako se ne dogovorite, naša podrška pregledava fotografije i poruke, posreduje i po potrebi blokira korisnika."]],"dmgNote":"Senvia povezuje korisnike i nije prijevoznik, pa za stvar odgovara osoba koja ju je preuzela. Detalji su u","dmgLink":"Uvjetima korištenja"},"en":{"banT":"What you must not send","banD":"Only items that are legal to transport may be sent through Senvia. The following is always prohibited, without exception:","ban":["Drugs, prescription medicines without documentation and narcotics","Weapons, ammunition, explosives and fireworks","Cash, securities, gold and high-value jewellery","Flammable, toxic or hazardous substances (gas, acids, paint, fuel)","Live animals and plants that require a permit","Perishable food without proper packaging","Counterfeit or stolen goods","Anything you could not declare at a border"],"banNote":"The driver may always check the contents and refuse the job. Breaking the rules means the account is permanently blocked.","dmgT":"What if something is damaged or lost","dmgD":"It rarely happens, but it is good to know what to do. The key is to have everything documented in the app.","steps":[["Before hand-off","Photograph the item and packaging, and state in the request what is inside and what it is worth."],["Report right away","If the item arrives damaged or does not arrive, report it in the app, ideally within 24 hours."],["Agree in the chat","The conversation with the driver is saved. Most issues are resolved by agreement between the two of you."],["Support steps in","If you cannot agree, our support reviews the photos and messages, mediates and blocks the user if needed."]],"dmgNote":"Senvia connects users and is not a carrier, so the person who took the item is responsible for it. Details are in the","dmgLink":"Terms of use"},"de":{"banT":"Was nicht verschickt werden darf","banD":"Über Senvia dürfen nur Sachen verschickt werden, deren Transport legal ist. Folgendes ist immer verboten, ohne Ausnahme:","ban":["Drogen, verschreibungspflichtige Medikamente ohne Unterlagen und Betäubungsmittel","Waffen, Munition, Sprengstoffe und Pyrotechnik","Bargeld, Wertpapiere, Gold und wertvoller Schmuck","Brennbare, giftige oder gefährliche Stoffe (Gas, Säuren, Farben, Kraftstoff)","Lebende Tiere und genehmigungspflichtige Pflanzen","Verderbliche Lebensmittel ohne geeignete Verpackung","Gefälschte oder gestohlene Ware","Alles, was du an der Grenze nicht angeben könntest"],"banNote":"Der Fahrer darf den Inhalt jederzeit prüfen und den Transport ablehnen. Verstöße führen zur dauerhaften Sperrung des Kontos.","dmgT":"Was tun bei Schaden oder Verlust","dmgD":"Es kommt selten vor, aber es ist gut zu wissen, was zu tun ist. Wichtig ist, dass alles in der App dokumentiert ist.","steps":[["Vor der Übergabe","Fotografiere Sache und Verpackung und gib in der Anfrage an, was drin ist und was es wert ist."],["Sofort melden","Kommt die Sache beschädigt oder gar nicht an, melde es in der App, am besten innerhalb von 24 Stunden."],["Einigung im Chat","Der Chat mit dem Fahrer bleibt gespeichert. Meist wird das Problem direkt zwischen euch gelöst."],["Support hilft","Wenn ihr euch nicht einigt, prüft unser Support Fotos und Nachrichten, vermittelt und sperrt den Nutzer bei Bedarf."]],"dmgNote":"Senvia verbindet Nutzer und ist kein Frachtführer, daher haftet die Person, die die Sache übernommen hat. Details stehen in den","dmgLink":"Nutzungsbedingungen"}};
+  __seoApply() {
+    const SEO = {"hr": ["Sigurnost u Senvia aplikaciji, provjereni korisnici | Senvia", "Verifikacija korisnika, obavezna fotografija stvari, pravo da odbiješ svaki prijevoz, ocjene nakon svake dostave i chat bez dijeljenja osobnih podataka."], "en": ["Safety on Senvia, verified users | Senvia", "User verification, a required photo of every item, the right to refuse any delivery, ratings after each hand-over and a chat without sharing personal details."], "de": ["Sicherheit bei Senvia, verifizierte Nutzer | Senvia", "Verifizierte Nutzer, Pflichtfoto jeder Sendung, das Recht, jeden Transport abzulehnen, Bewertungen nach jeder Übergabe und Chat ohne persönliche Daten."]};
+    let lang = 'hr';
+    try { lang = (this.state && this.state.lang) || (this.getLang ? this.getLang() : 'hr'); } catch (e) {}
+    const v = SEO[lang] || SEO.hr;
+    const loc = { hr: 'hr_HR', en: 'en_GB', de: 'de_DE' }[lang] || 'hr_HR';
+    const put = () => {
+      document.title = v[0];
+      const set = (attr, name, val) => { let el = document.head.querySelector('meta[' + attr + '="' + name + '"]'); if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); } el.setAttribute('content', val); };
+      set('name', 'description', v[1]); set('property', 'og:title', v[0]); set('property', 'og:description', v[1]); set('property', 'og:locale', loc);
+      set('name', 'twitter:title', v[0]); set('name', 'twitter:description', v[1]);
+    };
+    put(); clearTimeout(this.__seoT1); clearTimeout(this.__seoT2);
+    this.__seoT1 = setTimeout(put, 80); this.__seoT2 = setTimeout(put, 500);
+  }
+
   renderVals() {
+    this.__seoApply();
     const lang = this.state.lang || 'hr';
     const t = { ...this.STR.hr, ...(this.STR[lang] || {}) };
     const faqList = this.FAQ[lang] || this.FAQ.hr;

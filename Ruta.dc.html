@@ -29,9 +29,10 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -44,16 +45,16 @@
 
 <div style="overflow-x: clip">
 
-<dc-import name="Nav" active="" hint-size="100%,66px"></dc-import>
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" active="" hint-size="100%,66px"></dc-import>
 
 <sc-if value="{{ notFound }}" hint-placeholder-val="{{ false }}">
   <section style="max-width: 720px; margin: 0 auto; padding: clamp(54px, 9.2vw, 120px) clamp(16px, 4.0vw, 32px) clamp(63px, 10.8vw, 140px); text-align: center">
-    <div style="font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.12em; color: #6b8272; margin-bottom: 16px">404</div>
-    <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(23px, 6.5vw, 40px); line-height: 1.1; font-weight: 700; margin: 0 0 16px; text-wrap: balance">{{ nfTitle }}</h1>
+    <div style="font-family: 'Outfit', sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 0.12em; color: #6b8272; margin-bottom: 16px">404</div>
+    <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(23px, 6.5vw, 40px); line-height: 1.1; font-weight: 700; margin: 0 0 16px; text-wrap: balance">{{ nfTitle }}</h1>
     <p style="font-size: 18px; line-height: 1.6; color: #3c5346; margin: 0 0 28px; text-wrap: pretty">{{ nfText }}</p>
     <div style="display: flex; gap: 14px; justify-content: center; margin-bottom: 26px">
-      <a href="https://apps.apple.com/hr/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="50" style="display: block; border-radius: 10px"></a>
-      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="50" style="display: block; border-radius: 10px"></a>
+      <a href="https://apps.apple.com/app/id6759839112" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="50" style="display: block; border-radius: 10px"></a>
+      <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="50" style="display: block; border-radius: 10px"></a>
     </div>
     <a href="Slanje%20stvari.dc.html" style="font-weight: 600; font-size: 15.5px">{{ nfLink }}</a>
   </section>
@@ -61,22 +62,22 @@
 
 <sc-if value="{{ found }}" hint-placeholder-val="{{ true }}">
 <div>
-  <nav aria-label="breadcrumb" style="max-width: 1280px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
-    <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a>
+  <nav aria-label="breadcrumb" style="max-width: 1360px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px; align-items: center">
+    <a href="Senvia%20Landing%20v3.dc.html" style="color: #6b8272">Senvia</a>
     <span>/</span>
     <a href="Slanje%20stvari.dc.html" style="color: #6b8272">{{ crumbSend }}</a>
     <span>/</span>
     <span style="color: #12261a; font-weight: 600">{{ pair }}</span>
   </div>
 
-  <section style="max-width: 1280px; margin: 0 auto; padding: 32px clamp(16px, 4.0vw, 32px) clamp(29px, 4.9vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: clamp(23px, 4.3vw, 52px); align-items: center">
+  <section style="max-width: 1360px; margin: 0 auto; padding: 32px clamp(16px, 4.0vw, 32px) clamp(29px, 4.9vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: clamp(23px, 4.3vw, 52px); align-items: center">
     <div>
-      <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(32px, 9.0vw, 56px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 22px; text-wrap: balance">{{ h1 }}</h1>
+      <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(32px, 9.0vw, 56px); line-height: 1.05; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 22px; text-wrap: balance">{{ h1 }}</h1>
       <p style="font-size: 20px; line-height: 1.6; color: #3c5346; margin: 0 0 18px; max-width: 56ch; text-wrap: pretty">{{ intro }}</p>
       <p style="font-size: 17px; line-height: 1.65; color: #3c5346; margin: 0 0 32px; max-width: 60ch; text-wrap: pretty">{{ intro2 }}</p>
       <div style="display: flex; gap: 14px; align-items: center">
-        <a href="https://apps.apple.com/us/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform .2s ease" style-hover="transform: translateY(-2px)"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
-        <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform .2s ease" style-hover="transform: translateY(-2px)"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
+        <a href="https://apps.apple.com/app/id6759839112" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform .2s ease" style-hover="transform: translateY(-2px)"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="52" style="display: block; border-radius: 10px"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia" target="_blank" rel="noopener noreferrer" style="display: inline-block; transition: transform .2s ease" style-hover="transform: translateY(-2px)"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="52" style="display: block; border-radius: 10px"></a>
       </div>
     </div>
     <div style="display: flex; justify-content: center">
@@ -90,12 +91,12 @@
 
   <sc-if value="{{ hasFacts }}" hint-placeholder-val="{{ true }}">
     <section style="background: #f2f0ea; border-top: 1px solid #e9e6dd; border-bottom: 1px solid #e9e6dd">
-      <div style="max-width: 1280px; margin: 0 auto; padding: clamp(34px, 5vw, 60px) clamp(16px, 4.0vw, 32px)">
-        <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.2vw, 26px); font-weight: 700; letter-spacing: -0.01em; margin: 0 0 22px">{{ factsTitle }}</h2>
+      <div style="max-width: 1360px; margin: 0 auto; padding: clamp(34px, 5vw, 60px) clamp(16px, 4.0vw, 32px)">
+        <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(20px, 4.2vw, 26px); font-weight: 700; letter-spacing: -0.01em; margin: 0 0 22px">{{ factsTitle }}</h2>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 14px">
           <sc-for list="{{ facts }}" as="f" hint-placeholder-count="5">
             <div style="background: #ffffff; border: 1px solid #e6e3da; border-radius: 20px; padding: 24px 24px">
-              <div style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 5.2vw, 34px); font-weight: 700; letter-spacing: -0.02em; color: #167a38">{{ f.value }}</div>
+              <div style="font-family: 'Outfit', sans-serif; font-size: clamp(24px, 5.2vw, 34px); font-weight: 700; letter-spacing: -0.02em; color: #167a38">{{ f.value }}</div>
               <div style="margin-top: 8px; font-size: 15px; font-weight: 600; color: #12261a">{{ f.label }}</div>
               <div style="margin-top: 4px; font-size: 14px; line-height: 1.5; color: #6b8272; text-wrap: pretty">{{ f.hint }}</div>
             </div>
@@ -108,24 +109,24 @@
 
 
 
-  <section id="preuzmi" style="max-width: 1280px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4.0vw, 32px)">
+  <section id="preuzmi" style="max-width: 1360px; margin: 0 auto; padding: clamp(38px, 6.5vw, 84px) clamp(16px, 4.0vw, 32px)">
     <div style="background: #2dbb54; border-radius: 28px; padding: clamp(29px, 4.9vw, 64px) clamp(24px, 6.0vw, 48px); text-align: center; color: #ffffff">
       <img src="assets/senvia-logo.png" alt="Senvia logo" width="60" height="60" style="border-radius: 15px; box-shadow: 0 10px 26px rgba(10,60,26,0.3); margin-bottom: 24px">
-      <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(21px, 5.8vw, 36px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 14px; text-wrap: balance">{{ ctaTitle }}</h2>
+      <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(21px, 5.8vw, 36px); font-weight: 700; letter-spacing: -0.015em; margin: 0 0 14px; text-wrap: balance">{{ ctaTitle }}</h2>
       <p style="margin: 0 auto 32px; font-size: 18px; line-height: 1.55; max-width: 48ch; color: rgba(255,255,255,0.92); text-wrap: pretty">{{ ctaSub }}</p>
       <div style="display: flex; gap: 14px; justify-content: center">
-        <a href="https://apps.apple.com/us/app/senvia/id6759839112?l=hr" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="54" style="display: block; border-radius: 10px"></a>
-        <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia&amp;hl=hr" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="54" style="display: block; border-radius: 10px"></a>
+        <a href="https://apps.apple.com/app/id6759839112" target="_blank" rel="noopener noreferrer"><img src="assets/app-store-badge.webp" alt="Download on the App Store" height="54" style="display: block; border-radius: 10px"></a>
+        <a href="https://play.google.com/store/apps/details?id=com.senviaapp.senvia" target="_blank" rel="noopener noreferrer"><img src="assets/google-play-badge.png" alt="Get it on Google Play" height="54" style="display: block; border-radius: 10px"></a>
       </div>
     </div>
   </section>
 
-  <section style="max-width: 1280px; margin: 0 auto; padding: 0 clamp(16px, 4.0vw, 32px) clamp(38px, 6.5vw, 84px)">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(20px, 4.2vw, 26px); font-weight: 700; margin: 0 0 20px">{{ alsoTitle }}</h2>
+  <section style="max-width: 1360px; margin: 0 auto; padding: 0 clamp(16px, 4.0vw, 32px) clamp(38px, 6.5vw, 84px)">
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: clamp(20px, 4.2vw, 26px); font-weight: 700; margin: 0 0 20px">{{ alsoTitle }}</h2>
     <div style="display: flex; gap: 16px; flex-wrap: wrap">
       <sc-for list="{{ related }}" as="r" hint-placeholder-count="3">
         <a href="{{ r.href }}" style="display: block; flex: 1 1 280px; border: 1px solid #e6e3da; border-radius: 18px; padding: 22px 24px; color: #12261a" style-hover="border-color: #2dbb54; background: #f7f6f2">
-          <span style="display: block; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 18px; margin-bottom: 6px">{{ r.title }}</span>
+          <span style="display: block; font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 18px; margin-bottom: 6px">{{ r.title }}</span>
           <span style="display: block; font-size: 14px; color: #3c5346; line-height: 1.5">{{ r.meta }}</span>
         </a>
       </sc-for>
@@ -172,7 +173,12 @@ class Component extends DCLogic {
     { slug: 'zagreb-split', from: 'Zagreb', to: 'Split', activeDrivers: 11, distanceKm: 410, durationHours: [4, 5], priceMin: 17, priceMax: 32, ridesLast30: 5, sameDayShare: 70, routeFaqs: [] },
     { slug: 'zagreb-rijeka', from: 'Zagreb', to: 'Rijeka', activeDrivers: 9, distanceKm: 160, durationHours: [2, 3], priceMin: 10, priceMax: 19, ridesLast30: 16, sameDayShare: 88, routeFaqs: [] },
     { slug: 'zagreb-osijek', from: 'Zagreb', to: 'Osijek', activeDrivers: 7, distanceKm: 280, durationHours: [3, 4], priceMin: 13, priceMax: 25, ridesLast30: 13, sameDayShare: 85, routeFaqs: [] },
-    { slug: 'stuttgart-zagreb', from: 'Stuttgart', to: 'Zagreb', activeDrivers: 3, distanceKm: 780, durationHours: [8, 9], priceMin: 27, priceMax: 51, ridesLast30: 5, sameDayShare: 72, routeFaqs: [] }
+    { slug: 'stuttgart-zagreb', from: 'Stuttgart', to: 'Zagreb', activeDrivers: 3, distanceKm: 780, durationHours: [8, 9], priceMin: 27, priceMax: 51, ridesLast30: 5, sameDayShare: 72, routeFaqs: [] },
+    { slug: 'frankfurt-zagreb', from: 'Frankfurt', to: 'Zagreb', activeDrivers: 1, distanceKm: 960, durationHours: [9, 10], priceMin: 32, priceMax: 60, routeFaqs: [] },
+    { slug: 'berlin-zagreb', from: 'Berlin', to: 'Zagreb', activeDrivers: 1, distanceKm: 1050, durationHours: [10, 11], priceMin: 35, priceMax: 65, routeFaqs: [] },
+    { slug: 'nurnberg-zagreb', from: 'Nürnberg', to: 'Zagreb', fromEn: 'Nuremberg', toEn: 'Zagreb', activeDrivers: 1, distanceKm: 730, durationHours: [7, 8], priceMin: 26, priceMax: 48, routeFaqs: [] },
+    { slug: 'koln-zagreb', from: 'Köln', to: 'Zagreb', fromEn: 'Cologne', toEn: 'Zagreb', activeDrivers: 1, distanceKm: 1150, durationHours: [12, 13], priceMin: 38, priceMax: 70, routeFaqs: [] },
+    { slug: 'zeneva-zagreb', from: 'Ženeva', to: 'Zagreb', fromEn: 'Geneva', toEn: 'Zagreb', activeDrivers: 1, distanceKm: 1050, durationHours: [11, 12], priceMin: 35, priceMax: 65, routeFaqs: [] }
   ];
 
   active() { return this.BACKEND.filter(r => r.activeDrivers >= 1); }
@@ -266,7 +272,7 @@ class Component extends DCLogic {
   t() { return { ...this.STR.hr, ...(this.STR[this.state.lang] || {}) }; }
   fill(tpl, vals) { return String(tpl).replace(/\{(\w+)\}/g, (_, k) => vals[k]); }
   // Nazivi gradova po jeziku; njemački zadržava izvorne oblike (Wien, München).
-  CITY_DE = { 'Beč': 'Wien', 'Varaždin': 'Varazdin' };
+  CITY_DE = { 'Beč': 'Wien', 'Varaždin': 'Varazdin', 'Ženeva': 'Genf' };
   cityName(hr, en) {
     const lang = this.state.lang;
     if (lang === 'de') return this.CITY_DE[hr] || hr;
@@ -313,7 +319,7 @@ class Component extends DCLogic {
     const setOg = (p, v) => { let el = document.querySelector('meta[property="' + p + '"]'); if (!el) { el = document.createElement('meta'); el.setAttribute('property', p); head.appendChild(el); } el.setAttribute('content', v); };
     setOg('og:title', pageTitle);
     setOg('og:description', desc);
-    const routeUrl = 'https://www.senviaapp.com/slanje-stvari/' + r.slug + '/';
+    const routeUrl = 'https://www.senviaapp.com/slanje-stvari/' + r.slug + '/' + (this.state.lang !== 'hr' ? '?lang=' + this.state.lang : '');
     setOg('og:url', routeUrl);
     setOg('og:type', 'website');
     setOg('og:site_name', 'Senvia');
@@ -372,7 +378,7 @@ class Component extends DCLogic {
       .map(x => ({
         href: 'Ruta%20-%20' + x.slug + '.dc.html',
         title: this.fill(t.relTpl, { pair: this.pairOf(x) }),
-        meta: (x.durationHours ? x.durationHours[0] + ' ' + t.hoursWord + ' ' + x.durationHours[1] + ' ' + t.drive : t.activeRoute) + (x.priceMin ? ' \u00b7 ' + t.avg + ' ' + Math.round((x.priceMin + x.priceMax) / 2) + ' €' : '')
+        meta: (x.distanceKm ? x.distanceKm + ' km \u00b7 ' : '') + (x.durationHours ? x.durationHours[0] + ' ' + t.hoursWord + ' ' + x.durationHours[1] + ' ' + t.drive : t.activeRoute) + (x.priceMin ? ' \u00b7 ' + t.avg + ' ' + Math.round((x.priceMin + x.priceMax) / 2) + ' €' : '')
       }));
 
     return {

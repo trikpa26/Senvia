@@ -45,9 +45,10 @@
   </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { margin: 0; font-family: 'Instrument Sans', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
+    button, input, select, textarea { font-family: inherit; }
+    body { margin: 0; font-family: 'Outfit', sans-serif; color: #12261a; background: #faf9f6; -webkit-font-smoothing: antialiased; }
     a { color: #1a9e44; text-decoration: none; }
     a:hover { color: #0e7c31; }
     ::selection { background: #c9efd6; }
@@ -59,30 +60,29 @@
 
 <div style="overflow-x: clip; min-height: 100vh; display: flex; flex-direction: column">
 
-<dc-import name="Nav" active="" hint-size="100%,66px"></dc-import>
+<dc-import name="Nav" style="position: sticky; top: 0; z-index: 100" active="" hint-size="100%,66px"></dc-import>
 
 <nav aria-label="breadcrumb" style="max-width: 720px; margin: 0 auto; padding: 18px clamp(16px, 4.0vw, 32px) 0; font-size: 13.5px; color: #6b8272; display: flex; flex-wrap: wrap; gap: 8px">
-  <a href="Senvia%20Landing%20v2.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.title }}</span>
+  <a href="Senvia%20Landing%20v3.dc.html" style="color: #6b8272">Senvia</a><span>/</span><span style="color: #12261a; font-weight: 600">{{ t.title }}</span>
 </nav>
 
 <main style="width: 100%; max-width: 720px; margin: 0 auto; padding: clamp(32px, 5.5vw, 72px) clamp(16px, 4.0vw, 32px) clamp(43px, 7.4vw, 96px); box-sizing: border-box; flex: 1">
-  <div style="color: #1a9e44; font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px">{{ t.kicker }}</div>
-  <h1 style="font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px, 6.8vw, 42px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; text-wrap: balance">{{ t.title }}</h1>
+  <h1 style="font-family: 'Outfit', sans-serif; font-size: clamp(24px, 6.8vw, 42px); line-height: 1.1; letter-spacing: -0.02em; font-weight: 700; margin: 0 0 18px; text-wrap: balance">{{ t.title }}</h1>
   <p style="font-size: 17px; line-height: 1.65; color: #3c5346; margin: 0 0 40px; text-wrap: pretty">{{ t.intro }}</p>
 
   <div style="background: #f2f0ea; border: 1px solid #e6e3da; border-radius: 22px; padding: 30px clamp(16px, 4.0vw, 32px); margin-bottom: 22px">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; margin: 0 0 20px">{{ t.inAppTitle }}</h2>
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: 21px; font-weight: 600; margin: 0 0 20px">{{ t.inAppTitle }}</h2>
     <div style="display: grid; gap: 16px">
       <div style="display: flex; gap: 14px; align-items: flex-start">
-        <span style="width: 30px; height: 30px; border-radius: 10px; background: #2dbb54; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 14px; flex-shrink: 0">1</span>
+        <span style="width: 30px; height: 30px; border-radius: 10px; background: #2dbb54; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px; flex-shrink: 0">1</span>
         <p style="margin: 3px 0 0; font-size: 15.5px; line-height: 1.55; color: #12261a">{{ t.step1 }}</p>
       </div>
       <div style="display: flex; gap: 14px; align-items: flex-start">
-        <span style="width: 30px; height: 30px; border-radius: 10px; background: #2dbb54; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 14px; flex-shrink: 0">2</span>
+        <span style="width: 30px; height: 30px; border-radius: 10px; background: #2dbb54; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px; flex-shrink: 0">2</span>
         <p style="margin: 3px 0 0; font-size: 15.5px; line-height: 1.55; color: #12261a">{{ t.step2 }}</p>
       </div>
       <div style="display: flex; gap: 14px; align-items: flex-start">
-        <span style="width: 30px; height: 30px; border-radius: 10px; background: #2dbb54; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 14px; flex-shrink: 0">3</span>
+        <span style="width: 30px; height: 30px; border-radius: 10px; background: #2dbb54; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 14px; flex-shrink: 0">3</span>
         <p style="margin: 3px 0 0; font-size: 15.5px; line-height: 1.55; color: #12261a">{{ t.step3 }}</p>
       </div>
     </div>
@@ -94,7 +94,7 @@
   </div>
 
   <div style="border: 1px solid #e6e3da; border-radius: 22px; padding: 30px clamp(16px, 4.0vw, 32px)">
-    <h2 style="font-family: 'Space Grotesk', sans-serif; font-size: 21px; font-weight: 600; margin: 0 0 10px">{{ t.noAccessTitle }}</h2>
+    <h2 style="font-family: 'Outfit', sans-serif; font-size: 21px; font-weight: 600; margin: 0 0 10px">{{ t.noAccessTitle }}</h2>
     <p style="margin: 0 0 22px; font-size: 15.5px; line-height: 1.6; color: #3c5346; text-wrap: pretty">{{ t.noAccessDesc }}</p>
     <a href="mailto:contact@senviaapp.com" style="display: inline-flex; align-items: center; gap: 10px; background: #2dbb54; color: #ffffff; font-weight: 600; font-size: 15px; padding: 12px 22px; border-radius: 13px" style-hover="background: #26a449">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="3"></rect><path d="M22 7l-10 7L2 7"></path></svg>
@@ -172,10 +172,27 @@ class Component extends DCLogic {
   getLang() { return this.state.lang || (this.props.defaultLang ?? 'hr'); }
   setLang(l) { if (this.i18n) this.i18n.setLang(l); else this.setState({ lang: l }); }
 
+  __seoApply() {
+    const SEO = {"hr": ["Brisanje računa u Senvia aplikaciji | Senvia", "Kako trajno obrisati Senvia račun i sve povezane podatke. Brisanje ide kroz aplikaciju u tri koraka, a moguće je i zahtjevom na e-poštu."], "en": ["Deleting your Senvia account | Senvia", "How to permanently delete your Senvia account and all related data. It takes three steps in the app, or you can send us a request by email."], "de": ["Senvia Konto löschen | Senvia", "So löschst du dein Senvia Konto und alle zugehörigen Daten dauerhaft. Drei Schritte in der App oder eine Anfrage per E-Mail."]};
+    let lang = 'hr';
+    try { lang = (this.state && this.state.lang) || (this.getLang ? this.getLang() : 'hr'); } catch (e) {}
+    const v = SEO[lang] || SEO.hr;
+    const loc = { hr: 'hr_HR', en: 'en_GB', de: 'de_DE' }[lang] || 'hr_HR';
+    const put = () => {
+      document.title = v[0];
+      const set = (attr, name, val) => { let el = document.head.querySelector('meta[' + attr + '="' + name + '"]'); if (!el) { el = document.createElement('meta'); el.setAttribute(attr, name); document.head.appendChild(el); } el.setAttribute('content', val); };
+      set('name', 'description', v[1]); set('property', 'og:title', v[0]); set('property', 'og:description', v[1]); set('property', 'og:locale', loc);
+      set('name', 'twitter:title', v[0]); set('name', 'twitter:description', v[1]);
+    };
+    put(); clearTimeout(this.__seoT1); clearTimeout(this.__seoT2);
+    this.__seoT1 = setTimeout(put, 80); this.__seoT2 = setTimeout(put, 500);
+  }
+
   renderVals() {
+    this.__seoApply();
     const lang = this.getLang();
     const t = { ...this.STR.hr, ...(this.STR[lang] || {}) };
-    const pill = { border: 'none', cursor: 'pointer', fontFamily: "'Instrument Sans', sans-serif", fontWeight: 700, fontSize: '13px', padding: '5px 12px', borderRadius: '999px', transition: 'all .2s' };
+    const pill = { border: 'none', cursor: 'pointer', fontFamily: "'Outfit', sans-serif", fontWeight: 700, fontSize: '13px', padding: '5px 12px', borderRadius: '999px', transition: 'all .2s' };
     return {
       t,
       setHr: () => this.setLang('hr'), setEn: () => this.setLang('en'),
